@@ -1,3 +1,2 @@
 version.txt
-TalesOfCorsairs.exe
-Data/patch_notes.txt
+system/Game.exe
