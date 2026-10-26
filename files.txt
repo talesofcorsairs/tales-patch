@@ -1,2 +1,4 @@
+TalesOfCorsairs.exe
+TalesOfCorsairsLauncher.exe
 version.txt
 README.md
