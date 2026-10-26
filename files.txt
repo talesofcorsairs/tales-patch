@@ -1,4 +1,3 @@
-TalesOfCorsairs.exe
-TalesOfCorsairsLauncher.exe
 version.txt
-README.md
+TalesOfCorsairs.exe
+Data/patch_notes.txt
