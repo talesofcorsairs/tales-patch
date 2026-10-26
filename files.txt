@@ -1,2 +1,9 @@
 version.txt
-system/Game.exe
+Game.exe
+system/BTI.DLL
+system/PAI.dll
+system/SDL.dll
+system/SDL_mixer.dll
+system/smpeg.dll
+system/msvcr71.dll
+etc...
