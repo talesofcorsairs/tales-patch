@@ -1,13 +1,12 @@
-version.txt
-Game.exe
+system/Game.exe
 BTI.DLL
 CaLua.dll
 DBGHELP.DLL
 MindPower3D_D8D.dll
 MindPower3D_D8R.dll
 MindPower3D_DBR333.dll
-msvcr71.dll
 PAI.DLL
 SDL.dll
 SDL_mixer.dll
+msvcr71.dll
 smpeg.dll
