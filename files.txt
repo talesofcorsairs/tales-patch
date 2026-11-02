@@ -10,3 +10,7 @@ SDL.dll
 SDL_mixer.dll
 msvcr71.dll
 smpeg.dll
+Tales_of_Corsairs_Icon.ico
+system/ErrorReport.exe
+scripts/table/iteminfo.bin
+TalesOfCorsairsLauncher.exe
