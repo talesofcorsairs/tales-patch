@@ -4,7 +4,7 @@ CaLua.dll
 DBGHELP.DLL
 MindPower3D_D8D.dll
 MindPower3D_D8R.dll
-MindPower3D_DBR333.dll
+MindPower3D_D8R333.dll
 PAI.DLL
 SDL.dll
 SDL_mixer.dll
