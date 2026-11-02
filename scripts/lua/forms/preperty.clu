@@ -1,0 +1,238 @@
+
+-----------------------------------------------------------------------
+-- 定义角色属性 player stats
+-----------------------------------------------------------------------
+COLOR_CHA_VALUE = 4293981439
+COLOR_CHA_GOLD = 4294955883
+frmState = UI_CreateForm( "frmState", FALSE, 240, 424, 0, 120, TRUE, FALSE )
+UI_FormSetHotKey( frmState, ALT_KEY, HOTKEY_A )
+UI_ShowForm( frmState, FALSE )
+UI_AddFormToTemplete( frmState, 1 )
+UI_SetIsDrag( frmState, TRUE )
+--UI_SetFormStyle( frmState, 0 )
+--UI_SetAlpha( frmState, 200 )
+
+-- 加载背景图片
+imgBakTop = UI_CreateCompent( frmState, IMAGE_TYPE, "imgBakTop", 240, 424, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/ods/PublicD2.tga", NORMAL, 240, 424, 0, 0 )
+
+--创建关闭按钮
+btnClose = UI_CreateCompent( frmState, BUTTON_TYPE, "btnClose", 14, 14, 221, 6 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+
+
+labStateName = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateName", 160, 11, 68, 50 )
+UI_SetCaption( labStateName, "Child of Demon what is that" )
+UI_SetTextColor( labStateName, COLOR_CHA_GOLD )
+UI_SetLabelExFont( labStateName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建角色职业
+labStateJob = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateJob", 160, 11, 68, 66 )
+--UI_SetCaption( labStateJob, "Warrior" )
+UI_SetTextColor( labStateJob, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateJob, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建所属工会
+labStateGuid = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateGuid", 160, 11, 68, 82 )
+--UI_SetCaption( labStateGuid, "game developer" )
+UI_SetTextColor( labStateGuid, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateGuid, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建等级
+labStateLevel  = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateLevel", 40, 10, 68, 98 )
+UI_SetCaption( labStateLevel, "22" )
+UI_SetTextColor( labStateLevel, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateLevel, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建经验
+labStateEXP = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateEXP", 50, 10, 180, 98 )
+UI_SetCaption( labStateEXP, "11" )
+UI_SetTextColor( labStateEXP, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateEXP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建转生等级
+labSailLevel  = UI_CreateCompent( frmState, LABELEX_TYPE, "labSailLevel", 40, 10, 68, 114 )
+--UI_SetCaption( labSailLevel, "22" )
+UI_SetTextColor( labSailLevel, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labSailLevel, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetHint(labSailLevel,"Rebirth Level")
+
+--创建转生经验
+labSailEXP = UI_CreateCompent( frmState, LABELEX_TYPE, "labSailEXP", 50, 10, 180, 114 )
+--UI_SetCaption( labSailEXP, "9999999999" )
+UI_SetTextColor( labSailEXP, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labSailEXP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetHint(labSailEXP,"Rebirth Experience points")
+
+--创建HP
+labStateHP  = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateHP", 80, 10, 38, 130 )
+UI_SetCaption( labStateHP, "9999/9999" )
+UI_SetTextColor( labStateHP, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateHP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建SP
+labStateSP  = UI_CreateCompent( frmState, LABELEX_TYPE, "labStateSP", 80, 10, 146, 130 )
+UI_SetCaption( labStateSP, "9999/9999" )
+UI_SetTextColor( labStateSP, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStateSP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+
+--创建属性点数
+labStatePoint  = UI_CreateCompent( frmState, LABELEX_TYPE, "labStatePoint", 40, 10, 68, 368 )
+UI_SetCaption( labStatePoint, "1500" )
+UI_SetTextColor( labStatePoint, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStatePoint, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建技能点数
+labSkillPoint  = UI_CreateCompent( frmState, LABELEX_TYPE, "labSkillPoint", 40, 10, 180, 368 )
+UI_SetCaption( labSkillPoint, "300" )
+UI_SetTextColor( labSkillPoint, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labSkillPoint, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建力量栏
+btnStr = UI_CreateCompent( frmState, BUTTON_TYPE, "btnStr", 10, 10, 104, 173 )
+UI_LoadButtonImage( btnStr, "texture/ui/ods/PublicC.tga", 10, 10, 195, 239, TRUE )
+UI_SetHint( btnStr, "Strength increases Melee attack power" )
+
+labStrshow = UI_CreateCompent( frmState, LABELEX_TYPE, "labStrshow", 30, 10, 68, 172 )
+UI_SetCaption( labStrshow, "9527" )
+UI_SetTextColor( labStrshow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStrshow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建敏捷栏
+btnAgi = UI_CreateCompent( frmState, BUTTON_TYPE, "btnAgi", 10, 10, 216, 173 )
+UI_LoadButtonImage( btnAgi, "texture/ui/ods/PublicC.tga", 10, 10, 195, 239, TRUE )
+UI_SetHint( btnAgi, "Agility increases Attack speed and Dodge rate" )
+
+labAgishow = UI_CreateCompent( frmState, LABELEX_TYPE, "labAgishow", 30, 10, 180, 172 )
+UI_SetCaption( labAgishow, "9527" )
+UI_SetTextColor( labAgishow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labAgishow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建体质栏
+btnCon = UI_CreateCompent( frmState, BUTTON_TYPE, "btnCon", 10, 10, 104, 189 )
+UI_LoadButtonImage( btnCon, "texture/ui/ods/PublicC.tga", 10, 10, 195, 239, TRUE )
+UI_SetHint( btnCon, "Constitution increases Defense, Max HP and HP recovery rate" )
+
+labConshow = UI_CreateCompent( frmState, LABELEX_TYPE, "labConshow", 30, 10, 68, 188 )
+UI_SetCaption( labConshow, "9527" )
+UI_SetTextColor( labConshow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labConshow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建精神栏
+btnSta = UI_CreateCompent( frmState, BUTTON_TYPE, "btnSta", 10, 10, 216, 189 )
+UI_LoadButtonImage( btnSta, "texture/ui/ods/PublicC.tga", 10, 10, 195, 239, TRUE )
+UI_SetHint( btnSta, "Spirit increases Max SP, SP recovery rate, Magic defence and Magic attack" )
+
+labStashow = UI_CreateCompent( frmState, LABELEX_TYPE, "labStashow", 30, 10, 180, 188 )
+UI_SetCaption( labStashow, "9527" )
+UI_SetTextColor( labStashow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labStashow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建专注栏
+btnDex = UI_CreateCompent( frmState, BUTTON_TYPE, "btnDex", 10, 10, 104, 205 )
+UI_LoadButtonImage( btnDex, "texture/ui/ods/PublicC.tga", 10, 10, 195, 239, TRUE )
+UI_SetHint( btnDex, "Accuracy increases Range attack power and Hit Rate" )
+
+labDexshow = UI_CreateCompent( frmState, LABELEX_TYPE, "labDexshow", 30, 10, 68, 204 )
+UI_SetCaption( labDexshow, "9527" )
+UI_SetTextColor( labDexshow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labDexshow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建最小攻击
+labMinAtackShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labMinAtackShow", 40, 10, 68, 246 )
+UI_SetCaption( labMinAtackShow, "95278" )
+UI_SetTextColor( labMinAtackShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labMinAtackShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建最大攻击
+labMaxAtackShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labMaxAtackShow", 40, 10, 180, 246 )
+UI_SetCaption( labMaxAtackShow, "95278" )
+UI_SetTextColor( labMaxAtackShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labMaxAtackShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建命中
+labHitShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labHitShow", 40, 10, 68, 262 )
+UI_SetCaption( labHitShow, "400" )
+UI_SetTextColor( labHitShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labHitShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建闪避
+labFleeShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labFleeShow", 40, 10, 180, 262 )
+UI_SetCaption( labFleeShow, "400" )
+UI_SetTextColor( labFleeShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labFleeShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建防御
+labDefenceShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labDefenceShow", 40, 10, 68, 278 )
+UI_SetCaption( labDefenceShow, "4000" )
+UI_SetTextColor( labDefenceShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labDefenceShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建攻速
+labAspeedShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labAspeedShow", 40, 10, 180, 278 )
+UI_SetCaption( labAspeedShow, "400" )
+UI_SetTextColor( labAspeedShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labAspeedShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建物力抵抗
+labPhysDefineShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labPhysDefineShow", 40, 10, 82, 294 )
+UI_SetCaption( labPhysDefineShow, "400" )
+UI_SetTextColor( labPhysDefineShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labPhysDefineShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建名声
+labFameShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labFameShow", 40, 10, 82, 336 )
+UI_SetCaption( labFameShow, "0" )
+UI_SetTextColor( labFameShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labFameShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建称号
+labTitleShow  = UI_CreateCompent( frmState, LABELEX_TYPE, "labTitleShow", 150, 11, 68, 352 )
+--UI_SetCaption( labTitleShow, "0" )
+UI_SetTextColor( labTitleShow, COLOR_CHA_VALUE )
+UI_SetLabelExFont( labTitleShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--创建称号选择
+--cboAppellationShow  = UI_CreateCompent( frmState, COMBO_TYPE, "cboAppellationShow", 110, 20, 77, 368 )
+--lstAppellation = UI_GetList( cboAppellationShow )
+--UI_SetSize( lstAppellation, 110, 170 )
+--UI_LoadImage( lstAppellation, "texture/ui/QQ.dds", COMPENT_BACK, 142, 170, 0, 0 )
+
+--获得滚动条
+--scrollid = UI_GetScroll( lstAppellation )
+--UI_SetSize( scrollid, 11, 1 )
+--UI_LoadImage( scrollid, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
+
+--加载向上按钮
+--id = UI_GetScrollObj( scrollid, SCROLL_UP )
+--UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
+--UI_SetSize( id, 11, 9 )
+
+--加载滚动条
+--id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+--UI_LoadImage( id, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
+--UI_SetSize( id, 11, 43 )
+
+--加载向下按钮
+--id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
+--UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
+--UI_SetSize( id, 11, 9 )
+
+
+--Rates do servidor: texto fixo, o Game.exe nao atualiza estes campos
+labRateExp = UI_CreateCompent( frmState, LABELEX_TYPE, "labRateExp", 30, 10, 68, 384 )
+UI_SetCaption( labRateExp, "3.0x" )
+UI_SetTextColor( labRateExp, COLOR_CHA_GOLD )
+UI_SetLabelExFont( labRateExp, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+labRateDrop = UI_CreateCompent( frmState, LABELEX_TYPE, "labRateDrop", 30, 10, 180, 384 )
+UI_SetCaption( labRateDrop, "1.0x" )
+UI_SetTextColor( labRateDrop, COLOR_CHA_GOLD )
+UI_SetLabelExFont( labRateDrop, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+labRateFairy = UI_CreateCompent( frmState, LABELEX_TYPE, "labRateFairy", 30, 10, 82, 400 )
+UI_SetCaption( labRateFairy, "4x" )
+UI_SetTextColor( labRateFairy, COLOR_CHA_GOLD )
+UI_SetLabelExFont( labRateFairy, DEFAULT_FONT, TRUE, COLOR_BLACK )
