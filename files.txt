@@ -13,4 +13,7 @@ smpeg.dll
 Tales_of_Corsairs_Icon.ico
 system/ErrorReport.exe
 scripts/table/iteminfo.bin
+scripts/lua/mission/missioninfo.lua
+scripts/txt/ClientString.tx
+scripts/txt/HelpInfo.tx
 TalesOfCorsairsLauncher.exe
