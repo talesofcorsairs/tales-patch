@@ -1,0 +1,124 @@
+-----------------------------------------------------------------------
+-- 定义小地图 mini map HUD modified by Ryohll @ Immortal Sea
+-----------------------------------------------------------------------	
+-- Create Template space for Minimap 
+frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 160, 205, 656, 15, TRUE, FALSE )
+UI_ShowForm( frmMinimap, TRUE )
+UI_AddFormToTemplete( frmMinimap, FORM_MAIN )
+UI_SetFormStyle( frmMinimap, 9 )
+UI_FormSetIsEscClose( frmMinimap, FALSE )
+
+-- 加载图片
+imgMinimapT = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapT", 160, 205, 0, 0 )
+UI_LoadImage( imgMinimapT, "texture/ui/ods/minimap.tga", NORMAL, 160, 205, 0, 0 )
+
+imgMinimapN = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapN", 145, 134, 7, 28 )
+UI_LoadImage( imgMinimapN, "texture/ui/ods/minimapalpha.tga", NORMAL, 145, 134, 0, 0 )
+UI_SetAlpha( imgMinimapN, 180 )
+
+-- 加载显示区域
+imgMinimapRect = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapRect", 130, 130, 15, 30 )
+
+--加载地图名称显示 Map name text
+labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 5, 9 )
+UI_SetCaption( labMapName, "了了了了了了了" )
+UI_SetTextColor( labMapName, COLOR_YELLOW )
+UI_SetLabelExFont( labMapName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+--加载地图坐标显示 by lh此处定义了多个显示坐标的label，程序进行随机使用一个label显示，用于防止简单的外挂，如挂船脚本
+n  = 0
+while 1 do
+	local name = "labMapPos"..n
+	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 79, 12, 18, 189 )
+	UI_SetCaption( labMapPos, "2200, 2200" )
+	UI_SetTextColor( labMapPos, COLOR_CLOUD )
+	UI_SetLabelExFont( labMapPos, DEFAULT_FONT, TRUE, COLOR_BLACK )
+	
+	if n~=0  then UI_SetIsShow( labMapPos, FALSE ) end
+	
+	n = n + 1
+	if n==10 then break end	
+end
+
+--创建打开大地图按钮
+btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 39, 15, 48, 164 )
+UI_LoadButtonImage( btnOpen, "texture/ui/ods/minimap.tga", 39, 15, 0, 232, TRUE )
+UI_SetHint( btnOpen, "World Map" )
+
+--创建打开了雷达按钮
+btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 39, 15, 8, 164 )
+UI_LoadButtonImage( btnSearch, "texture/ui/ods/minimap.tga", 39, 15, 0, 215, TRUE )
+UI_SetHint( btnSearch, "Radar" )
+
+--打开商城button ingame mall
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 26, 12, 76, 189 )
+UI_LoadButtonImage( btnOpenStore, "texture/ui/ods/minimap.tga", 26, 12, 67, 249, FALSE )
+UI_SetHint( btnOpenStore, "In-game Mall" )
+
+--打开组队面版，临时
+btnteam = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnteam", 63, 15, 88, 164 )
+UI_LoadButtonImage( btnteam, "texture/ui/ods/minimap.tga", 63, 15, 0, 249, FALSE )
+
+-----------------------------------------------------------------------
+-- 定义雷达 minimap search
+-----------------------------------------------------------------------	
+-- 创建雷达表单
+frmSearch = UI_CreateForm( "frmSearch", FALSE, 212, 114, 300, 200, TRUE, FALSE )
+UI_ShowForm( frmSearch, FALSE )
+UI_AddFormToTemplete( frmSearch, FORM_MAIN )
+UI_FormSetIsEscClose( frmSearch, FALSE )
+UI_FormSetHotKey( frmSearch, ALT_KEY, HOTKEY_R )
+UI_SetIsDrag( frmSearch, TRUE )
+
+--加载图片
+imgSearch = UI_CreateCompent( frmSearch, IMAGE_TYPE, "imgSearch", 212, 114, 0, 0 )
+UI_LoadImage( imgSearch, "texture/ui/ods/search.tga", NORMAL, 212, 114, 0, 0 )
+
+--创建关闭按钮
+btnClose = UI_CreateCompent( frmSearch, BUTTON_TYPE, "btnClose", 14, 14, 194, 3 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+
+--加载坐标输入框
+edtLeft = UI_CreateCompent( frmSearch, EDIT_TYPE, "edtLeft", 45, 11, 89, 70 )
+UI_SetTextColor( edtLeft, COLOR_CLOUD )
+UI_SetEditCursorColor( edtLeft, COLOR_CLOUD )
+UI_SetEditMaxNum( edtLeft, 4 )
+UI_SetEditMaxNumVisible( edtLeft, 4 )
+
+edtRight = UI_CreateCompent( frmSearch, EDIT_TYPE, "edtRight", 25, 11, 143, 70 )
+UI_SetTextColor( edtRight, COLOR_CLOUD )
+UI_SetEditCursorColor( edtRight, COLOR_CLOUD )
+UI_SetEditMaxNum( edtRight, 4 )
+UI_SetEditMaxNumVisible( edtRight, 4 )
+
+
+--加载确定按钮
+btnYes = UI_CreateCompent( frmSearch, BUTTON_TYPE, "btnYes", 38, 16, 119, 92 )
+UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
+UI_SetEditEnterButton( edtRight, btnYes )
+
+--加载取消按钮
+btnNo = UI_CreateCompent( frmSearch, BUTTON_TYPE, "btnNo", 36, 16, 165, 92 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
+UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
+
+
+--创建地图选择列表
+cboMap  = UI_CreateCompent( frmSearch, COMBO_TYPE, "cboMap", 98, 20, 88, 38 )
+UI_ComboSetStyle( cboMap, TRUE )
+UI_LoadComboImage( cboMap, "", 81, 20, 106, 39, "texture/ui/search.tga", 1, 1, 130, 140, FALSE )
+UI_ComboSetTextColor( cboMap, COLOR_CLOUD )
+lstMap = UI_GetList( cboMap )
+UI_SetListFontColor( lstMap, COLOR_CLOUD, COLOR_YELLOW )
+UI_SetSize( lstMap, 98, 60 )
+UI_SetMargin( lstMap, 9,6,16,0 )
+UI_SetListRowHeight( lstMap, 18 )
+UI_LoadImage( lstMap, "texture/ui/ods/searchcbo.tga", NORMAL, 98, 60, 0, 0 )
+UI_SetAlpha( lstMap, 200 )
+UI_AddListText( lstMap, "Ascaron" )
+UI_AddListText( lstMap, "Magical Ocean" )
+UI_AddListText( lstMap, "Deep Blue" )
+UI_SetListIsMouseFollow( lstMap, TRUE)
+--UI_ListLoadSelectImage( lstMap, "texture/ui/SystemBotton3.tga", 79, 18, 0, 227  )
+UI_ComboSetTextColor( lstMap, COLOR_WHITE )

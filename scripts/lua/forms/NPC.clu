@@ -72,8 +72,8 @@ UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmNPCchat, BUTTON_TYPE, "btnNo", 36, 12, 142, 262 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbutton2.tga", 36, 12, 0, 72, TRUE )
+btnNo = UI_CreateCompent( frmNPCchat, BUTTON_TYPE, "btnNo", 36, 16, 142, 260 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 300, 96, TRUE )
 
 -----------------------------------------------------------------------
 -- 定义NPC交易 NPC item trade window weapons armor grocery

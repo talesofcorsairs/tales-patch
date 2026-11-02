@@ -54,14 +54,14 @@ UI_SetTextColor( labPrice, COLOR_CLOUD )
 UI_SetLabelExFont( labPrice, DEFAULT_FONT, TRUE, COLOR_BLANK )
 
 --加载交易
-btnYes = UI_CreateCompent( frmTrade, BUTTON_TYPE, "btnYes", 36, 12, 77, 81 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbutton1.tga", 36, 12, 0, 72, TRUE )
+btnYes = UI_CreateCompent( frmTrade, BUTTON_TYPE, "btnYes", 36, 16, 77, 79 )
+UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 96, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_SetEditEnterButton( edtNumber, btnYes )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmTrade, BUTTON_TYPE, "btnNo", 36, 12, 125, 81 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbutton1.tga", 36, 12, 0, 84, TRUE )
+btnNo = UI_CreateCompent( frmTrade, BUTTON_TYPE, "btnNo", 36, 16, 125, 79 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 -----------------------------------------------------------------------
@@ -87,15 +87,15 @@ UI_SetTextColor( labInfo, COLOR_CLOUD )
 UI_SetLabelExFont( labInfo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载接受按钮
-btnYes = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnYes", 38, 12, 122, 80 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbutton1.tga", 38, 12, 144, 12, TRUE )
+btnYes = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnYes", 38, 16, 122, 78 )
+UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
 --UI_LoadButtonImage( btnYes, "texture/ui/SystemBotton3.tga", 41, 19, 0, 0, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmSelect, btnYes )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 36, 12, 170, 80 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbutton1.tga", 36, 12, 0, 84, TRUE )
+btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 36, 16, 170, 78 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 
@@ -127,14 +127,14 @@ UI_SetEditMaxNum( edtNumber, 8 )
 UI_SetEditMaxNumVisible( edtNumber, 8 )
 
 --加载确定按钮
-btnYes = UI_CreateCompent( frmNumber, BUTTON_TYPE, "btnYes", 38, 12, 77, 81 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbutton1.tga", 38, 12, 144, 12, TRUE )
+btnYes = UI_CreateCompent( frmNumber, BUTTON_TYPE, "btnYes", 38, 16, 77, 79 )
+UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_SetEditEnterButton( edtNumber, btnYes )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmNumber, BUTTON_TYPE, "btnNo", 36, 12, 125, 81 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbutton1.tga", 36, 12, 0, 84, TRUE )
+btnNo = UI_CreateCompent( frmNumber, BUTTON_TYPE, "btnNo", 36, 16, 125, 79 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 -----------------------------------------------------------------------
