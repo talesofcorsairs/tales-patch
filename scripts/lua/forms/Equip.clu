@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------
 -- 定义道具表单 Inventory window
 -----------------------------------------------------------------------
-frmItem = UI_CreateForm( "frmItem", FALSE, 198, 394, 244, 120, TRUE, FALSE )
+frmItem = UI_CreateForm( "frmItem", FALSE, 240, 536, 244, 110, TRUE, FALSE )
 UI_FormSetHotKey( frmItem, ALT_KEY, HOTKEY_E ) --'E'
 --UI_LoadFormImage( frmItem, "texture/ui/Item.dds", 233, 358, 0, 0, "", 0, 0 )
 UI_ShowForm( frmItem, FALSE )
@@ -11,13 +11,13 @@ UI_SetIsDrag( frmItem, TRUE )
 --UI_SetAlpha( frmItem, 200 )
 
 -- 加载背景图片
-imgItemTop = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemTop", 198, 394, 0, 0 )
-UI_LoadImage( imgItemTop, "texture/ui/ods/PublicD.tga", NORMAL, 198, 394, 0, 0 )
+imgItemTop = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemTop", 240, 536, 0, 0 )
+UI_LoadImage( imgItemTop, "texture/ui/ods/inventory.tga", NORMAL, 240, 536, 0, 0 )
 --imgItemDown = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemDown", 198, 138, 0, 256 )
 --UI_LoadImage( imgItemDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnClose", 14, 14, 177, 3 )
+btnClose = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnClose", 14, 14, 221, 3 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
@@ -54,15 +54,17 @@ UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 --UI_LoadImage( imgItemBack, "texture/ui/Item2.tga", NORMAL, 174, 176, 0, 0 )
 
 -- 加载道具前4格的图片 - wing fairy and ration grids
-imgItem4 = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItem4", 137, 35, 27, 190 )
-UI_LoadImage( imgItem4, "texture/ui/ods/save2.tga", NORMAL, 137, 35, 0, 0 )
 
 --创建道具物品表格
-grdItem = UI_CreateCompent( frmItem, GOODS_GRID_TYPE, "grdItem", 180, 172, 7, 166 ) 
+grdItem = UI_CreateCompent( frmItem, GOODS_GRID_TYPE, "grdItem", 216, 284, 19, 203 ) 
 UI_SetGridSpace( grdItem, 2, 3 )
-UI_SetGridContent( grdItem, 8, 4 )
+UI_SetGridContent( grdItem, 8, 6 )
 UI_SetGridUnitSize( grdItem, 32, 32 )
-UI_SetMargin( grdItem, 21, 25, 0, 0 )
+UI_SetMargin( grdItem, 0, 0, 0, 0 )
+UI_GoodGridLoadUnitImage( grdItem, "texture/ui/ods/inventory.tga", 32, 32, 300, 0 )
+imgItem4 = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItem4", 100, 32, 19, 203 )
+UI_LoadImage( imgItem4, "texture/ui/ods/inventory.tga", NORMAL, 100, 32, 300, 40 )
+UI_SetIsEnabled( imgItem4, FALSE )
 
 --获得滚动条
 scrollid = UI_GetScroll( grdItem)
@@ -92,36 +94,36 @@ UI_SetSize( id, 11, 9 )
 --imgItemgold = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemgold", 96, 18, 42, 365 )
 --UI_LoadImage( imgItemgold, "texture/ui/PublicC.tga", NORMAL, 96, 18, 0, 235 )
 
-labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 47, 349 )
+labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 58, 506 )
 --UI_SetCaption( labItemgoldnumber, "7777777" )
 UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
 UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, 4289901234 )
 
 --创建透明控制按钮
-btnLock = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnLock", 13, 18, 144, 346 )
+btnLock = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnLock", 13, 18, 168, 502 )
 --创建密码锁定图片(锁定)
-imgLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgLock", 13, 18, 144, 346 )
+imgLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgLock", 13, 18, 168, 502 )
 UI_LoadImage( imgLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 0, FALSE )
 --创建密码锁定图片(未锁定)
-imgUnLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgUnLock", 13, 18, 144, 346 )
+imgUnLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgUnLock", 13, 18, 168, 502 )
 UI_LoadImage( imgUnLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 18, FALSE )
 
 --创建丢弃按钮 trash can
-btnbrush = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnbrush", 16, 19, 164, 364 )
+btnbrush = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnbrush", 16, 19, 194, 500 )
 --UI_LoadButtonImage( btnbrush, "texture/ui/SystemBotton3.tga", 16, 19, 151, 226, TRUE ) 
-cmdLost = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLost", 31, 31, 164, 359 )	-- 鞋子
+cmdLost = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLost", 31, 31, 192, 494 )	-- 鞋子
 UI_SetTag( cmdLost, 999 )
 
 -- 装备
-cmdArmet = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 83, 42 )	-- 头盔
-cmdBody = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 83, 83 )	-- 身体
-cmdNecklace = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 19, 26 )	-- 项链
-cmdRightHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 41, 83 )	-- 右手
-cmdLeftHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 126, 83 )	-- 左手
-cmdGlove = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 147, 26 )	-- 手套
-cmdCirclet1 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 19, 140 )	-- 手饰1
-cmdCirclet2 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 147, 140 )	-- 手饰2
-cmdShoes = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 83, 124 )	-- 鞋子
+cmdArmet = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 104, 30 )	-- 头盔
+cmdBody = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 104, 78 )	-- 身体
+cmdNecklace = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 52, 30 )	-- 项链
+cmdRightHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 52, 78 )	-- 右手
+cmdLeftHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 156, 78 )	-- 左手
+cmdGlove = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 156, 30 )	-- 手套
+cmdCirclet1 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 52, 126 )	-- 手饰1
+cmdCirclet2 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 156, 126 )	-- 手饰2
+cmdShoes = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 104, 126 )	-- 鞋子
 	
 -- 设置Tag值供程序使用
 UI_SetTag( cmdArmet, enumEQUIP_HEAD )
@@ -134,7 +136,7 @@ UI_SetTag( cmdCirclet1, enumEQUIP_HAND1 )
 UI_SetTag( cmdCirclet2, enumEQUIP_HAND2 )
 UI_SetTag( cmdShoes, enumEQUIP_SHOES )
 
-labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 103, 10, 113, 330 )
+labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 103, 10, 58, 506 )
 --UI_SetCaption( labItemgoldnumber, "0" )
 UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
 UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, COLOR_WHITE )
@@ -142,7 +144,7 @@ UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, COLOR_WHITE )
 -----------------------------------------------------------------------
 -- 定义技能 skills page
 -----------------------------------------------------------------------
-frmSkill = UI_CreateForm( "frmSkill", FALSE, 198, 394, 446, 120, FALSE, FALSE )
+frmSkill = UI_CreateForm( "frmSkill", FALSE, 198, 394, 486, 120, FALSE, FALSE )
 UI_FormSetHotKey( frmSkill, ALT_KEY, HOTKEY_S ) 
 UI_ShowForm( frmSkill, TRUE )
 UI_AddFormToTemplete( frmSkill, FORM_MAIN )

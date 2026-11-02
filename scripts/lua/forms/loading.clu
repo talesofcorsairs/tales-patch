@@ -26,34 +26,34 @@ imgLoadingA = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoadingA", 1024, 768
 UI_LoadImage( imgLoadingA, "texture/ui/loading/full_a.tga", NORMAL, 1024, 768, 0, 0 )
 imgLoadingB = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoadingB", 342, 768, 1024, 0 )
 UI_LoadImage( imgLoadingB, "texture/ui/loading/full_b.tga", NORMAL, 342, 768, 0, 0 )
-imgLoading = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoading", 120,123, 176, 447)
-UI_LoadImage( imgLoading, "texture/ui/LoadProgress.tga", NORMAL, 120,23, 0, 0 )
+imgLoading = UI_CreateCompent( frmLoading, IMAGE_TYPE, "imgLoading", 140, 30, 232, 700 )
+UI_LoadImage( imgLoading, "texture/ui/LoadProgress.tga", NORMAL, 140, 30, 0, 0 )
 
 --定义说明
-labLoad= UI_CreateCompent( frmLoading, LABELEX_TYPE, "labLoad", 52, 13, 503,553 )
+labLoad= UI_CreateCompent( frmLoading, LABELEX_TYPE, "labLoad", 80, 13, 650, 744 )
 UI_SetCaption( labLoad, "Loading…" )
-UI_SetTextColor( labLoad, COLOR_BLACK )
-UI_SetLabelExFont( labLoad, DEFAULT_FONT, TRUE, COLOR_WHITE)
+UI_SetTextColor( labLoad, COLOR_YELLOW )
+UI_SetLabelExFont( labLoad, DEFAULT_FONT, TRUE, COLOR_BLACK)
 -----------------------------------------------------------------------
 -- 定义连接服务器表单
 -----------------------------------------------------------------------	
 -- 创建连接服务器表单
-frmConnect = UI_CreateForm( "frmConnect", FALSE, 198, 72, 396, 80, FALSE, FALSE )
-UI_LoadFormImage( frmConnect, "texture/ui/SysBotton2.dds", 198, 72, 0, 111, "", 0, 0 )
+frmConnect = UI_CreateForm( "frmConnect", FALSE, 300, 72, 533, 340, FALSE, FALSE )
+UI_LoadFormImage( frmConnect, "texture/ui/ods/loginbox.tga", 300, 72, 0, 270, "", 0, 0 )
 --UI_FormSetHotKey( frmConnect, ALT_KEY, HOTKEY_L ) 
 UI_SetFormStyle( frmConnect, 1 )
 UI_AddFormToTemplete( frmConnect, FORM_SWITCH_SCENE )
 UI_FormSetIsEscClose( frmConnect, FALSE )
 
 --创建连接信息
-labConnect = UI_CreateCompent( frmConnect, LABELEX_TYPE, "labConnect", 52, 13, 70, 24 )
+labConnect = UI_CreateCompent( frmConnect, LABELEX_TYPE, "labConnect", 120, 13, 110, 18 )
 UI_SetCaption( labConnect, "Please wait…" )
-UI_SetTextColor( labConnect, COLOR_BLACK )
-UI_SetLabelExFont( labConnect, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labConnect, COLOR_YELLOW )
+UI_SetLabelExFont( labConnect, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建loading进度
-imgLoading = UI_CreateCompent( frmConnect, IMAGE_FLASH_TYPE, "imgLoading", 135, 8, 20, 51 )
-UI_LoadScaleImage( imgLoading, "texture/ui/SysBotton2.dds", 0, 26, 8, 20, 185, 1.0, 1.0 )
+imgLoading = UI_CreateCompent( frmConnect, IMAGE_FLASH_TYPE, "imgLoading", 260, 10, 20, 46 )
+UI_LoadScaleImage( imgLoading, "texture/ui/ods/loginbox.tga", 0, 260, 10, 0, 350, 1.0, 1.0 )
 
 
 
