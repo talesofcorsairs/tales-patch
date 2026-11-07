@@ -33,3 +33,14 @@ texture/ui/corsairs/SysBotton5.png
 texture/ui/corsairs/SysBotton5.wsd
 texture/ui/corsairs/trade.png
 texture/ui/corsairs/trade.wsd
+scripts/table/iteminfo.bin
+texture/icon/w0324.png
+texture/icon/w0325.png
+texture/icon/w0326.png
+texture/icon/w0327.png
+texture/icon/w0328.png
+texture/icon/w0329.png
+texture/icon/w0330.png
+texture/icon/w0331.png
+texture/icon/w0332.png
+texture/icon/w0333.png
