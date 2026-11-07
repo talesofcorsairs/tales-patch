@@ -1,1 +1,4 @@
 TalesOfCorsairsLauncher.exe
+system/Game.exe
+system/MindPower3D_D8R.dll
+user/system.ini
