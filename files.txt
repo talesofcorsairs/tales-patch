@@ -44,3 +44,4 @@ texture/icon/w0330.png
 texture/icon/w0331.png
 texture/icon/w0332.png
 texture/icon/w0333.png
+scripts/table/Characterinfo.bin
