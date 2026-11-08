@@ -79,3 +79,4 @@ scripts/lua/forms/equip.bin
 scripts/lua/forms/Equip.clu
 texture/ui/corsairs/habilidades.png
 texture/ui/corsairs/habilidades.wsd
+scripts/kop.cfg
