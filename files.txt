@@ -80,3 +80,9 @@ scripts/lua/forms/Equip.clu
 texture/ui/corsairs/habilidades.png
 texture/ui/corsairs/habilidades.wsd
 scripts/kop.cfg
+scripts/lua/forms/mission.bin
+scripts/lua/forms/mission.clu
+texture/ui/corsairs/btnAbandonar.tga
+texture/ui/corsairs/btnAbandonar.wsd
+texture/ui/corsairs/missoes.png
+texture/ui/corsairs/missoes.wsd
