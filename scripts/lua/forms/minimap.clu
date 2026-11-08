@@ -2,15 +2,15 @@
 -- 定义小地图 mini map HUD modified by Ryohll @ Immortal Sea
 -----------------------------------------------------------------------	
 -- Create Template space for Minimap 
-frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 160, 205, 656, 15, TRUE, FALSE )
+frmMinimap = UI_CreateForm( "frmMinimap", FALSE, 160, 232, 656, 15, TRUE, FALSE )
 UI_ShowForm( frmMinimap, TRUE )
 UI_AddFormToTemplete( frmMinimap, FORM_MAIN )
 UI_SetFormStyle( frmMinimap, 9 )
 UI_FormSetIsEscClose( frmMinimap, FALSE )
 
 -- 加载图片
-imgMinimapT = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapT", 160, 205, 0, 0 )
-UI_LoadImage( imgMinimapT, "texture/ui/ods/minimap.tga", NORMAL, 160, 205, 0, 0 )
+imgMinimapT = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapT", 160, 232, 0, 0 )
+UI_LoadImage( imgMinimapT, "texture/ui/corsairs/minimapa.png", NORMAL, 160, 232, 0, 0 )
 
 imgMinimapN = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapN", 145, 134, 7, 28 )
 UI_LoadImage( imgMinimapN, "texture/ui/ods/minimapalpha.tga", NORMAL, 145, 134, 0, 0 )
@@ -20,19 +20,21 @@ UI_SetAlpha( imgMinimapN, 180 )
 imgMinimapRect = UI_CreateCompent( frmMinimap, IMAGE_TYPE, "imgMinimapRect", 130, 130, 15, 30 )
 
 --加载地图名称显示 Map name text
-labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 51, 12, 5, 9 )
+labMapName = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labMapName", 150, 12, 5, 8 )
 UI_SetCaption( labMapName, "了了了了了了了" )
 UI_SetTextColor( labMapName, COLOR_YELLOW )
 UI_SetLabelExFont( labMapName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labMapName, TRUE )
 
 --加载地图坐标显示 by lh此处定义了多个显示坐标的label，程序进行随机使用一个label显示，用于防止简单的外挂，如挂船脚本
 n  = 0
 while 1 do
 	local name = "labMapPos"..n
-	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 79, 12, 18, 189 )
+	labMapPos = UI_CreateCompent( frmMinimap, LABELEX_TYPE, name, 80, 12, 8, 208 )
 	UI_SetCaption( labMapPos, "2200, 2200" )
 	UI_SetTextColor( labMapPos, COLOR_CLOUD )
 	UI_SetLabelExFont( labMapPos, DEFAULT_FONT, TRUE, COLOR_BLACK )
+	UI_SetLabelExAlign( labMapPos, TRUE )
 	
 	if n~=0  then UI_SetIsShow( labMapPos, FALSE ) end
 	
@@ -41,23 +43,27 @@ while 1 do
 end
 
 --创建打开大地图按钮
-btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 39, 15, 48, 164 )
-UI_LoadButtonImage( btnOpen, "texture/ui/ods/minimap.tga", 39, 15, 0, 232, TRUE )
+btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 48, 30, 56, 167 )
+UI_LoadButtonImage( btnOpen, "texture/ui/corsairs/minimapa_botoes.png", 48, 30, 48, 0, FALSE )
 UI_SetHint( btnOpen, "World Map" )
 
 --创建打开了雷达按钮
-btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 39, 15, 8, 164 )
-UI_LoadButtonImage( btnSearch, "texture/ui/ods/minimap.tga", 39, 15, 0, 215, TRUE )
+btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 48, 30, 6, 167 )
+UI_LoadButtonImage( btnSearch, "texture/ui/corsairs/minimapa_botoes.png", 48, 30, 0, 0, FALSE )
 UI_SetHint( btnSearch, "Radar" )
 
 --打开商城button ingame mall
-btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 26, 12, 76, 189 )
-UI_LoadButtonImage( btnOpenStore, "texture/ui/ods/minimap.tga", 26, 12, 67, 249, FALSE )
+btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 46, 22, 108, 203 )
+UI_LoadButtonImage( btnOpenStore, "texture/ui/corsairs/minimapa_botoes.png", 46, 22, 110, 128, FALSE )
 UI_SetHint( btnOpenStore, "In-game Mall" )
 
 --打开组队面版，临时
-btnteam = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnteam", 63, 15, 88, 164 )
-UI_LoadButtonImage( btnteam, "texture/ui/ods/minimap.tga", 63, 15, 0, 249, FALSE )
+btnteam = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnteam", 48, 30, 106, 167 )
+UI_LoadButtonImage( btnteam, "texture/ui/corsairs/minimapa_botoes.png", 48, 30, 96, 0, FALSE )
+UI_SetHint( btnteam, "Find Party" )
+btnSearchCoord = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 100, 22, 6, 203 )
+UI_LoadButtonImage( btnSearchCoord, "texture/ui/corsairs/minimapa_botoes.png", 100, 22, 0, 128, FALSE )
+UI_SetHint( btnSearchCoord, "Click to go to a coordinate (Radar)" )
 
 -----------------------------------------------------------------------
 -- 定义雷达 minimap search
@@ -122,3 +128,58 @@ UI_AddListText( lstMap, "Deep Blue" )
 UI_SetListIsMouseFollow( lstMap, TRUE)
 --UI_ListLoadSelectImage( lstMap, "texture/ui/SystemBotton3.tga", 79, 18, 0, 227  )
 UI_ComboSetTextColor( lstMap, COLOR_WHITE )
+
+-- Tales of Corsairs: controle novo da versao DX9 (chkID), copiado da interface da fonte.
+chkID = UI_CreateCompent( frmSearch, CHECK_TYPE, "chkID", 10, 10, 25, 106 )
+UI_LoadImage( chkID, "texture/ui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
+UI_LoadImage( chkID, "texture/ui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
+UI_SetHint( chkID, "Auto-trace or not?" )----------------
+UI_SetIsShow( chkID, FALSE )
+-- Tales of Corsairs: janela nova da versao DX9 (contem btnOpenTempBag), copiada da interface da fonte.
+DailyBuffFrm = UI_CreateForm( "DailyBuffFrm", FALSE, 591, 467, 0, 0, TRUE, FALSE )
+UI_ShowForm( DailyBuffFrm, FALSE )
+UI_AddFormToTemplete( DailyBuffFrm, FORM_MAIN )
+UI_FormSetIsEscClose( DailyBuffFrm, FALSE )
+--UI_FormSetHotKey( DailyBuffFrm, ALT_KEY, HOTKEY_V )
+UI_SetIsDrag( DailyBuffFrm, TRUE )
+
+DailyBuffBK = UI_CreateCompent( DailyBuffFrm, IMAGE_TYPE, "DailyBuffBK", 591, 467, 0, 0 )
+UI_LoadImage( DailyBuffBK, "texture/ui/new/DailyBuff/dailybuff.png", NORMAL, 591, 467, 0, 0 )
+
+btnClose = UI_CreateCompent( DailyBuffFrm, BUTTON_TYPE, "btnClose", 14, 14, 582, 4 )
+UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+--load image of curren buff placeholder
+DBufImageType = UI_CreateCompent( DailyBuffFrm, IMAGE_TYPE, "DBufImageType", 256, 256, 180, 281 )
+UI_LoadImage( DBufImageType, "texture/ui/new/DailyBuff/Combining_gems.png", NORMAL, 736, 626, 0, 0 )
+--load first label 
+DailyBufInfo = UI_CreateCompent( DailyBuffFrm, LABELEX_TYPE, "DailyBufInfo", 51, 12, 81, 88 )
+UI_SetCaption( DailyBufInfo, "Info About current daily buff " )
+UI_SetTextColor( DailyBufInfo, COLOR_BLACK )
+UI_SetLabelExFont( DailyBufInfo, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+-----------------------------------------------------------------------
+--打开临时背包button
+--btnOpenTempBag = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenTempBag", 76, 19, 3, 158 )
+--UI_LoadButtonImage( btnOpenTempBag, "texture/ui/storebutton.tga", 76, 19, 0, 0, FALSE )
+--UI_SetHint( btnSearch, "Open temporary inventory" )
+
+--打开组队面版，临时
+--	btnteam = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnteam", 48, 19, 87, 178 )
+--	UI_LoadButtonImage( btnteam, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+
+-----------------------------------------------------------------------
+-- 定义雷达
+-----------------------------------------------------------------------	
+-- 创建雷达表单
+-- Tales of Corsairs: controle novo da versao DX9 (labClock), copiado da interface da fonte.
+labClock = UI_CreateCompent( frmMinimap, LABELEX_TYPE, "labClock", 79, 12, 2, 155+15 )
+UI_SetCaption( labClock, "00:00:00" )
+UI_SetTextColor( labClock, COLOR_WHITE)
+UI_SetLabelExFont( labClock, FONT20, TRUE, COLOR_BLACK )
+UI_SetIsShow( labClock, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (btnPosSearch), copiado da interface da fonte.
+btnPosSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnPosSearch", 20, 20, 75, 112 )
+UI_LoadButtonImage( btnPosSearch, "texture/ui/corsairs/botton3.png", 20, 20, 74, 85, FALSE )
+UI_SetHint( btnPosSearch, "Search NPC & Monsters" )
+UI_SetIsShow( btnPosSearch, FALSE )

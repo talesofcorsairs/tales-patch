@@ -86,3 +86,9 @@ texture/ui/corsairs/btnAbandonar.tga
 texture/ui/corsairs/btnAbandonar.wsd
 texture/ui/corsairs/missoes.png
 texture/ui/corsairs/missoes.wsd
+scripts/lua/forms/minimap.bin
+scripts/lua/forms/minimap.clu
+texture/ui/corsairs/minimapa.png
+texture/ui/corsairs/minimapa.wsd
+texture/ui/corsairs/minimapa_botoes.png
+texture/ui/corsairs/minimapa_botoes.wsd
