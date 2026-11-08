@@ -92,3 +92,13 @@ texture/ui/corsairs/minimapa.png
 texture/ui/corsairs/minimapa.wsd
 texture/ui/corsairs/minimapa_botoes.png
 texture/ui/corsairs/minimapa_botoes.wsd
+scripts/lua/forms/main.bin
+scripts/lua/forms/main.clu
+texture/ui/corsairs/grupo.png
+texture/ui/corsairs/grupo.wsd
+texture/ui/corsairs/btnGrupoEntrar.png
+texture/ui/corsairs/btnGrupoEntrar.wsd
+texture/ui/corsairs/btnGrupoSair.png
+texture/ui/corsairs/btnGrupoSair.wsd
+texture/ui/corsairs/btnGrupoConvidar.png
+texture/ui/corsairs/btnGrupoConvidar.wsd
