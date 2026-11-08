@@ -1,68 +1,68 @@
 -----------------------------------------------------------------------
 -- 定义道具表单 Inventory window
 -----------------------------------------------------------------------
-frmItem = UI_CreateForm( "frmItem", FALSE, 240, 536, 244, 110, TRUE, FALSE )
-UI_FormSetHotKey( frmItem, ALT_KEY, HOTKEY_E ) --'E'
---UI_LoadFormImage( frmItem, "texture/ui/Item.dds", 233, 358, 0, 0, "", 0, 0 )
-UI_ShowForm( frmItem, FALSE )
-UI_AddFormToTemplete( frmItem, FORM_MAIN )
-UI_SetIsDrag( frmItem, TRUE )
---UI_SetFormStyle( frmItem, 0 )
---UI_SetAlpha( frmItem, 200 )
+frmInv = UI_CreateForm( "frmInv", FALSE, 240, 536, 244, 110, TRUE, FALSE )
+UI_FormSetHotKey( frmInv, ALT_KEY, HOTKEY_E ) --'E'
+--UI_LoadFormImage( frmInv, "texture/ui/Item.dds", 233, 358, 0, 0, "", 0, 0 )
+UI_ShowForm( frmInv, FALSE )
+UI_AddFormToTemplete( frmInv, FORM_MAIN )
+UI_SetIsDrag( frmInv, TRUE )
+--UI_SetFormStyle( frmInv, 0 )
+--UI_SetAlpha( frmInv, 200 )
 
 -- 加载背景图片
-imgItemTop = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemTop", 240, 536, 0, 0 )
+imgItemTop = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemTop", 240, 536, 0, 0 )
 UI_LoadImage( imgItemTop, "texture/ui/ods/inventory.tga", NORMAL, 240, 536, 0, 0 )
---imgItemDown = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemDown", 198, 138, 0, 256 )
+--imgItemDown = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemDown", 198, 138, 0, 256 )
 --UI_LoadImage( imgItemDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnClose", 14, 14, 221, 3 )
+btnClose = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnClose", 14, 14, 221, 3 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -- 加载界面title
-labTitle = UI_CreateCompent( frmItem, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
+labTitle = UI_CreateCompent( frmInv, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
 UI_SetCaption( labTitle, "Inventory")
 UI_SetTextColor( labTitle, COLOR_YELLOW )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 -- 加载道具背景图片 equiped items
---imgItemBackTop = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackTop", 148, 74, 25, 25 )
+--imgItemBackTop = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackTop", 148, 74, 25, 25 )
 --UI_LoadImage( imgItemBackTop, "texture/ui/Item2.tga", NORMAL, 148, 74, 0, 182 )
 
---imgItemBackDownL = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackDownL", 74, 74, 25, 99 )
+--imgItemBackDownL = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackDownL", 74, 74, 25, 99 )
 --UI_LoadImage( imgItemBackDownL, "texture/ui/Item2.tga", NORMAL, 74, 74, 177, 154 )
 
---imgItemBackDownR = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackDownR", 74, 74, 99, 99 )
+--imgItemBackDownR = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackDownR", 74, 74, 99, 99 )
 --UI_LoadImage( imgItemBackDownR, "texture/ui/Item2.tga", NORMAL, 74, 74, 177, 76 )
 
---imgItemBackLT = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackLT", 36, 36, 17, 24 )
+--imgItemBackLT = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackLT", 36, 36, 17, 24 )
 --UI_LoadImage( imgItemBackLT, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 0)
 
---imgItemBackLD = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackLD", 36, 36, 17, 138 )
+--imgItemBackLD = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackLD", 36, 36, 17, 138 )
 --UI_LoadImage( imgItemBackLD, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 36)
 
---imgItemBackRT = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackRT", 36, 36, 145, 24 )
+--imgItemBackRT = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackRT", 36, 36, 145, 24 )
 --UI_LoadImage( imgItemBackRT, "texture/ui/Item2.tga", NORMAL, 36, 36, 213, 0)
 
---imgItemBackRD = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBackRD", 36, 36, 145, 138 )
+--imgItemBackRD = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackRD", 36, 36, 145, 138 )
 --UI_LoadImage( imgItemBackRD, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 36)
 
 -- 加载表格图片 invent slot space bg 
---imgItemBack = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemBack", 174, 176, 7, 178 )
+--imgItemBack = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBack", 174, 176, 7, 178 )
 --UI_LoadImage( imgItemBack, "texture/ui/Item2.tga", NORMAL, 174, 176, 0, 0 )
 
 -- 加载道具前4格的图片 - wing fairy and ration grids
 
 --创建道具物品表格
-grdItem = UI_CreateCompent( frmItem, GOODS_GRID_TYPE, "grdItem", 216, 284, 19, 203 ) 
+grdItem = UI_CreateCompent( frmInv, GOODS_GRID_TYPE, "grdItem", 216, 284, 19, 203 ) 
 UI_SetGridSpace( grdItem, 2, 3 )
 UI_SetGridContent( grdItem, 8, 6 )
 UI_SetGridUnitSize( grdItem, 32, 32 )
 UI_SetMargin( grdItem, 0, 0, 0, 0 )
 UI_GoodGridLoadUnitImage( grdItem, "texture/ui/ods/inventory.tga", 32, 32, 300, 0 )
-imgItem4 = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItem4", 100, 32, 19, 203 )
+imgItem4 = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItem4", 100, 32, 19, 203 )
 UI_LoadImage( imgItem4, "texture/ui/ods/inventory.tga", NORMAL, 100, 32, 300, 40 )
 UI_SetIsEnabled( imgItem4, FALSE )
 
@@ -87,43 +87,43 @@ UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
 
 -- 加载金钱图片 Dollar sign gold
---imgItemM = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemM", 20, 28, 15, 357 )
+--imgItemM = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemM", 20, 28, 15, 357 )
 --UI_LoadImage( imgItemM, "texture/ui/PublicC.tga", NORMAL, 20, 28, 228, 110 )
 
 --创建金币栏 Gold text area bg
---imgItemgold = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgItemgold", 96, 18, 42, 365 )
+--imgItemgold = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemgold", 96, 18, 42, 365 )
 --UI_LoadImage( imgItemgold, "texture/ui/PublicC.tga", NORMAL, 96, 18, 0, 235 )
 
-labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 58, 506 )
+labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 58, 506 )
 --UI_SetCaption( labItemgoldnumber, "7777777" )
 UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
 UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, 4289901234 )
 
 --创建透明控制按钮
-btnLock = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnLock", 13, 18, 168, 502 )
+btnLock = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLock", 13, 18, 168, 502 )
 --创建密码锁定图片(锁定)
-imgLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgLock", 13, 18, 168, 502 )
+imgLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgLock", 13, 18, 168, 502 )
 UI_LoadImage( imgLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 0, FALSE )
 --创建密码锁定图片(未锁定)
-imgUnLock = UI_CreateCompent( frmItem, IMAGE_TYPE, "imgUnLock", 13, 18, 168, 502 )
+imgUnLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgUnLock", 13, 18, 168, 502 )
 UI_LoadImage( imgUnLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 18, FALSE )
 
 --创建丢弃按钮 trash can
-btnbrush = UI_CreateCompent( frmItem, BUTTON_TYPE, "btnbrush", 16, 19, 194, 500 )
+btnbrush = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnbrush", 16, 19, 194, 500 )
 --UI_LoadButtonImage( btnbrush, "texture/ui/SystemBotton3.tga", 16, 19, 151, 226, TRUE ) 
-cmdLost = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLost", 31, 31, 192, 494 )	-- 鞋子
+cmdLost = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLost", 31, 31, 192, 494 )	-- 鞋子
 UI_SetTag( cmdLost, 999 )
 
 -- 装备
-cmdArmet = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 104, 30 )	-- 头盔
-cmdBody = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 104, 78 )	-- 身体
-cmdNecklace = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 52, 30 )	-- 项链
-cmdRightHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 52, 78 )	-- 右手
-cmdLeftHand = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 156, 78 )	-- 左手
-cmdGlove = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 156, 30 )	-- 手套
-cmdCirclet1 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 52, 126 )	-- 手饰1
-cmdCirclet2 = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 156, 126 )	-- 手饰2
-cmdShoes = UI_CreateCompent( frmItem, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 104, 126 )	-- 鞋子
+cmdArmet = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 104, 30 )	-- 头盔
+cmdBody = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 104, 78 )	-- 身体
+cmdNecklace = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 52, 30 )	-- 项链
+cmdRightHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 52, 78 )	-- 右手
+cmdLeftHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 156, 78 )	-- 左手
+cmdGlove = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 156, 30 )	-- 手套
+cmdCirclet1 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 52, 126 )	-- 手饰1
+cmdCirclet2 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 156, 126 )	-- 手饰2
+cmdShoes = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 104, 126 )	-- 鞋子
 	
 -- 设置Tag值供程序使用
 UI_SetTag( cmdArmet, enumEQUIP_HEAD )
@@ -136,7 +136,7 @@ UI_SetTag( cmdCirclet1, enumEQUIP_HAND1 )
 UI_SetTag( cmdCirclet2, enumEQUIP_HAND2 )
 UI_SetTag( cmdShoes, enumEQUIP_SHOES )
 
-labItemgoldnumber = UI_CreateCompent( frmItem, LABELEX_TYPE, "labItemgoldnumber", 103, 10, 58, 506 )
+labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 103, 10, 58, 506 )
 --UI_SetCaption( labItemgoldnumber, "0" )
 UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
 UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, COLOR_WHITE )
@@ -154,7 +154,7 @@ UI_SetIsDrag( frmSkill, TRUE )
 
 -- 加载背景图片
 imgSkillBTop = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBTop", 198, 394, 0, 0 )
-UI_LoadImage( imgSkillBTop, "texture/ui/ods/skill.tga", NORMAL, 198, 394, 0, 0 )
+UI_LoadImage( imgSkillBTop, "texture/ui/corsairs/habilidades.png", NORMAL, 198, 394, 0, 0 )
 --imgSkillBDown = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBDown", 198, 138, 0, 256 )
 --UI_LoadImage( imgSkillBDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
 
@@ -324,3 +324,271 @@ UI_LoadImage( ttlSail, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_ACTIVE, 49,
 UI_SetPos( ttlSail, 110, -54 )
 UI_SetSize( ttlSail, 49, 35 )
 UI_AddCompent( skillid, lstSkillS )
+
+-- Tales of Corsairs: valores da fonte usados pelos controles copiados.
+impgoldplacementX = 200
+impgoldplacementY = 342
+frmEquipX = 196
+frmEquipY = 385
+-- Tales of Corsairs: funcao auxiliar da fonte (addEquip), usada pelas janelas copiadas.
+function addEquip(x,y,name,form,skillid)
+	_G["img"..name] = UI_CreateCompent( form, IMAGE_TYPE, "img"..name, 36,36, x-2 ,y -2 )
+	UI_LoadImage( _G["img"..name], "texture/ui/corsairs/eqform/"..name..".png", NORMAL, 36,36, 0, 0 )
+	_G[name] = UI_CreateCompent( form, COMMAND_ONE_TYPE, name, 32, 32, x ,y )
+	if skillid then
+		UI_AddCompent( skillid, _G["img"..name] )
+		UI_AddCompent( skillid, _G[name] )
+	end
+end
+-- Tales of Corsairs: funcao auxiliar da fonte (addEquipGroup), usada pelas janelas copiadas.
+function addEquipGroup(X,Y,Xoff,Yoff,names,form,skillid)
+	for i,v in pairs(names) do
+		addEquip(X + (i-1)* Xoff ,Y + (i-1)* Yoff,v,form,skillid)
+	end
+end
+-- Tales of Corsairs: janela nova da versao DX9 (contem btnLeft3d), copiada da interface da fonte.
+frmItemSpy = UI_CreateForm( "frmItemSpy", FALSE, frmEquipX,frmEquipY, 198+242, 160, TRUE, FALSE )
+--UI_FormSetHotKey( frmItemSpy, ALT_KEY, HOTKEY_Z ) --'F'
+UI_ShowForm( frmItemSpy, FALSE )
+UI_AddFormToTemplete( frmItemSpy, FORM_MAIN )
+UI_SetIsDrag( frmItemSpy, TRUE )
+
+imgItemTop = UI_CreateCompent( frmItemSpy, IMAGE_TYPE, "imgItemTop", frmEquipX,frmEquipY, 0, 0 )
+UI_LoadImage( imgItemTop, "texture/ui/corsairs/eqform/eqform.png", NORMAL, frmEquipX,frmEquipY, 0, 0 )
+
+btnClose = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnClose", 14, 14, 173, 0 )
+UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+
+-- Form Label
+labTitle = UI_CreateCompent( frmItemSpy, LABELEX_TYPE, "labTitle", 400, 150, 10, 1 )
+UI_SetCaption( labTitle, "Equip")
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+--backdrop = UI_CreateCompent( frmItemSpy, IMAGE_TYPE, "backdrop", 108,200, 44,16 )
+--UI_LoadImage( backdrop, "texture/ui/corsairs/eqform2.png",NORMAL, 108,200, 44, 16, TRUE )
+
+
+--left col
+addEquipGroup(10,84,0,49,{"cmdArmet","cmdWing","cmdNecklace","cmdRightHand","cmdJewelry4","cmdCloak"},frmItemSpy)
+--2nd col
+addEquipGroup(58,231,0,49,{"cmdCirclet1","cmdJewelry1","cmdRearPet"},frmItemSpy)
+--3rd col
+addEquipGroup(106,231,0,49,{"cmdCirclet2","cmdJewelry2","cmdPet"},frmItemSpy)
+--right col
+addEquipGroup(154,84,0,49,{"cmdBody","cmdGlove","cmdShoes","cmdLeftHand","cmdJewelry3","cmdMount"},frmItemSpy)
+
+
+UI_SetHint( cmdArmet, "Helm" )
+UI_SetHint( cmdBody, "Armor" )
+UI_SetHint( cmdNecklace, "Necklace" )
+UI_SetHint( cmdRightHand, "Weapon" )
+UI_SetHint( cmdLeftHand, "Shield" )
+UI_SetHint( cmdGlove, "Glove" )
+UI_SetHint( cmdCirclet1, "Ring 1" )
+UI_SetHint( cmdCirclet2, "Ring 2" )
+UI_SetHint( cmdShoes, "Shoes" )
+UI_SetHint( cmdJewelry1, "Bracelet 1" )
+UI_SetHint( cmdJewelry2, "Bracelet 2" )
+UI_SetHint( cmdJewelry3, "Belt" )
+UI_SetHint( cmdJewelry4, "Handguard" )
+UI_SetHint( cmdWing, "Wing" )
+UI_SetHint( cmdMount, "Mount" )
+UI_SetHint( cmdCloak, "Cloak" )
+UI_SetHint( cmdRearPet, "Rear Fairy" )
+UI_SetHint( cmdPet, "Fairy" )
+
+
+-- PLAYER MODEL
+ui3dEqSpyCha = UI_CreateCompent( frmItemSpy, UI3D_COMPENT, "ui3dEqSpyCha", 0, 0, 96, 210 )
+
+btnLeft3d = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnLeft3d", 32, 38, 11,182-49-49-49 )
+-- UI_LoadButtonImage( btnLeft3d, "texture/ui/select4.tga", 32, 38, 0, 38, TRUE )
+UI_LoadButtonImage( btnLeft3d, "texture/ui/corsairs/coButtons.png", 32, 32, 217, 87, TRUE )
+
+btnRight3d = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnRight3d", 32, 38, 153,182-49-49-49 )
+-- UI_LoadButtonImage( btnRight3d, "texture/ui/select4.tga", 32, 38, 0, 0, TRUE )
+UI_LoadButtonImage( btnRight3d, "texture/ui/corsairs/coButtons.png",  32, 32, 217, 119, TRUE )
+
+---------------------------------------
+--  Npc/ Monster Helper from Top II  --
+----------------------------------------
+--  Lee 锟斤拷NPC 锟斤拷锟斤拷锟窖拷锟斤拷  20080715  --
+----------------------------------------
+-- Tales of Corsairs: controle novo da versao DX9 (ui3dCha), copiado da interface da fonte.
+ui3dCha = UI_CreateCompent( frmInv, UI3D_COMPENT, "ui3dCha", 0, 0, 96, 180 )
+UI_AddCompent( skillid, ui3dCha )
+UI_SetIsShow( ui3dCha, FALSE )
+-- Tales of Corsairs: janela nova da versao DX9 (contem chkID), copiada da interface da fonte.
+frmNpcShow= UI_CreateForm( "frmNpcShow", FALSE, 420, 544, 0, 0, FALSE, FALSE )
+UI_ShowForm( frmNpcShow, TRUE )
+UI_AddFormToTemplete( frmNpcShow, FORM_MAIN )
+UI_SetIsDrag( frmNpcShow, TRUE )
+UI_SetFormStyleEx( frmNpcShow, 1 )
+
+UI_FormSetHotKey( frmNpcShow, ALT_KEY, HOTKEY_Z )
+imgSkilld1 = UI_CreateCompent( frmNpcShow, IMAGE_TYPE, "imgSkilld1", 416,544, 0, 0 )
+UI_LoadImage( imgSkilld1, "texture/ui/corsairs/npclist.png", NORMAL, 420, 544, 0, 0 )
+
+labTitle = UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labTitle", 400, 150, 150, 5 )
+UI_SetCaption( labTitle, "Npc and Monster Index")
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+btnClose = UI_CreateCompent( frmNpcShow, BUTTON_TYPE, "btnClose", 14, 14, 400, 5 )
+UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+
+chkID = UI_CreateCompent( frmNpcShow, CHECK_TYPE, "chkID", 10, 10, 17, 400 )
+UI_LoadImage( chkID, "texture/ui/QQ2.tga", UNCHECKED, 10, 10, 40,231 )
+UI_LoadImage( chkID, "texture/ui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
+UI_SetHint( chkID, "Walks automatically towards the target" )
+
+labID= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labID", 12, 12, 32, 400 )
+UI_SetCaption( labID, "Use auto-pathing" )
+UI_SetTextColor( labID, COLOR_BLACK )
+UI_SetLabelExFont( labID, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+labNPC= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labNPC", 128, 11,33,5 )
+UI_SetCaption( labNPC, "Name" )
+UI_SetTextColor( labNPC, COLOR_BLACK )
+UI_SetLabelExFont( labNPC, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+labNpcPos= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labNpcPos", 219, 11, 210, 5)
+UI_SetCaption( labNpcPos, "Region" )
+UI_SetTextColor( labNpcPos, COLOR_BLACK )
+UI_SetLabelExFont( labNpcPos, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+labPOS= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labPOS", 219, 11, 300,5)
+UI_SetCaption( labPOS, "Coordinates" )
+UI_SetTextColor( labPOS, COLOR_BLACK )
+UI_SetLabelExFont( labPOS, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+lstNpcList = UI_CreateCompent( frmNpcShow, LIST_TYPE, "lstNpcList", 392, 297, 10, 17 )
+lstHelpButton = UI_GetList(lstNpcList)
+UI_SetListRowHeight(lstNpcList,15)
+UI_SetListIsMouseFollow( lstNpcList, TRUE )
+
+
+scrollid = UI_GetScroll( lstNpcList )
+UI_SetSize( scrollid, 11, 1 )
+UI_LoadImage( scrollid, "texture/ui/forsaken/item1.tga", COMPENT_BACK, 11, 1, 232, 190 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_UP )
+UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, FALSE )
+UI_SetSize( id, 11, 9 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+UI_LoadImage( id, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
+UI_SetSize( id, 11, 43 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
+UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, FALSE )
+UI_SetSize( id, 8, 7 )
+
+------------------------------------------------------------
+labMonster= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labMonster", 61, 11, 33,5 )
+UI_SetCaption( labMonster, "Name" )
+UI_SetTextColor( labMonster, COLOR_BLACK )
+UI_SetLabelExFont( labMonster, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+labMonsterLV= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labMonsterLV", 61, 11,210,5 )
+UI_SetCaption( labMonsterLV, "Level" )
+UI_SetTextColor( labMonsterLV, COLOR_BLACK )
+UI_SetLabelExFont( labMonsterLV, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+labMPOS= UI_CreateCompent( frmNpcShow, LABELEX_TYPE, "labMPOS",216, 11, 300,5 )
+UI_SetCaption( labMPOS, "Coordinates" )
+UI_SetTextColor( labMPOS, COLOR_BLACK )
+UI_SetLabelExFont( labMPOS, DEFAULT_FONT, FALSE, COLOR_WHITE )
+
+lstMonsterList = UI_CreateCompent( frmNpcShow, LIST_TYPE, "lstMonsterList", 392, 297, 10, 17 )
+lstHelpButton = UI_GetList(lstMonsterList)
+UI_SetListRowHeight(lstMonsterList,15)
+UI_SetListIsMouseFollow( lstMonsterList, TRUE )
+
+scrollid = UI_GetScroll( lstMonsterList )
+UI_SetSize( scrollid, 11, 1 )
+UI_LoadImage( scrollid, "texture/ui/forsaken/item1.tga", COMPENT_BACK, 11, 1, 232, 190 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_UP )
+UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, FALSE )
+UI_SetSize( id, 11, 9 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
+UI_LoadImage( id, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
+UI_SetSize( id, 11, 43 )
+
+id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
+UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, FALSE )
+UI_SetSize( id, 11, 9 )
+
+pgeSkill = UI_CreateCompent( frmNpcShow, PAGE_TYPE, "pgeSkill", 211, 233, 9, 82 )
+UI_SetPageButton( pgeSkill, PAGE_BUTTON_CUSTOM, 48, 16 )
+
+skillid = UI_CreatePageItem( pgeSkill )
+ttlBattle = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/npclist.tga", PAGE_ITEM_TITLE_NORMAL, 67, 34, 428, 136 )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/npclist.tga", PAGE_ITEM_TITLE_ACTIVE, 67, 34, 428, 96 )
+UI_SetPos( ttlBattle, 20, -32 )
+UI_SetSize( ttlBattle, 67,34 )
+UI_AddCompent( skillid, lstNpcList )
+UI_AddCompent( skillid, labNPC )
+UI_AddCompent( skillid, labNpcPos )
+UI_AddCompent( skillid, labPOS )
+
+skillid = UI_CreatePageItem( pgeSkill )
+ttlBattle = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/npclist.tga", PAGE_ITEM_TITLE_NORMAL, 67, 34, 428, 45 )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/npclist.tga", PAGE_ITEM_TITLE_ACTIVE, 67, 34, 428, 5 )
+UI_SetPos( ttlBattle, 85, -32 )
+UI_SetSize( ttlBattle, 67, 34 )
+UI_AddCompent( skillid, lstMonsterList )
+UI_AddCompent( skillid, labMonster )
+UI_AddCompent( skillid, labMonsterLV )
+UI_AddCompent( skillid, labMPOS )
+
+-- Tales of Corsairs: controle novo da versao DX9 (btnChaLeft3d), copiado da interface da fonte.
+btnChaLeft3d = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnChaLeft3d", 32, 38, 55,335 )
+UI_LoadButtonImage( btnChaLeft3d, "texture/ui/corsairs/coButtons.png", 32, 32, 217, 87, TRUE )
+UI_AddCompent( skillid, btnChaLeft3d )
+UI_SetIsShow( btnChaLeft3d, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (btnChaRight3d), copiado da interface da fonte.
+btnChaRight3d = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnChaRight3d", 32, 38, 109,335 )
+UI_LoadButtonImage( btnChaRight3d, "texture/ui/corsairs/coButtons.png",  32, 32, 217, 119, TRUE )
+UI_AddCompent( skillid, btnChaRight3d )
+UI_SetIsShow( btnChaRight3d, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (btnOpenTempBag), copiado da interface da fonte.
+btnOpenTempBag = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnOpenTempBag", 37, 22, 394, 20 )
+UI_LoadButtonImage( btnOpenTempBag, "texture/ui/new6.tga", 37, 22, 0, 220,TRUE )
+UI_SetHint( btnOpenTempBag , "Temporary Bag" )
+UI_SetIsShow( btnOpenTempBag, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (inventoryItemRightClick), copiado da interface da fonte.
+inventoryItemRightClick = UI_CreateCompent( frmInv, MENU_TYPE, "inventoryItemRightClick", 90, 97, 240, 468 )
+UI_MenuLoadImage( inventoryItemRightClick, TRUE, FALSE, "texture/ui/right.tga", 5, 5, 10, 10, "texture/ui/right.tga", 5, 5 )
+UI_SetMargin( inventoryItemRightClick, 10, 5, 5, 5 )
+UI_MenuLoadSelect( inventoryItemRightClick, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227  )
+UI_MenuAddText(inventoryItemRightClick, "Lock Item")
+UI_MenuAddText(inventoryItemRightClick, "Unlock Item")
+UI_MenuAddText(inventoryItemRightClick, "Throw Item")
+UI_MenuAddText(inventoryItemRightClick, "Delete Item")
+UI_MenuAddText(inventoryItemRightClick, "Sell Item")
+UI_SetIsShow( inventoryItemRightClick, FALSE )
+-- Tales of Corsairs: janela nova da versao DX9 (stateDrags), copiada da interface da fonte.
+stateDrags = UI_CreateForm( "stateDrags", FALSE, 250, 120, 0, 160, TRUE, FALSE )	--198, 394
+UI_ShowForm( stateDrags, FALSE )
+UI_AddFormToTemplete( stateDrags, 1 )
+UI_SetIsDrag( stateDrags, TRUE )
+UI_FormSetIsEscClose( stateDrags, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (labItemIMPnumber), copiado da interface da fonte.
+labItemIMPnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemIMPnumber", 91, 8, impgoldplacementX+24, impgoldplacementY+34 )
+UI_SetTextColor( labItemIMPnumber, COLOR_BLACK )
+UI_SetLabelExFont( labItemIMPnumber, DEFAULT_FONT, TRUE, 4289901234 )
+UI_SetIsShow( labItemIMPnumber, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (pgePublic), copiado da interface da fonte.
+pgePublic = UI_CreateCompent( frmInv, PAGE_TYPE, "pgePublic", 192, 325, 8, 16 )
+UI_SetPageButton( pgePublic, PAGE_BUTTON_CUSTOM, 48, 16 )
+skillid = UI_CreatePageItem( pgePublic )
+skillid = UI_CreatePageItem( pgePublic )
+UI_SetIsShow( pgePublic, FALSE )

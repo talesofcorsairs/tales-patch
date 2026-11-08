@@ -75,3 +75,7 @@ texture/ui/corsairs/btnListaSair.png
 texture/ui/corsairs/btnListaSair.wsd
 texture/ui/corsairs/lista_servidor.png
 texture/ui/corsairs/lista_servidor.wsd
+scripts/lua/forms/equip.bin
+scripts/lua/forms/Equip.clu
+texture/ui/corsairs/habilidades.png
+texture/ui/corsairs/habilidades.wsd
