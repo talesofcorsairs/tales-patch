@@ -258,11 +258,11 @@ UI_LoadImage( chkID, "texture/ui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
 UI_SetHint( chkID, "Remember ID" )
 
 --加载登陆，取消按钮
-btnYes = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnYes", 41, 19, 190, 114 )
-UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
+btnYes = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnYes", 72, 24, 134, 112 )
+UI_LoadButtonImage( btnYes, "texture/ui/corsairs/btnLoginConfirm.tga", 72, 24, 0, 0, FALSE )
 
-btnNo = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnNo", 41, 19, 240, 114 )
-UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+btnNo = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnNo", 72, 24, 212, 112 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/btnLoginCancel.tga", 72, 24, 0, 0, FALSE )
 
 labYes = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labYes", 42, 10, 107, 155 )
 UI_SetCaption( labYes, "" )
@@ -287,8 +287,8 @@ UI_SetEditMaxNum( edtPassword, 20 )
 UI_SetEditMaxNumVisible( edtPassword, 20 )
 
 --加载软件盘开关按钮
-btnKeyboard = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnKeyboard", 57, 17, 24, 115 )
-UI_LoadButtonImage( btnKeyboard, "texture/ui/Keyboard4.tga", 57, 17, 197, 85, FALSE )
+btnKeyboard = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnKeyboard", 80, 24, 16, 112 )
+UI_LoadButtonImage( btnKeyboard, "texture/ui/corsairs/btnLoginTeclado.tga", 80, 24, 0, 0, FALSE )
 
 -----------------------------------------------------------------------
 -- 定义健康通告
@@ -341,13 +341,13 @@ UI_SetImageAlpha( imgKeyboard2, 255 )
 -- 加载界面title
 labTitle1 = UI_CreateCompent( frmKeyboard, LABELEX_TYPE, "labTitle1", 24, 10, 112, 4 )
 UI_SetCaption( labTitle1, "For the safety of your account" )
-UI_SetTextColor( labTitle1, COLOR_BLACK )
-UI_SetLabelExFont( labTitle1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle1, 4293976766 )
+UI_SetLabelExFont( labTitle1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 labTitle2 = UI_CreateCompent( frmKeyboard, LABELEX_TYPE, "labTitle2", 24, 10, 36, 16 )
 UI_SetCaption( labTitle2, "please use the soft keyboard to input your password" )
-UI_SetTextColor( labTitle2, COLOR_BLACK )
-UI_SetLabelExFont( labTitle2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle2, 4293976766 )
+UI_SetLabelExFont( labTitle2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载数值按钮
 btnNum1 = UI_CreateCompent( frmKeyboard, BUTTON_TYPE, "btnNum1", 27, 17, 28, 50 )
@@ -959,3 +959,108 @@ UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
 
 btnClear = UI_CreateCompent( frmChaNameAlter, BUTTON_TYPE, "btnClear", 41, 19, 80, 120 )
 UI_LoadButtonImage( btnClear, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+
+-- Tales of Corsairs: janela nova da versao DX9 (frmModel), copiada da interface da fonte.
+frmModel = UI_CreateForm( "frmModel", FALSE, 280, 450, 0, 0, TRUE, FALSE )
+UI_ShowForm( frmModel, FALSE )
+UI_AddFormToTemplete( frmModel, FORM_LOGIN )
+
+cardBack = UI_CreateCompent( frmModel, IMAGE_TYPE, "cardBack", 280, 450, 0, 0 )
+UI_LoadImage( cardBack, "texture/ui/corsairs/card.png", NORMAL, 280, 450, 22,120 )
+
+iconBack = UI_CreateCompent( frmModel, IMAGE_TYPE, "iconBack", 130, 130, 0, 0 )
+UI_LoadImage( iconBack, "texture/ui/corsairs/discord.png", NORMAL, 128, 128, 0,0 )
+
+
+ui3dCha = UI_CreateCompent( frmModel, UI3D_COMPENT, "ui3dCha", 280, 450, 0, 40 )
+ui3dIcon = UI_CreateCompent( frmModel, UI3D_COMPENT, "ui3dIcon", 128, 128, 0, 0 )
+-- Tales of Corsairs: janela nova da versao DX9 (contem edtRegID), copiada da interface da fonte.
+frmRegister = UI_CreateForm( "frmRegister", FALSE, 268, 170, 310, 160, FALSE, FALSE )
+UI_AddFormToTemplete( frmRegister, FORM_LOGIN )
+UI_SetFormStyle( frmRegister, 2 )
+UI_FormSetIsEscClose( frmRegister, FALSE )
+
+imgAccout = UI_CreateCompent( frmRegister, IMAGE_TYPE, "imgAccout", 268, 170, 0, 0 )
+UI_LoadImage( imgAccout, "texture/ui/corsairs/register.png", NORMAL, 268, 170, 0, 0 )
+UI_SetImageAlpha(imgAccout,235)
+
+labTitle = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
+UI_SetCaption( labTitle, "Account Registration")
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labID = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labID", 23, 11, 18, 50 )
+UI_SetCaption( labID, "Account" )
+UI_SetTextColor( labID, COLOR_BLACK )
+UI_SetLabelExFont( labID, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labPass = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labPass", 23, 11, 18, 74 )
+UI_SetCaption( labPass, "Password" )
+UI_SetTextColor( labPass, COLOR_BLACK )
+UI_SetLabelExFont( labPass, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labPass2 = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labPass2", 23, 11, 18, 98 )
+UI_SetCaption( labPass2, "Re-Password" )
+UI_SetTextColor( labPass2, COLOR_BLACK )
+UI_SetLabelExFont( labPass2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labEmail = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labEmail", 23, 11, 18, 122 )
+UI_SetCaption( labEmail, "Email" )
+UI_SetTextColor( labEmail, COLOR_BLACK )
+UI_SetLabelExFont( labEmail, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+-- IMAGES FOR FIELD
+-- imgID = UI_CreateCompent( frmRegister, IMAGE_TYPE, "imgID", 87, 18, 70, 28 )
+-- UI_LoadImage( imgID, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+
+-- imgPass = UI_CreateCompent( frmRegister, IMAGE_TYPE, "imgPass", 87, 18, 70, 50 )
+-- UI_LoadImage( imgPass, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+
+-- imgPass2 = UI_CreateCompent( frmRegister, IMAGE_TYPE, "imgPass2", 87, 18, 70, 72 )
+-- UI_LoadImage( imgPass2, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+
+-- imgEmail = UI_CreateCompent( frmRegister, IMAGE_TYPE, "imgEmail", 87, 18, 70, 94 )
+-- UI_LoadImage( imgEmail, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
+
+btnRegYes = UI_CreateCompent( frmRegister, BUTTON_TYPE, "btnRegYes", 41, 19, 82, 148 )
+UI_LoadButtonImage( btnRegYes, "texture/ui/corsairs/coButtons.png", 41, 19, 0, 152, TRUE )
+
+btnRegNo = UI_CreateCompent( frmRegister, BUTTON_TYPE, "btnRegNo", 41, 19, 148, 148 )
+UI_LoadButtonImage( btnRegNo, "texture/ui/corsairs/coButtons.png", 41, 19, 0, 133, TRUE )
+
+-- YES/NO BUTTONS
+labYes = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labYes", 42, 10, 107, 155 )
+UI_SetCaption( labYes, "" )
+UI_SetTextColor( labYes, COLOR_WHITE )
+UI_SetLabelExFont( labYes, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+labNo = UI_CreateCompent( frmRegister, LABELEX_TYPE, "labNo", 42, 10, 152, 155 )
+UI_SetCaption( labNo, "" )
+UI_SetTextColor( labNo, COLOR_WHITE )
+UI_SetLabelExFont( labNo, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
+-- TYPING BOXES
+edtRegID = UI_CreateCompent( frmRegister, EDIT_TYPE, "edtRegID", 130, 12, 120, 51 )
+UI_SetTextColor( edtRegID, COLOR_BLACK )
+UI_SetEditMaxNum( edtRegID, 20 )
+UI_SetEditMaxNumVisible( edtRegID, 12 )
+
+edtRegPassword = UI_CreateCompent( frmRegister, EDIT_TYPE, "edtRegPassword", 130, 12, 120, 75 )
+UI_SetTextColor( edtRegPassword, COLOR_BLACK )
+UI_SetEditMaxNum( edtRegPassword, 20 )
+UI_SetEditMaxNumVisible( edtRegPassword, 12 )
+
+edtRegPassword2 = UI_CreateCompent( frmRegister, EDIT_TYPE, "edtRegPassword2", 130, 12, 120, 99 )
+UI_SetTextColor( edtRegPassword2, COLOR_BLACK )
+UI_SetEditMaxNum( edtRegPassword2, 20 )
+UI_SetEditMaxNumVisible( edtRegPassword2, 12 )
+
+edtRegEmail = UI_CreateCompent( frmRegister, EDIT_TYPE, "edtRegEmail", 130, 12, 120, 123 )
+UI_SetTextColor( edtRegEmail, COLOR_BLACK )
+UI_SetEditMaxNum( edtRegEmail, 254 )
+UI_SetEditMaxNumVisible( edtRegEmail, 12 )
+
+-----------------------------------------------------------------------
+-- 定义软件盘
+-----------------------------------------------------------------------	
+-- 创建软件盘表单
