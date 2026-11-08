@@ -584,7 +584,7 @@ UI_FormSetIsEscClose( frmFound, FALSE )
 
 -- 加载图片
 imgBak = UI_CreateCompent( frmBooth, IMAGE_TYPE, "imgBak", 288, 290, 0, 0 )
-UI_LoadImage( imgBak, "texture/ui/ods/baitan.tga", NORMAL, 288, 290, 0, 0 )
+UI_LoadImage( imgBak, "texture/ui/corsairs/barraca.png", NORMAL, 288, 290, 0, 0 )
 
 
 --创建关闭按钮
@@ -635,11 +635,11 @@ UI_SetSize( id, 11, 9 )
 
 
 --加载确定，取消按钮
-btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 44, 18, 120, 261 )
-UI_LoadButtonImage( btnSetupBooth, "texture/ui/ods/baitanbutton.tga", 44, 18, 0, 0, TRUE )
+btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 80, 24, 104, 260 )
+UI_LoadButtonImage( btnSetupBooth, "texture/ui/corsairs/btnBarracaMontar.png", 80, 24, 0, 0, FALSE )
 
-btnPullStakes = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnPullStakes", 42, 18, 120, 261 )
-UI_LoadButtonImage( btnPullStakes, "texture/ui/ods/baitanbutton.tga", 42, 18, 0, 18, TRUE )
+btnPullStakes = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnPullStakes", 80, 24, 104, 260 )
+UI_LoadButtonImage( btnPullStakes, "texture/ui/corsairs/btnBarracaFechar.png", 80, 24, 0, 0, FALSE )
 
 
 -----------------------------------------------------------------------
@@ -826,3 +826,206 @@ UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
 --加载取消按钮
 btnNo = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnNo", 41, 19, 279, 382 )
 UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+
+-- Tales of Corsairs: janela nova da versao DX9 (contem imgBackDropTarget), copiada da interface da fonte.
+frmTargetInfo = UI_CreateForm("frmTargetInfo", FALSE, 242, 74, 262, 4, TRUE, FALSE)
+
+imgBackDropTarget = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "imgBackDropTarget", 38, 38, 7, 7)
+UI_LoadImage(imgBackDropTarget, "texture/ui/corsairs/npcBackdrop/0.tga", NORMAL, 55, 44, 0, 0)
+
+imgTargetInfo = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "imgTargetInfo", 242, 52, 0, 0)
+UI_LoadImage(imgTargetInfo, "texture/ui/corsairs/monstro.png", NORMAL, 242, 52, 720, 10)
+
+UI_ShowForm(frmTargetInfo, TRUE)
+UI_SetIsDrag(frmTargetInfo, FLASE)
+UI_AddFormToTemplete(frmTargetInfo, FORM_MAIN)
+UI_FormSetIsEscClose(frmTargetInfo, FALSE)
+
+frmTargetInfoHP = UI_CreateCompent(frmTargetInfo, PROGRESS_TYPE, "frmTargetInfoHP", 184, 13, 52, 31)
+UI_LoadScaleImage(frmTargetInfoHP, "texture/ui/ods/hudbar.tga", PROGRESS_PROGRESS, 184, 13, 0, 150, 1.0, 1.0)
+UI_SetProgressHintStyle(frmTargetInfoHP, 2)
+UI_SetHint(frmTargetInfoHP, "HP")
+
+frmTargetInfoName = UI_CreateCompent(frmTargetInfo, LABELEX_TYPE, "frmTargetInfoName", 152, 12, 84, 9)
+UI_SetTextColor(frmTargetInfoName, COLOR_WHITE)
+UI_SetLabelExFont(frmTargetInfoName, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+labTargetLv = UI_CreateCompent(frmTargetInfo, LABELEX_TYPE, "labTargetLv", 24, 12, 53, 9)
+UI_SetTextColor(labTargetLv, 4294366590)
+UI_SetLabelExAlign(labTargetLv, TRUE)
+UI_SetLabelExFont(labTargetLv, DEFAULT_FONT, TRUE, COLOR_BLACK)
+UI_SetCaption(labLv, "99")
+
+-- Render 3D Model
+d3dTarget = UI_CreateCompent(frmTargetInfo, UI3D_COMPENT_TYPE, "d3dTarget", 38, 38, 7, 7)
+
+-- Monster Info Button
+btnMonsterInfo = UI_CreateCompent(frmTargetInfo, BUTTON_TYPE, "btnMonsterInfo", 67, 18, 172, 55)
+UI_LoadButtonImage(btnMonsterInfo, "texture/ui/corsairs/monstro.png", 67, 18, 244, 488, TRUE)
+
+-- Monster Drop Information Tab
+-- Tales of Corsairs: janela nova da versao DX9 (frmMonsterInfo), copiada da interface da fonte.
+frmMonsterInfo = UI_CreateForm("frmMonsterInfo", FALSE, 202, 473, 0, 0, TRUE, TRUE)
+imgfrmMobDrops = UI_CreateCompent(frmMonsterInfo, IMAGE_TYPE, "imgfrmMobDrops", 202, 473, 0, 0)
+UI_LoadImage(imgfrmMobDrops, "texture/ui/corsairs/monstro.png", NORMAL, 202, 473, 0, 0)
+
+-- Drop Data Columns
+imgfrmMobDrops = UI_CreateCompent(frmMonsterInfo, IMAGE_TYPE, "imgfrmMobDrops", 152, 402, 22, 54)
+UI_LoadImage(imgfrmMobDrops, "texture/ui/corsairs/monstro.png", NORMAL, 152, 402, 542, 11)
+
+-- Break Lines
+imgfrmMobInfoLines = UI_CreateCompent(frmMonsterInfo, IMAGE_TYPE, "imgfrmMobInfoLines", 173, 403, 16, 51)
+UI_LoadImage(imgfrmMobInfoLines, "texture/ui/corsairs/monstro.png", NORMAL, 173, 403, 326, 10)
+
+-- Show UI
+UI_ShowForm(frmMonsterInfo, TRUE)
+UI_SetIsDrag(frmMonsterInfo, TRUE)
+UI_AddFormToTemplete(frmMonsterInfo, FORM_MAIN)
+UI_FormSetIsEscClose(frmMonsterInfo, FALSE)
+UI_SetFormStyleEx(frmMonsterInfo, 9, 180, 59)
+UI_FormSetIsEscClose(frmMonsterInfo, TRUE)
+
+-- Close Button
+btnClose = UI_CreateCompent(frmMonsterInfo, BUTTON_TYPE, "btnClose", 14, 14, 185, 3)
+UI_LoadButtonImage(btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE)
+UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)
+
+
+MobDropCtl = {}
+for i = 0, 14 do
+	local fora = 0
+	if i >= 10 then fora = 5000 end
+	listMobDrops = UI_CreateCompent(frmMonsterInfo, COMMAND_ONE_TYPE, "listMobDrops"..i, 170, 37, 25, 56 + (i * 40) + fora)
+	table.insert(MobDropCtl, listMobDrops)
+	UI_SetIsDrag(listMobDrops, TRUE)
+
+	LabMobItems = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobItems"..i, 94, 12, 62, 59 + (i * 40) + fora)
+	table.insert(MobDropCtl, LabMobItems)
+	UI_SetTextColor(LabMobItems, 4293976766)
+	UI_SetLabelExFont(LabMobItems, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+	LabMobRates = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobRates"..i, 94, 12, 62, 74 + (i * 40) + fora)
+	table.insert(MobDropCtl, LabMobRates)
+	UI_SetTextColor(LabMobRates, 4288665738)
+	UI_SetLabelExFont(LabMobRates, DEFAULT_FONT, TRUE, COLOR_BLACK)
+	
+	checkDropFilter = UI_CreateCompent(frmMonsterInfo, CHECK_TYPE, "checkDropFilter"..i, 10, 10,  160, 68 + (i * 40) + fora)
+	table.insert(MobDropCtl, checkDropFilter)
+	UI_LoadImage(checkDropFilter, "texture/ui/corsairs/monstro.png", UNCHECKED, 10, 10, 412, 473)
+	UI_LoadImage(checkDropFilter, "texture/ui/corsairs/monstro.png", CHECKED, 10, 10, 393, 473)
+end
+
+-- Show Monster's Level
+LabMobLevel = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobLevel", 66, 14, 118, 82)
+UI_SetCaption(LabMobLevel, "0")
+UI_SetTextColor(LabMobLevel, 4294366590)
+UI_SetLabelExFont(LabMobLevel, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Experience
+LabMobexp = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobexp", 66, 14, 118, 104)
+UI_SetCaption(LabMobexp, "0")
+UI_SetTextColor(LabMobexp, 4294366590)
+UI_SetLabelExFont(LabMobexp, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's HP
+LabMobHP = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobHP", 66, 14, 118, 126)
+UI_SetCaption(LabMobHP, "0")
+UI_SetTextColor(LabMobHP, 4294366590)
+UI_SetLabelExFont(LabMobHP, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Damage
+LabMobAttack = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobAttack", 66, 14, 118, 332)
+UI_SetCaption(LabMobAttack, "0")
+UI_SetTextColor(LabMobAttack, 4294366590)
+UI_SetLabelExFont(LabMobAttack, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Hit Rate
+LabMobHitRate = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobHitRate", 66, 14, 118, 174)
+UI_SetCaption(LabMobHitRate, "0")
+UI_SetTextColor(LabMobHitRate, 4294366590)
+UI_SetLabelExFont(LabMobHitRate, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Dodge
+LabMobDodge = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobDodge", 66, 14, 118, 196) --258
+UI_SetCaption(LabMobDodge, "0")
+UI_SetTextColor(LabMobDodge, 4294366590)
+UI_SetLabelExFont(LabMobDodge, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Defense
+LabMobDef = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobDef", 66, 14, 118, 218)
+UI_SetCaption(LabMobDef, "0")
+UI_SetTextColor(LabMobDef, 4294366590)
+UI_SetLabelExFont(LabMobDef, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Physical Defense
+LabMobPR = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobPR", 66, 14, 118, 240)
+UI_SetCaption(LabMobPR, "0")
+UI_SetTextColor(LabMobPR, 4294366590)
+UI_SetLabelExFont(LabMobPR, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Attack Speed
+LabMobAtSpeed = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobAtSpeed", 66, 14, 118, 310)
+UI_SetCaption(LabMobAtSpeed, "0")
+UI_SetTextColor(LabMobAtSpeed, 4294366590)
+UI_SetLabelExFont(LabMobAtSpeed, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Show Monster's Movement Speed
+LabMobMSpeed = UI_CreateCompent(frmMonsterInfo, LABELEX_TYPE, "LabMobMSpeed", 66, 14, 118, 262)
+UI_SetCaption(LabMobMSpeed, "0")
+UI_SetTextColor(LabMobMSpeed, 4294366590)
+UI_SetLabelExFont(LabMobMSpeed, DEFAULT_FONT, TRUE, COLOR_BLACK)
+
+-- Form Tab
+pgeSkill = UI_CreateCompent(frmMonsterInfo, PAGE_TYPE, "pgeSkill", 172, 25, 0, 0)
+UI_SetPageButton(pgeSkill, PAGE_BUTTON_CUSTOM, 48, 16)
+
+-- Drop Info Tab
+DropsInfo = UI_CreatePageItem(pgeSkill)
+ttlDrop = UI_GetPageItemObj(DropsInfo, PAGE_ITEM_TITLE)
+UI_LoadImage(ttlDrop, "texture/ui/corsairs/monstro.png", PAGE_ITEM_TITLE_NORMAL, 67, 24, 246, 440)
+UI_LoadImage(ttlDrop, "texture/ui/corsairs/monstro.png", PAGE_ITEM_TITLE_ACTIVE, 67, 24, 311, 440)
+UI_SetPos(ttlDrop, 22, 28)
+UI_SetSize(ttlDrop, 67, 24)
+
+-- Display Monster Drops
+UI_AddCompent(DropsInfo, imgfrmMobDrops)
+for k = 1, table.getn(MobDropCtl) do UI_AddCompent(DropsInfo, MobDropCtl[k]) end
+
+-- Monster Attributes Tab
+MobsInfo = UI_CreatePageItem(pgeSkill)
+ttlInfo = UI_GetPageItemObj(MobsInfo, PAGE_ITEM_TITLE)
+UI_LoadImage(ttlInfo, "texture/ui/corsairs/monstro.png", PAGE_ITEM_TITLE_NORMAL, 67, 24, 246, 464)
+UI_LoadImage(ttlInfo, "texture/ui/corsairs/monstro.png", PAGE_ITEM_TITLE_ACTIVE, 67, 24, 311, 464)
+UI_SetPos(ttlInfo, 104, 28)
+UI_SetSize(ttlInfo, 67, 24)
+
+-- Display Monster Attributes
+UI_AddCompent(MobsInfo, imgfrmMobInfoLines)
+--UI_AddCompent(MobsInfo, lstMobInfo)
+UI_AddCompent(MobsInfo, LabMobLevel)
+UI_AddCompent(MobsInfo, LabMobexp)
+UI_AddCompent(MobsInfo, LabMobHP)
+UI_AddCompent(MobsInfo, LabMobAttack)
+UI_AddCompent(MobsInfo, LabMobHitRate)
+UI_AddCompent(MobsInfo, LabMobDodge)
+UI_AddCompent(MobsInfo, LabMobDef)
+UI_AddCompent(MobsInfo, LabMobPR)
+UI_AddCompent(MobsInfo, LabMobAtSpeed)
+UI_AddCompent(MobsInfo, LabMobMSpeed)
+-- Tales of Corsairs: controle novo da versao DX9 (labOtherIMP), copiado da interface da fonte.
+labOtherIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherIMP", 47, 11, 88, 174 + 36 )
+UI_SetCaption( labOtherIMP, "0" )
+UI_SetTextColor( labOtherIMP, COLOR_WHITE )
+UI_SetLabelExFont( labOtherIMP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetIsShow( labOtherIMP, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (labSelfIMP), copiado da interface da fonte.
+labSelfIMP = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfIMP", 47, 11, 88, 349 + 71 )
+UI_SetCaption( labSelfIMP, "0" )
+UI_SetTextColor( labSelfIMP, COLOR_WHITE )
+UI_SetLabelExFont( labSelfIMP, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetIsShow( labSelfIMP, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (btnIMP), copiado da interface da fonte.
+btnIMP = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnIMP", 26, 26, 167, 341 + 71 )
+UI_LoadButtonImage( btnIMP, "texture/ui/corsairs/trade.png", 26, 26, 202, 26, TRUE )
+UI_SetHint( btnIMP, "Click here to input IMP for trade" )
+UI_SetIsShow( btnIMP, FALSE )

@@ -63,3 +63,11 @@ texture/ui/corsairs/btnLoginConfirm.tga
 texture/ui/corsairs/btnLoginConfirm.wsd
 texture/ui/corsairs/btnLoginTeclado.tga
 texture/ui/corsairs/btnLoginTeclado.wsd
+scripts/lua/forms/Player.bin
+scripts/lua/forms/player.clu
+texture/ui/corsairs/barraca.png
+texture/ui/corsairs/barraca.wsd
+texture/ui/corsairs/btnBarracaFechar.png
+texture/ui/corsairs/btnBarracaFechar.wsd
+texture/ui/corsairs/btnBarracaMontar.png
+texture/ui/corsairs/btnBarracaMontar.wsd
