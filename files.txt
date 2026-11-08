@@ -71,3 +71,7 @@ texture/ui/corsairs/btnBarracaFechar.png
 texture/ui/corsairs/btnBarracaFechar.wsd
 texture/ui/corsairs/btnBarracaMontar.png
 texture/ui/corsairs/btnBarracaMontar.wsd
+texture/ui/corsairs/btnListaSair.png
+texture/ui/corsairs/btnListaSair.wsd
+texture/ui/corsairs/lista_servidor.png
+texture/ui/corsairs/lista_servidor.wsd

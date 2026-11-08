@@ -10,30 +10,31 @@ UI_FormSetIsEscClose( frmArea, FALSE )
 
 -- 加载背景图片
 imgBakTop = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgBakTop", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/list1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/lista_servidor.png", NORMAL, 256, 256, 0, 0 )
 UI_SetImageAlpha(imgBakTop,255)
 
 imgBakDown = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgBakDown", 147, 256, 256, 0 )
-UI_LoadImage( imgBakDown, "texture/ui/list2.tga", NORMAL, 147, 256, 0, 0 )
+UI_LoadImage( imgBakDown, "texture/ui/corsairs/lista_servidor.png", NORMAL, 147, 256, 256, 0 )
 UI_SetImageAlpha(imgBakDown,255)
 
 imgBakDown1 = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgBakDown1", 256, 34, 0, 256 )
-UI_LoadImage( imgBakDown1, "texture/ui/list3.tga", NORMAL, 256, 34, 0, 0 )
+UI_LoadImage( imgBakDown1, "texture/ui/corsairs/lista_servidor.png", NORMAL, 256, 34, 0, 256 )
 UI_SetImageAlpha(imgBakDown1,255)
 
 imgBakDown1 = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgBakDown1", 147, 34, 256, 256 )
-UI_LoadImage( imgBakDown1, "texture/ui/list3.tga", NORMAL, 147, 34, 0, 44 )
+UI_LoadImage( imgBakDown1, "texture/ui/corsairs/lista_servidor.png", NORMAL, 147, 34, 256, 256 )
 UI_SetImageAlpha(imgBakDown1,255)
 
 imgPapa = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgPapa", 43, 32, 7, 22 )
 UI_LoadImage( imgPapa, "texture/ui/PublicC.tga", NORMAL, 43, 32, 213, 15 )
-UI_SetImageAlpha(imgPapa,220)
+UI_SetImageAlpha(imgPapa,0)
 
 -- 加载界面title
 --imgServerTitle1 = UI_CreateCompent( frmArea, IMAGE_TYPE, "imgServerTitle1", 61, 13, 175, 27 )
 --UI_LoadImage( imgServerTitle1, "texture/ui/Word.dds", NORMAL, 61, 13, 158, 183 )
-labTitle = UI_CreateCompent( frmArea, LABELEX_TYPE, "labTitle", 400, 150, 175, 27 )
+labTitle = UI_CreateCompent( frmArea, LABELEX_TYPE, "labTitle", 403, 14, 0, 12 )
 UI_SetCaption( labTitle, "Region")
+UI_SetLabelExAlign( labTitle, TRUE )
 UI_SetTextColor( labTitle, COLOR_YELLOW )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
@@ -45,7 +46,7 @@ UI_SetListRowHeight( lstRegion0, 23 )
 UI_SetListIsMouseFollow( lstRegion0, TRUE)
 UI_ListLoadSelectImage( lstRegion0, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227 )
 UI_SetImageAlpha( lstRegion0, 134 )
-UI_SetListFontColor( lstRegion0, COLOR_BLACK, COLOR_RED )
+UI_SetListFontColor( lstRegion0, 4293976766, 4280949254 )
 
 lstRegion1 = UI_CreateCompent( frmArea, LIST_TYPE, "lstRegion1", 184, 150, 202, 35 )
 UI_SetMargin( lstRegion1, 19, 20, 15, 0 )
@@ -54,7 +55,7 @@ UI_SetListRowHeight( lstRegion1, 23 )
 UI_SetListIsMouseFollow( lstRegion1, TRUE)
 UI_ListLoadSelectImage( lstRegion1, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227 )
 UI_SetImageAlpha( lstRegion1, 134 )
-UI_SetListFontColor( lstRegion1, COLOR_BLACK, COLOR_RED )
+UI_SetListFontColor( lstRegion1, 4293976766, 4280949254 )
 
 --获得滚动条
 scrollid = UI_GetScroll( lstServer1 )
@@ -79,8 +80,8 @@ UI_SetSize( id, 11, 9 )
 
 
 --取消按钮
-btnNo = UI_CreateCompent( frmArea, BUTTON_TYPE, "btnNo", 41, 19, 185, 263 )
-UI_LoadButtonImage( btnNo, "texture/ui/SystemBotton3.tga", 41, 19, 0, 152, TRUE )
+btnNo = UI_CreateCompent( frmArea, BUTTON_TYPE, "btnNo", 80, 24, 161, 256 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/btnListaSair.png", 80, 24, 0, 0, FALSE )
 UI_SetAlpha(btnNo,210)
 -----------------------------------------------------------------------
 -- 定义服务器列表
@@ -93,31 +94,32 @@ UI_FormSetIsEscClose( frmServer, FALSE )
 
 -- 加载背景图片
 imgBakTop = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBakTop", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/list1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/lista_servidor.png", NORMAL, 256, 256, 0, 0 )
 UI_SetImageAlpha(imgBakTop,255)
 
 imgBakDown = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBakDown", 147, 256, 256, 0 )
-UI_LoadImage( imgBakDown, "texture/ui/list2.tga", NORMAL, 147, 256, 0, 0 )
+UI_LoadImage( imgBakDown, "texture/ui/corsairs/lista_servidor.png", NORMAL, 147, 256, 256, 0 )
 UI_SetImageAlpha(imgBakDown,255)
 
 imgBakDown1 = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBakDown1", 256, 34, 0, 256 )
-UI_LoadImage( imgBakDown1, "texture/ui/list3.tga", NORMAL, 256, 34, 0, 0 )
+UI_LoadImage( imgBakDown1, "texture/ui/corsairs/lista_servidor.png", NORMAL, 256, 34, 0, 256 )
 UI_SetImageAlpha(imgBakDown1,255)
 
 imgBakDown1 = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgBakDown1", 147, 34, 256, 256 )
-UI_LoadImage( imgBakDown1, "texture/ui/list3.tga", NORMAL, 147, 34, 0, 44 )
+UI_LoadImage( imgBakDown1, "texture/ui/corsairs/lista_servidor.png", NORMAL, 147, 34, 256, 256 )
 UI_SetImageAlpha(imgBakDown1,255)
 
 imgPapa = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgPapa", 43, 32, 7, 22 )
 UI_LoadImage( imgPapa, "texture/ui/PublicC.tga", NORMAL, 43, 32, 213, 15 )
-UI_SetImageAlpha(imgPapa,220)
+UI_SetImageAlpha(imgPapa,0)
 
 -- 加载界面title
 --imgServerTitle = UI_CreateCompent( frmServer, IMAGE_TYPE, "imgServerTitle", 61, 13, 175, 27 )
 --UI_LoadImage( imgServerTitle, "texture/ui/Word.dds", NORMAL, 61, 13, 0, 86 )
 
-labTitle = UI_CreateCompent( frmServer, LABELEX_TYPE, "labTitle", 400, 150, 175, 27 )
+labTitle = UI_CreateCompent( frmServer, LABELEX_TYPE, "labTitle", 403, 14, 0, 12 )
 UI_SetCaption( labTitle, "Server List")
+UI_SetLabelExAlign( labTitle, TRUE )
 UI_SetTextColor( labTitle, COLOR_YELLOW )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 --加载服务器状态图片
@@ -153,7 +155,7 @@ UI_SetListRowHeight( lvServer0, 23 )
 UI_SetListIsMouseFollow( lvServer0, TRUE)
 UI_ListLoadSelectImage( lvServer0, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227 )
 UI_SetImageAlpha( lvServer0, 134 )
-UI_SetListFontColor( lvServer0, COLOR_BLACK, COLOR_RED )
+UI_SetListFontColor( lvServer0, 4293976766, 4280949254 )
 
 lvServer1 = UI_CreateListView( frmServer, "lvServer1", 184, 150, 202, 35, 2, 2 )
 UI_SetMargin( lvServer1, 19, 20, 15, 0 )
@@ -164,7 +166,7 @@ UI_SetListRowHeight( lvServer1, 23 )
 UI_SetListIsMouseFollow( lvServer1, TRUE)
 UI_ListLoadSelectImage( lvServer1, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227, 2, 2 )
 UI_SetImageAlpha( lvServer1, 134 )
-UI_SetListFontColor( lvServer1, COLOR_BLACK, COLOR_RED )
+UI_SetListFontColor( lvServer1, 4293976766, 4280949254 )
 
 
 --获得滚动条
@@ -190,8 +192,8 @@ UI_SetSize( id, 11, 9 )
 
 
 --取消按钮
-btnNo = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnNo", 41, 19, 185, 263 )
-UI_LoadButtonImage( btnNo, "texture/ui/SystemBotton3.tga", 41, 19, 0, 152, TRUE )
+btnNo = UI_CreateCompent( frmServer, BUTTON_TYPE, "btnNo", 80, 24, 161, 256 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/btnListaSair.png", 80, 24, 0, 0, FALSE )
 UI_SetAlpha(btnNo,210)
 -----------------------------------------------------------------------
 -- 定义帐号输入表单
