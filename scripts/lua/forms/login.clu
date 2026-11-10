@@ -566,7 +566,7 @@ UI_FormSetEnterButton(frmDoublePwdCreate,btnYes)
 
 -- º”‘ÿ±≥æ∞Õº∆¨
 imgDoublePwdCreate = UI_CreateCompent( frmDoublePwdCreate, IMAGE_TYPE,"imgDoublePwdCreate" ,247, 129, 0, 0)
-UI_LoadImage(imgDoublePwdCreate, "texture/ui/a001.tga", NORMAL , 247, 129, 0, 0)
+UI_LoadImage(imgDoublePwdCreate, "texture/ui/corsairs/senha2.png", NORMAL , 247, 129, 0, 0)
 
 --º”‘ÿ»∑∂®∞¥≈•
 btnYes = UI_CreateCompent( frmDoublePwdCreate, BUTTON_TYPE, "btnYes", 41, 19, 130, 107 )
@@ -579,16 +579,16 @@ UI_LoadButtonImage( btnClear, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 -- º”‘ÿ√‹¬Îœ‘ æøÚ
 lab1 = UI_CreateCompent( frmDoublePwdCreate, LABELEX_TYPE, "lab1", 210, 11, 17, 35)
 UI_SetCaption( lab1, "Enter security code" )
-UI_SetTextColor( lab1,COLOR_BLACK )
-UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab1, 4293976766 )
+UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 edtDoublePwdCreate = UI_CreateCompent(frmDoublePwdCreate, EDIT_TYPE,"edtDoublePwdCreate" ,66, 14, 137, 35)
 UI_SetEditMaxNum( edtDoublePwdCreate, 12 )
 UI_SetEditMaxNumVisible(edtDoublePwdCreate,12)
 
 lab2 = UI_CreateCompent( frmDoublePwdCreate, LABELEX_TYPE, "lab2", 210, 11, 17, 60)
 UI_SetCaption( lab2, "Re-enter" )
-UI_SetTextColor( lab2,COLOR_BLACK )
-UI_SetLabelExFont( lab2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab2, 4293976766 )
+UI_SetLabelExFont( lab2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 edtDoublePwdCreateRetry = UI_CreateCompent(frmDoublePwdCreate, EDIT_TYPE,"edtDoublePwdCreateRetry", 66, 14, 137, 59)
 UI_SetEditMaxNum( edtDoublePwdCreateRetry, 12 )
 UI_SetEditMaxNumVisible(edtDoublePwdCreateRetry,12)
@@ -597,7 +597,7 @@ UI_SetEditMaxNumVisible(edtDoublePwdCreateRetry,12)
 --labID = UI_CreateCompent( frmDoublePwdCreate, LABELEX_TYPE, "labID", 210, 11, 16, 84)
 --UI_SetCaption( labID, "For the safety of your account, please make a security code" )
 --UI_SetTextColor( labID,COLOR_RED )
---UI_SetLabelExFont( labID, DEFAULT_FONT, TRUE, COLOR_WHITE )
+--UI_SetLabelExFont( labID, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 -----------------------------------------------------------------------
@@ -616,7 +616,7 @@ UI_FormSetEnterButton(frmDoublePwdAlter,btnYes)
 
 -- º”‘ÿ±≥æ∞Õº∆¨
 imgDoublePwdAlter = UI_CreateCompent(frmDoublePwdAlter, IMAGE_TYPE,"imgDoublePwdAlter", 247, 129, 0, 0)
-UI_LoadImage( imgDoublePwdAlter, "texture/ui/a002.tga", NORMAL, 247, 129, 0, 0)
+UI_LoadImage( imgDoublePwdAlter, "texture/ui/corsairs/senha2.png", NORMAL, 247, 129, 0, 130)
 
 -- º”‘ÿ»∑∂®∞¥≈•
 btnYes = UI_CreateCompent( frmDoublePwdAlter, BUTTON_TYPE, "btnYes", 41, 19, 130, 107 )
@@ -629,28 +629,28 @@ UI_LoadButtonImage( btnClear, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 --title
 labTitle = UI_CreateCompent( frmDoublePwdAlter, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
 UI_SetCaption( labTitle, "Edit security code")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle, 4294366590 )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 -- º”‘ÿ√‹¬Îœ‘ æøÚ
 lab1 = UI_CreateCompent( frmDoublePwdAlter, LABELEX_TYPE, "lab1", 210, 11, 16, 32)
 UI_SetCaption( lab1, "Enter old code" )
-UI_SetTextColor( lab1,COLOR_BLACK )
-UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab1, 4293976766 )
+UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 edtDoublePwdAlterOld = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterOld", 66, 14, 137, 34)
 UI_SetEditMaxNum( edtDoublePwdAlterOld, 12 )
 UI_SetEditMaxNumVisible(edtDoublePwdAlterOld,12)
 
 lab2 = UI_CreateCompent( frmDoublePwdAlter, LABELEX_TYPE, "lab2", 210, 11, 16, 56)
 UI_SetCaption( lab2, "Enter new code" )
-UI_SetTextColor( lab2,COLOR_BLACK )
-UI_SetLabelExFont( lab2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab2, 4293976766 )
+UI_SetLabelExFont( lab2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 edtDoublePwdAlterNew = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterNew", 66, 14, 137, 58)
 UI_SetEditMaxNum( edtDoublePwdAlterNew, 12 )
 UI_SetEditMaxNumVisible(edtDoublePwdAlterNew,12)
 lab3 = UI_CreateCompent( frmDoublePwdAlter, LABELEX_TYPE, "lab3", 210, 11, 16, 80)
 UI_SetCaption( lab3, "Re-enter" )
-UI_SetTextColor( lab3,COLOR_BLACK )
-UI_SetLabelExFont( lab3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab3, 4293976766 )
+UI_SetLabelExFont( lab3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 edtDoublePwdAlterNewRetry = UI_CreateCompent(frmDoublePwdAlter, EDIT_TYPE,"edtDoublePwdAlterNewRetry" ,66, 14, 137, 82)
 UI_SetEditMaxNum( edtDoublePwdAlterNewRetry, 12 )
@@ -672,17 +672,17 @@ UI_FormSetEnterButton(frmDoublePwd,btnYes)
 
 -- º”‘ÿ±≥æ∞Õº∆¨
 imgDoublePwd = UI_CreateCompent(frmDoublePwd, IMAGE_TYPE,"imgDoublePwd", 247, 129, 0, 0)
-UI_LoadImage( imgDoublePwd, "texture/ui/a003.tga", NORMAL, 247, 129, 0, 0)
+UI_LoadImage( imgDoublePwd, "texture/ui/corsairs/senha2.png", NORMAL, 247, 129, 0, 260)
 --title
 labTitle = UI_CreateCompent( frmDoublePwd, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
 UI_SetCaption( labTitle, "Enter security code")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle, 4294366590 )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 --º”‘ÿlabel
 lab1 = UI_CreateCompent( frmDoublePwd, LABELEX_TYPE, "lab1", 210, 11, 16, 46)
 UI_SetCaption( lab1, "Enter security code" )
-UI_SetTextColor( lab1,COLOR_BLACK )
-UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( lab1, 4293976766 )
+UI_SetLabelExFont( lab1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 -- º”‘ÿ√‹¬Îœ‘ æøÚ
 edtDoublePwd = UI_CreateCompent(frmDoublePwd, EDIT_TYPE,"edtDoublePwd", 66, 14, 137, 44)
@@ -713,7 +713,7 @@ UI_FormSetIsEscClose(frmDoublePwdInput, TRUE)
 
 -- º”‘ÿ±≥æ∞Õº∆¨
 imgDoublePwdInput = UI_CreateCompent(frmDoublePwdInput, IMAGE_TYPE,"imgDoublePwdInput", 131, 129, 0, 0)
-UI_LoadImage( imgDoublePwdInput, "texture/ui/a004.tga", NORMAL, 131,129, 0, 0)
+UI_LoadImage( imgDoublePwdInput, "texture/ui/corsairs/senha2.png", NORMAL, 131,129, 256, 0)
 
 -- º”‘ÿ ˝◊÷∞¥≈•Õº∆¨
 btnNum1 = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnNum1", 27, 17, 17, 26 )
@@ -739,7 +739,7 @@ UI_LoadButtonImage( btnNum0, "texture/ui/Keyboard3.tga", 27, 17, 0, 187, TRUE )
 
 --º”‘ÿ«Â≥˝∞¥≈•
 btnClear = UI_CreateCompent( frmDoublePwdInput, BUTTON_TYPE, "btnClear", 61, 17, 51, 98 )
-UI_LoadButtonImage( btnClear, "texture/ui/a002.tga", 54, 17, 0, 129, TRUE )
+UI_LoadButtonImage( btnClear, "texture/ui/corsairs/senha2.png", 61, 17, 256, 140, TRUE )
 
 -----------------------------------------------------------------------
 -- ∂®“Â∂˛¥Œ√‹¬ÎΩÈ…‹¥∞ÃÂ
@@ -771,18 +771,18 @@ UI_SetCaption( labText3, "You will require the security code to")
 UI_SetCaption( labText4, "delete character or unlock inventory")
 UI_SetCaption( labText5, "Please remember your security code well!")
 --UI_SetCaption( labText6,"Requires a valid Security Code to delete character or withdraw inventory items")
-UI_SetTextColor( labText1, COLOR_BLACK )
-UI_SetLabelExFont( labText1, DEFAULT_FONT, TRUE, COLOR_WHITE )
-UI_SetTextColor( labText2, COLOR_BLACK )
-UI_SetLabelExFont( labText2, DEFAULT_FONT, TRUE, COLOR_WHITE )
-UI_SetTextColor( labText3, COLOR_BLACK )
-UI_SetLabelExFont( labText3, DEFAULT_FONT, TRUE, COLOR_WHITE )
-UI_SetTextColor( labText4, COLOR_BLACK )
-UI_SetLabelExFont( labText4, DEFAULT_FONT, TRUE, COLOR_WHITE )
-UI_SetTextColor( labText5, COLOR_BLACK )
-UI_SetLabelExFont( labText5, DEFAULT_FONT, TRUE, COLOR_WHITE )
---UI_SetTextColor( labText6, COLOR_BLACK )
---UI_SetLabelExFont( labText6, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labText1, 4293976766 )
+UI_SetLabelExFont( labText1, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetTextColor( labText2, 4293976766 )
+UI_SetLabelExFont( labText2, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetTextColor( labText3, 4293976766 )
+UI_SetLabelExFont( labText3, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetTextColor( labText4, 4293976766 )
+UI_SetLabelExFont( labText4, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetTextColor( labText5, 4293976766 )
+UI_SetLabelExFont( labText5, DEFAULT_FONT, TRUE, COLOR_BLACK )
+--UI_SetTextColor( labText6, 4293976766 )
+--UI_SetLabelExFont( labText6, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 -----------------------------------------------------------------------

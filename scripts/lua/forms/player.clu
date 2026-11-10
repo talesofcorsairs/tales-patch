@@ -519,8 +519,8 @@ UI_LoadImage( imgLeader, "texture/ui/new3.tga", NORMAL, 9, 9, 0, 161 )
 -----------------------------------------------------------------------
 -- 定义复活框
 -----------------------------------------------------------------------
-frmRelive = UI_CreateForm( "frmRelive",  FALSE, 185, 101, 397, 500, TRUE, FALSE )
-UI_LoadFormImage( frmRelive, "texture/ui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+frmRelive = UI_CreateForm( "frmRelive",  FALSE, 240, 110, 397, 500, TRUE, FALSE )
+UI_LoadFormImage( frmRelive, "texture/ui/corsairs/reviver.png", 240, 110, 0, 0, "", 0, 0 )
 UI_ShowForm( frmRelive, FALSE )
 UI_AddFormToTemplete( frmRelive, FORM_MAIN )
 UI_SetFormStyle( frmRelive, 0 )
@@ -530,18 +530,19 @@ UI_SetIsDrag( frmRelive, TRUE )
 --UI_FormSetHotKey( frmRelive, ALT_KEY, HOTKEY_X ) 
 
 --创建询问显示
-labReCity = UI_CreateCompent( frmRelive, LABELEX_TYPE, "labReCity", 1, 1, 38, 40 )
+labReCity = UI_CreateCompent( frmRelive, LABELEX_TYPE, "labReCity", 216, 14, 12, 43 )
 UI_SetCaption( labReCity, "Do you want to Revive in town" )
-UI_SetTextColor( labReCity, COLOR_BLACK)
-UI_SetLabelExFont( labReCity, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labReCity, 4293976766 )
+UI_SetLabelExFont( labReCity, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labReCity, TRUE )
 
 -- 加载界面title
 imgReCity = UI_CreateCompent( frmRelive, IMAGE_TYPE, "imgReCity", 48, 13, 8, 4 )
-UI_LoadImage( imgReCity, "texture/ui/Word.dds", NORMAL, 48, 13, 158, 161 )
+UI_LoadImage( imgReCity, "texture/ui/corsairs/reviver.png", NORMAL, 48, 13, 400, 200 )
 
 --加载回城按钮
-btnReCity = UI_CreateCompent( frmRelive, BUTTON_TYPE, "btnReCity", 41, 19, 74, 78 )
-UI_LoadButtonImage( btnReCity, "texture/ui/SystemBotton3.tga", 41, 19, 169, 39, FALSE )
+btnReCity = UI_CreateCompent( frmRelive, BUTTON_TYPE, "btnReCity", 80, 24, 80, 76 )
+UI_LoadButtonImage( btnReCity, "texture/ui/corsairs/reviver.png", 80, 24, 0, 128, TRUE )
 
 -----------------------------------------------------------------------
 -- 定义倒计时框

@@ -681,30 +681,30 @@ UI_SetAlpha( frmConAsk, 255 )
 
 -- 加载背景图片
 imgBakAsk2 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk2", 13, 256, 512, 0 )
-UI_LoadImage( imgBakAsk2, "texture/ui/ShipD2.tga", NORMAL, 13, 256, 147, 0 )
+UI_LoadImage( imgBakAsk2, "texture/ui/corsairs/guilda_lista.png", NORMAL, 13, 256, 512, 0 )
 
 imgBakAsk3 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk3", 256, 18, 0, 256 )
-UI_LoadImage( imgBakAsk3, "texture/ui/ShipD.tga", NORMAL, 256, 18, 0, 210 )
+UI_LoadImage( imgBakAsk3, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 18, 0, 256 )
 
 imgBakAsk4 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk4", 256, 18, 256, 256 )
-UI_LoadImage( imgBakAsk4, "texture/ui/ShipD.tga", NORMAL, 256, 18, 0, 228 )
+UI_LoadImage( imgBakAsk4, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 18, 256, 256 )
 
 imgBakAsk5 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk5", 13, 18, 512, 256 )
-UI_LoadImage( imgBakAsk5, "texture/ui/ShipD2.tga", NORMAL, 13, 18, 160, 0 )
+UI_LoadImage( imgBakAsk5, "texture/ui/corsairs/guilda_lista.png", NORMAL, 13, 18, 512, 256 )
 
 imgMaxim = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgMaxim", 187, 26, 117, 37 )
-UI_LoadImage( imgMaxim, "texture/ui/help3.tga", NORMAL, 187, 26, 0, 145 )
+UI_LoadImage( imgMaxim, "texture/ui/corsairs/guilda_lista.png", NORMAL, 187, 26, 117, 37 )
 
 
 --海军相关
 imgBakAskH = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAskH", 256, 256, 0, 0 )
-UI_LoadImage( imgBakAskH, "texture/ui/ConAsk1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakAskH, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 256, 0, 0 )
 
 imgBakAskH1 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAskH1", 256, 256, 256, 0 )
-UI_LoadImage( imgBakAskH1, "texture/ui/ConAsk2.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakAskH1, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 256, 256, 0 )
 
 imgName1 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgName1", 102, 26, 410, 37 )
-UI_LoadImage( imgName1, "texture/ui/help3.tga", NORMAL, 102, 26, 0, 180 )
+UI_LoadImage( imgName1, "texture/ui/corsairs/guilda_lista.png", NORMAL, 102, 26, 410, 37 )
 
 --imgbackJ = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgbackJ", 256, 256, 165, 50 )
 --UI_LoadImage( imgbackJ, "texture/ui/HJback.tga", NORMAL, 256, 256, 0, 0 )
@@ -716,25 +716,25 @@ imgTitleJ = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgTitleJ", 61, 13, 8, 4 )
 
 --labTitle
 labTitleJ = UI_CreateCompent( frmConAsk, LABELEX_TYPE, "labTitleJ", 100, 11, 8, 4 )
-UI_SetCaption( labTitleJ, "Navy Recruitment Station" )
+UI_SetCaption( labTitleJ, "" )
 UI_SetTextColor( labTitleJ, COLOR_BLACK )
 UI_SetLabelExFont( labTitleJ, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --labInfo
 labInfoJ = UI_CreateCompent( frmConAsk, LABELEX_TYPE, "labInfoJ", 100, 11, 80, 5 )
-UI_SetCaption( labInfoJ, "Can only apply for occupied Navy division" )
+UI_SetCaption( labInfoJ, "" )
 UI_SetTextColor( labInfoJ, COLOR_BLACK )
 UI_SetLabelExFont( labInfoJ, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --海盗相关
 imgBakAsk = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk", 256, 256, 0, 0 )
-UI_LoadImage( imgBakAsk, "texture/ui/ConAsk1D.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakAsk, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 256, 0, 0 )
 
 imgBakAsk1 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgBakAsk1", 256, 256, 256, 0 )
-UI_LoadImage( imgBakAsk1, "texture/ui/ConAsk2D.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakAsk1, "texture/ui/corsairs/guilda_lista.png", NORMAL, 256, 256, 256, 0 )
 
 imgName2 = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgName2", 102, 26, 410, 37 )
-UI_LoadImage( imgName2, "texture/ui/help3.tga", NORMAL, 102, 26, 102, 180 )
+UI_LoadImage( imgName2, "texture/ui/corsairs/guilda_lista.png", NORMAL, 102, 26, 410, 37 )
 
 --imgbackD = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgbackD", 256, 256, 185, 80 )
 --UI_LoadImage( imgbackD, "texture/ui/HDback.tga", NORMAL, 256, 256, 0, 0 )
@@ -747,7 +747,7 @@ imgTitleD = UI_CreateCompent( frmConAsk, IMAGE_TYPE, "imgTitleD", 61, 13, 8, 4 )
 
 --labTitle
 labTitleD = UI_CreateCompent( frmConAsk, LABELEX_TYPE, "labTitleD", 100, 11, 8, 4 )
-UI_SetCaption( labTitleD, "Join the Pirates" )
+UI_SetCaption( labTitleD, "" )
 UI_SetTextColor( labTitleD, COLOR_BLACK )
 UI_SetLabelExFont( labTitleD, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -757,25 +757,25 @@ UI_LoadButtonImage( btnApply, "texture/ui/SysBotton4.tga", 41, 19, 0, 0, TRUE )
 
 --创建公会名称按钮
 btnName = UI_CreateCompent( frmConAsk, BUTTON_TYPE, "btnName", 102, 26, 14, 37 )
-UI_LoadImage( btnName, "texture/ui/SysBotton4.tga", 0, 102, 26, 24, 173)
-UI_LoadImage( btnName, "texture/ui/SysBotton4.tga", 1, 102, 26, 24, 173)
-UI_LoadImage( btnName, "texture/ui/SysBotton4.tga", 2, 102, 26, 126, 173)
+UI_LoadImage( btnName, "texture/ui/corsairs/guilda_lista.png", 0, 102, 26, 0, 300 )
+UI_LoadImage( btnName, "texture/ui/corsairs/guilda_lista.png", 1, 102, 26, 102, 300 )
+UI_LoadImage( btnName, "texture/ui/corsairs/guilda_lista.png", 2, 102, 26, 204, 300 )
 
 --创建人数按钮
 btnNum = UI_CreateCompent( frmConAsk, BUTTON_TYPE, "btnNum", 37, 26, 306, 37 )
-UI_LoadImage( btnNum, "texture/ui/SysBotton4.tga", 0, 37, 26, 24, 200 )
-UI_LoadImage( btnNum, "texture/ui/SysBotton4.tga", 1, 37, 26, 24, 200 )
-UI_LoadImage( btnNum, "texture/ui/SysBotton4.tga", 2, 37, 26, 61, 200)
+UI_LoadImage( btnNum, "texture/ui/corsairs/guilda_lista.png", 0, 37, 26, 320, 300 )
+UI_LoadImage( btnNum, "texture/ui/corsairs/guilda_lista.png", 1, 37, 26, 357, 300 )
+UI_LoadImage( btnNum, "texture/ui/corsairs/guilda_lista.png", 2, 37, 26, 394, 300 )
 
 --创建经验按钮
 btnExp = UI_CreateCompent( frmConAsk, BUTTON_TYPE, "btnExp", 66, 26, 343, 37 )
-UI_LoadImage( btnExp, "texture/ui/SysBotton4.tga", 0, 66, 26, 24, 228 )
-UI_LoadImage( btnExp, "texture/ui/SysBotton4.tga", 1, 66, 26, 24, 228 )
-UI_LoadImage( btnExp, "texture/ui/SysBotton4.tga", 2, 66, 26, 90, 228 )
+UI_LoadImage( btnExp, "texture/ui/corsairs/guilda_lista.png", 0, 66, 26, 440, 300 )
+UI_LoadImage( btnExp, "texture/ui/corsairs/guilda_lista.png", 1, 66, 26, 506, 300 )
+UI_LoadImage( btnExp, "texture/ui/corsairs/guilda_lista.png", 2, 66, 26, 572, 300 )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmConAsk, BUTTON_TYPE, "btnClose", 14, 14, 506, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmConAsk, BUTTON_TYPE, "btnClose", 14, 14, 503, 8 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --加载取消按钮
@@ -859,7 +859,7 @@ UI_SetButtonModalResult( btnNo, BUTTON_NO )
 -- 定义输入公会名称、密码对话框
 -----------------------------------------------------------------------
 frmName = UI_CreateForm( "frmName",  FALSE, 185, 136, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmName, "texture/ui/QuestD2.dds", 185, 136, 0, 111, "", 0, 0 )
+UI_LoadFormImage( frmName, "texture/ui/corsairs/guilda_nome.png", 185, 136, 0, 0, "", 0, 0 )
 UI_ShowForm( frmName, FALSE )
 UI_AddFormToTemplete( frmName, FORM_MAIN )
 --UI_FormSetHotKey( frmName, ALT_KEY, HOTKEY_V ) 
@@ -869,14 +869,14 @@ UI_SetIsDrag( frmName, TRUE )
 -- 加载界面title
 labTitle = UI_CreateCompent( frmName, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
 UI_SetCaption( labTitle, "Input guild name, password")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle, 4294366590 )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建输入名称
 labNameInfo = UI_CreateCompent( frmName, LABELEX_TYPE, "labNameInfo", 40, 11, 15, 45 )
 UI_SetCaption( labNameInfo, "Name:" )
-UI_SetTextColor( labNameInfo, COLOR_BLACK )
-UI_SetLabelExFont( labNameInfo, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labNameInfo, 4293976766 )
+UI_SetLabelExFont( labNameInfo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 -- 加载输入区背景
 imgName = UI_CreateCompent( frmName, IMAGE_TYPE, "imgName", 109, 19, 68, 41 )
@@ -891,8 +891,8 @@ UI_SetEditMaxNumVisible( edtName, 16 )
 --创建输入密码
 labCodeInfo = UI_CreateCompent( frmName, LABELEX_TYPE, "labCodeInfo", 40, 11, 15, 70 )
 UI_SetCaption( labCodeInfo, "Password:" )
-UI_SetTextColor( labCodeInfo, COLOR_BLACK )
-UI_SetLabelExFont( labCodeInfo, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labCodeInfo, 4293976766 )
+UI_SetLabelExFont( labCodeInfo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 -- 加载输入区背景
 imgCode = UI_CreateCompent( frmName, IMAGE_TYPE, "imgCode", 109, 19, 68, 65 )
@@ -917,8 +917,8 @@ UI_SetEditMaxNumVisible( edtPCode, 8 )
 --创建密码确认
 labCodeInfo2 = UI_CreateCompent( frmName, LABELEX_TYPE, "labCodeInfo2", 40, 11, 15, 92 )
 UI_SetCaption( labCodeInfo2, "Re-Enter:" )
-UI_SetTextColor( labCodeInfo2, COLOR_BLACK )
-UI_SetLabelExFont( labCodeInfo2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labCodeInfo2, 4293976766 )
+UI_SetLabelExFont( labCodeInfo2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 
