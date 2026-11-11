@@ -12,11 +12,11 @@ UI_FormSetIsEscClose( frmPlayertrade, FALSE )
 
 -- 加载背景图片
 imgBakTop = UI_CreateCompent( frmPlayertrade, IMAGE_TYPE, "imgBakTop", 198, 394, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/ods/tradewindow.tga", NORMAL, 198, 394, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 198, 394, 0, 0 )
 
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnClose", 14, 14, 177, 3 )
+btnClose = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnClose", 14, 14, 177, 7 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 -- 加载界面title
@@ -28,14 +28,15 @@ UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TR
 --UI_LoadImage( imgOtherItem, "texture/ui/SysBotton1.dds", NORMAL, 90, 13, 12, 226 )
 
 --加载对方姓名显示
-labPlayertradeName = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labPlayertradeName", 95, 11, 22, 27 )
+labPlayertradeName = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labPlayertradeName", 170, 11, 14, 28 )
 UI_SetCaption( labPlayertradeName, "Wuwuwuw…Ah…Tatatata" )
-UI_SetTextColor( labPlayertradeName, COLOR_YELLOW )
+UI_SetTextColor( labPlayertradeName, 4294366590 )
 UI_SetLabelExFont( labPlayertradeName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labPlayertradeName, TRUE )
 
 --创建对方物品表格
 grdBuy = UI_CreateCompent( frmPlayertrade, GOODS_GRID_TYPE, "grdBuy", 168, 146, 12, 45 ) 
-UI_LoadImage( grdBuy,  "texture/ui/ods/trade1.tga", NORMAL, 168, 146, 0, 0 )
+UI_LoadImage( grdBuy,  "texture/ui/corsairs/jogador_janelas.png", NORMAL, 4, 4, 1000, 1000 )
 UI_SetGridSpace( grdBuy, 2, 3 )
 UI_SetGridContent( grdBuy, 3, 4 )
 UI_SetGridUnitSize( grdBuy, 32, 32 )
@@ -51,7 +52,7 @@ UI_SetIsEnabled( grdBuy, FALSE )
 --UI_LoadImage( imgOtherGoldBak, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
 
 --加载金币显示框
-labOtherGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherGold", 47, 11, 67, 174 )
+labOtherGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labOtherGold", 56, 11, 66, 173 )
 UI_SetCaption( labOtherGold, "0" )
 UI_SetTextColor( labOtherGold, COLOR_BLACK )
 UI_SetLabelExFont( labOtherGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
@@ -103,14 +104,14 @@ UI_SetMargin( grdSale, 21, 10, 0, 3 )
 --UI_LoadImage( imgMineGoldBak, "texture/ui/PublicC.tga", NORMAL, 87, 18, 99, 235 )
 
 --加载金额显示
-labSelfGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfGold", 47, 11, 70, 349 )
+labSelfGold = UI_CreateCompent( frmPlayertrade, LABELEX_TYPE, "labSelfGold", 56, 11, 66, 348 )
 UI_SetCaption( labSelfGold, "0" )
 UI_SetTextColor( labSelfGold, COLOR_BLACK )
 UI_SetLabelExFont( labSelfGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --加载金币输入按钮
-btnGold = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnGold", 23, 22, 32, 343 )
-UI_LoadButtonImage( btnGold, "texture/ui/ods/trade1.tga", 23, 22, 0, 146, TRUE )
+btnGold = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnGold", 23, 22, 36, 342 )
+UI_LoadButtonImage( btnGold, "texture/ui/corsairs/jogador_janelas.png", 23, 22, 660, 100, TRUE )
 UI_SetHint( btnGold, "Click here to input gold for trade" )
 
 --加载对方金币图标
@@ -118,16 +119,16 @@ UI_SetHint( btnGold, "Click here to input gold for trade" )
 --UI_LoadImage( imgOtherGoldBak, "texture/ui/PublicC.tga", NORMAL, 28, 26, 190, 208 )
 
 --加载确定按钮
-btnYes = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnYes", 38, 16, 60, 372 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
+btnYes = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnYes", 56, 19, 12, 371 )
+UI_LoadButtonImage( btnYes, "texture/ui/corsairs/jogador_janelas.png", 56, 19, 660, 0, TRUE )
 
 --加载交易按钮
-btnTrade = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnTrade", 36, 16, 107, 372 )
-UI_LoadButtonImage( btnTrade, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 96, TRUE )
+btnTrade = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnTrade", 56, 19, 71, 371 )
+UI_LoadButtonImage( btnTrade, "texture/ui/corsairs/jogador_janelas.png", 56, 19, 660, 20, TRUE )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnNo", 36, 16, 152, 372 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
+btnNo = UI_CreateCompent( frmPlayertrade, BUTTON_TYPE, "btnNo", 56, 19, 130, 371 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/jogador_janelas.png", 56, 19, 660, 40, TRUE )
 
 
 
@@ -135,7 +136,7 @@ UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 -- 定义是否添加为好友 -added by Arcol
 -----------------------------------------------------------------------
 frmAcceptFrnd = UI_CreateForm( "frmAcceptFrnd",  FALSE, 185, 101, 0, 0, FALSE, FALSE )
-UI_LoadFormImage( frmAcceptFrnd, "texture/ui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAcceptFrnd, "texture/ui/corsairs/jogador_janelas.png", 185, 101, 200, 210, "", 0, 0 )
 UI_ShowForm( frmAcceptFrnd, FALSE )
 UI_AddFormToTemplete( frmAcceptFrnd, FORM_MAIN )
 UI_SetFormStyle( frmAcceptFrnd, 0 )
@@ -143,27 +144,29 @@ UI_SetIsDrag( frmAcceptFrnd, TRUE )
 UI_FormSetIsEscClose( frmAcceptFrnd, FALSE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnClose", 14, 14, 164, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnClose", 14, 14, 164, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --创建询问者姓名
-labFrndName = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrndName", 23, 11, 44, 32 )
+labFrndName = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrndName", 165, 11, 10, 32 )
 UI_SetCaption( labFrndName, "" )
-UI_SetTextColor( labFrndName, COLOR_BLACK )
-UI_SetLabelExFont( labFrndName, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labFrndName, 4294366590 )
+UI_SetLabelExAlign( labFrndName, TRUE )
+UI_SetLabelExFont( labFrndName, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建询问内容
-labFrnd = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrnd", 23, 11, 44, 54 )
+labFrnd = UI_CreateCompent( frmAcceptFrnd, LABELEX_TYPE, "labFrnd", 165, 11, 10, 50 )
 UI_SetCaption( labFrnd, "" )
-UI_SetTextColor( labFrnd, COLOR_BLACK )
-UI_SetLabelExFont( labFrnd, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labFrnd, 4293976766 )
+UI_SetLabelExAlign( labFrnd, TRUE )
+UI_SetLabelExFont( labFrnd, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载接受按钮
-btnYes = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnYes", 41, 19, 74, 78 )
+btnYes = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnYes", 41, 19, 46, 76 )
 UI_LoadButtonImage( btnYes, "texture/ui/SystemBotton3.tga", 41, 19, 0, 0, TRUE )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnNo", 41, 19, 122, 78 )
+btnNo = UI_CreateCompent( frmAcceptFrnd, BUTTON_TYPE, "btnNo", 41, 19, 98, 76 )
 UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 
@@ -171,7 +174,7 @@ UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 -- 定义是否组队 request party window
 -----------------------------------------------------------------------
 frmAcceptGroup = UI_CreateForm( "frmAcceptGroup",  FALSE, 185, 101, 0, 0, FALSE, FALSE )
-UI_LoadFormImage( frmAcceptGroup, "texture/ui/ods/sure3.tga", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAcceptGroup, "texture/ui/corsairs/jogador_janelas.png", 185, 101, 200, 320, "", 0, 0 )
 UI_ShowForm( frmAcceptGroup, FALSE )
 UI_AddFormToTemplete( frmAcceptGroup, FORM_MAIN )
 UI_SetFormStyle( frmAcceptGroup, 0 )
@@ -188,28 +191,30 @@ UI_FormSetIsEscClose( frmAcceptGroup, FALSE )
 --UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnClose", 14, 14, 164, 3 )
+btnClose = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnClose", 14, 14, 164, 7 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --创建询问者姓名
-labGroupName = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroupName", 23, 11, 15, 31 )
+labGroupName = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroupName", 165, 11, 10, 32 )
 UI_SetCaption( labGroupName, "" )
-UI_SetTextColor( labGroupName, COLOR_YELLOW )
+UI_SetTextColor( labGroupName, 4294366590 )
+UI_SetLabelExAlign( labGroupName, TRUE )
 UI_SetLabelExFont( labGroupName, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建询问内容
-labGroup = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroup", 23, 11, 15, 49 )
+labGroup = UI_CreateCompent( frmAcceptGroup, LABELEX_TYPE, "labGroup", 165, 11, 10, 50 )
 UI_SetCaption( labGroup, "" )
-UI_SetTextColor( labGroup, COLOR_CLOUD )
+UI_SetTextColor( labGroup, 4293976766 )
+UI_SetLabelExAlign( labGroup, TRUE )
 UI_SetLabelExFont( labGroup, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载接受按钮
-btnYes = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnYes", 36, 16, 92, 78 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 36, 16, 300, 80, TRUE )
+btnYes = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnYes", 56, 19, 34, 76 )
+UI_LoadButtonImage( btnYes, "texture/ui/corsairs/jogador_janelas.png", 56, 19, 660, 0, TRUE )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnNo", 36, 16, 137, 78 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
+btnNo = UI_CreateCompent( frmAcceptGroup, BUTTON_TYPE, "btnNo", 56, 19, 96, 76 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/jogador_janelas.png", 56, 19, 660, 40, TRUE )
 
 
 -----------------------------------------------------------------------
@@ -655,54 +660,56 @@ UI_FormSetIsEscClose( frmHead, FALSE )
 
 -- 加载图片
 imgFoundTop = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundTop", 256, 256, 0, 0 )
-UI_LoadImage( imgFoundTop, "texture/ui/head1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgFoundTop, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 256, 256, 0, 520 )
 
 imgFoundDown = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundDown", 256, 117, 0, 256 )
-UI_LoadImage( imgFoundDown, "texture/ui/head3.tga", NORMAL, 256, 117, 0, 0 )
+UI_LoadImage( imgFoundDown, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 256, 117, 0, 776 )
 
 imgFoundTopR = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundTopR", 198, 256, 256, 0 )
-UI_LoadImage( imgFoundTopR, "texture/ui/head2.tga", NORMAL, 198, 256, 0, 0 )
+UI_LoadImage( imgFoundTopR, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 198, 256, 256, 520 )
 
 imgFoundDownR = UI_CreateCompent( frmHead, IMAGE_TYPE, "imgFoundDownR", 198, 117, 256, 256 )
-UI_LoadImage( imgFoundDownR, "texture/ui/head3.tga", NORMAL, 198, 117, 0, 117 )
+UI_LoadImage( imgFoundDownR, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 198, 117, 256, 776 )
 
 --创建发型
-labHairColor = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairColor", 61, 12, 330, 200 )
+labHairColor = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairColor", 70, 12, 318, 183 )
 UI_SetCaption( labHairColor, "Long Hair" )
-UI_SetTextColor( labHairColor, COLOR_BLACK )
-UI_SetLabelExFont( labHairColor, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHairColor, 4293976766 )
+UI_SetLabelExAlign( labHairColor, TRUE )
+UI_SetLabelExFont( labHairColor, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建发色
-labHair = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHair", 61, 12, 330, 243 )
+labHair = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHair", 70, 12, 318, 237 )
 UI_SetCaption( labHair, "1 1 Golden" )
-UI_SetTextColor( labHair, COLOR_BLACK )
-UI_SetLabelExFont( labHair, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHair, 4293976766 )
+UI_SetLabelExAlign( labHair, TRUE )
+UI_SetLabelExFont( labHair, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载向左按钮
-btnLeftColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftColor", 40, 24, 283, 191 )
-UI_LoadButtonImage( btnLeftColor, "texture/ui/select4.tga", 40, 24, 110, 24, TRUE )
+btnLeftColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftColor", 24, 24, 290, 177 )
+UI_LoadButtonImage( btnLeftColor, "texture/ui/corsairs/criar_botoes.png", 24, 24, 0, 0, TRUE )
 
-btnLeftHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftHair", 40, 24, 283, 234 )
-UI_LoadButtonImage( btnLeftHair, "texture/ui/select4.tga", 40, 24, 110, 24, TRUE )
+btnLeftHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeftHair", 24, 24, 290, 231 )
+UI_LoadButtonImage( btnLeftHair, "texture/ui/corsairs/criar_botoes.png", 24, 24, 0, 0, TRUE )
 
 --加载向右按钮
-btnRightColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightColor", 40, 24, 392, 191 )
-UI_LoadButtonImage( btnRightColor, "texture/ui/select4.tga", 40, 24, 110, 0, TRUE )
+btnRightColor = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightColor", 24, 24, 392, 177 )
+UI_LoadButtonImage( btnRightColor, "texture/ui/corsairs/criar_botoes.png", 24, 24, 0, 24, TRUE )
 
-btnRightHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightHair", 40, 24, 392, 234 )
-UI_LoadButtonImage( btnRightHair, "texture/ui/select4.tga", 40, 24, 110, 0, TRUE )
+btnRightHair = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRightHair", 24, 24, 392, 231 )
+UI_LoadButtonImage( btnRightHair, "texture/ui/corsairs/criar_botoes.png", 24, 24, 0, 24, TRUE )
 
 --创建3D角色
 ui3dCreateCha = UI_CreateCompent( frmHead, UI3D_COMPENT, "ui3dCreateCha", 160, 300, 52, 35 )
 
 btnLeft3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnLeft3d", 32, 38, 28, 291 )
-UI_LoadButtonImage( btnLeft3d, "texture/ui/select4.tga", 32, 38, 0, 38, TRUE )
+UI_LoadButtonImage( btnLeft3d, "texture/ui/corsairs/criar_botoes.png", 32, 38, 0, 48, TRUE )
 
 btnRight3d = UI_CreateCompent( frmHead, BUTTON_TYPE, "btnRight3d", 32, 38, 204, 291 )
-UI_LoadButtonImage( btnRight3d, "texture/ui/select4.tga",  32, 38, 0, 0, TRUE )
+UI_LoadButtonImage( btnRight3d, "texture/ui/corsairs/criar_botoes.png", 32, 38, 0, 86, TRUE )
 
 --创建金钱
-labHairMoney = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairMoney", 65, 12, 335, 287 )
+labHairMoney = UI_CreateCompent( frmHead, LABELEX_TYPE, "labHairMoney", 92, 12, 318, 284 )
 UI_SetCaption( labHairMoney, "99999999" )
 UI_SetTextColor( labHairMoney, COLOR_BLACK )
 UI_SetLabelExFont( labHairMoney, DEFAULT_FONT, TRUE, COLOR_WHITE )
@@ -725,10 +732,11 @@ UI_CreateCompent( frmHead, COMMAND_ONE_TYPE, "cmdHead2", 32, 32, 298, 78 )
 UI_CreateCompent( frmHead, COMMAND_ONE_TYPE, "cmdHead3", 32, 32, 344, 78 )
 UI_CreateCompent( frmHead, COMMAND_ONE_TYPE, "cmdHead4", 32, 32, 390, 78 )
 
-labTicket = UI_CreateCompent( frmHead, LABELEX_TYPE, "labTicket", 65, 12, 298, 138 )
+labTicket = UI_CreateCompent( frmHead, LABELEX_TYPE, "labTicket", 172, 12, 268, 120 )
 UI_SetCaption( labTicket, "Hairstyling Voucher required" )
-UI_SetTextColor( labTicket, COLOR_BLACK )
-UI_SetLabelExFont( labTicket, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTicket, 4293976766 )
+UI_SetLabelExAlign( labTicket, TRUE )
+UI_SetLabelExFont( labTicket, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 -----------------------------------------------------------------------
 -- 定义玩家间PK申请

@@ -122,3 +122,11 @@ texture/ui/corsairs/reviver.png
 texture/ui/corsairs/reviver.wsd
 texture/ui/corsairs/senha2.png
 texture/ui/corsairs/senha2.wsd
+texture/ui/corsairs/guilda_janela.png
+texture/ui/corsairs/guilda_janela.wsd
+texture/ui/corsairs/guilda_paginas.png
+texture/ui/corsairs/guilda_paginas.wsd
+texture/ui/corsairs/npc_janelas.png
+texture/ui/corsairs/npc_janelas.wsd
+texture/ui/corsairs/jogador_janelas.png
+texture/ui/corsairs/jogador_janelas.wsd

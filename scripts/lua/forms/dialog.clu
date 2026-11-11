@@ -67,8 +67,8 @@ UI_SetButtonModalResult( btnNo, BUTTON_NO )
 -----------------------------------------------------------------------
 -- 定义选择是/否对话框 request to trade , ingame mall access confirmation
 -----------------------------------------------------------------------
-frmSelect = UI_CreateForm( "frmSelect",  FALSE, 218, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmSelect, "texture/ui/ods/surenew.tga", 218, 101, 0, 0, "", 0, 0 )
+frmSelect = UI_CreateForm( "frmSelect",  FALSE, 320, 124, 397, 500, FALSE, FALSE )
+UI_LoadFormImage( frmSelect, "texture/ui/corsairs/aviso.png", 320, 124, 0, 256, "", 0, 0 )
 UI_ShowForm( frmSelect, FALSE )
 UI_AddFormToTemplete( frmSelect, FORM_DIALOG )
 UI_SetFormStyle( frmSelect, 0 )
@@ -79,23 +79,24 @@ UI_SetIsDrag( frmSelect, TRUE )
 btnClose = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnClose", 14, 14, 197, 3 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+UI_SetIsShow( btnClose, FALSE )
 
 --创建询问者姓名
-labInfo = UI_CreateCompent( frmSelect, LABELEX_TYPE, "labInfo", 23, 11, 15, 31 )
+labInfo = UI_CreateCompent( frmSelect, LABELEX_TYPE, "labInfo", 288, 62, 16, 14 )
 UI_SetCaption( labInfo, "Search ID\n\n Search Content" )
-UI_SetTextColor( labInfo, COLOR_CLOUD )
+UI_SetTextColor( labInfo, 4293976766 )
 UI_SetLabelExFont( labInfo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载接受按钮
-btnYes = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnYes", 38, 16, 122, 78 )
-UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
+btnYes = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnYes", 72, 24, 78, 90 )
+UI_LoadButtonImage( btnYes, "texture/ui/corsairs/aviso.png", 72, 24, 0, 128, TRUE )
 --UI_LoadButtonImage( btnYes, "texture/ui/SystemBotton3.tga", 41, 19, 0, 0, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_YES )
 UI_FormSetEnterButton( frmSelect, btnYes )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 36, 16, 170, 78 )
-UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
+btnNo = UI_CreateCompent( frmSelect, BUTTON_TYPE, "btnNo", 72, 24, 170, 90 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/aviso.png", 72, 24, 0, 152, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_NO )
 
 

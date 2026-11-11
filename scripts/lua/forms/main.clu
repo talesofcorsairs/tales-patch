@@ -1336,19 +1336,20 @@ UI_SetFormStyle(frmViewAll,1)
 --UI_FormSetHotKey( frmViewAll, ALT_KEY, HOTKEY_Z )
 
 imgBackGround1 = UI_CreateCompent( frmViewAll, IMAGE_TYPE, "imgBackGround1", 250, 85, 0, 0 )
-UI_LoadImage( imgBackGround1, "texture/ui/player1.tga", NORMAL, 171,85, 0, 0 )
+UI_LoadImage( imgBackGround1, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 250, 85, 400, 0 )
 
 imgBackGround2 = UI_CreateCompent( frmViewAll, IMAGE_TYPE, "imgBackGround2", 250, 29, 0, 155 )
-UI_LoadImage( imgBackGround2, "texture/ui/player2.tga", NORMAL, 171,29, 0, 23)
+UI_LoadImage( imgBackGround2, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 250, 29, 400, 155 )
 
 imgBackGround3 = UI_CreateCompent( frmViewAll, IMAGE_TYPE, "imgBackGround3", 250, 70, 0, 85 )
-UI_LoadImage( imgBackGround3, "texture/ui/player1.tga", NORMAL, 171,2, 0, 85)
+UI_LoadImage( imgBackGround3, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 250, 70, 400, 85 )
 
 --定义title
-labTitle = UI_CreateCompent(  frmViewAll, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
+labTitle = UI_CreateCompent(  frmViewAll, LABELEX_TYPE, "labTitle", 238, 14, 6, 8 )
 UI_SetCaption( labTitle, "Investigate")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle, 4294366590 )
+UI_SetLabelExAlign( labTitle, TRUE )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --定义icon img背景框框
 	local imgSquareViewAll = {}
@@ -1356,31 +1357,31 @@ UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	
 	for i=0 , 5 , 1 do
 		imgSquareViewAll[i] = UI_CreateCompent( frmViewAll, IMAGE_TYPE, "imgSquareViewAll_"..i, 36, 36, i*40+7, 30 )
-		UI_LoadImage( imgSquareViewAll[i], "texture/ui/store6.tga",NORMAL, 36 ,36, 157, 76 )
+		UI_LoadImage( imgSquareViewAll[i], "texture/ui/corsairs/jogador_janelas.png", NORMAL, 4, 4, 1000, 1000 )
 
 		cmdSquareIcon[i] = UI_CreateCompent( frmViewAll, COMMAND_ONE_TYPE, "cmdSquareIcon_"..i, 32, 32, i*40+7, 31 )	
 	end
 
-	memViewAll  = UI_CreateCompent( frmViewAll, MEMO_TYPE, "memViewAll", 220, 100, 12, 70)
+	memViewAll  = UI_CreateCompent( frmViewAll, MEMO_TYPE, "memViewAll", 222, 70, 14, 75)
 	UI_SetCaption( memViewAll, "400" )
 	UI_SetTextColor( memViewAll, COLOR_BLACK )
 	UI_SetLabelExFont( memViewAll, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	UI_SetMemoPageShowNum( memViewAll, 4 )
 	UI_SetMemoMaxNumPerRow( memViewAll, 38 )
 	
-	btnReBack = UI_CreateCompent( frmViewAll, BUTTON_TYPE, "btnReBack", 48, 19,185, 151 )
-	UI_LoadButtonImage( btnReBack, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	btnReBack = UI_CreateCompent( frmViewAll, BUTTON_TYPE, "btnReBack", 48, 19, 192, 156 )
+	UI_LoadButtonImage( btnReBack, "texture/ui/corsairs/jogador_janelas.png", 48, 19, 660, 60, TRUE )
 	UI_SetButtonModalResult( btnReBack, BUTTON_CLOSE )
 	
 	labReBack = UI_CreateCompent( frmViewAll, LABELEX_TYPE, "labReBack", 400, 15,195 , 156 )
-	UI_SetCaption( labReBack, "Return")
+	UI_SetCaption( labReBack, "")
 	UI_SetTextColor( labReBack, COLOR_BLACK )
 	UI_SetLabelExFont( labReBack, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 
 	--创建关闭按钮
-	btnClose = UI_CreateCompent( frmViewAll, BUTTON_TYPE, "btnClose", 14, 14, 230, 3 )
-	UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+	btnClose = UI_CreateCompent( frmViewAll, BUTTON_TYPE, "btnClose", 14, 14, 230, 7 )
+	UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 	UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 	
 
@@ -1396,13 +1397,13 @@ UI_SetIsDrag( frmTryon,FALSE)
 --UI_FormSetHotKey( frmTryon, ALT_KEY, HOTKEY_Z )
 
 imgBackGround1 = UI_CreateCompent( frmTryon, IMAGE_TYPE, "imgBackGround1", 200, 265, 0, 0 )
-UI_LoadImage( imgBackGround1, "texture/ui/player1.tga", NORMAL, 171,256, 0, 0 )
+UI_LoadImage( imgBackGround1, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 200, 265, 400, 190 )
 
 imgBackGround2 = UI_CreateCompent( frmTryon, IMAGE_TYPE, "imgBackGround2", 200, 53, 0, 265 )
-UI_LoadImage( imgBackGround2, "texture/ui/player2.tga", NORMAL, 171,51, 0, 0 )
+UI_LoadImage( imgBackGround2, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 200, 53, 400, 455 )
 
 labTitle = UI_CreateCompent( frmTryon, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  )
-UI_SetCaption( labTitle, "Try")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -1411,17 +1412,17 @@ ui3dplayer = UI_CreateCompent( frmTryon, UI3D_COMPENT, "ui3dplayer", 120, 240, 4
 
 --创建左右旋转按钮
 btnTurnleft3d = UI_CreateCompent( frmTryon, BUTTON_TYPE, "btnTurnleft3d", 32, 38, 34, 264 )
-UI_LoadButtonImage( btnTurnleft3d, "texture/ui/select4.tga", 32, 38, 0, 38, TRUE )
+UI_LoadButtonImage( btnTurnleft3d, "texture/ui/corsairs/criar_botoes.png", 32, 38, 0, 48, TRUE )
 
 btnTurnright3d = UI_CreateCompent( frmTryon, BUTTON_TYPE, "btnTurnright3d", 32, 38, 134, 264 )
-UI_LoadButtonImage( btnTurnright3d, "texture/ui/select4.tga",  32, 38, 0, 0, TRUE )
+UI_LoadButtonImage( btnTurnright3d, "texture/ui/corsairs/criar_botoes.png", 32, 38, 0, 86, TRUE )
 
 --创建清空按钮
 	btnClearAll = UI_CreateCompent( frmTryon, BUTTON_TYPE, "btnClearAll", 68, 19, 66, 30)
-	UI_LoadButtonImage( btnClearAll, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnClearAll, "texture/ui/corsairs/jogador_janelas.png", 68, 19, 660, 80, TRUE )
 
 	labClearAll = UI_CreateCompent( frmTryon, LABELEX_TYPE, "labClearAll", 400, 150, 76, 34 )
-	UI_SetCaption( labClearAll, "Empty test wear")
+	UI_SetCaption( labClearAll, "")
 	UI_SetTextColor( labClearAll, COLOR_BLACK )
 	UI_SetLabelExFont( labClearAll, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -1439,15 +1440,15 @@ UI_FormSetHotKey( frmTempBag, ALT_KEY, HOTKEY_D )
 
 --加载背景图片
 imgBakTop = UI_CreateCompent( frmTempBag, IMAGE_TYPE, "imgBakTop", 192, 206, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/ods/tempbag.tga", NORMAL, 192, 206, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/jogador_janelas.png", NORMAL, 192, 206, 200, 0 )
 
 --Title
 labTitle = UI_CreateCompent( frmTempBag, LABELEX_TYPE, "labTitle", 400, 150, 10, 5 )
-UI_SetCaption( labTitle, "Temporary Bag")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_YELLOW )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmTempBag, BUTTON_TYPE, "btnClose", 14, 14, 174, 3 )
+btnClose = UI_CreateCompent( frmTempBag, BUTTON_TYPE, "btnClose", 14, 14, 174, 7 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
@@ -1531,81 +1532,93 @@ UI_SetFormStyle( frmEquipPurify,1)
 
 --加载背景图片
 imgBakTop = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgBakTop", 226, 255, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/EquipPurify.tga", NORMAL, 226, 255, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/npc_janelas.png", NORMAL, 226, 255, 660, 0 )
 
 --title
-labTitle1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle1", 49, 14, 7, 3 )
+labTitle1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle1", 214, 14, 6, 8 )
 UI_SetCaption( labTitle1, "Purification")
-UI_SetTextColor( labTitle1, COLOR_BLACK )
-UI_SetLabelExFont( labTitle1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle1, 4294366590 )
+UI_SetLabelExAlign( labTitle1, TRUE )
+UI_SetLabelExFont( labTitle1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
-labTitle2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle2", 49, 14, 7, 3 )
+labTitle2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle2", 214, 14, 6, 8 )
 UI_SetCaption( labTitle2, "Coral recharge")
-UI_SetTextColor( labTitle2, COLOR_BLACK )
-UI_SetLabelExFont( labTitle2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle2, 4294366590 )
+UI_SetLabelExAlign( labTitle2, TRUE )
+UI_SetLabelExFont( labTitle2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
-labTitle3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle3", 49, 14, 7, 3 )
+labTitle3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle3", 214, 14, 6, 8 )
 UI_SetCaption( labTitle3, "Gem purification")
-UI_SetTextColor( labTitle3, COLOR_BLACK )
-UI_SetLabelExFont( labTitle3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle3, 4294366590 )
+UI_SetLabelExAlign( labTitle3, TRUE )
+UI_SetLabelExFont( labTitle3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
-labTitle4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle4", 49, 14, 7, 3 )
+labTitle4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle4", 214, 14, 6, 8 )
 UI_SetCaption( labTitle4, "Repair Lifeskill tools")
-UI_SetTextColor( labTitle4, COLOR_BLACK )
-UI_SetLabelExFont( labTitle4, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labTitle4, 4294366590 )
+UI_SetLabelExAlign( labTitle4, TRUE )
+UI_SetLabelExFont( labTitle4, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建command栏
 cmdEquipOne = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipOne", 32, 32, 46, 65 )	-- 另一把武器
 
 --设置装备提纯lab左
-labHintleft1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft1", 112, 14, 40, 110 )
+labHintleft1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft1", 100, 14, 12, 110 )
 UI_SetCaption( labHintleft1, "Main")
-UI_SetTextColor( labHintleft1, COLOR_BLACK )
-UI_SetLabelExFont( labHintleft1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintleft1, 4293976766 )
+UI_SetLabelExAlign( labHintleft1, TRUE )
+UI_SetLabelExFont( labHintleft1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置贝壳充电lab左
-labHintleft2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft2", 112, 14,40, 110 )
+labHintleft2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft2", 100, 14, 12, 110 )
 UI_SetCaption( labHintleft2, "Conch")
-UI_SetTextColor( labHintleft2, COLOR_BLACK )
-UI_SetLabelExFont( labHintleft2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintleft2, 4293976766 )
+UI_SetLabelExAlign( labHintleft2, TRUE )
+UI_SetLabelExFont( labHintleft2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --道具分解lab左
-labHintleft3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft3", 112, 14, 40, 110 )
+labHintleft3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft3", 100, 14, 12, 110 )
 UI_SetCaption( labHintleft3, "Equipment")
-UI_SetTextColor( labHintleft3, COLOR_BLACK )
-UI_SetLabelExFont( labHintleft3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintleft3, 4293976766 )
+UI_SetLabelExAlign( labHintleft3, TRUE )
+UI_SetLabelExFont( labHintleft3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --修理破锅lab左
-labHintleft4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft4", 112, 14, 40, 110 )
+labHintleft4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft4", 100, 14, 12, 110 )
 UI_SetCaption( labHintleft4, "Lifeskill tool")
-UI_SetTextColor( labHintleft4, COLOR_BLACK )
-UI_SetLabelExFont( labHintleft4, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintleft4, 4293976766 )
+UI_SetLabelExAlign( labHintleft4, TRUE )
+UI_SetLabelExFont( labHintleft4, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 cmdEquipTwo = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipTwo", 32, 32, 146, 65 )	-- 要提纯的武器
 
 --设置装备提纯lab右
-labHintright1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright1", 112, 14, 144, 110 )
+labHintright1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright1", 100, 14, 112, 110 )
 UI_SetCaption( labHintright1, "Catalyst")
-UI_SetTextColor( labHintright1, COLOR_BLACK )
-UI_SetLabelExFont( labHintright1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintright1, 4293976766 )
+UI_SetLabelExAlign( labHintright1, TRUE )
+UI_SetLabelExFont( labHintright1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置贝壳充电lab右
-labHintright2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright2", 112, 14, 144, 110 )
+labHintright2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright2", 100, 14, 112, 110 )
 UI_SetCaption( labHintright2, "Battery")
-UI_SetTextColor( labHintright2, COLOR_BLACK )
-UI_SetLabelExFont( labHintright2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintright2, 4293976766 )
+UI_SetLabelExAlign( labHintright2, TRUE )
+UI_SetLabelExFont( labHintright2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --道具分解lab右
-labHintright3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright3", 112, 14,144, 110 )
+labHintright3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright3", 100, 14, 112, 110 )
 UI_SetCaption( labHintright3, "Pliers")
-UI_SetTextColor( labHintright3, COLOR_BLACK )
-UI_SetLabelExFont( labHintright3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintright3, 4293976766 )
+UI_SetLabelExAlign( labHintright3, TRUE )
+UI_SetLabelExFont( labHintright3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --修理破锅lab右
-labHintright4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright4", 112, 14,144, 110 )
+labHintright4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright4", 100, 14, 112, 110 )
 UI_SetCaption( labHintright4, "Repair Tool")
-UI_SetTextColor( labHintright4, COLOR_BLACK )
-UI_SetLabelExFont( labHintright4, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labHintright4, 4293976766 )
+UI_SetLabelExAlign( labHintright4, TRUE )
+UI_SetLabelExFont( labHintright4, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置金钱显示label
 labMoneyShow = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labMoneyShow", 112, 14, 64, 148 )
@@ -1614,8 +1627,8 @@ UI_SetTextColor( labMoneyShow, COLOR_BLACK )
 UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnClose", 14, 14, 206, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnClose", 14, 14, 206, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --加载确定取消按钮
