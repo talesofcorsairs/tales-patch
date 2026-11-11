@@ -130,3 +130,4 @@ texture/ui/corsairs/npc_janelas.png
 texture/ui/corsairs/npc_janelas.wsd
 texture/ui/corsairs/jogador_janelas.png
 texture/ui/corsairs/jogador_janelas.wsd
+texture/icon/n7293.png
