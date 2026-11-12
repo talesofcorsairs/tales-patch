@@ -209,7 +209,7 @@ UI_LoadButtonImage( btnkick, "texture/ui/corsairs/guilda_paginas.png", 54, 22, 7
 -- 定义编辑座右铭
 -----------------------------------------------------------------------
 frmEditMaxim = UI_CreateForm( "frmEditMaxim",  FALSE, 211, 120, 397, 500, TRUE, FALSE )
-UI_LoadFormImage( frmEditMaxim, "texture/ui/edit.tga", 221, 157, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmEditMaxim, "texture/ui/corsairs/guilda_pk.png", 211, 120, 570, 0, "", 0, 0 )
 UI_ShowForm( frmEditMaxim, FALSE )
 UI_AddFormToTemplete( frmEditMaxim, FORM_MAIN )
 UI_SetFormStyle( frmEditMaxim, 0 )
@@ -217,19 +217,20 @@ UI_SetIsDrag( frmEditMaxim, TRUE )
 --UI_FormSetHotKey( frmEditMaxim, ALT_KEY, HOTKEY_W ) 
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnClose", 14, 14, 192, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnClose", 14, 14, 192, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 
 imgMaxim = UI_CreateCompent( frmEditMaxim, IMAGE_TYPE, "imgMaxim", 193, 18, 8, 66 )
-UI_LoadImage( imgMaxim, "texture/ui/ShipBuild4.tga", NORMAL, 193, 18, 4, 202 )
+UI_LoadImage( imgMaxim, "texture/ui/corsairs/guilda_pk.png", NORMAL, 4, 4, 1000, 1000 )
 
-labMaxim = UI_CreateCompent( frmEditMaxim, LABELEX_TYPE, "labMaxim", 58, 11, 72, 44 )
+labMaxim = UI_CreateCompent( frmEditMaxim, LABELEX_TYPE, "labMaxim", 195, 11, 8, 42 )
 UI_SetCaption( labMaxim, "Edit Motto" )
-UI_SetTextColor( labMaxim, COLOR_BLACK )
-UI_SetLabelExFont( labMaxim, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labMaxim, 4293976766 )
+UI_SetLabelExAlign( labMaxim, TRUE )
+UI_SetLabelExFont( labMaxim, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载格言输入框
 edtMaxim = UI_CreateCompent( frmEditMaxim, EDIT_TYPE, "edtMaxim", 179, 11, 15, 71 )
@@ -239,109 +240,70 @@ UI_SetEditMaxNumVisible( edtMaxim, 30 )
 
 
 --加载确定按钮
-btnYes = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnYes", 41, 19, 99, 97 )
+btnYes = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnYes", 41, 19, 62, 94 )
 UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
 UI_SetEditEnterButton( edtTradeGold, btnYes )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnNo", 41, 19, 150, 97 )
+btnNo = UI_CreateCompent( frmEditMaxim, BUTTON_TYPE, "btnNo", 41, 19, 108, 94 )
 UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
--- Tales of Corsairs: janela nova da versao DX9 (contem trvEditor), copiada da interface da fonte.
+-- Tales of Corsairs: permissoes da guilda no esquema da skin (guilda_pk.png)
 frmGuildPerm = UI_CreateForm( "frmGuildPerm", FALSE, 190, 281, 805, 351, FALSE, FALSE )
 UI_ShowForm( frmGuildPerm, FALSE )
 UI_AddFormToTemplete( frmGuildPerm, 1 )
 UI_SetIsDrag( frmGuildPerm, TRUE )
 
 imgVideoT = UI_CreateCompent( frmGuildPerm, IMAGE_TYPE, "imgVideoT", 190, 281, 0, 0 )
-UI_LoadImage( imgVideoT, "texture/ui/corsairs/guildPerms.png", NORMAL, 190, 281, 0, 0 )
+UI_LoadImage( imgVideoT, "texture/ui/corsairs/guilda_pk.png", NORMAL, 190, 281, 570, 130 )
 
-btnClose = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnClose", 14, 14, 165, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnClose", 14, 14, 170, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 labGame = UI_CreateCompent( frmGuildPerm, LABELEX_TYPE, "labGame", 47, 11, 7, 3 )
-UI_SetCaption( labGame, "Guild Permissions" )
-UI_SetTextColor( labGame, COLOR_BLACK )
-UI_SetLabelExFont( labGame, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetCaption( labGame, "" )
 
-btnYesPerm = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnYesPerm", 41, 19, 84, 225+29 )
-UI_LoadButtonImage( btnYesPerm, "texture/ui/corsairs/coButtons.png", 41, 19, 0, 152, TRUE )
+btnYesPerm = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnYesPerm", 41, 19, 84, 254 )
+UI_LoadButtonImage( btnYesPerm, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 460, TRUE )
 UI_SetButtonModalResult( btnYesPerm, BUTTON_CLOSE )
 
-btnNo = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnNo", 41, 19, 132, 225+29 )
-UI_LoadButtonImage( btnNo, "texture/ui/corsairs/coButtons.png", 41, 19, 0, 133, TRUE )
+btnNo = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnNo", 41, 19, 132, 254 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 480, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
-
-local perms = {
-	"Speak",
-	"Manage Permissions",
-	"View Bank",
-	"Deposit Bank",
-	"Withdraw Bank",
-	"Recruit",
-	"Kick",
-	"Change Motto",
-	--"Manage Stats",	
-	--"Enter Guild House",
-	--"Place Object",
-	--"Remove Object",
-	"Disband Guild",
-	"Leader",
-}
-
-
+local perms = { "Speak", "Manage Permissions", "View Bank", "Deposit Bank", "Withdraw Bank", "Recruit", "Kick", "Change Motto", "Disband Guild", "Leader" }
 
 trvEditor = UI_CreateCompent( frmGuildPerm, TREE_TYPE, "trvEditor", 180, 200, 0, 35 )
-
-
-for i,v in ipairs(perms) do			
-	itemid = UI_CreateTextItem( v, COLOR_RED )--permission name
-	sndNode = UI_CreateSingleNode( trvEditor, itemid, -1 )--add to tree list
+for i,v in ipairs(perms) do
+	itemid = UI_CreateTextItem( v, COLOR_RED )
+	sndNode = UI_CreateSingleNode( trvEditor, itemid, -1 )
 end
-
-
-
 UI_SetIsDrag( trvEditor, TRUE )
-
 UI_TreeLoadImage( trvEditor, enumTreeAddImage, "texture/ui/QQ2.tga", 20,16,85,222, 20, 16)
 UI_TreeLoadImage( trvEditor, enumTreeSubImage, "texture/ui/QQ2.tga", 20,16,85,240, 20, 16)
-
 scrollid = UI_GetScroll( trvEditor )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
 UI_LoadImage( id, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
 UI_SetSize( id, 11, 43 )
-
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
 
-
--- Predefined Presets
-
-local predefX = 36
-local predefY = 254
-
-btnPredef = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnPredef", 41, 19, predefX, predefY )
-UI_LoadButtonImage( btnPredef, "texture/ui/corsairs/coButtons.png", 41, 19, 0, 171, TRUE )
-
-local predefPicX = 41
-local predefPicY = 19
-
+-- cargos prontos (Admin, Leader, Builder, Banker, Trusted, Member) acima do botao Presets
+btnPredef = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnPredef", 41, 19, 36, 254 )
+UI_LoadButtonImage( btnPredef, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 440, TRUE )
 for i = 1,6 do
-	predef = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnPredef"..i, predefPicX, predefPicY, predefX, predefY-(predefPicY*i) )
-	UI_LoadImage( predef, "texture/ui/corsairs/coButtons.png", 0, predefPicX,predefPicY,169 + ( i-1) * predefPicX, 168 )
-	UI_LoadImage( predef, "texture/ui/corsairs/coButtons.png", 2, 41,predefPicY,169 + ( i-1) * predefPicX, 168 + predefPicY )
-	UI_LoadImage( predef, "texture/ui/corsairs/coButtons.png", 1, 41,predefPicY,169 + ( i-1) * predefPicX, 168 + 2*predefPicY )
-	UI_SetIsShow(predef,0)
+	predef = UI_CreateCompent( frmGuildPerm, BUTTON_TYPE, "btnPredef"..i, 41, 19, 36, 254-(19*i) )
+	UI_LoadImage( predef, "texture/ui/corsairs/guilda_pk.png", 0, 41, 19, 570 + (i-1) * 41, 500 )
+	UI_LoadImage( predef, "texture/ui/corsairs/guilda_pk.png", 2, 41, 19, 570 + (i-1) * 41, 519 )
+	UI_LoadImage( predef, "texture/ui/corsairs/guilda_pk.png", 1, 41, 19, 570 + (i-1) * 41, 538 )
+	UI_SetIsShow( predef, 0 )
 end

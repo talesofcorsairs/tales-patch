@@ -752,38 +752,40 @@ UI_FormSetIsEscClose( frmTeamPK, TRUE )
 
 -- 加载背景图片
 imgBakTop1 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop1", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTop1, "texture/ui/PK1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTop1, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 256, 560, 0 )
 
 imgBakTop2 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop2", 120, 256, 256, 0 )
-UI_LoadImage( imgBakTop2, "texture/ui/PK2.tga", NORMAL, 120, 256, 0, 0 )
+UI_LoadImage( imgBakTop2, "texture/ui/corsairs/pk_janelas.png", NORMAL, 120, 256, 816, 0 )
 
 --imgBakTop3 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakTop3", 46, 256, 512, 0 )
 --UI_LoadImage( imgBakTop3, "texture/ui/PK4.tga", NORMAL, 46, 256, 0, 0 )
 
 imgBakDown1 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown1", 256, 175, 0, 256 )
-UI_LoadImage( imgBakDown1, "texture/ui/PK3.tga", NORMAL, 256, 175, 0, 0 )
+UI_LoadImage( imgBakDown1, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 175, 560, 256 )
 
 imgBakDown2 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown2", 120, 175, 256, 256 )
-UI_LoadImage( imgBakDown2, "texture/ui/PK4.tga", NORMAL, 120, 175, 0, 0 )
+UI_LoadImage( imgBakDown2, "texture/ui/corsairs/pk_janelas.png", NORMAL, 120, 175, 816, 256 )
 
 --imgBakDown3 = UI_CreateCompent( frmTeamPK, IMAGE_TYPE, "imgBakDown3", 46, 26, 512, 256 )
 --UI_LoadImage( imgBakDown3, "texture/ui/PK3.tga", NORMAL, 46, 26, 210, 52 )
 
 --创建PK地图title
-labPKtitle = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKtitle", 207, 12, 87, 7 )
+labPKtitle = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKtitle", 330, 12, 23, 8 )
 UI_SetCaption( labPKtitle, "" )
-UI_SetTextColor( labPKtitle, COLOR_BLACK )
-UI_SetLabelExFont( labPKtitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labPKtitle, 4294366590 )
+UI_SetLabelExAlign( labPKtitle, TRUE )
+UI_SetLabelExFont( labPKtitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnClose", 14, 14, 340, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnClose", 14, 14, 354, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 
 --创建PK地图名称lab
-labPKmap = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKmap", 100, 12, 256, 31 )
+labPKmap = UI_CreateCompent( frmTeamPK, LABELEX_TYPE, "labPKmap", 300, 12, 38, 40 )
 UI_SetCaption( labPKmap, "" )
-UI_SetTextColor( labPKmap, COLOR_BLACK )
-UI_SetLabelExFont( labPKmap, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labPKmap, 4293976766 )
+UI_SetLabelExAlign( labPKmap, TRUE )
+UI_SetLabelExFont( labPKmap, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 ----------team1队员列表

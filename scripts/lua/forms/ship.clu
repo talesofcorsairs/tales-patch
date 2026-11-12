@@ -271,10 +271,10 @@ UI_SetIsDrag( frmShipRoom, TRUE )
 
 -- º”‘ÿ¥¨≤’±≥æ∞Õº∆¨
 imgRoomLeft = UI_CreateCompent( frmShipRoom, IMAGE_TYPE, "imgRoomLeft", 256, 168, 0, 0 )
-UI_LoadImage( imgRoomLeft, "texture/ui/shipR2.tga", NORMAL, 256, 168, 0, 0 )
+UI_LoadImage( imgRoomLeft, "texture/ui/corsairs/diversos2.png", NORMAL, 256, 168, 480, 180 )
 
 imgRoomRight = UI_CreateCompent( frmShipRoom, IMAGE_TYPE, "imgRoomRight", 126, 168, 256, 0 )
-UI_LoadImage( imgRoomRight, "texture/ui/shipR.tga", NORMAL, 126, 168, 0, 0 )
+UI_LoadImage( imgRoomRight, "texture/ui/corsairs/diversos2.png", NORMAL, 126, 168, 736, 180 )
 
 --¥¥Ω®¥¨≤’±Ì∏Ò
 grdRoom = UI_CreateCompent( frmShipRoom, GOODS_GRID_TYPE, "grdRoom", 320, 110, 46, 29 ) 

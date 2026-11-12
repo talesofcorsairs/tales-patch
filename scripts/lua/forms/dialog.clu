@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------	
 -- 创建NPC对话表单
 frmTrade = UI_CreateForm( "frmTrade", FALSE, 185, 101, 240, 268, TRUE, FALSE )
-UI_LoadFormImage( frmTrade, "texture/ui/ods/suretrade.tga", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmTrade, "texture/ui/corsairs/escuras.png", 185, 101, 380, 0, "", 0, 0 )
 UI_ShowForm( frmTrade, FALSE )
 UI_AddFormToTemplete( frmTrade, FORM_DIALOG )
 UI_SetIsDrag( frmTrade, TRUE )
@@ -104,7 +104,7 @@ UI_SetButtonModalResult( btnNo, BUTTON_NO )
 -- 定义输入数量对话框 inventory box transfer
 -----------------------------------------------------------------------
 frmNumber = UI_CreateForm( "frmNumber",  FALSE, 185, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmNumber, "texture/ui/ods/quantity.tga", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmNumber, "texture/ui/corsairs/escuras.png", 185, 101, 570, 0, "", 0, 0 )
 UI_ShowForm( frmNumber, FALSE )
 UI_AddFormToTemplete( frmNumber, FORM_DIALOG )
 UI_SetFormStyle( frmNumber, 0 )

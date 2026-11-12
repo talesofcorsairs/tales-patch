@@ -1,3 +1,15 @@
+-- Tales of Corsairs: opcao nova da versao DX9 com as caixas da skin (nome desenhado no fundo).
+function addOpcaoSkin(frm, nome, y)
+	local c1 = UI_CreateCompent( frm, CHECK_TYPE, nome.."1", 10, 10, 134, y )
+	UI_LoadImage( c1, "texture/ui/ods/PublicC.tga", UNCHECKED, 10, 10, 228, 241 )
+	UI_LoadImage( c1, "texture/ui/ods/PublicC.tga", CHECKED, 10, 10, 240, 241 )
+	local c2 = UI_CreateCompent( frm, CHECK_TYPE, nome.."2", 10, 10, 165, y )
+	UI_LoadImage( c2, "texture/ui/ods/PublicC.tga", UNCHECKED, 10, 10, 228, 241 )
+	UI_LoadImage( c2, "texture/ui/ods/PublicC.tga", CHECKED, 10, 10, 240, 241 )
+	local g = UI_CreateCompent( frm, CHECK_GROUP_TYPE, nome, 0, 0, 0, 0 )
+	UI_AddGroupBox( g, c1 )
+	UI_AddGroupBox( g, c2 )
+end
 -----------------------------------------------------------------------
 -- 定义系统 System options window
 -----------------------------------------------------------------------
@@ -13,8 +25,8 @@ UI_SetAlpha( frmSystem, 235 )
 
 
 --创建系统背景
-imgSystemT = UI_CreateCompent( frmSystem, IMAGE_TYPE, "imgSystemT", 190, 309, 0, 0 )
-UI_LoadImage( imgSystemT, "texture/ui/ods/system1.tga", NORMAL, 190, 309, 0, 0 )
+imgSystemT = UI_CreateCompent( frmSystem, IMAGE_TYPE, "imgSystemT", 190, 274, 0, 0 )
+UI_LoadImage( imgSystemT, "texture/ui/corsairs/escuras.png", NORMAL, 190, 274, 680, 520 )
 
 
 --创建关闭按钮
@@ -51,7 +63,7 @@ UI_LoadButtonImage( btnExit, "texture/ui/ods/SysBotton1.tga", 121, 26, 605, 0, F
 -- 定义音频调整 - volume settings window
 -----------------------------------------------------------------------
 frmAudio = UI_CreateForm( "frmAudio",  FALSE, 185, 100, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAudio, "texture/ui/ods/frmaudio.tga", 185, 100, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAudio, "texture/ui/corsairs/escuras.png", 185, 100, 760, 0, "", 0, 0 )
 UI_ShowForm( frmAudio, FALSE )
 UI_AddFormToTemplete( frmAudio, FORM_MAIN )
 --UI_FormSetHotKey( frmAudio, ALT_KEY, HOTKEY_X ) --'O'
@@ -107,7 +119,7 @@ UI_SetAlpha( frmVideo, 235 )
 
 --创建系统背景
 imgVideoT = UI_CreateCompent( frmVideo, IMAGE_TYPE, "imgVideoT", 190, 229, 0, 0 )
-UI_LoadImage( imgVideoT, "texture/ui/ods/video.tga", NORMAL, 190, 229, 0, 0 )
+UI_LoadImage( imgVideoT, "texture/ui/corsairs/escuras.png", NORMAL, 190, 229, 605, 280 )
 
 btnClose = UI_CreateCompent( frmVideo, BUTTON_TYPE, "btnClose", 14, 14, 168, 3 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
@@ -235,20 +247,11 @@ UI_AddGroupBox( cbxColor, chkColor16 )
 
 --------------创建分辨率
 --创建1024*768
-chk1024 = UI_CreateCompent( frmVideo, CHECK_TYPE, "chk1024", 10, 10, 134, 186 )
-UI_LoadImage( chk1024, "texture/ui/ods/PublicC.tga", UNCHECKED, 10, 10, 228, 241 )
-UI_LoadImage( chk1024, "texture/ui/ods/PublicC.tga", CHECKED, 10, 10, 240, 241 )
 
 
 --创建800*600
-chk800 = UI_CreateCompent( frmVideo, CHECK_TYPE, "chk800", 10, 10, 165, 186 )
-UI_LoadImage( chk800, "texture/ui/ods/PublicC.tga", UNCHECKED, 10, 10, 228, 241 )
-UI_LoadImage( chk800, "texture/ui/ods/PublicC.tga", CHECKED, 10, 10, 240, 241 )
 
 --创建CHKGROUP
-cbxSize = UI_CreateCompent( frmVideo, CHECK_GROUP_TYPE, "cbxSize", 0, 0, 0, 0 )
-UI_AddGroupBox( cbxSize, chk800 )
-UI_AddGroupBox( cbxSize, chk1024 )
 
 -----------------创建全屏  是  否
 --创建全屏
@@ -293,7 +296,7 @@ UI_AddGroupBox( cbxQuality, chkLow )
 -- 定义游戏调整 -game settings window
 -----------------------------------------------------------------------
 -- 创建游戏调整表单
-frmGame = UI_CreateForm( "frmGame", FALSE, 190, 230, 150, 150, FALSE, FALSE )
+frmGame = UI_CreateForm( "frmGame", FALSE, 190, 340, 150, 150, FALSE, FALSE )
 --UI_FormSetHotKey( frmGame, ALT_KEY, HOTKEY_Z )
 UI_ShowForm( frmGame, FALSE )
 UI_AddFormToTemplete( frmGame, 1 )
@@ -303,8 +306,8 @@ UI_SetAlpha( frmGame, 230 )
 
 
 --创建背景
-imgVideoT = UI_CreateCompent( frmGame, IMAGE_TYPE, "imgVideoT", 190, 230, 0, 0 )
-UI_LoadImage( imgVideoT, "texture/ui/ods/frmgame.tga", NORMAL, 190, 230, 0, 0 )
+imgVideoT = UI_CreateCompent( frmGame, IMAGE_TYPE, "imgVideoT", 190, 340, 0, 0 )
+UI_LoadImage( imgVideoT, "texture/ui/corsairs/escuras.png", NORMAL, 190, 340, 830, 110 )
 
 
 --创建关闭按钮
@@ -319,12 +322,12 @@ UI_SetTextColor( labGame, COLOR_YELLOW )
 UI_SetLabelExFont( labGame, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --加载确定
-btnYes = UI_CreateCompent( frmGame, BUTTON_TYPE, "btnYes", 38, 16, 94, 206 )
+btnYes = UI_CreateCompent( frmGame, BUTTON_TYPE, "btnYes", 38, 16, 94, 316 )
 UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
 UI_SetButtonModalResult( btnYes, BUTTON_CLOSE )
 
 --加载取消按钮
-btnNo = UI_CreateCompent( frmGame, BUTTON_TYPE, "btnNo", 36, 16, 143, 206 )
+btnNo = UI_CreateCompent( frmGame, BUTTON_TYPE, "btnNo", 36, 16, 143, 316 )
 UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
@@ -426,7 +429,7 @@ UI_AddGroupBox( cbxHelpmodel, chkHelpmodel2 )
 -- 定义更换角色询问 -switch character window
 -----------------------------------------------------------------------
 frmAskChange = UI_CreateForm( "frmAskChange", FALSE, 185, 100, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAskChange, "texture/ui/ods/frmremind.tga", 185, 100, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAskChange, "texture/ui/corsairs/escuras.png", 185, 100, 0, 110, "", 0, 0 )
 
 UI_ShowForm( frmAskChange, FALSE )
 UI_AddFormToTemplete( frmAskChange, FORM_MAIN )
@@ -457,7 +460,7 @@ UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 -- 定义重新登陆询问 --logout window
 -----------------------------------------------------------------------
 frmAskRelogin = UI_CreateForm( "frmAskRelogin", FALSE, 185, 100, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAskRelogin, "texture/ui/ods/frmremind.tga", 185, 100, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAskRelogin, "texture/ui/corsairs/escuras.png", 185, 100, 0, 110, "", 0, 0 )
 
 UI_ShowForm( frmAskRelogin, FALSE )
 UI_AddFormToTemplete( frmAskRelogin, FORM_MAIN )
@@ -488,7 +491,7 @@ UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 -- 定义退出游戏询问
 -----------------------------------------------------------------------
 frmAskExit = UI_CreateForm( "frmAskExit",  FALSE, 185, 100, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAskExit, "texture/ui/ods/frmremind.tga", 185, 100, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAskExit, "texture/ui/corsairs/escuras.png", 185, 100, 0, 110, "", 0, 0 )
 
 UI_ShowForm( frmAskExit, FALSE )
 UI_AddFormToTemplete( frmAskExit, FORM_MAIN )
@@ -516,3 +519,63 @@ UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
 --加载取消按钮
 btnNo = UI_CreateCompent( frmAskExit, BUTTON_TYPE, "btnNo", 36, 16, 138, 79 )
 UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
+
+-- Tales of Corsairs: opcoes novas da versao DX9.
+addOpcaoSkin( frmGame, "cbxCameraMode_p", 106 )
+addOpcaoSkin( frmGame, "cbxAppmodel", 126 )
+addOpcaoSkin( frmGame, "cbxEffmodel", 146 )
+addOpcaoSkin( frmGame, "cbxShowMounts_p", 166 )
+addOpcaoSkin( frmGame, "cbxStatemodel", 186 )
+addOpcaoSkin( frmGame, "cbxEnemyNames_p", 206 )
+addOpcaoSkin( frmGame, "cbxShowBars_p", 226 )
+addOpcaoSkin( frmGame, "cbxShowPercentages_p", 246 )
+addOpcaoSkin( frmGame, "cbxShowInfo_p", 266 )
+addOpcaoSkin( frmGame, "cbxFramerate_p", 286 )
+
+-- Tales of Corsairs: lista de resolucoes da versao DX9 (1024x768 e a do cliente antigo).
+-- Fundo: o campo creme com a seta da search.tga da skin (o mesmo do campo de mapa do minimapa).
+imgResolucao = UI_CreateCompent( frmVideo, IMAGE_TYPE, "imgResolucao", 84, 18, 96, 181 )
+UI_LoadImage( imgResolucao, "texture/ui/search.tga", NORMAL, 100, 20, 85, 39 )
+cboResolution = UI_CreateCompent( frmVideo, COMBO_TYPE, "cboResolution", 80, 16, 98, 182 )
+UI_ComboSetStyle( cboResolution, TRUE )
+UI_LoadComboImage( cboResolution, "", 64, 16, 106, 39, "texture/ui/search.tga", 1, 1, 130, 180, FALSE )
+UI_ComboSetTextColor( cboResolution, COLOR_BLACK )
+lstMap = UI_GetList( cboResolution )
+UI_SetListFontColor( lstMap, COLOR_WHITE, COLOR_WHITE )
+UI_SetSize( lstMap, 80, 130 )
+UI_SetMargin( lstMap, 8, 6, 8, 0 )
+UI_SetListRowHeight( lstMap, 18 )
+UI_LoadImage( lstMap, "texture/ui/search.tga", COMPENT_BACK, 51, 60, 0, 133 )
+UI_AddListText( lstMap, "800x600" )
+UI_AddListText( lstMap, "1024x768" )
+UI_AddListText( lstMap, "1152x648" )
+UI_AddListText( lstMap, "1280x720" )
+UI_AddListText( lstMap, "1366x768" )
+UI_AddListText( lstMap, "1600x900" )
+UI_AddListText( lstMap, "1920x1080" )
+UI_SetListIsMouseFollow( lstMap, TRUE )
+UI_ListLoadSelectImage( lstMap, "texture/ui/SystemBotton3.tga", 79, 18, 0, 227 )
+
+-- Tales of Corsairs: janela nova da versao DX9 (frmAskOfflineMode), copiada da interface da fonte.
+frmAskOfflineMode = UI_CreateForm( "frmAskOfflineMode",  FALSE, 185, 100, 397, 500, FALSE, FALSE )
+UI_LoadFormImage( frmAskOfflineMode, "texture/ui/Sure.dds", 185, 100, 0, 0, "", 0, 0 )
+
+UI_ShowForm( frmAskOfflineMode, FALSE )
+UI_AddFormToTemplete( frmAskOfflineMode, FORM_MAIN )
+UI_SetFormStyle( frmAskOfflineMode, 0 )
+
+labTitle = UI_CreateCompent( frmAskOfflineMode, LABELEX_TYPE, "labTitle", 47, 11, 7, 3 )
+UI_SetCaption( labTitle, "Offline Mode" )
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labBody = UI_CreateCompent( frmAskOfflineMode, LABELEX_TYPE, "labBody", 63, 5, 11, 45 )
+UI_SetCaption( labBody, "Confirm to offline mode?" )
+UI_SetTextColor( labBody, COLOR_BLACK )
+UI_SetLabelExFont( labBody, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+btnYes = UI_CreateCompent( frmAskOfflineMode, BUTTON_TYPE, "btnYes", 41, 19, 74, 78 )
+UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
+
+btnNo = UI_CreateCompent( frmAskOfflineMode, BUTTON_TYPE, "btnNo", 41, 19, 122, 78 )
+UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )

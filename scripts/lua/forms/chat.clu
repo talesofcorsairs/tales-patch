@@ -41,7 +41,7 @@ UI_SetFormStyleEx( frmQQ, FORM_BOTTOM, 0, 45)
 
 -- 加载背景图片
 imgQQTop = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgQQTop", 148, 335, 0, 0 )
-UI_LoadImage( imgQQTop, "texture/ui/ods/friend.tga", NORMAL, 148, 335, 0, 0 )
+UI_LoadImage( imgQQTop, "texture/ui/corsairs/escuras.png", NORMAL, 148, 335, 520, 520 )
 --imgQQDown = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgQQDown", 148, 98, 0, 258 )
 --UI_LoadImage( imgQQDown, "texture/ui/ods/friend.tga", NORMAL, 148, 98, 0, 257 )
 
@@ -232,7 +232,7 @@ UI_SetIsDrag( frmChat, TRUE )
 
 -- 加载背景图片
 imgChatTL = UI_CreateCompent( frmChat, IMAGE_TYPE, "imgChatTL", 377, 229, 0, 0 )
-UI_LoadImage( imgChatTL, "texture/ui/ods/Talk1.tga", NORMAL, 377, 229, 0, 0 )
+UI_LoadImage( imgChatTL, "texture/ui/corsairs/escuras.png", NORMAL, 377, 229, 220, 280 )
 
 --imgChatTR = UI_CreateCompent( frmChat, IMAGE_TYPE, "imgChatTR", 121, 256, 256, 0 )
 --UI_LoadImage( imgChatTR, "texture/ui/ods/speak2.tga", NORMAL, 121, 256, 0, 0 )
@@ -511,7 +511,7 @@ UI_SetLabelExFont( labName, DEFAULT_FONT, TRUE, COLOR_WHITE )
 -- 定义添加好友 - add player as friend window
 -----------------------------------------------------------------------
 frmAddFriend = UI_CreateForm( "frmAddFriend",  FALSE, 185, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmAddFriend, "texture/ui/ods/sure.tga", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmAddFriend, "texture/ui/corsairs/escuras.png", 185, 101, 0, 0, "", 0, 0 )
 UI_ShowForm( frmAddFriend, FALSE )
 UI_AddFormToTemplete( frmAddFriend, FORM_MAIN )
 UI_SetFormStyle( frmAddFriend, 0 )
@@ -568,7 +568,7 @@ UI_MenuLoadSelect( styMenu, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227  )
 -- 定义编辑个人信息  share a message window
 -----------------------------------------------------------------------
 frmEdit = UI_CreateForm( "frmEdit",  FALSE, 221, 157, 397, 500, TRUE, FALSE )
-UI_LoadFormImage( frmEdit, "texture/ui/ods/date.tga", 221, 157, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmEdit, "texture/ui/corsairs/escuras.png", 221, 157, 410, 110, "", 0, 0 )
 UI_ShowForm( frmEdit, FALSE )
 UI_AddFormToTemplete( frmEdit, FORM_MAIN )
 UI_SetFormStyle( frmEdit, 0 )
@@ -626,7 +626,7 @@ UI_LoadImage( imgMhead, "texture/ui/main800.tga", NORMAL, 32, 32, 37, 201 )
 -- 定义详细资料 friend details
 -----------------------------------------------------------------------
 frmdetails = UI_CreateForm( "frmdetails",  FALSE, 212, 229, 397, 500, TRUE, FALSE )
-UI_LoadFormImage( frmdetails, "texture/ui/ods/frienddds.tga", 212, 229, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmdetails, "texture/ui/corsairs/escuras.png", 212, 229, 0, 280, "", 0, 0 )
 UI_ShowForm( frmdetails, FALSE )
 UI_AddFormToTemplete( frmdetails, FORM_MAIN )
 UI_SetFormStyle( frmdetails, 0 )
@@ -704,7 +704,7 @@ UI_SetLabelExFont( labShiplv, DEFAULT_FONT, TRUE, COLOR_BLACK )
 -- 定义上下线提示界面 transparent slide chat box
 -----------------------------------------------------------------------
 frmRemind = UI_CreateForm( "frmRemind",  TRUE, 185, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmRemind, "texture/ui/ods/frmremind.tga", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmRemind, "texture/ui/corsairs/escuras.png", 185, 101, 190, 0, "", 0, 0 )
 UI_SetFormStyle( frmRemind, 1 )
 UI_ShowForm( frmRemind, FALSE )
 --UI_AddFormToTemplete( frmRemind, FORM_LOGIN )
@@ -755,3 +755,64 @@ scrollid = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
 UI_LoadImage( scrollid, "texture/ui/editor/scroll.dds", COMPENT_BACK, 16, 32, 0, 0 )
 UI_SetSize( scrollid, 10, 32 )
 -- UI_SetAlpha( trvChatManage, 100 )
+
+-- Tales of Corsairs: controle novo da versao DX9 (btnBlock), copiado da interface da fonte.
+btnBlock = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnBlock", 14, 14, 70, 332 )
+UI_LoadButtonImage( btnBlock, "texture/ui/corsairs/coButtons.png", 14, 14, 276, 51, TRUE )
+UI_SetHint( btnBlock, "Block" )
+UI_SetIsShow( btnBlock, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (BlockedRight), copiado da interface da fonte.
+BlockedRight = UI_CreateCompent( frmQQ, MENU_TYPE, "BlockedRight", 92, 97, 240, 468 )
+UI_MenuLoadImage( BlockedRight, TRUE, FALSE, "texture/ui/right.tga", 5, 5, 10, 10, "texture/ui/right.tga", 5, 5 )
+UI_SetMargin( BlockedRight, 10, 5, 5, 5 )
+UI_MenuLoadSelect( BlockedRight, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227  )
+UI_MenuAddText( BlockedRight, "Delete" )
+UI_SetIsShow( BlockedRight, FALSE )
+-- Tales of Corsairs: grupo novo da versao DX9 (GM), copiado da interface da fonte.
+itemid = UI_CreateNoteGraphItem( "texture/ui/QQ2.tga", 87,16,105,222, 0, "GM", 5,2 )
+gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
+-- Tales of Corsairs: grupo novo da versao DX9 (Blocked), copiado da interface da fonte.
+itemid = UI_CreateNoteGraphItem( "texture/ui/QQ2.tga", 87,16,105,222, 0, "Blocked", 5,2 )
+gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
+-- Tales of Corsairs: janela nova da versao DX9 (frmBlockPlayer), copiada da interface da fonte.
+frmBlockPlayer = UI_CreateForm( "frmBlockPlayer",  FALSE, 185, 101, 397, 500, FALSE, FALSE )
+UI_LoadFormImage( frmBlockPlayer, "texture/ui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_ShowForm( frmBlockPlayer, FALSE )
+UI_AddFormToTemplete( frmBlockPlayer, FORM_MAIN )
+UI_SetFormStyle( frmBlockPlayer, 0 )
+UI_SetIsDrag( frmBlockPlayer, TRUE )
+--UI_SetAlpha( frmBlockPlayer, 200 )
+--UI_FormSetHotKey( frmBlockPlayer, ALT_KEY, HOTKEY_K ) 
+
+btnClose = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnClose", 14, 14, 164, 3 )
+UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
+
+labTitle = UI_CreateCompent( frmBlockPlayer, LABELEX_TYPE, "labTitle", 400, 150, 10, 4 )
+UI_SetCaption( labTitle, "Block Player")
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+labTradeGold = UI_CreateCompent( frmBlockPlayer, LABELEX_TYPE, "labTradeGold", 23, 11, 50, 30 )
+UI_SetCaption( labTradeGold, "Please input player name" )
+UI_SetTextColor( labTradeGold, COLOR_BLACK )
+UI_SetLabelExFont( labTradeGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
+
+imgTradeGoldBak = UI_CreateCompent( frmBlockPlayer, IMAGE_TYPE, "imgTradeGoldBak", 109, 19, 50, 50 )
+UI_LoadImage( imgTradeGoldBak, "texture/ui/PublicC.tga", NORMAL, 109, 19, 47, 68 )
+
+edtTradeGold = UI_CreateCompent( frmBlockPlayer, EDIT_TYPE, "edtTradeGold", 96, 11, 58, 54 )
+UI_SetTextColor( edtTradeGold, COLOR_BLACK )
+UI_SetEditMaxNum( edtTradeGold, 17 )
+UI_SetEditMaxNumVisible( edtTradeGold, 17 )
+
+btnYes = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnYes", 41, 19, 74, 78 )
+UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
+
+btnNo = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnNo", 41, 19, 122, 78 )
+UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
+
+-----------------
+-- chat pop up --
+-----------------

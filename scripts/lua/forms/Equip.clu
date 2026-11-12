@@ -356,13 +356,13 @@ UI_SetIsDrag( frmItemSpy, TRUE )
 imgItemTop = UI_CreateCompent( frmItemSpy, IMAGE_TYPE, "imgItemTop", frmEquipX,frmEquipY, 0, 0 )
 UI_LoadImage( imgItemTop, "texture/ui/corsairs/eqform/eqform.png", NORMAL, frmEquipX,frmEquipY, 0, 0 )
 
-btnClose = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnClose", 14, 14, 173, 0 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnClose", 14, 14, 175, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -- Form Label
 labTitle = UI_CreateCompent( frmItemSpy, LABELEX_TYPE, "labTitle", 400, 150, 10, 1 )
-UI_SetCaption( labTitle, "Equip")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -405,11 +405,11 @@ ui3dEqSpyCha = UI_CreateCompent( frmItemSpy, UI3D_COMPENT, "ui3dEqSpyCha", 0, 0,
 
 btnLeft3d = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnLeft3d", 32, 38, 11,182-49-49-49 )
 -- UI_LoadButtonImage( btnLeft3d, "texture/ui/select4.tga", 32, 38, 0, 38, TRUE )
-UI_LoadButtonImage( btnLeft3d, "texture/ui/corsairs/coButtons.png", 32, 32, 217, 87, TRUE )
+UI_LoadButtonImage( btnLeft3d, "texture/ui/ods/dx9/coButtons_ouro.png", 32, 32, 217, 87, TRUE )
 
 btnRight3d = UI_CreateCompent( frmItemSpy, BUTTON_TYPE, "btnRight3d", 32, 38, 153,182-49-49-49 )
 -- UI_LoadButtonImage( btnRight3d, "texture/ui/select4.tga", 32, 38, 0, 0, TRUE )
-UI_LoadButtonImage( btnRight3d, "texture/ui/corsairs/coButtons.png",  32, 32, 217, 119, TRUE )
+UI_LoadButtonImage( btnRight3d, "texture/ui/ods/dx9/coButtons_ouro.png",  32, 32, 217, 119, TRUE )
 
 ---------------------------------------
 --  Npc/ Monster Helper from Top II  --

@@ -951,33 +951,33 @@ UI_SetIsDrag( frmGuildPK, TRUE )
 
 -- 加载背景图片
 imgBakLeft = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakLeft, "texture/ui/GuildPK1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakLeft, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 256, 0, 0 )
 
 imgBakMidle = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakMidle", 256, 256, 256, 0 )
-UI_LoadImage( imgBakMidle, "texture/ui/GuildPK2.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakMidle, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 256, 256, 0 )
 
 imgBakRight = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakRight", 46, 256, 512, 0 )
-UI_LoadImage( imgBakRight, "texture/ui/GuildPK3.tga", NORMAL, 46, 256, 0, 0 )
+UI_LoadImage( imgBakRight, "texture/ui/corsairs/guilda_pk.png", NORMAL, 46, 256, 512, 0 )
 
 imgBakLeftD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakLeftD", 256, 131, 0, 256 )
-UI_LoadImage( imgBakLeftD, "texture/ui/GuildPK4.tga", NORMAL, 256, 131, 0, 0 )
+UI_LoadImage( imgBakLeftD, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 131, 0, 256 )
 
 imgBakMidleD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakMidleD", 256, 131, 256, 256 )
-UI_LoadImage( imgBakMidleD, "texture/ui/GuildPK5.tga", NORMAL, 256, 131, 0, 0 )
+UI_LoadImage( imgBakMidleD, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 131, 256, 256 )
 
 imgBakRightD = UI_CreateCompent( frmGuildPK, IMAGE_TYPE, "imgBakRightD", 46, 131, 512, 256 )
-UI_LoadImage( imgBakRightD, "texture/ui/GuildPK6.tga", NORMAL, 46, 131, 0, 0 )
+UI_LoadImage( imgBakRightD, "texture/ui/corsairs/guilda_pk.png", NORMAL, 46, 131, 512, 256 )
 
 --title
 labTitle = UI_CreateCompent( frmGuildPK, LABELEX_TYPE, "labTitle", 60, 14, 208, 4 )
-UI_SetCaption( labTitle, "Guild Ranking Board")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 --title
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnClose", 14, 14, 537, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnClose", 14, 14, 537, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --创建擂主
@@ -1030,15 +1030,15 @@ UI_SetLabelExFont( labMoney2, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --加载竞价按钮
 btnCharge0 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge0", 41, 19, 497, 120 )
-UI_LoadButtonImage( btnCharge0, "texture/ui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge0, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 420, TRUE )
 UI_SetButtonModalResult( btnCharge0, BUTTON_YES )
 
 btnCharge1 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge1", 41, 19, 497, 167 )
-UI_LoadButtonImage( btnCharge1, "texture/ui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge1, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 420, TRUE )
 UI_SetButtonModalResult( btnCharge1, BUTTON_YES )
 
 btnCharge2 = UI_CreateCompent( frmGuildPK, BUTTON_TYPE, "btnCharge2", 41, 19, 497, 212 )
-UI_LoadButtonImage( btnCharge2, "texture/ui/forge3.tga", 41, 19, 0, 82, TRUE )
+UI_LoadButtonImage( btnCharge2, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 420, TRUE )
 UI_SetButtonModalResult( btnCharge2, BUTTON_YES )
 
 
@@ -1049,7 +1049,7 @@ UI_SetListRowHeight( lstGuildPK, 13 )
 UI_SetListFontColor( lstGuildPK, COLOR_BLACK, COLOR_BLACK )
 UI_SetMargin( lstGuildPK, 12,12,12,12 )
 UI_SetIsShow( lstGuildPK, TRUE )
-UI_AddListText( lstGuildPK, "1st place challenge: Every Sunday at 0001 GMT+8. Bids will end at Saturday 0001 GMT+8" )
-UI_AddListText( lstGuildPK, "Tales of Corsairs Online" )
-UI_AddListText( lstGuildPK, "3rd place challenge: Every Sunday 1201 GMT+8. Bids will end at Saturday 1201 GMT+8" )
-UI_AddListText( lstGuildPK, "Note: After each match ended, a new round will begin. Please check out the official website for details." )
+UI_AddListText( lstGuildPK, "1st place: every Sunday at 00:01 GMT+8. Bids close on Saturday at 00:01." )
+UI_AddListText( lstGuildPK, "Bid gold to challenge a guild for its place on the board." )
+UI_AddListText( lstGuildPK, "3rd place: every Sunday at 12:01 GMT+8. Bids close on Saturday at 12:01." )
+UI_AddListText( lstGuildPK, "A new round starts after each match. Check the website for details." )

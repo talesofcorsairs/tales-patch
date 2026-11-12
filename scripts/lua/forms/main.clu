@@ -906,60 +906,61 @@ UI_SetFormStyle( frmStore,1)
 
 --加载商城背景
 imgBackGround1 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround1", 256, 256, 0, 0 )
-UI_LoadImage( imgBackGround1, "texture/ui/store1.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround1, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 256, 0, 0 )
 
 imgBackGround2 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround2", 256, 256, 256, 0 )
-UI_LoadImage( imgBackGround2, "texture/ui/store2.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround2, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 256, 256, 0 )
 
 imgBackGround3 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround3", 88, 256, 512, 0 )
-UI_LoadImage( imgBackGround3, "texture/ui/store5.tga", NORMAL, 88,256, 0, 0 )
+UI_LoadImage( imgBackGround3, "texture/ui/corsairs/diversos1.png", NORMAL, 88, 256, 512, 0 )
 
 imgBackGround4 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround4", 256, 256, 0, 256 )
-UI_LoadImage( imgBackGround4, "texture/ui/store3.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround4, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 256, 0, 256 )
 
 imgBackGround5 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround5", 256, 256, 256, 256 )
-UI_LoadImage( imgBackGround5, "texture/ui/store4.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround5, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 256, 256, 256 )
 
 imgBackGround5 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround5", 256, 5, 256, 507 )
-UI_LoadImage( imgBackGround5, "texture/ui/store3.tga", NORMAL, 5,5, 189, 251 )
+UI_LoadImage( imgBackGround5, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 5, 256, 507 )
 
 imgBackGround6 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround6", 88, 256, 512, 256 )
-UI_LoadImage( imgBackGround6, "texture/ui/store5.tga", NORMAL, 88,256, 88, 0 )
+UI_LoadImage( imgBackGround6, "texture/ui/corsairs/diversos1.png", NORMAL, 88, 256, 512, 256 )
 
 imgBackGround7 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround7", 256, 38, 0, 512 )
-UI_LoadImage( imgBackGround7, "texture/ui/store6.tga", NORMAL, 255,38, 0, 0 )
+UI_LoadImage( imgBackGround7, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 38, 0, 512 )
 
 imgBackGround8 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround8", 256, 38, 256, 512 )
-UI_LoadImage( imgBackGround8, "texture/ui/store6.tga", NORMAL, 255,38, 0, 38 )
+UI_LoadImage( imgBackGround8, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 38, 256, 512 )
 
 imgBackGround9 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround9", 88, 38, 512, 512 )
-UI_LoadImage( imgBackGround9, "texture/ui/store6.tga", NORMAL, 88,38, 0, 76 )
+UI_LoadImage( imgBackGround9, "texture/ui/corsairs/diversos1.png", NORMAL, 88, 38, 512, 512 )
 
 --搜索挡板临时用
 imgblack = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgblack", 550, 17, 42, 29 )
-UI_LoadImage( imgblack, "texture/ui/store1.tga", NORMAL, 5,17, 27, 29 )
+UI_LoadImage( imgblack, "texture/ui/corsairs/diversos1.png", NORMAL, 4, 4, 1000, 1000 )
 
 --title
 labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  )
-		UI_SetCaption( labTitle, "Item Mall")
+		UI_SetCaption( labTitle, "")
 		UI_SetTextColor( labTitle, COLOR_BLACK )
 		UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --Notice
 		labNotice = UI_CreateCompent( frmStore, LABELEX_TYPE, "labNotice", 10, 150, 48 ,29  )
 		UI_SetCaption( labNotice, "Welcome to the InGame Item Mall: We have many items that will help you in your journeys!")
-		UI_SetTextColor( labNotice, COLOR_RED )
-		UI_SetLabelExFont( labNotice, DEFAULT_FONT, FALSE, COLOR_WHITE )
+		UI_SetTextColor( labNotice, 4294366590 )
+		UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --内置商城--begin
 	--创建左方目录树
-	trvStore = UI_CreateCompent( frmStore, TREE_TYPE, "trvStore", 142, 370, 6, 56)
+	trvStore = UI_CreateCompent( frmStore, TREE_TYPE, "trvStore", 142, 324, 6, 56)
 
 	itemid = UI_CreateNoteGraphItem( "texture/ui/store6.tga", 127, 20, 30, 114, 0, "Item Mall", 5 , 2 )
 	gridid = UI_CreateGridNode( trvStore, itemid, 1, 32, 32, -1 )
 
-	UI_TreeLoadImage( trvStore, enumTreeAddImage, "texture/ui/store6.tga", 30, 20, 0, 114, 30, 20)
-	UI_TreeLoadImage( trvStore, enumTreeSubImage, "texture/ui/store6.tga", 30, 20, 0, 134, 30, 20)
+	UI_TreeLoadImage( trvStore, enumTreeAddImage, "texture/ui/corsairs/diversos1.png", 30, 20, 730, 300, 30, 20)
+	UI_TreeLoadImage( trvStore, 2, "texture/ui/corsairs/diversos1.png", 110, 20, 610, 300, 110, 20)
+	UI_TreeLoadImage( trvStore, enumTreeSubImage, "texture/ui/corsairs/diversos1.png", 30, 20, 760, 300, 30, 20)
 	
 	UI_SetIsDrag( trvStore, FALSE )
 
@@ -974,20 +975,20 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 --	UI_SetLabelExFont( labBeVIP, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 		--兑换按钮
-	btnReceiveMoney = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnReceiveMoney", 64, 19, 293, 67 )
-	UI_LoadButtonImage( btnReceiveMoney, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	btnReceiveMoney = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnReceiveMoney", 72, 19, 43, 390 )
+	UI_LoadButtonImage( btnReceiveMoney, "texture/ui/corsairs/diversos1.png", 72, 19, 610, 210, TRUE )
 
 	labReceiveMoney = UI_CreateCompent( frmStore, LABELEX_TYPE, "labReceiveMoney", 400, 150, 301, 71 )
-	UI_SetCaption( labReceiveMoney, "Redeem Crystal")
+	UI_SetCaption( labReceiveMoney, "")
 	UI_SetTextColor( labReceiveMoney, COLOR_BLACK )
 	UI_SetLabelExFont( labReceiveMoney, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	
 	--摩豆兑换按钮
-	btnReceiveMoDou= UI_CreateCompent( frmStore, BUTTON_TYPE, "btnReceiveMoDou", 64, 19, 368, 67 )
-	UI_LoadButtonImage( btnReceiveMoDou, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	btnReceiveMoDou= UI_CreateCompent( frmStore, BUTTON_TYPE, "btnReceiveMoDou", 72, 19, 43, 412 )
+	UI_LoadButtonImage( btnReceiveMoDou, "texture/ui/corsairs/diversos1.png", 72, 19, 610, 230, TRUE )
 
 	labReceiveMoDou= UI_CreateCompent( frmStore, LABELEX_TYPE, "labReceiveMoDou", 400, 150, 376, 71 )
-	UI_SetCaption( labReceiveMoDou, "Top Up Point")
+	UI_SetCaption( labReceiveMoDou, "")
 	UI_SetTextColor( labReceiveMoDou, COLOR_BLACK )
 	UI_SetLabelExFont( labReceiveMoDou, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	
@@ -1084,7 +1085,7 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 
 	--白色挡板
 	imgBackGround10 = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBackGround10", 405, 440, 182, 60 )
-	UI_LoadImage( imgBackGround10, "texture/ui/store1.tga", NORMAL, 20,20, 30, 70 )
+	UI_LoadImage( imgBackGround10, "texture/ui/corsairs/diversos1.png", NORMAL, 4, 4, 1000, 1000 )
 
 	--帮助中心显示memo
 	memStoreHelp  = UI_CreateCompent( frmStore, MEMO_TYPE, "memStoreHelp", 397, 430, 190, 67 )
@@ -1117,23 +1118,23 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 	--列表栏标题
 		labNameTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labNameTitle0", 10, 150, 235, 64 )
 		UI_SetCaption( labNameTitle, "Item")
-		UI_SetTextColor( labNameTitle, COLOR_BLACK )
-		UI_SetLabelExFont( labNameTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+		UI_SetTextColor( labNameTitle, 4294366590 )
+		UI_SetLabelExFont( labNameTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 		labPriceTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labPriceTitle", 10, 150, 380, 64)
 		UI_SetCaption( labPriceTitle, "Price")
-		UI_SetTextColor( labPriceTitle, COLOR_BLACK )
-		UI_SetLabelExFont( labPriceTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+		UI_SetTextColor( labPriceTitle, 4294366590 )
+		UI_SetLabelExFont( labPriceTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 		
 		labLeftTimeTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labLeftTimeTitle", 10, 150, 440, 64 )
 		UI_SetCaption( labLeftTimeTitle, "Time Left")
-		UI_SetTextColor( labLeftTimeTitle, COLOR_BLACK )
-		UI_SetLabelExFont( labLeftTimeTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+		UI_SetTextColor( labLeftTimeTitle, 4294366590 )
+		UI_SetLabelExFont( labLeftTimeTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 		labLeftNumTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labLeftNumTitle", 10, 150, 510, 64 )
 		UI_SetCaption( labLeftNumTitle, "Amount Left")
-		UI_SetTextColor( labLeftNumTitle, COLOR_BLACK )
-		UI_SetLabelExFont( labLeftNumTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )		
+		UI_SetTextColor( labLeftNumTitle, 4294366590 )
+		UI_SetLabelExFont( labLeftNumTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )		
 	
 	
 	--设置道具栏位
@@ -1161,12 +1162,12 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 	for i=0,8,1 do
 		--分割线
 		imgCutLine[i] = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgCutLine_"..i, 355, 2, 230, i*42+78 )
-		UI_LoadImage( imgCutLine[i], "texture/ui/store6.tga",NORMAL, 253 ,2, 0, 51 )
+		UI_LoadImage( imgCutLine[i], "texture/ui/corsairs/diversos1.png", NORMAL, 355, 2, 610, 40 )
 		--UI_SetAlpha(imgCutLine[i],150)
 		
 		--icon框框
 		imgSquare[i] =  UI_CreateCompent( frmStore, IMAGE_TYPE, "imgSquare_"..i, 36, 36, 190, i*42+82 )
-		UI_LoadImage( imgSquare[i], "texture/ui/store6.tga",NORMAL, 36 ,36, 157, 76 )
+		UI_LoadImage( imgSquare[i], "texture/ui/corsairs/diversos1.png", NORMAL, 36, 36, 610, 0 )
 		
 		--商品中的icon列表
 		cmdStore[i] = UI_CreateCompent( frmStore, COMMAND_ONE_TYPE, "cmdStore_"..i, 32, 32, 192, i*42+84 )	
@@ -1178,7 +1179,7 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 		
 		--标识条  点击后显示
 		imgBlue[i] = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgBlue_"..i, 355, 40, 230, i*42+80 )
-		UI_LoadImage( imgBlue[i], "texture/ui/store7.tga",NORMAL, 253 ,48, 0, 51 )
+		UI_LoadImage( imgBlue[i], "texture/ui/corsairs/diversos1.png", NORMAL, 355, 40, 610, 50 )
 		UI_SetAlpha(imgBlue[i],200)
 		UI_SetIsShow(imgBlue[i],FALSE)
 		
@@ -1231,38 +1232,38 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 	--设置金钱剩余数显示
 	labMoneyNotice = UI_CreateCompent( frmStore, LABELEX_TYPE, "labMoneyNotice", 400, 150,24, 445 )
 	UI_SetCaption( labMoneyNotice, "Crystal")
-	UI_SetTextColor( labMoneyNotice, COLOR_BLACK )
-	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labMoneyNotice, 4293976766 )
+	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 	imgMoney = UI_CreateCompent( frmStore, IMAGE_TYPE, "imgMoney", 18, 24, 82, 435 )
 	UI_LoadImage( imgMoney, "texture/ui/store6.tga", NORMAL, 24,31, 0, 200 )
 
 	labMoneyLeft = UI_CreateCompent( frmStore, LABELEX_TYPE, "labMoneyLeft", 400, 150,110 , 445 )
 	UI_SetCaption( labMoneyLeft, "99999")
-	UI_SetTextColor( labMoneyLeft, COLOR_BLACK )
-	UI_SetLabelExFont( labMoneyLeft, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labMoneyLeft, 4293976766 )
+	UI_SetLabelExFont( labMoneyLeft, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	
 	--设置摩豆剩余数
 	labMoneyNotice = UI_CreateCompent( frmStore, LABELEX_TYPE, "labMoneyNotice", 400, 150,24, 465 )
 	UI_SetCaption( labMoneyNotice, "Points")
-	UI_SetTextColor( labMoneyNotice, COLOR_BLACK )
-	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labMoneyNotice, 4293976766 )
+	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	
 	labBeanLeft = UI_CreateCompent( frmStore, LABELEX_TYPE, "labBeanLeft", 400, 150,82, 465 )
 	UI_SetCaption( labBeanLeft, "0")
-	UI_SetTextColor( labBeanLeft, COLOR_BLACK )
-	UI_SetLabelExFont( labBeanLeft, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labBeanLeft, 4293976766 )
+	UI_SetLabelExFont( labBeanLeft, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	
 		--设置会员种类
 	labMoneyNotice = UI_CreateCompent( frmStore, LABELEX_TYPE, "labMoneyNotice", 400, 150,24, 485 )
 	UI_SetCaption( labMoneyNotice, "Type")
-	UI_SetTextColor( labMoneyNotice, COLOR_BLACK )
-	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labMoneyNotice, 4293976766 )
+	UI_SetLabelExFont( labMoneyNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	
 	labMemberStyle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labMemberStyle", 400, 150,82, 485 )
 	UI_SetCaption( labMemberStyle, "Ordinary Member")
-	UI_SetTextColor( labMemberStyle, COLOR_BLACK )
-	UI_SetLabelExFont( labMemberStyle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labMemberStyle, 4293976766 )
+	UI_SetLabelExFont( labMemberStyle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 	
 	--设置左箭头
@@ -1273,8 +1274,8 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 	--设置页数显示
 	labListPage = UI_CreateCompent( frmStore, LABELEX_TYPE, "labListPage", 400, 150, 525, 485 )
 	UI_SetCaption( labListPage, "")
-	UI_SetTextColor( labListPage, COLOR_BLACK )
-	UI_SetLabelExFont( labListPage, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetTextColor( labListPage, 4293976766 )
+	UI_SetLabelExFont( labListPage, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	UI_SetIsShow(labListPage,FALSE)
 
 	--设置右箭头
@@ -1284,44 +1285,44 @@ labTitle = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTitle", 10, 150, 7 ,3  
 
 	--交易按钮
 	btnTrade = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnTrade", 48, 19, 200, 480 )
-	UI_LoadButtonImage( btnTrade, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnTrade, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 130, TRUE )
 
 	labTrade = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTrade", 400, 150, 212, 484 )
-	UI_SetCaption( labTrade, "Buy")
+	UI_SetCaption( labTrade, "")
 	UI_SetTextColor( labTrade, COLOR_BLACK )
 	UI_SetLabelExFont( labTrade, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 	--试穿按钮
 	btnTryon = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnTryon", 48, 19, 260, 480 )
-	UI_LoadButtonImage( btnTryon, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnTryon, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 150, TRUE )
 
 	labTryon = UI_CreateCompent( frmStore, LABELEX_TYPE, "labTryon", 400, 150, 272, 484 )
-	UI_SetCaption( labTryon, "Try")
+	UI_SetCaption( labTryon, "")
 	UI_SetTextColor( labTryon, COLOR_BLACK )
 	UI_SetLabelExFont( labTryon, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	
 	--查看详细信息按钮
 	btnViewAll = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnViewAll", 68, 19, 320, 480 )
-	UI_LoadButtonImage( btnViewAll, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnViewAll, "texture/ui/corsairs/diversos1.png", 68, 19, 610, 170, TRUE )
 
 	labViewAll = UI_CreateCompent( frmStore, LABELEX_TYPE, "labViewAll", 400, 150, 329, 484 )
-	UI_SetCaption( labViewAll, "Check")
+	UI_SetCaption( labViewAll, "")
 	UI_SetTextColor( labViewAll, COLOR_BLACK )
 	UI_SetLabelExFont( labViewAll, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 	--关闭按钮II
 	btnCloseall = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnCloseall", 68, 19, 400, 480 )
-	UI_LoadButtonImage( btnCloseall, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnCloseall, "texture/ui/corsairs/diversos1.png", 68, 19, 610, 190, TRUE )
 	UI_SetButtonModalResult( btnCloseall, BUTTON_CLOSE )
 	
 	labCloseAll = UI_CreateCompent( frmStore, LABELEX_TYPE, "labCloseAll", 400, 150, 409, 484 )
-	UI_SetCaption( labCloseAll, "Close Mall")
+	UI_SetCaption( labCloseAll, "")
 	UI_SetTextColor( labCloseAll, COLOR_BLACK )
 	UI_SetLabelExFont( labCloseAll, DEFAULT_FONT, TRUE, COLOR_WHITE )
 	
 	--创建关闭按钮
-	btnClose = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnClose", 14, 14, 570, 3 )
-	UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+	btnClose = UI_CreateCompent( frmStore, BUTTON_TYPE, "btnClose", 14, 14, 578, 7 )
+	UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 	UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -1473,14 +1474,14 @@ UI_SetFormStyle( frmSpiritMarry,1)
 
 --加载背景图片
 imgBakTop = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgBakTop", 226, 256, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/marry1.tga", NORMAL, 226, 256, 0, 0 )
+UI_LoadImage( imgBakTop, "texture/ui/corsairs/diversos1.png", NORMAL, 226, 256, 430, 560 )
 
 imgBakButtom = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgBakButtom", 226, 170, 0, 256 )
-UI_LoadImage( imgBakButtom, "texture/ui/marry2.tga", NORMAL, 226, 170, 0, 0 )
+UI_LoadImage( imgBakButtom, "texture/ui/corsairs/diversos1.png", NORMAL, 226, 170, 430, 816 )
 
 --定义title
 labTitle = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "Fairy Marriage")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -1497,8 +1498,8 @@ UI_SetTag( cmdSpiritItem, enumSPIRIT_OUT )
 --设置labal
 labNotice = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labNotice", 112, 14, 18, 384 )
 UI_SetCaption( labNotice, "Demonic Fruit has bonus effect!")
-UI_SetTextColor( labNotice, COLOR_RED )
-UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labNotice, 4294941312 )
+UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置金钱显示label
 labMoneyShow = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labMoneyShow", 112, 14, 68, 334 )
@@ -1507,8 +1508,8 @@ UI_SetTextColor( labMoneyShow, COLOR_BLACK )
 UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnClose", 14, 14, 206, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnClose", 14, 14, 206, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --加载确定取消按钮
@@ -1652,16 +1653,16 @@ UI_SetFormStyle( frmSpiritErnie,1)
 
 --加载背景图片
 imgBakTopLeft = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/SpiritErnie1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 256, 0, 560 )
 
 imgBakTopRight = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakTopRight", 167, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/SpiritErnie2.tga", NORMAL, 167, 256, 0, 0 )
+UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/diversos1.png", NORMAL, 167, 256, 256, 560 )
 
 imgBakBottomLeft = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakBottomLeft", 256, 101, 0, 256 )
-UI_LoadImage( imgBakBottomLeft, "texture/ui/SpiritErnie3.tga", NORMAL, 256, 101, 0, 0 )
+UI_LoadImage( imgBakBottomLeft, "texture/ui/corsairs/diversos1.png", NORMAL, 256, 101, 0, 816 )
 
 imgBakBottomRight = UI_CreateCompent( frmSpiritErnie, IMAGE_TYPE, "imgBakBottomRight", 167, 101, 256, 256 )
-UI_LoadImage( imgBakBottomRight, "texture/ui/SpiritErnie3.tga", NORMAL, 167, 101, 0, 101 )
+UI_LoadImage( imgBakBottomRight, "texture/ui/corsairs/diversos1.png", NORMAL, 167, 101, 256, 816 )
 
 --加载滚动动画
 	--第一竖条
@@ -1818,35 +1819,35 @@ cmdItemTiger9 = UI_CreateCompent( frmSpiritErnie, COMMAND_ONE_TYPE, "cmdItemTige
 
 --创建开始按钮
 btnStart = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStart", 48, 19, 80, 252 )
-UI_LoadButtonImage( btnStart, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+UI_LoadButtonImage( btnStart, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 250, TRUE )
 
 labStart = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labStart", 400, 150, 92, 255 )
-UI_SetCaption( labStart, "Start")
+UI_SetCaption( labStart, "")
 UI_SetTextColor( labStart, COLOR_BLACK )
 UI_SetLabelExFont( labStart, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnClose", 14, 14, 403, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnClose", 14, 14, 403, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --创建提示
 labMoneyShow = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labMoneyShow", 112, 14, 84, 42 )
 UI_SetCaption( labMoneyShow, "Note: Minimum try cost 5 Fairy Coins!")
-UI_SetTextColor( labMoneyShow, COLOR_RED )
-UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labMoneyShow, 4294941312 )
+UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建提示
 labMoneyShow = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labMoneyShow", 112, 14, 84, 60 )
 UI_SetCaption( labMoneyShow, "Note: Do not have than 1900000000G in your inventory!")
-UI_SetTextColor( labMoneyShow, COLOR_RED )
-UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labMoneyShow, 4294941312 )
+UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建下注label1
 labSetmoney1= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney1", 112, 14, 100, 85 )
 UI_SetCaption( labSetmoney1, "Bet")
-UI_SetTextColor( labSetmoney1, COLOR_BLACK )
-UI_SetLabelExFont( labSetmoney1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labSetmoney1, 4293976766 )
+UI_SetLabelExFont( labSetmoney1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置压注按钮1
 chkSetmoney1 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney1", 10, 10, 130, 85 )
@@ -1857,14 +1858,14 @@ UI_SetHint( chkSetmoney1, "Bet" )
 --设置下注显示label
 labUsemoney1= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney1", 112, 14, 78, 106 )
 UI_SetCaption( labUsemoney1, "")
-UI_SetTextColor( labUsemoney1, COLOR_BLACK )
-UI_SetLabelExFont( labUsemoney1, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labUsemoney1, 4293976766 )
+UI_SetLabelExFont( labUsemoney1, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建下注label2
 labSetmoney2= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney2", 112, 14, 100, 142 )
 UI_SetCaption( labSetmoney2, "Bet")
-UI_SetTextColor( labSetmoney2, COLOR_BLACK )
-UI_SetLabelExFont( labSetmoney2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labSetmoney2, 4293976766 )
+UI_SetLabelExFont( labSetmoney2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置压注按钮2
 chkSetmoney2 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney2", 10, 10, 130, 142 )
@@ -1875,14 +1876,14 @@ UI_SetHint( chkSetmoney2, "Bet" )
 
 labUsemoney2= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney2", 112, 14, 78, 163 )
 UI_SetCaption( labUsemoney2, "")
-UI_SetTextColor( labUsemoney2, COLOR_BLACK )
-UI_SetLabelExFont( labUsemoney2, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labUsemoney2, 4293976766 )
+UI_SetLabelExFont( labUsemoney2, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建下注label3
 labSetmoney3 = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labSetmoney3", 112, 14, 100, 198 )
 UI_SetCaption( labSetmoney3, "Bet")
-UI_SetTextColor( labSetmoney3, COLOR_BLACK )
-UI_SetLabelExFont( labSetmoney3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labSetmoney3, 4293976766 )
+UI_SetLabelExFont( labSetmoney3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --设置压注按钮3
 chkSetmoney3 = UI_CreateCompent( frmSpiritErnie, CHECK_TYPE, "chkSetmoney3", 10, 10, 130, 198 )
@@ -1893,31 +1894,31 @@ UI_SetHint( chkSetmoney3, "Bet" )
 
 labUsemoney3= UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labUsemoney3", 112, 14, 78, 219 )
 UI_SetCaption( labUsemoney3, "")
-UI_SetTextColor( labUsemoney3, COLOR_BLACK )
-UI_SetLabelExFont( labUsemoney3, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labUsemoney3, 4293976766 )
+UI_SetLabelExFont( labUsemoney3, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建停止按钮
 btnStop1 = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStop1", 48, 19, 175, 252 )
-UI_LoadButtonImage( btnStop1, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+UI_LoadButtonImage( btnStop1, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 270, TRUE )
 
 labStop1 = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labTryon", 400, 150, 187, 255 )
-UI_SetCaption( labStop1, "Stop")
+UI_SetCaption( labStop1, "")
 UI_SetTextColor( labStop1, COLOR_BLACK )
 UI_SetLabelExFont( labStop1, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 btnStop2 = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStop2", 48, 19, 234, 252 )
-UI_LoadButtonImage( btnStop2, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+UI_LoadButtonImage( btnStop2, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 270, TRUE )
 
 labStop2 = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labTryon", 400, 150, 246, 255 )
-UI_SetCaption( labStop2, "Stop")
+UI_SetCaption( labStop2, "")
 UI_SetTextColor( labStop2, COLOR_BLACK )
 UI_SetLabelExFont( labStop2, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 btnStop3 = UI_CreateCompent( frmSpiritErnie, BUTTON_TYPE, "btnStop3", 48, 19, 292, 252 )
-UI_LoadButtonImage( btnStop3, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+UI_LoadButtonImage( btnStop3, "texture/ui/corsairs/diversos1.png", 48, 19, 610, 270, TRUE )
 
 labStop3 = UI_CreateCompent( frmSpiritErnie, LABELEX_TYPE, "labStop3", 400, 150, 304, 255 )
-UI_SetCaption( labStop3, "Stop")
+UI_SetCaption( labStop3, "")
 UI_SetTextColor( labStop3, COLOR_BLACK )
 UI_SetLabelExFont( labStop3, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -1947,51 +1948,51 @@ UI_SetFormStyle( frmPKSilver,2)
 
 --加载背景图片
 imgBackGround1 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround1", 256, 256, 0, 0 )
-UI_LoadImage( imgBackGround1, "texture/ui/fighting1.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround1, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 256, 0, 0 )
 
 imgBackGround2 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround2", 256, 256, 256, 0 )
-UI_LoadImage( imgBackGround2, "texture/ui/fighting2.tga", NORMAL, 256,256, 0, 0 )
+UI_LoadImage( imgBackGround2, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 256, 256, 0 )
 
 imgBackGround3 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround3", 46, 256, 512, 0 )
-UI_LoadImage( imgBackGround3, "texture/ui/fighting5.tga", NORMAL, 46, 256, 0, 0 )
+UI_LoadImage( imgBackGround3, "texture/ui/corsairs/pk_janelas.png", NORMAL, 46, 256, 512, 0 )
 
 imgBackGround4 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround4", 256, 130, 0, 256 )
-UI_LoadImage( imgBackGround4, "texture/ui/fighting3.tga", NORMAL, 256,130, 0, 0 )
+UI_LoadImage( imgBackGround4, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 130, 0, 256 )
 
 imgBackGround5 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround5", 256, 130, 256, 256 )
-UI_LoadImage( imgBackGround5, "texture/ui/fighting4.tga", NORMAL, 256,130, 0, 0 )
+UI_LoadImage( imgBackGround5, "texture/ui/corsairs/pk_janelas.png", NORMAL, 256, 130, 256, 256 )
 
 imgBackGround6 = UI_CreateCompent( frmPKSilver, IMAGE_TYPE, "imgBackGround6", 46, 130, 512, 256 )
-UI_LoadImage( imgBackGround6, "texture/ui/fighting5.tga", NORMAL, 46,130, 46, 0 )
+UI_LoadImage( imgBackGround6, "texture/ui/corsairs/pk_janelas.png", NORMAL, 46, 130, 512, 256 )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmPKSilver, BUTTON_TYPE, "btnClose", 14, 14, 531, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmPKSilver, BUTTON_TYPE, "btnClose", 14, 14, 528, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --创建结果表单
 --标头--程序不处理
 labTtitle1 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle1", 400, 150,60, 104 )
 UI_SetCaption( labTtitle1, "Character ")
-UI_SetTextColor( labTtitle1, COLOR_RED )
+UI_SetTextColor( labTtitle1, 4294366590 )
 UI_SetLabelExFont( labTtitle1, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 labTtitle2 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle2", 400, 150,175, 104 )
 UI_SetCaption( labTtitle2, "Level")
-UI_SetTextColor( labTtitle2, COLOR_RED )
+UI_SetTextColor( labTtitle2, 4294366590 )
 UI_SetLabelExFont( labTtitle2, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 labTtitle3 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle3", 400, 150,289, 104 )
 UI_SetCaption( labTtitle3, "Class")
-UI_SetTextColor( labTtitle3, COLOR_RED )
+UI_SetTextColor( labTtitle3, 4294366590 )
 UI_SetLabelExFont( labTtitle3, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 labTtitle4 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle4", 400, 150,406, 104 )
 UI_SetCaption( labTtitle4, "Chaos Points")
-UI_SetTextColor( labTtitle4, COLOR_RED )
+UI_SetTextColor( labTtitle4, 4294366590 )
 UI_SetLabelExFont( labTtitle4, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
-labTtitle5 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle5", 400, 150,27, 104 )
+labTtitle5 = UI_CreateCompent( frmPKSilver, LABELEX_TYPE, "labTtitle5", 400, 150, 24, 104 )
 UI_SetCaption( labTtitle5, "NO")
 UI_SetTextColor( labTtitle5, COLOR_RED )
 UI_SetLabelExFont( labTtitle5, DEFAULT_FONT, TRUE, COLOR_WHITE )
@@ -2182,23 +2183,23 @@ UI_SetFormStyle( frmCompose,2)
 
 --加载背景图片
 imgBakTopLeft = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/Compose1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 256, 310, 0 )
 
 imgBakTopRight = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgBakTopRight", 49, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/Compose3.tga", NORMAL, 49, 256, 0, 0 )
+UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 256, 566, 0 )
 
 imgBakBottomLeft = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgBakBottomLeft", 256, 224, 0, 256 )
-UI_LoadImage( imgBakBottomLeft, "texture/ui/Compose2.tga", NORMAL, 256, 224, 0, 0 )
+UI_LoadImage( imgBakBottomLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 224, 310, 256 )
 
 imgBakBottomRight = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgBakBottomRight", 49, 224, 256, 256 )
-UI_LoadImage( imgBakBottomRight, "texture/ui/Compose3.tga", NORMAL, 49, 224, 49, 0 )
+UI_LoadImage( imgBakBottomRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 224, 566, 256 )
 
 imgCover = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgCover", 181, 23, 26, 434 )
-UI_LoadImage( imgCover, "texture/ui/Compose2.tga", NORMAL, 30, 23, 26, 146)
+UI_LoadImage( imgCover, "texture/ui/corsairs/profissoes.png", NORMAL, 181, 23, 336, 434 )
 
 --定义title
 labTitle = UI_CreateCompent( frmCompose, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "Manufacturing")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2233,16 +2234,16 @@ UI_SetLabelExFont( labCharOutput, FONT28, FALSE, COLOR_WHITE )
 
 --定义进度条外框
 imgComposeFrame = UI_CreateCompent( frmCompose, IMAGE_TYPE, "imgComposeFrame", 278, 13, 13, 369 )
-UI_LoadImage( imgComposeFrame, "texture/ui/Progress.tga", NORMAL, 157, 13, 0, 52 )
+UI_LoadImage( imgComposeFrame, "texture/ui/corsairs/profissoes.png", NORMAL, 278, 13, 310, 490 )
 
 --定义进度条
 proCompose = UI_CreateCompent( frmCompose, PROGRESS_TYPE, "proCompose", 278, 13, 13, 369 )
-UI_LoadImage( proCompose, "texture/ui/Progress.tga", PROGRESS_PROGRESS, 157, 13, 0, 65 )
+UI_LoadImage( proCompose, "texture/ui/corsairs/profissoes.png", PROGRESS_PROGRESS, 278, 13, 310, 510 )
 
 --定义数量输入框
 labNumInput = UI_CreateCompent( frmCompose, LABELEX_TYPE, "labNumInput", 49, 14, 41, 318 )
 UI_SetCaption( labNumInput, "Quantity")
-UI_SetTextColor( labNumInput, COLOR_RED )
+UI_SetTextColor( labNumInput, 4294366590 )
 UI_SetLabelExFont( labNumInput, DEFAULT_FONT, FALSE, COLOR_WHITE )
 
 --设置左箭头
@@ -2254,31 +2255,32 @@ edtNumInput = UI_CreateCompent(frmCompose, EDIT_TYPE,"edtNumInput", 49, 14, 42, 
 UI_SetEditMaxNum(edtNumInput, 8 )
 UI_SetEditMaxNumVisible(edtNumInput,8)
 UI_SetIsKeyFocus(edtNumInput,FALSE)
+UI_SetTextColor( edtNumInput, 4293976766 )
 --设置右箭头
 btnRightPage = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnRightPage", 13, 13,  97, 335 )
 UI_LoadButtonImage( btnRightPage, "texture/ui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
 
 --定义提交按钮
 btnForgeYes = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnForgeYes", 57, 26, 230, 389 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 580, TRUE )
 
 labInput = UI_CreateCompent( frmCompose, LABELEX_TYPE, "labInput", 49, 14, 246, 396 )
-UI_SetCaption( labInput, "Start")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义取消按钮
 btnForgeNo = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnForgeNo", 57, 26, 230, 441 )
-UI_LoadButtonImage( btnForgeNo, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 610, TRUE )
 
 labInput = UI_CreateCompent( frmCompose, LABELEX_TYPE, "labInput", 49, 14, 246, 448 )
-UI_SetCaption( labInput, "Stop")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义关闭按钮
-btnClose = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnClose", 14, 14, 285, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmCompose, BUTTON_TYPE, "btnClose", 14, 14, 285, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -2295,20 +2297,20 @@ UI_SetFormStyle( frmBreak,2)
 
 --加载背景图片
 imgBakTopLeft = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/Break1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 256, 0, 0 )
 
 imgBakTopRight = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBakTopRight", 49, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/Break3.tga", NORMAL, 49, 256, 0, 0 )
+UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 256, 256, 0 )
 
 imgBakBottomLeft = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBakBottomLeft", 256, 224, 0, 256 )
-UI_LoadImage( imgBakBottomLeft, "texture/ui/Break2.tga", NORMAL, 256, 224, 0, 0 )
+UI_LoadImage( imgBakBottomLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 224, 0, 256 )
 
 imgBakBottomRight = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBakBottomRight", 49, 224, 256, 256 )
-UI_LoadImage( imgBakBottomRight, "texture/ui/Break3.tga", NORMAL, 49, 224, 49, 0 )
+UI_LoadImage( imgBakBottomRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 224, 256, 256 )
 
 --定义title
 labTitle = UI_CreateCompent( frmBreak, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "Analyze")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2328,15 +2330,15 @@ UI_SetHint(cmdItemBase1,"Fairy")
 
 --定义进度条外框
 imgBreakFrame = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBreakFrame", 278, 13, 13, 369 )
-UI_LoadImage( imgBreakFrame, "texture/ui/Progress.tga", NORMAL, 157, 13, 0, 52 )
+UI_LoadImage( imgBreakFrame, "texture/ui/corsairs/profissoes.png", NORMAL, 278, 13, 310, 490 )
 
 --定义进度条
 proBreak = UI_CreateCompent( frmBreak, PROGRESS_TYPE, "proBreak", 278, 13, 13, 369 )
-UI_LoadImage( proBreak, "texture/ui/Progress.tga", PROGRESS_PROGRESS, 157, 13, 0, 65)
+UI_LoadImage( proBreak, "texture/ui/corsairs/profissoes.png", PROGRESS_PROGRESS, 278, 13, 310, 510 )
 
 --定义遮罩
 imgBreakOver = UI_CreateCompent( frmBreak, IMAGE_TYPE, "imgBreakOver", 110, 25,170, 395 )
-UI_LoadImage( imgBreakOver, "texture/ui/Break2.tga", NORMAL, 90, 15, 30, 150 )
+UI_LoadImage( imgBreakOver, "texture/ui/corsairs/profissoes.png", NORMAL, 110, 25, 170, 395 )
 
 --定义数字显示区左
 labNumOutputLeft = UI_CreateCompent( frmBreak, LABELEX_TYPE, "labNumOutputLeft", 10, 145, 31, 402 )
@@ -2355,25 +2357,25 @@ UI_SetLabelExFont( labNumOutputRight, FONT20, FALSE, COLOR_YELLOW )
 
 --定义提交按钮
 btnForgeYes = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnForgeYes", 57, 26, 43, 441 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 580, TRUE )
 
 labInput = UI_CreateCompent( frmBreak, LABELEX_TYPE, "labInput", 49, 14, 59, 448 )
-UI_SetCaption( labInput, "Start")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义取消按钮
 btnForgeNo = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnForgeNo", 57, 26, 196, 441 )
-UI_LoadButtonImage( btnForgeNo, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 610, TRUE )
 
 labInput = UI_CreateCompent( frmBreak, LABELEX_TYPE, "labInput", 49, 14, 212, 448 )
-UI_SetCaption( labInput, "Stop")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义关闭按钮
-btnClose = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnClose", 14, 14, 285, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmBreak, BUTTON_TYPE, "btnClose", 14, 14, 285, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 --------------------------------------------------------------------
@@ -2390,20 +2392,20 @@ UI_SetFormStyle( frmFound,2)
 
 --加载背景图片
 imgBakTopLeft = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/Found1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 256, 620, 0 )
 
 imgBakTopRight = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgBakTopRight", 49, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/Found3.tga", NORMAL, 49, 256, 0, 0 )
+UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 256, 876, 0 )
 
 imgBakBottomLeft = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgBakBottomLeft", 256, 224, 0, 256 )
-UI_LoadImage( imgBakBottomLeft, "texture/ui/Found2.tga", NORMAL, 256, 224, 0, 0 )
+UI_LoadImage( imgBakBottomLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 224, 620, 256 )
 
 imgBakBottomRight = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgBakBottomRight", 49, 224, 256, 256 )
-UI_LoadImage( imgBakBottomRight, "texture/ui/Found3.tga", NORMAL, 49, 224, 49, 0 )
+UI_LoadImage( imgBakBottomRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 224, 876, 256 )
 
 --定义title
 labTitle = UI_CreateCompent( frmFound, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "Crafting")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2505,42 +2507,42 @@ UI_SetIsShow(imgShaiZi3_6,FALSE)
 
 --加载大按钮
 btnBigBig = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnBigBig", 47, 26, 170, 391 )
-UI_LoadButtonImage( btnBigBig, "texture/ui/Progress.tga", 47, 26, 0, 78, FALSE )
+UI_LoadButtonImage( btnBigBig, "texture/ui/corsairs/profissoes.png", 47, 26, 310, 640, TRUE )
 
 labInput = UI_CreateCompent( frmFound, LABELEX_TYPE, "labInput", 49, 14, 185, 398 )
-UI_SetCaption( labInput, "Big")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --加载小按钮
 btnSmallSmall = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnSmallSmall", 47, 26, 227, 391 )
-UI_LoadButtonImage( btnSmallSmall, "texture/ui/Progress.tga", 47, 26, 0, 78, FALSE )
+UI_LoadButtonImage( btnSmallSmall, "texture/ui/corsairs/profissoes.png", 47, 26, 310, 670, TRUE )
 
 labInput = UI_CreateCompent( frmFound, LABELEX_TYPE, "labInput", 49, 14, 235, 398 )
-UI_SetCaption( labInput, "Small")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义进度条外框
 imgFoundFrame = UI_CreateCompent( frmFound, IMAGE_TYPE, "imgFoundFrame", 278, 13, 13, 352 )
-UI_LoadImage( imgFoundFrame, "texture/ui/Progress.tga", NORMAL, 157, 13, 0, 52 )
+UI_LoadImage( imgFoundFrame, "texture/ui/corsairs/profissoes.png", NORMAL, 278, 13, 310, 490 )
 
 --定义进度条
 proFound = UI_CreateCompent( frmFound, PROGRESS_TYPE, "proFound", 278, 13, 13, 352 )
-UI_LoadImage( proFound, "texture/ui/Progress.tga", PROGRESS_PROGRESS, 157, 13, 0, 65 )
+UI_LoadImage( proFound, "texture/ui/corsairs/profissoes.png", PROGRESS_PROGRESS, 278, 13, 310, 510 )
 
 --定义提交按钮
 btnForgeYes = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnForgeYes", 57, 26, 124, 439 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 580, TRUE )
 
 labInput = UI_CreateCompent( frmFound, LABELEX_TYPE, "labInput", 49, 14, 140, 446 )
-UI_SetCaption( labInput, "Start")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义关闭按钮
-btnClose = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnClose", 14, 14, 285, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmFound, BUTTON_TYPE, "btnClose", 14, 14, 285, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -2557,20 +2559,20 @@ UI_SetFormStyle( frmCooking,2)
 
 --加载背景图片
 imgBakTopLeft = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/Cooking1.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 256, 0, 490 )
 
 imgBakTopRight = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgBakTopRight", 49, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/Cooking3.tga", NORMAL, 49, 256, 0, 0 )
+UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 256, 256, 490 )
 
 imgBakBottomLeft = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgBakBottomLeft", 256, 224, 0, 256 )
-UI_LoadImage( imgBakBottomLeft, "texture/ui/Cooking2.tga", NORMAL, 256, 224, 0, 0 )
+UI_LoadImage( imgBakBottomLeft, "texture/ui/corsairs/profissoes.png", NORMAL, 256, 224, 0, 746 )
 
 imgBakBottomRight = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgBakBottomRight", 49, 224, 256, 256 )
-UI_LoadImage( imgBakBottomRight, "texture/ui/Cooking3.tga", NORMAL, 49, 224, 49, 0 )
+UI_LoadImage( imgBakBottomRight, "texture/ui/corsairs/profissoes.png", NORMAL, 49, 224, 256, 746 )
 
 --定义title
 labTitle = UI_CreateCompent( frmCooking, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "Cooking")
+UI_SetCaption( labTitle, "")
 UI_SetTextColor( labTitle, COLOR_BLACK )
 UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2595,37 +2597,37 @@ cmdItemBase1 = UI_CreateCompent( frmCooking, COMMAND_ONE_TYPE, "cmdItemBase1", 3
 UI_SetHint(cmdItemBase1,"Fairy")
 
 imgCookingOver = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgCookingOver", 240, 10, 15, 411 )
-UI_LoadImage( imgCookingOver, "texture/ui/Cooking2.tga", NORMAL, 14,10,100, 155 )
+UI_LoadImage( imgCookingOver, "texture/ui/corsairs/profissoes.png", NORMAL, 240, 10, 15, 901 )
 
 --定义进度条外框
 imgCookingFrame = UI_CreateCompent( frmCooking, IMAGE_TYPE, "imgCookingFrame", 217, 13, 43, 426 )
-UI_LoadImage( imgCookingFrame, "texture/ui/Progress.tga", NORMAL, 157, 13, 0, 52 )
+UI_LoadImage( imgCookingFrame, "texture/ui/corsairs/profissoes.png", NORMAL, 217, 13, 310, 530 )
 
 --定义进度条
 proCooking = UI_CreateCompent( frmCooking, PROGRESS_TYPE, "proCooking", 217, 13,43, 426 )
-UI_LoadImage( proCooking, "texture/ui/Progress.tga", PROGRESS_PROGRESS, 157, 13, 0, 0 )
+UI_LoadImage( proCooking, "texture/ui/corsairs/profissoes.png", PROGRESS_PROGRESS, 217, 13, 310, 550 )
 
 --定义提交按钮
 btnForgeYes = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnForgeYes", 57, 26, 40, 385)
-UI_LoadButtonImage( btnForgeYes, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 580, TRUE )
 
 labInput = UI_CreateCompent( frmCooking, LABELEX_TYPE, "labInput", 49, 14, 56, 392 )
-UI_SetCaption( labInput, "Start")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义取消按钮
 btnForgeNo = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnForgeNo", 57, 26, 207, 385)
-UI_LoadButtonImage( btnForgeNo, "texture/ui/Progress.tga", 57, 26, 47, 78, FALSE )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/profissoes.png", 57, 26, 310, 610, TRUE )
 
 labInput = UI_CreateCompent( frmCooking, LABELEX_TYPE, "labInput", 49, 14, 223, 392 )
-UI_SetCaption( labInput, "Stop")
+UI_SetCaption( labInput, "")
 UI_SetTextColor( labInput, COLOR_BLACK )
 UI_SetLabelExFont( labInput, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --定义关闭按钮
-btnClose = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnClose", 14, 14, 285, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmCooking, BUTTON_TYPE, "btnClose", 14, 14, 285, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 
@@ -2644,13 +2646,13 @@ UI_SetFormStyle( frmQuestion,2)
 
 --背景
 imgMissonT = UI_CreateCompent( frmQuestion, IMAGE_TYPE, "imgMissonT", 235, 111, 0, 0 )
-UI_LoadImage( imgMissonT, "texture/ui/answer.tga", NORMAL, 235, 111, 0, 0 )
+UI_LoadImage( imgMissonT, "texture/ui/corsairs/diversos2.png", NORMAL, 235, 111, 0, 0 )
 imgMissonD = UI_CreateCompent( frmQuestion, IMAGE_TYPE, "imgMissonD", 235, 206, 0, 111 )
-UI_LoadImage( imgMissonD, "texture/ui/question.tga", NORMAL, 235, 206, 0, 0 )
+UI_LoadImage( imgMissonD, "texture/ui/corsairs/diversos2.png", NORMAL, 235, 206, 0, 111 )
 
 --title
 labMisson = UI_CreateCompent( frmQuestion, LABELEX_TYPE, "labMisson", 47, 11, 3, 3 )
-UI_SetCaption( labMisson, "Submit question" )
+UI_SetCaption( labMisson, "" )
 UI_SetTextColor( labMisson, COLOR_BLACK )
 UI_SetLabelExFont( labMisson, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2669,22 +2671,22 @@ UI_SetMemoPageShowNum( memCentent, 9 )
 UI_SetMemoMaxNumPerRow( memCentent, 31 )
 
 	labNotice = UI_CreateCompent( frmQuestion, LABELEX_TYPE, "labNotice", 400, 150, 15 ,73 )
-	UI_SetCaption( labNotice, "Please do not disclose your security code in the question.")
-	UI_SetTextColor( labNotice, COLOR_RED)
-	UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_WHITE )
+	UI_SetCaption( labNotice, "Never share your security code.")
+	UI_SetTextColor( labNotice, 4294941312 )
+	UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
 	
 --定义提交按钮
 	btnSubmit = UI_CreateCompent( frmQuestion, BUTTON_TYPE, "btnSubmit", 48, 19, 170, 287 )
-	UI_LoadButtonImage( btnSubmit, "texture/ui/store8.tga", 48, 19, 0, 76, FALSE )
+	UI_LoadButtonImage( btnSubmit, "texture/ui/corsairs/diversos2.png", 48, 19, 0, 330, TRUE )
 
 	labSubmit = UI_CreateCompent( frmQuestion, LABELEX_TYPE, "labSubmit", 400 , 150 , 179 , 289 )
-	UI_SetCaption( labSubmit, "Submit")
+	UI_SetCaption( labSubmit, "")
 	UI_SetTextColor( labSubmit, COLOR_BLACK )
 	UI_SetLabelExFont( labSubmit, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmQuestion, BUTTON_TYPE, "btnClose", 14, 14, 215, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmQuestion, BUTTON_TYPE, "btnClose", 14, 14, 215, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -2701,13 +2703,13 @@ UI_SetFormStyle( frmAnswer,2)
 
 --背景
 imgMissonT = UI_CreateCompent( frmAnswer, IMAGE_TYPE, "imgMissonT", 235, 111, 0, 0)
-UI_LoadImage( imgMissonT, "texture/ui/answer.tga", NORMAL, 235, 111, 0,111 )
+UI_LoadImage( imgMissonT, "texture/ui/corsairs/diversos2.png", NORMAL, 235, 111, 240, 0 )
 imgMissonD = UI_CreateCompent( frmAnswer, IMAGE_TYPE, "imgMissonD", 235, 206, 0, 111 )
-UI_LoadImage( imgMissonD, "texture/ui/question.tga", NORMAL, 235, 206, 0, 0 )
+UI_LoadImage( imgMissonD, "texture/ui/corsairs/diversos2.png", NORMAL, 235, 206, 240, 111 )
 
 --title
 labMisson = UI_CreateCompent( frmAnswer, LABELEX_TYPE, "labMisson", 47, 11, 3, 3 )
-UI_SetCaption( labMisson, "Check browser" )
+UI_SetCaption( labMisson, "" )
 UI_SetTextColor( labMisson, COLOR_BLACK )
 UI_SetLabelExFont( labMisson, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
@@ -2720,8 +2722,8 @@ UI_SetMemoPageShowNum( memMiss, 9 )
 UI_SetMemoMaxNumPerRow( memMiss, 31 )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmAnswer, BUTTON_TYPE, "btnClose", 14, 14, 215, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmAnswer, BUTTON_TYPE, "btnClose", 14, 14, 215, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -----------------------------------------------------------------------
@@ -2784,25 +2786,25 @@ UI_SetFormStyle(frmChurchSale,1)
 
 -- 加载背景图片
 imgBack01 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack01", 256,256,0,0 )
-UI_LoadImage( imgBack01, "texture/ui/church01.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBack01, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 256, 0, 390 )
 
 imgBack02 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack02", 256,256,256,0 )
-UI_LoadImage( imgBack02, "texture/ui/church02.tga", NORMAL, 256, 256, 0, 0 )
+UI_LoadImage( imgBack02, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 256, 256, 390 )
 
 imgBack03 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack03", 46,256,512,0 )
-UI_LoadImage( imgBack03, "texture/ui/church04.tga", NORMAL, 46, 256, 0, 0 )
+UI_LoadImage( imgBack03, "texture/ui/corsairs/guilda_pk.png", NORMAL, 46, 256, 512, 390 )
 
 imgBack04 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack04", 256,35,0,256 )
-UI_LoadImage( imgBack04, "texture/ui/church03.tga", NORMAL, 256, 35, 0, 0 )
+UI_LoadImage( imgBack04, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 35, 0, 646 )
 
 imgBack05 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack05", 256,35,256,256 )
-UI_LoadImage( imgBack05, "texture/ui/church03.tga", NORMAL, 256, 35, 0, 74 )
+UI_LoadImage( imgBack05, "texture/ui/corsairs/guilda_pk.png", NORMAL, 256, 35, 256, 646 )
 
 imgBack06 = UI_CreateCompent( frmChurchSale, IMAGE_TYPE, "imgBack06", 46,35,512,256 )
-UI_LoadImage( imgBack06, "texture/ui/church04.tga", NORMAL, 46, 35, 46, 0 )
+UI_LoadImage( imgBack06, "texture/ui/corsairs/guilda_pk.png", NORMAL, 46, 35, 512, 646 )
 
 btnPriceUp = UI_CreateCompent( frmChurchSale, BUTTON_TYPE, "btnPriceUp", 41, 19, 492, 118)
-UI_LoadButtonImage( btnPriceUp, "texture/ui/church03.tga", 41, 19, 1, 55, TRUE )
+UI_LoadButtonImage( btnPriceUp, "texture/ui/corsairs/guilda_pk.png", 41, 19, 570, 420, TRUE )
 
 --加载显示label
 labInfoShow1 = UI_CreateCompent( frmChurchSale, LABELEX_TYPE, "labInfoShow1", 124, 16,24,122 )
@@ -2820,10 +2822,11 @@ UI_SetCaption( labInfoShow3, "Program writes here")
 UI_SetTextColor( labInfoShow3, COLOR_BLACK )
 UI_SetLabelExFont( labInfoShow3, DEFAULT_FONT, FALSE, COLOR_WHITE )
 
-labTittle = UI_CreateCompent( frmChurchSale, LABELEX_TYPE, "labTittle", 496,16,23,35 )
+labTittle = UI_CreateCompent( frmChurchSale, LABELEX_TYPE, "labTittle", 518, 16, 20, 36 )
 UI_SetCaption( labTittle, "Please make sure your inventory have two empty spaces")
-UI_SetTextColor( labTittle, COLOR_BLACK )
-UI_SetLabelExFont( labTittle, DEFAULT_FONT, FALSE, COLOR_WHITE )
+UI_SetTextColor( labTittle, 4293976766 )
+UI_SetLabelExAlign( labTittle, TRUE )
+UI_SetLabelExFont( labTittle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 --加载文字label
@@ -2848,8 +2851,8 @@ UI_SetTextColor( labTextShow, COLOR_BLACK )
 UI_SetLabelExFont( labTextShow, DEFAULT_FONT, FALSE, COLOR_WHITE )
 
 --创建关闭按钮
-btnClose = UI_CreateCompent( frmChurchSale, BUTTON_TYPE, "btnClose", 14, 14, 538, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+btnClose = UI_CreateCompent( frmChurchSale, BUTTON_TYPE, "btnClose", 14, 14, 538, 7 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 
 -- Tales of Corsairs: segunda barra de atalhos da versao DX9, com a moldura da skin.
