@@ -243,3 +243,8 @@ texture/ui/corsairs/mapa/teampk.jpg
 texture/ui/corsairs/mapa/winterland.jpg
 texture/ui/corsairs/mapa/yschurch.jpg
 scripts/table/mapa_pontos.txt
+texture/ui/corsairs/cronometros.png
+texture/ui/corsairs/cronometros.wsd
+texture/ui/corsairs/cronometros_mapas.png
+texture/ui/corsairs/cronometros_mapas.wsd
+texture/ui/corsairs/cronometros_mapas.txt
