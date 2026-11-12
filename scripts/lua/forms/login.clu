@@ -199,7 +199,7 @@ UI_SetAlpha(btnNo,210)
 -- 定义帐号输入表单
 -----------------------------------------------------------------------
 -- 创建帐号输入
-frmAccount = UI_CreateForm( "frmAccount", FALSE, 300, 150, 533, 470, FALSE, FALSE )
+frmAccount = UI_CreateForm( "frmAccount", FALSE, 400, 220, 483, 250, FALSE, FALSE )
 UI_AddFormToTemplete( frmAccount, FORM_LOGIN )
 UI_SetFormStyle( frmAccount, 2 )
 --UI_SetIsDrag( frmAccount, TRUE )
@@ -229,8 +229,8 @@ imgLogo2 = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgLogo2", 256, 256, 139, 
 
 
 -- 加载背景图片
-imgAccout = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgAccout", 300, 150, 0, 0 )
-UI_LoadImage( imgAccout, "texture/ui/ods/loginbox.tga", NORMAL, 300, 150, 0, 0 )
+imgAccout = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgAccout", 400, 220, 0, 0 )
+UI_LoadImage( imgAccout, "texture/ui/corsairs/login_caixa.png", NORMAL, 400, 220, 0, 0 )
 UI_SetImageAlpha(imgAccout,255)
 
 -- 加载界面title
@@ -241,29 +241,29 @@ UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 --创建帐号两个字
 labID = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labID", 60, 11, 24, 42 )
-UI_SetCaption( labID, "Account" )
+UI_SetCaption( labID, "" )
 UI_SetTextColor( labID, COLOR_YELLOW )
 UI_SetLabelExFont( labID, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --创建密码两个字
 labPass = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labPass", 60, 11, 24, 72 )
-UI_SetCaption( labPass, "Password" )
+UI_SetCaption( labPass, "" )
 UI_SetTextColor( labPass, COLOR_YELLOW )
 UI_SetLabelExFont( labPass, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 --密码和帐号
 
 --加载帐号锁定框
-chkID = UI_CreateCompent( frmAccount, CHECK_TYPE, "chkID", 10, 10, 262, 43 )
+chkID = UI_CreateCompent( frmAccount, CHECK_TYPE, "chkID", 10, 10, 130, 125 )
 UI_LoadImage( chkID, "texture/ui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
 UI_LoadImage( chkID, "texture/ui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
 UI_SetHint( chkID, "Remember ID" )
 
 --加载登陆，取消按钮
-btnYes = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnYes", 72, 24, 134, 112 )
+btnYes = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnYes", 72, 24, 214, 150 )
 UI_LoadButtonImage( btnYes, "texture/ui/corsairs/btnLoginConfirm.tga", 72, 24, 0, 0, FALSE )
 
-btnNo = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnNo", 72, 24, 212, 112 )
+btnNo = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnNo", 72, 24, 298, 150 )
 UI_LoadButtonImage( btnNo, "texture/ui/corsairs/btnLoginCancel.tga", 72, 24, 0, 0, FALSE )
 
 labYes = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labYes", 42, 10, 107, 155 )
@@ -278,19 +278,31 @@ UI_SetLabelExFont( labNo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 
 
 --加载帐号和密码输入框
-edtID = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtID", 138, 12, 106, 42 )
+edtID = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtID", 226, 12, 137, 56 )
 UI_SetTextColor( edtID, COLOR_BLACK )
 UI_SetEditMaxNum( edtID, 20 )
 UI_SetEditMaxNumVisible( edtID, 20 )
 
-edtPassword = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtPassword", 138, 12, 106, 72 )
+edtPassword = UI_CreateCompent( frmAccount, EDIT_TYPE, "edtPassword", 226, 12, 137, 92 )
 UI_SetTextColor( edtPassword, COLOR_BLACK )
 UI_SetEditMaxNum( edtPassword, 20 )
 UI_SetEditMaxNumVisible( edtPassword, 20 )
 
 --加载软件盘开关按钮
-btnKeyboard = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnKeyboard", 80, 24, 16, 112 )
+btnKeyboard = UI_CreateCompent( frmAccount, BUTTON_TYPE, "btnKeyboard", 80, 24, 40, 150 )
 UI_LoadButtonImage( btnKeyboard, "texture/ui/corsairs/btnLoginTeclado.tga", 80, 24, 0, 0, FALSE )
+-- Tales of Corsairs: status do servidor (bolinha verde/vermelha/ambar + texto)
+imgStOn = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgStOn", 8, 8, 22, 199 )
+UI_LoadImage( imgStOn, "texture/ui/corsairs/login_caixa.png", NORMAL, 8, 8, 0, 224 )
+imgStOff = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgStOff", 8, 8, 22, 199 )
+UI_LoadImage( imgStOff, "texture/ui/corsairs/login_caixa.png", NORMAL, 8, 8, 10, 224 )
+imgStWait = UI_CreateCompent( frmAccount, IMAGE_TYPE, "imgStWait", 8, 8, 22, 199 )
+UI_LoadImage( imgStWait, "texture/ui/corsairs/login_caixa.png", NORMAL, 8, 8, 20, 224 )
+labStatus = UI_CreateCompent( frmAccount, LABELEX_TYPE, "labStatus", 340, 12, 36, 197 )
+UI_SetCaption( labStatus, "" )
+UI_SetTextColor( labStatus, 4292463526 )
+UI_SetLabelExFont( labStatus, DEFAULT_FONT, TRUE, COLOR_BLACK )
+
 
 -----------------------------------------------------------------------
 -- 定义健康通告
@@ -322,7 +334,7 @@ UI_SetLabelExFont( labYes, DEFAULT_FONT, TRUE, COLOR_BLACK )
 -- 定义软件盘
 -----------------------------------------------------------------------	
 -- 创建软件盘表单
-frmKeyboard = UI_CreateForm( "frmKeyboard", FALSE, 447, 122, 396, 278, FALSE, FALSE )
+frmKeyboard = UI_CreateForm( "frmKeyboard", FALSE, 447, 122, 460, 478, FALSE, FALSE )
 --UI_LoadFormImage( frmKeyboard, "texture/ui/Game.bmp", 198, 207, 0, 0, "", 0, 0 )
 UI_AddFormToTemplete( frmKeyboard, FORM_LOGIN )
 UI_SetFormStyle( frmKeyboard, 2 )

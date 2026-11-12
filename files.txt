@@ -189,3 +189,7 @@ texture/ui/corsairs/eqform/cmdWing.png
 texture/ui/corsairs/eqform/cmdWing.wsd
 texture/ui/corsairs/eqform/eqform.png
 texture/ui/corsairs/eqform/eqform.wsd
+texture/ui/corsairs/login_caixa.png
+texture/ui/corsairs/login_caixa.wsd
+texture/ui/corsairs/login_brilho.png
+texture/ui/corsairs/login_brilho.wsd
