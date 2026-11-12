@@ -242,3 +242,4 @@ texture/ui/corsairs/mapa/shalan2.jpg
 texture/ui/corsairs/mapa/teampk.jpg
 texture/ui/corsairs/mapa/winterland.jpg
 texture/ui/corsairs/mapa/yschurch.jpg
+scripts/table/mapa_pontos.txt

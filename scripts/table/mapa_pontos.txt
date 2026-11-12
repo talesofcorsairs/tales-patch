@@ -1,0 +1,496 @@
+// gerado por ferramentas\mapa_pontos.py: terreno, B chefe / R recurso, x, y, nivel (recurso: tipo logico), nome
+abandonedcity	B	153	136	38	Sorrow Captain
+abandonedcity	B	154	161	40	Wailing Captain
+abandonedcity	B	177	139	38	Sorrow Archer Captain
+abandonedcity	B	178	162	40	Wailing Archer Captain
+abandonedcity	R	345	311	9	Shiny Coral Ship
+abandonedcity	R	84	345	9	Shiny Coral Ship
+abandonedcity	R	27	354	9	Shiny Coral Ship
+abandonedcity	R	234	348	9	Shiny Coral Ship
+abandonedcity	R	309	339	8	Moon Tail Eel
+abandonedcity	R	239	336	8	Moon Tail Eel
+abandonedcity	R	117	356	8	Moon Tail Eel
+abandonedcity	R	265	110	7	Silver Ore
+abandonedcity	R	232	123	7	Silver Ore
+abandonedcity	R	144	84	7	Silver Ore
+abandonedcity	R	95	138	7	Silver Ore
+abandonedcity	R	69	96	7	Silver Ore
+abandonedcity	R	79	76	6	Metal Norite
+abandonedcity	R	138	122	6	Metal Norite
+abandonedcity	R	179	164	6	Metal Norite
+abandonedcity3	B	30	33	45	Death Knight
+binglang2	B	154	85	80	Evil Ice Phantasm
+darkblue	R	1209	500	6	Legendary Tree of Fortune
+darkblue	R	1314	702	6	Legendary Tree of Fortune
+darkblue	R	1469	531	6	Legendary Tree of Fortune
+darkblue	R	845	719	7	Iron Ore x5
+darkblue	R	888	759	7	Iron Ore x8
+darkblue	R	854	791	7	Iron Ore x5
+darkblue	R	882	825	7	Iron Ore x5
+darkblue	R	905	855	7	Iron Ore x2
+darkblue	R	922	886	7	Iron Ore x3
+darkblue	R	978	930	7	Iron Ore x5
+darkblue	R	1040	911	7	Iron Ore x2
+darkblue	R	1024	867	7	Iron Ore x2
+darkblue	R	1043	811	7	Iron Ore x2
+darkblue	R	372	3362	9	Sunken Ship
+darkblue	R	519	3383	9	Sunken Ship
+darkblue	R	524	3507	9	Sunken Ship
+darkblue	R	2577	2867	9	Sunken Ship x2
+darkblue	R	1967	2831	9	Sunken Ship
+darkblue	R	2116	2658	9	Sunken Ship
+darkblue	R	2255	2739	9	Sunken Ship
+darkblue	R	2316	2787	9	Sunken Ship
+darkblue	R	2380	2880	9	Sunken Ship
+darkblue	R	2475	2692	9	Sunken Ship
+darkblue	R	2558	2745	9	Sunken Ship
+darkblue	R	2795	3013	6	Fir
+darkblue	R	2765	2958	6	Fir
+darkblue	R	2722	2952	6	Fir
+darkblue	R	2728	2983	6	Fir
+darkblue	R	2686	2992	6	Fir
+darkblue	R	2647	2959	6	Fir
+darkblue	R	2596	2940	6	Fir
+darkblue	R	2592	2974	6	Fir
+darkblue	R	2613	2999	6	Fir
+darkblue	R	3656	2766	6	Flower Pear
+darkblue	R	3658	2808	6	Flower Pear x2
+darkblue	R	3720	2772	6	Flower Pear x2
+darkblue	R	3777	2739	6	Flower Pear x2
+darkblue	R	3754	2797	6	Flower Pear
+darkblue	R	1486	1938	9	Coral Ship
+darkblue	R	1441	1996	9	Coral Ship
+darkblue	R	1422	2040	9	Coral Ship
+darkblue	R	1560	2067	9	Coral Ship
+darkblue	R	1523	2009	9	Coral Ship
+darkblue	R	1520	1975	9	Coral Ship
+darkblue	R	2822	3010	7	Fascinating Gem
+darkblue	R	2758	3010	7	Fascinating Gem
+darkblue	R	2698	2992	7	Fascinating Gem
+darkblue	R	2597	2968	7	Fascinating Gem
+darkblue	R	2538	3006	7	Fascinating Gem
+darkblue	R	2574	3056	7	Fascinating Gem
+darkblue	R	2630	3034	7	Fascinating Gem x2
+darkblue	R	2628	3071	7	Fascinating Gem
+darkblue	R	2734	696	7	Bronze Ore
+darkblue	R	2735	641	7	Bronze Ore
+darkblue	R	2788	709	7	Bronze Ore x2
+darkblue	R	2833	682	7	Bronze Ore
+darkblue	R	1154	386	7	Iron Ore x3
+darkblue	R	1210	402	7	Iron Ore
+darkblue	R	1224	347	7	Iron Ore
+darkblue	R	1178	327	7	Iron Ore x2
+darkblue	R	1624	1778	7	Crystal
+darkblue	R	1611	1809	7	Crystal x2
+darkblue	R	1647	1828	7	Crystal
+darkblue	R	1658	1799	7	Crystal x2
+darkblue	R	3360	3381	7	Strange Metal x3
+darkblue	R	3367	3341	7	Strange Metal
+darkblue	R	3406	3283	7	Strange Metal x2
+darkblue	R	1027	3428	8	Clownfish x2
+darkblue	R	962	3395	8	Clownfish
+darkblue	R	962	3331	8	Clownfish
+darkblue	R	936	3263	8	Clownfish x2
+darkblue	R	888	3327	8	Clownfish
+darkswamp	B	63	1011	50	Huge Mud Monster
+darkswamp	B	365	1303	50	Master Swamp Watcher
+darkswamp	B	490	586	55	Swamp Champion
+darkswamp	B	155	283	45	Master Swamp Bog
+darkswamp	R	73	68	9	Turtle Shell Ship
+darkswamp	R	64	166	9	Turtle Shell Ship
+darkswamp	R	50	302	9	Turtle Shell Ship
+darkswamp	R	118	364	9	Turtle Shell Ship
+darkswamp	R	67	92	8	Diving Clam
+darkswamp	R	55	160	8	Diving Clam
+darkswamp	R	74	364	8	Diving Clam
+darkswamp	R	67	241	8	Phoenix Prawn
+darkswamp	R	208	139	6	Rue
+darkswamp	R	145	195	6	Rue
+darkswamp	R	106	234	6	Rue
+darkswamp	R	189	328	6	Rue
+darkswamp	R	241	279	6	Rue
+darkswamp	R	279	226	6	Rue
+darkswamp	R	254	181	6	Rue
+darkswamp	R	168	190	7	Gold Ore x2
+darkswamp	R	106	271	7	Gold Ore
+darkswamp	R	157	307	7	Gold Ore
+darkswamp	R	245	312	7	Gold Ore
+darkswamp	R	145	292	6	Metal Norite
+darkswamp	R	206	107	6	Metal Norite
+darkswamp	R	257	284	7	Silver Ore
+garner	B	3480	724	75	Icy Dragon
+garner	B	3498	734	65	Baby Icy Dragon
+garner	B	3507	721	65	Baby Icy Dragon
+garner	R	2099	2752	6	Legendary Tree of Fortune
+garner	R	2137	2589	6	Legendary Tree of Fortune
+garner	R	2242	2626	6	Legendary Tree of Fortune
+garner	R	807	1630	6	Legendary Tree of Fortune
+garner	R	831	1448	6	Legendary Tree of Fortune
+garner	R	859	1565	6	Legendary Tree of Fortune
+garner	R	933	1230	6	Pine Tree x9
+garner	R	836	1061	6	Pine Tree x6
+garner	R	848	1119	6	Pine Tree x3
+garner	R	983	1222	6	Pine Tree x5
+garner	R	958	1234	6	Pine Tree
+garner	R	922	1184	6	Pine Tree x2
+garner	R	912	1149	6	Pine Tree x2
+garner	R	886	1091	6	Pine Tree x5
+garner	R	927	1039	6	Pine Tree x2
+garner	R	945	1102	6	Pine Tree x2
+garner	R	976	1139	6	Pine Tree x3
+garner	R	1013	1195	6	Pine Tree x4
+garner	R	1023	1152	6	Pine Tree x2
+garner	R	1875	2643	7	Crystal Ore x10
+garner	R	1904	2729	7	Crystal Ore x7
+garner	R	1903	2684	7	Crystal Ore x4
+garner	R	1906	2648	7	Crystal Ore x2
+garner	R	1862	2695	7	Crystal Ore x3
+garner	R	1854	2723	7	Crystal Ore x3
+garner	R	1836	2750	7	Crystal Ore x2
+garner	R	1790	2741	7	Crystal Ore x5
+garner	R	1784	2694	7	Crystal Ore x3
+garner	R	1801	2647	7	Crystal Ore x4
+garner	R	1840	2666	7	Crystal Ore x2
+garner	R	1632	3105	6	Pine Tree x7
+garner	R	1682	3152	6	Pine Tree x4
+garner	R	1678	3108	6	Pine Tree x3
+garner	R	1623	3054	6	Pine Tree x4
+garner	R	1566	3012	6	Pine Tree x2
+garner	R	1498	2948	6	Pine Tree x2
+garner	R	1550	2975	6	Pine Tree x2
+garner	R	1585	2973	6	Pine Tree x2
+garner	R	1660	2991	6	Pine Tree x5
+garner	R	1690	3023	6	Pine Tree x2
+garner	R	1692	3081	6	Pine Tree x2
+garner	R	1993	3310	8	Fish Swarm x2
+garner	R	1878	3131	8	Fish Swarm x2
+garner	R	1877	3168	8	Fish Swarm
+garner	R	1953	3167	8	Fish Swarm
+garner	R	1934	3196	8	Fish Swarm
+garner	R	1997	3209	8	Fish Swarm
+garner	R	1951	3257	8	Fish Swarm
+garner	R	2031	3263	8	Fish Swarm
+garner	R	2058	3302	8	Fish Swarm
+garner	R	1575	730	8	Fish Swarm x4
+garner	R	1547	681	8	Fish Swarm
+garner	R	1589	685	8	Fish Swarm
+garner	R	1616	727	8	Fish Swarm
+garner	R	1655	701	8	Fish Swarm
+garner	R	1676	736	8	Fish Swarm x2
+garner	R	1653	751	8	Fish Swarm
+garner	R	1780	745	8	Fish Swarm
+garner	R	2397	2824	8	Fish Swarm x2
+garner	R	2270	2899	8	Fish Swarm
+garner	R	2348	2872	8	Fish Swarm
+garner	R	3235	3259	8	Fish Swarm (Bountiful)
+garner	R	3242	3092	8	Fish Swarm (Bountiful)
+garner	R	3304	3080	8	Fish Swarm (Bountiful)
+garner	R	3346	3079	8	Fish Swarm (Bountiful)
+garner	R	3418	3054	8	Fish Swarm (Bountiful)
+garner	R	3464	3086	8	Fish Swarm (Bountiful)
+garner	R	3503	3143	8	Fish Swarm (Bountiful)
+garner	R	3488	3182	8	Fish Swarm (Bountiful)
+garner	R	3488	3235	8	Fish Swarm (Bountiful)
+garner	R	3460	3314	8	Fish Swarm (Bountiful)
+garner	R	3362	3326	8	Fish Swarm (Bountiful)
+garner	R	3324	3333	8	Fish Swarm (Bountiful)
+garner	R	3484	699	8	Fish Swarm (Bountiful) x2
+garner	R	3541	686	8	Fish Swarm (Bountiful)
+garner	R	3574	700	8	Fish Swarm (Bountiful)
+garner	R	3621	704	8	Fish Swarm (Bountiful)
+garner	R	3632	763	8	Fish Swarm (Bountiful)
+garner	R	3637	818	8	Fish Swarm (Bountiful)
+garner	R	3613	853	8	Fish Swarm (Bountiful) x2
+garner	R	3555	885	8	Fish Swarm (Bountiful)
+garner	R	3518	864	8	Fish Swarm (Bountiful)
+garner	R	3469	867	8	Fish Swarm (Bountiful)
+garner	R	3451	790	8	Fish Swarm (Bountiful)
+garner	R	3456	739	8	Fish Swarm (Bountiful)
+garner	R	2190	1059	8	Fish Swarm (Bountiful) x3
+garner	R	2141	1064	8	Fish Swarm (Bountiful) x2
+garner	R	2243	1058	8	Fish Swarm (Bountiful)
+garner	R	2286	1063	8	Fish Swarm (Bountiful)
+garner	R	2321	1077	8	Fish Swarm (Bountiful)
+garner	R	2317	1178	8	Fish Swarm (Bountiful)
+garner	R	2278	1196	8	Fish Swarm (Bountiful)
+garner	R	2255	1232	8	Fish Swarm (Bountiful)
+garner	R	2207	1198	8	Fish Swarm (Bountiful)
+garner	R	2164	1190	8	Fish Swarm (Bountiful)
+garner	R	2129	1162	8	Fish Swarm (Bountiful)
+garner	R	2121	1110	8	Fish Swarm (Bountiful)
+garner	R	342	976	9	Sunken Ship x2
+garner	R	954	944	9	Sunken Ship
+garner	R	767	957	9	Sunken Ship
+garner	R	654	881	9	Sunken Ship
+garner	R	537	979	9	Sunken Ship
+garner	R	506	1044	9	Sunken Ship
+garner	R	418	1073	9	Sunken Ship
+garner	R	288	1047	9	Sunken Ship
+garner	R	2240	1122	6	Tusk Softwood x4
+garner	R	2216	1107	6	Tusk Softwood
+garner	R	628	2492	6	Lavender Core Wood x2
+garner	R	572	2500	6	Lavender Core Wood
+garner	R	569	2437	6	Lavender Core Wood x3
+garner	R	568	2394	6	Lavender Core Wood
+garner	R	2175	2660	6	Defoliate Pine x2
+garner	R	2146	2795	6	Defoliate Pine
+garner	R	2128	2746	6	Defoliate Pine
+garner	R	2145	2696	6	Defoliate Pine
+garner	R	2226	2644	6	Defoliate Pine
+garner	R	2266	2662	6	Defoliate Pine
+garner	R	1811	2682	7	Crystal
+garner	R	1841	2702	7	Crystal x2
+garner	R	1858	2692	7	Crystal
+garner	R	1888	2711	7	Crystal
+garner	R	1895	2759	7	Crystal
+garner	R	1217	1867	8	Squirting Fish
+garner	R	1153	1877	8	Squirting Fish x2
+garner	R	1122	1981	8	Squirting Fish
+garner	R	1115	1939	8	Squirting Fish x2
+guildwar	R	504	317	7	Oceania Meteorite x2
+guildwar	R	504	317	7	Sorcery Ore x2
+guildwar	R	115	309	6	War Tree x20
+guildwar	R	265	224	9	Turtle Shell Ship x3
+guildwar	R	351	226	8	Diving Clam x2
+guildwar	R	263	390	8	Moon Tail Eel x3
+guildwar	R	351	388	9	Hard Shell Ship x2
+guildwar2	R	504	317	7	Oceania Meteorite x2
+guildwar2	R	504	317	7	Sorcery Ore x2
+guildwar2	R	115	309	6	War Tree x20
+guildwar2	R	265	224	9	Turtle Shell Ship x3
+guildwar2	R	351	226	8	Diving Clam x2
+guildwar2	R	263	390	8	Moon Tail Eel x3
+guildwar2	R	351	388	9	Hard Shell Ship x2
+hell4	B	56	56	160	Abyss Lord - Hardin
+jialebi	B	282	174	85	Barborosa
+jialebi	B	520	169	90	Prehistoric Giant Octopus
+jialebi	B	869	139	75	Black Jewel
+jialebi	B	939	909	85	Deathsoul Commander
+jialebi	B	173	963	45	Cerebus
+jialebi	R	1068	271	9	Bayside Wreckage x2
+jialebi	R	701	1081	9	Bayside Wreckage
+jialebi	R	507	849	9	Bayside Wreckage
+jialebi	R	596	822	9	Bayside Wreckage
+jialebi	R	576	886	9	Bayside Wreckage
+jialebi	R	448	894	9	Bayside Wreckage
+jialebi	R	459	828	9	Bayside Wreckage
+jialebi	R	392	855	9	Bayside Wreckage
+jialebi	R	373	911	9	Bayside Wreckage
+jialebi	R	413	969	9	Bayside Wreckage
+jialebi	R	371	1003	9	Bayside Wreckage
+jialebi	R	356	1183	9	Bayside Wreckage
+jialebi	R	416	1202	9	Bayside Wreckage
+jialebi	R	457	1121	9	Bayside Wreckage
+jialebi	R	402	1121	9	Bayside Wreckage
+jialebi	R	359	1114	9	Bayside Wreckage
+jialebi	R	366	1052	9	Bayside Wreckage
+jialebi	R	414	1056	9	Bayside Wreckage
+jialebi	R	511	1021	9	Bayside Wreckage
+jialebi	R	579	981	9	Bayside Wreckage
+jialebi	R	604	1022	9	Bayside Wreckage
+jialebi	R	530	1078	9	Bayside Wreckage
+jialebi	R	513	1127	9	Bayside Wreckage
+jialebi	R	514	1195	9	Bayside Wreckage
+jialebi	R	586	1149	9	Bayside Wreckage
+jialebi	R	597	1201	9	Bayside Wreckage
+jialebi	R	675	1242	9	Bayside Wreckage
+jialebi	R	687	1181	9	Bayside Wreckage
+jialebi	R	702	1128	9	Bayside Wreckage
+jialebi	R	624	1130	9	Bayside Wreckage
+jialebi	R	640	1082	9	Bayside Wreckage
+jialebi	R	663	1039	9	Bayside Wreckage
+jialebi	R	707	964	9	Bayside Wreckage
+jialebi	R	704	914	9	Bayside Wreckage
+jialebi	R	663	882	9	Bayside Wreckage
+jialebi	R	668	815	9	Bayside Wreckage
+jialebi	R	704	859	9	Bayside Wreckage
+jialebi	R	746	814	9	Bayside Wreckage
+jialebi	R	776	846	9	Bayside Wreckage
+jialebi	R	779	900	9	Bayside Wreckage
+jialebi	R	757	935	9	Bayside Wreckage
+jialebi	R	773	977	9	Bayside Wreckage
+jialebi	R	770	1017	9	Bayside Wreckage
+jialebi	R	767	1067	9	Bayside Wreckage
+jialebi	R	768	1125	9	Bayside Wreckage
+jialebi	R	760	1179	9	Bayside Wreckage
+jialebi	R	773	1230	9	Bayside Wreckage
+jialebi	R	83	1342	8	Fish Swarm (Bountiful)
+jialebi	R	33	1261	8	Fish Swarm (Bountiful)
+jialebi	R	15	1041	8	Fish Swarm (Bountiful)
+jialebi	R	67	1121	8	Fish Swarm (Bountiful)
+jialebi	R	144	1109	8	Fish Swarm (Bountiful)
+jialebi	R	256	1155	8	Fish Swarm (Bountiful)
+jialebi	R	297	1137	8	Fish Swarm (Bountiful)
+jialebi	R	349	1181	8	Fish Swarm (Bountiful)
+jialebi	R	383	1213	8	Fish Swarm (Bountiful)
+jialebi	R	443	1208	8	Fish Swarm (Bountiful)
+jialebi	R	497	1188	8	Fish Swarm (Bountiful)
+jialebi	R	596	1235	8	Fish Swarm (Bountiful)
+jialebi	R	764	1159	8	Fish Swarm (Bountiful)
+jialebi	R	723	1130	8	Fish Swarm (Bountiful)
+jialebi	R	666	1107	8	Fish Swarm (Bountiful)
+jialebi	R	625	1085	8	Fish Swarm (Bountiful)
+jialebi	R	664	854	8	Fish Swarm (Bountiful)
+jialebi	R	658	908	8	Fish Swarm (Bountiful)
+jialebi	R	762	947	8	Fish Swarm (Bountiful)
+jialebi	R	776	990	8	Fish Swarm (Bountiful)
+jialebi	R	746	1028	8	Fish Swarm (Bountiful) x2
+jialebi	R	677	981	7	Crystal Ore x2
+jialebi	R	566	923	7	Crystal Ore x2
+jialebi	R	531	934	7	Crystal Ore x2
+jialebi	R	647	963	7	Crystal Ore
+jialebi	R	612	941	7	Crystal Ore x2
+jialebi	R	507	930	7	Crystal Ore x2
+jialebi	R	521	947	6	Pine Tree x4
+jialebi	R	491	988	6	Pine Tree
+jialebi	R	450	1045	6	Pine Tree x4
+jialebi	R	435	1081	6	Pine Tree x2
+jialebi	R	417	1032	6	Pine Tree x2
+jialebi	R	437	990	6	Pine Tree x2
+jialebi	R	477	960	6	Pine Tree x2
+jialebi	R	568	949	6	Pine Tree x2
+jialebi	R	621	955	6	Pine Tree x3
+jialebi	R	667	987	6	Pine Tree x3
+jialebi	R	690	998	6	Pine Tree x2
+jialebi	R	692	1045	6	Pine Tree x4
+jialebi	R	571	835	9	Bayside Wreckage
+jialebi	R	418	948	9	Bayside Wreckage
+jialebi	R	402	1058	9	Bayside Wreckage
+jialebi	R	479	1187	9	Bayside Wreckage
+jialebi	R	714	1110	9	Bayside Wreckage
+jialebi	R	80	986	6	Jade Sandal
+jialebi	R	36	944	6	Jade Sandal
+jialebi	R	82	908	6	Jade Sandal
+jialebi	R	116	941	6	Jade Sandal
+jialebi	R	157	946	6	Jade Sandal
+jialebi	R	198	984	6	Jade Sandal
+jialebi	R	236	944	6	Jade Sandal
+jialebi	R	198	908	6	Jade Sandal
+jialebi	R	236	822	6	Jade Sandal
+jialebi	R	200	790	6	Jade Sandal
+jialebi	R	157	820	6	Jade Sandal
+jialebi	R	115	824	6	Jade Sandal
+jialebi	R	80	791	6	Jade Sandal
+jialebi	R	39	826	6	Jade Sandal
+jialebi	R	86	865	6	Jade Sandal
+jialebi	R	203	866	6	Jade Sandal
+jialebi	R	863	156	9	Sharp Skeletar Ship
+jialebi	R	954	110	9	Sharp Skeletar Ship x2
+jialebi	R	1324	390	9	Sharp Skeletar Ship
+jialebi	R	1211	497	9	Sharp Skeletar Ship
+jialebi	R	1113	92	9	Sorceror Ship
+jialebi	R	1209	111	9	Sorceror Ship
+jialebi	R	1330	87	9	Sorceror Ship
+jialebi	R	1341	124	9	Sorceror Ship
+jialebi	R	1259	161	9	Sorceror Ship
+jialebi	R	1292	218	9	Sorceror Ship
+jialebi	R	1317	279	9	Sorceror Ship
+jialebi	R	1302	471	9	Shiny Coral Ship
+jialebi	R	579	1000	9	Shiny Coral Ship
+jialebi	R	664	1112	9	Shiny Coral Ship
+jialebi	R	757	1064	9	Shiny Coral Ship
+jialebi	R	720	953	9	Shiny Coral Ship
+jialebi	R	758	862	9	Shiny Coral Ship
+jialebi	R	710	814	9	Shiny Coral Ship
+jialebi	R	234	861	7	Fascinating Gem
+jialebi	R	158	791	7	Fascinating Gem
+jialebi	R	116	790	7	Fascinating Gem
+jialebi	R	38	865	7	Fascinating Gem
+jialebi	R	37	910	7	Fascinating Gem
+jialebi	R	115	982	7	Fascinating Gem
+jialebi	R	236	909	7	Fascinating Gem
+jialebi	R	158	984	7	Fascinating Gem
+jialebi	R	236	790	7	Diamond
+jialebi	R	160	863	7	Diamond
+jialebi	R	113	860	7	Diamond
+jialebi	R	40	983	7	Diamond
+jialebi	R	115	909	7	Diamond
+jialebi	R	235	981	7	Diamond
+jialebi	R	158	909	7	Diamond
+jialebi	R	37	789	7	Diamond
+jialebi	R	193	949	6	Fir
+jialebi	R	78	942	6	Fir
+jialebi	R	208	833	6	Fir
+jialebi	R	77	824	6	Fir
+jialebi	R	1057	483	8	Tiger Bone Fish
+jialebi	R	891	494	8	Tiger Bone Fish x2
+jialebi	R	855	375	8	Tiger Bone Fish
+jialebi	R	808	295	8	Tiger Bone Fish x2
+jialebi	R	1034	508	8	Pearlie Ratfish
+jialebi	R	956	520	8	Pearlie Ratfish
+jialebi	R	886	398	8	Pearlie Ratfish
+jialebi	R	839	449	8	Phoenix Prawn
+jialebi	R	818	226	8	Phoenix Prawn
+jialebi	R	834	160	8	Phoenix Prawn
+leiting2	B	146	64	80	Warrior Phantom
+magicsea	B	1381	3163	75	Medusa
+magicsea	R	972	3621	6	Legendary Tree of Fortune
+magicsea	R	981	3475	6	Legendary Tree of Fortune
+magicsea	R	1366	3085	7	Stone Ore x2
+magicsea	R	1339	3058	7	Stone Ore x3
+magicsea	R	1300	3073	7	Stone Ore x4
+magicsea	R	1316	3129	7	Stone Ore x6
+magicsea	R	1314	3169	7	Stone Ore x7
+magicsea	R	1350	3209	7	Stone Ore x3
+magicsea	R	1400	3211	7	Stone Ore x2
+magicsea	R	1450	3195	7	Stone Ore x5
+magicsea	R	1463	3154	7	Stone Ore x2
+magicsea	R	1448	3122	7	Stone Ore x3
+magicsea	R	1449	3073	7	Stone Ore x5
+magicsea	R	1400	3066	7	Stone Ore x2
+magicsea	R	1613	2791	9	Sunken Ship x2
+magicsea	R	851	3828	9	Sunken Ship
+magicsea	R	972	3868	9	Sunken Ship
+magicsea	R	1116	3795	9	Sunken Ship
+magicsea	R	1270	3768	9	Sunken Ship
+magicsea	R	1283	3581	9	Sunken Ship
+magicsea	R	1595	3441	9	Sunken Ship
+magicsea	R	1640	3290	9	Sunken Ship
+magicsea	R	1643	3134	9	Sunken Ship
+magicsea	R	1639	2952	9	Sunken Ship
+magicsea	R	3528	3496	9	Skeletar Ship
+magicsea	R	3496	3507	9	Skeletar Ship
+magicsea	R	3430	3540	9	Skeletar Ship
+magicsea	R	3359	3507	9	Skeletar Ship
+magicsea	R	3298	3501	9	Skeletar Ship
+magicsea	R	3254	3547	9	Skeletar Ship
+magicsea	R	748	3467	9	Ossein Ship
+magicsea	R	735	3501	9	Ossein Ship
+magicsea	R	653	3476	9	Ossein Ship
+magicsea	R	655	3416	9	Ossein Ship
+magicsea	R	592	3432	9	Ossein Ship
+magicsea	R	535	3494	9	Ossein Ship
+magicsea	R	547	3562	9	Ossein Ship
+magicsea	R	600	3581	9	Ossein Ship
+magicsea	R	1344	3192	7	Silver Ore
+magicsea	R	1311	3108	7	Silver Ore
+magicsea	R	1346	3059	7	Silver Ore
+magicsea	R	1399	3067	7	Silver Ore
+magicsea	R	1428	3059	7	Silver Ore
+magicsea	R	1427	3113	7	Silver Ore
+magicsea	R	1426	3158	7	Silver Ore
+magicsea	R	1460	3174	7	Silver Ore
+magicsea	R	688	3951	8	Dotted Codfish
+magicsea	R	676	4021	8	Dotted Codfish x2
+magicsea	R	825	4024	8	Dotted Codfish x2
+magicsea	R	755	3968	8	Dotted Codfish
+prisonisland	B	285	113	50	Prisoners Head
+puzzleworld	B	266	245	55	Wandering Soul
+puzzleworld	R	24	149	7	Gold Ore
+puzzleworld	R	220	19	7	Gold Ore
+puzzleworld	R	355	37	7	Gold Ore
+puzzleworld	R	465	342	7	Gold Ore
+puzzleworld	R	392	426	7	Gold Ore
+puzzleworld	R	60	47	6	Rue
+puzzleworld	R	304	71	6	Rue
+puzzleworld	R	439	413	6	Rue
+puzzleworld	R	362	393	6	Rue
+puzzleworld	R	461	46	7	Silver Ore
+puzzleworld	R	522	221	7	Silver Ore
+puzzleworld	R	523	344	7	Silver Ore
+puzzleworld	R	478	349	7	Silver Ore
+puzzleworld	R	399	376	7	Silver Ore
+puzzleworld	R	522	21	6	Metal Norite
+puzzleworld	R	469	465	6	Metal Norite
+puzzleworld2	B	266	246	65	Snowman Warlord
+shalan2	B	120	109	80	Phantom Knight
