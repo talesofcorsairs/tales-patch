@@ -416,7 +416,7 @@ btnFastDown = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastDown", 7, 8, 280, 
 -- 定义功能区 menu hud - menuhud.tga
 -----------------------------------------------------------------------	
 -- 创建功能表单
-frmMainFun = UI_CreateForm( "frmMainFun", FALSE, 179,  37, 621, 563, TRUE, FALSE )
+frmMainFun = UI_CreateForm( "frmMainFun", FALSE, 318, 48, 482, 552, TRUE, FALSE )
 --UI_FormSetHotKey( frmMainFun, ALT_KEY, HOTKEY_D ) 
 UI_ShowForm( frmMainFun, TRUE )
 UI_AddFormToTemplete( frmMainFun, FORM_MAIN )
@@ -424,57 +424,59 @@ UI_FormSetIsEscClose( frmMainFun, FALSE )
 UI_SetFormStyle( frmMainFun, 11 )---右下
 
 --加载背景图片
-imgMainFun1 = UI_CreateCompent( frmMainFun, IMAGE_TYPE, "imgMainFun1", 179, 37, 0, 0 )
-UI_LoadImage( imgMainFun1, "texture/ui/ods/menuhud.tga", NORMAL, 179, 37, 0, 0 )
+imgMainFun1 = UI_CreateCompent( frmMainFun, IMAGE_TYPE, "imgMainFun1", 318, 48, 0, 0 )
+UI_LoadImage( imgMainFun1, "texture/ui/corsairs/menu_barra.png", NORMAL, 318, 48, 0, 0 )
 
 --imgMainFun2 = UI_CreateCompent( frmMainFun, IMAGE_TYPE, "imgMainFun2", 32, 30, 183, 0 )
 --UI_LoadImage( imgMainFun2, "texture/ui/new.tga", NORMAL, 32, 30, 0, 132 )
 
 --加载按钮图片
-btnState = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnState", 20, 19, 6, 13 )
-UI_LoadButtonImage( btnState, "texture/ui/ods/menuhud.tga", 20, 19, 0, 40,TRUE )
+btnState = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnState", 34, 34, 9, 7 )
+UI_LoadButtonImage( btnState, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 56, TRUE )
 UI_SetHint( btnState , "Stats" )
 
 
-btnOpenItem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenItem", 20, 19, 29, 13 )
-UI_LoadButtonImage( btnOpenItem, "texture/ui/ods/menuhud.tga", 20, 19, 0, 60,TRUE )
+btnOpenItem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenItem", 34, 34, 47, 7 )
+UI_LoadButtonImage( btnOpenItem, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 92, TRUE )
 UI_SetHint( btnOpenItem , "Inventory" )
 
 --点击后显示临时背包
-btnOpenTempBag = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenTempBag", 20, 9, 29, 1 )
-UI_LoadButtonImage( btnOpenTempBag, "texture/ui/ods/menuhud.tga", 20, 9, 126, 60,TRUE )
+btnOpenTempBag = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenTempBag", 34, 34, 85, 7 )
+UI_LoadButtonImage( btnOpenTempBag, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 128, TRUE )
 UI_SetHint( btnOpenTempBag , "Temp Bag" )
 
-btnSkill = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSkill", 20, 19, 52, 13  )
-UI_LoadButtonImage( btnSkill, "texture/ui/ods/menuhud.tga", 20, 19, 0, 80,TRUE )
+btnSkill = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSkill", 34, 34, 123, 7 )
+UI_LoadButtonImage( btnSkill, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 164, TRUE )
 UI_SetHint( btnSkill , "Skills" )
 
 
-btnMission = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnMission", 20, 19, 75, 13  )
-UI_LoadButtonImage( btnMission, "texture/ui/ods/menuhud.tga", 20, 19, 63, 40,TRUE )
+btnMission = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnMission", 34, 34, 161, 7 )
+UI_LoadButtonImage( btnMission, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 200, TRUE )
 UI_SetHint( btnMission , "Quest" )
 
 
-btnOpenGuild = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenGuild", 20, 19, 102, 13  )
-UI_LoadButtonImage( btnOpenGuild, "texture/ui/ods/menuhud.tga", 20, 19, 63, 60,TRUE )
+btnOpenGuild = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenGuild", 34, 34, 199, 7 )
+UI_LoadButtonImage( btnOpenGuild, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 56, TRUE )
 UI_SetHint( btnOpenGuild , "Guild" )
 
-btnSystem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSystem", 26, 19, 148, 13  )
-UI_LoadButtonImage( btnSystem, "texture/ui/ods/menuhud.tga",  26, 19, 126, 40, TRUE )
+btnSystem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSystem", 34, 34, 275, 7 )
+UI_LoadButtonImage( btnSystem, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 128, TRUE )
 UI_SetHint( btnSystem , "Settings" )
 
-btnQQ = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnQQ", 20, 19, 125, 13 )
-UI_LoadButtonImage( btnQQ, "texture/ui/ods/menuhud.tga", 20, 19, 63, 80, TRUE )
+btnQQ = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnQQ", 34, 34, 237, 7 )
+UI_LoadButtonImage( btnQQ, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 92, TRUE )
 UI_SetHint( btnQQ , "Friends" )
 
 --定义升级帮助系统
-btnLevelUpHelp = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnLevelUpHelp", 48, 48 , 160, -110 )
-UI_LoadButtonImage( btnLevelUpHelp, "texture/ui/newbutton.tga", 41, 41, 0, 0, FALSE )
+btnLevelUpHelp = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnLevelUpHelp", 40, 40, 236, -44 )
+UI_LoadButtonImage( btnLevelUpHelp, "texture/ui/corsairs/menu_barra.png", 40, 40, 280, 56, TRUE )
+UI_SetHint( btnLevelUpHelp, "Level up tips" )
 UI_SetIsShow(btnLevelUpHelp,FALSE)
 
 --定义帮助按钮
-btnInfoCenter = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnInfoCenter",24, 24, 172, -60 )
-UI_LoadButtonImage( btnInfoCenter, "texture/ui/newbutton.tga", 41, 41, 41, 0, FALSE )
+btnInfoCenter = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnInfoCenter", 28, 28, 282, -32 )
+UI_LoadButtonImage( btnInfoCenter, "texture/ui/corsairs/menu_barra.png", 28, 28, 280, 100, TRUE )
+UI_SetHint( btnInfoCenter, "Help" )
 UI_SetIsShow(btnInfoCenter,FALSE)
 
 -------------------------------------------------------------------------

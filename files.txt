@@ -193,3 +193,9 @@ texture/ui/corsairs/login_caixa.png
 texture/ui/corsairs/login_caixa.wsd
 texture/ui/corsairs/login_brilho.png
 texture/ui/corsairs/login_brilho.wsd
+texture/ui/corsairs/menu_barra.png
+texture/ui/corsairs/menu_barra.wsd
+texture/ui/corsairs/dicas.png
+texture/ui/corsairs/dicas.wsd
+scripts/lua/forms/loading.clu
+scripts/lua/forms/loading.bin

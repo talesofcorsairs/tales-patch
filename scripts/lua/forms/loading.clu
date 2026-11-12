@@ -61,55 +61,47 @@ UI_LoadScaleImage( imgLoading, "texture/ui/ods/loginbox.tga", 0, 260, 10, 0, 350
 -- 定义界面说明表单
 -----------------------------------------------------------------------	
 -- 创建界面说明表单
-frmVHelp = UI_CreateForm( "frmVHelp", FALSE, 800, 600, 0, 0, TRUE, FALSE )
+frmVHelp = UI_CreateForm( "frmVHelp", FALSE, 1366, 768, 0, 0, TRUE, FALSE )
 UI_AddFormToTemplete( frmVHelp, FORM_MAIN )
 UI_ShowForm( frmVHelp, TRUE )
 UI_FormSetIsEscClose( frmVHelp, FALSE )
+imgDicas = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgDicas", 1366, 768, 0, 0 )
+UI_LoadImage( imgDicas, "texture/ui/corsairs/dicas.png", NORMAL, 1366, 768, 0, 0 )
 --UI_FormSetHotKey( frmVHelp, ALT_KEY, HOTKEY_U )
 
 
-imgLoading1 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading1", 256, 256, 0, 0 )
-UI_LoadImage( imgLoading1, "texture/ui/f1.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading2 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading2", 256, 256, 256, 0 )
-UI_LoadImage( imgLoading2, "texture/ui/f2.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading3 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading3", 256, 256, 512, 0 )
-UI_LoadImage( imgLoading3, "texture/ui/f3.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading4 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading4", 32, 256, 768, 0 )
-UI_LoadImage( imgLoading4, "texture/ui/f9.tga", NORMAL, 32, 256, 224, 0 )
 
-imgLoading5 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading5", 256, 256, 0, 256 )
-UI_LoadImage( imgLoading5, "texture/ui/f4.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading6 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading6", 256, 256, 256, 256  )
-UI_LoadImage( imgLoading6, "texture/ui/f5.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading7 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading7", 256, 256, 512, 256 )
-UI_LoadImage( imgLoading7, "texture/ui/f6.tga", NORMAL, 256, 256, 0, 0 )
 
-imgLoading8 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading8", 32, 256, 768, 256 )
-UI_LoadImage( imgLoading8, "texture/ui/f9.tga", NORMAL, 32, 256, 192, 0 )
 
-imgLoading9 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading9", 256, 88, 0, 512 )
-UI_LoadImage( imgLoading9, "texture/ui/f7.tga", NORMAL, 256, 88, 0, 168 )
 
-imgLoading10 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading10", 256, 88, 256, 512 )
-UI_LoadImage( imgLoading10, "texture/ui/f7.tga", NORMAL, 256, 88, 0, 80 )
 
-imgLoading11 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading11", 128, 88, 512, 512 )
-UI_LoadImage( imgLoading11, "texture/ui/f9.tga", NORMAL, 128, 88, 0, 88 )
-
-imgLoading13 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading13", 128, 88, 640, 512 )
-UI_LoadImage( imgLoading13, "texture/ui/f9.tga", NORMAL, 128, 88, 0, 0 )
-
-imgLoading12 = UI_CreateCompent( frmVHelp, IMAGE_TYPE, "imgLoading12", 32, 88, 768, 512 )
-UI_LoadImage( imgLoading12, "texture/ui/f9.tga", NORMAL, 32, 88, 160, 168 )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmVHelp, BUTTON_TYPE, "btnClose", 222, 78, 50, 400 )
-UI_LoadButtonImage( btnClose, "texture/ui/f10.tga", 222, 78, 0, 0, FALSE )
 
 
 
+--创建关闭按钮
+btnClose = UI_CreateCompent( frmVHelp, BUTTON_TYPE, "btnClose", 140, 40, 613, 400 )
+UI_LoadButtonImage( btnClose, "texture/ui/corsairs/dicas.png", 140, 40, 0, 780, TRUE )
+
+-- Tales of Corsairs: controle novo da versao DX9 (imgProgressLoad), copiado da interface da fonte.
+imgProgressLoad = UI_CreateCompent(frmLoading, IMAGE_TYPE, "imgProgressLoad", 1338, 180, 294, 122)
+UI_LoadImage(imgProgressLoad, "texture/ui/imgProgressLoad.png", NORMAL, 854, 180, 0, 37)
+UI_SetIsShow( imgProgressLoad, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (labTip), copiado da interface da fonte.
+labTip = UI_CreateCompent(frmLoading, LABELEX_TYPE, "labTip", 800, 13, 220, 750)
+UI_SetCaption(labTip, "2. This is second tip, you can click ALT + E to open inventory")
+UI_SetTextColor(labTip, COLOR_WHITE)
+UI_SetLabelExFont(labTip, TIPFONT, FALSE, COLOR_WHITE)
+UI_SetIsShow( labTip, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (imgLoadingBg), copiado da interface da fonte.
+imgLoadingBg = UI_CreateCompent(frmLoading, IMAGE_TYPE, "imgLoadingBg", 1920, 1080, 0, 0)
+UI_LoadImage(imgLoadingBg, "texture/ui/LOADING/LoadBgScene.jpg", NORMAL, 1920, 1080, 0, 0)
+UI_SetIsShow( imgLoadingBg, FALSE )
+-- Tales of Corsairs: controle novo da versao DX9 (imgProgressBar), copiado da interface da fonte.
+imgProgressBar = UI_CreateCompent(frmLoading, IMAGE_TYPE, "imgProgressBar", 854, 180, 294, 122)
+UI_LoadImage(imgProgressBar, "texture/ui/imgProgressBar.png", NORMAL, 854, 180, 0, 0)
+UI_SetIsShow( imgProgressBar, FALSE )
