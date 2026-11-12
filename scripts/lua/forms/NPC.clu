@@ -116,9 +116,9 @@ UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 --创建武器物品表格
 grdNPCtradeWeapon = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeWeapon", 189, 313, 0, 0 ) 
 UI_SetGridSpace( grdNPCtradeWeapon, 2, 3 )
-UI_SetGridContent( grdNPCtradeWeapon, 30, 4 )
+UI_SetGridContent( grdNPCtradeWeapon, 24, 5 )
 UI_SetGridUnitSize( grdNPCtradeWeapon, 32, 32 )
-UI_SetMargin( grdNPCtradeWeapon, 17, 6, 0, 4 )
+UI_SetMargin( grdNPCtradeWeapon, 6, 6, 0, 4 )
 
 --获得滚动条
 scrollid = UI_GetScroll( grdNPCtradeWeapon )
@@ -143,9 +143,9 @@ UI_SetSize( id, 11, 9 )
 --创建放具物品表格
 grdNPCtradeEquip = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeEquip", 189, 313, 0, 0 ) 
 UI_SetGridSpace( grdNPCtradeEquip, 2, 3 )
-UI_SetGridContent( grdNPCtradeEquip, 30, 4 )
+UI_SetGridContent( grdNPCtradeEquip, 24, 5 )
 UI_SetGridUnitSize( grdNPCtradeEquip, 32, 32 )
-UI_SetMargin( grdNPCtradeEquip, 17, 6, 0, 4 )
+UI_SetMargin( grdNPCtradeEquip, 6, 6, 0, 4 )
 
 --获得滚动条
 scrollid = UI_GetScroll( grdNPCtradeEquip )
@@ -170,9 +170,9 @@ UI_SetSize( id, 11, 9 )
 --创建杂项物品表格
 grdNPCtradeOther = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeOther", 189, 313, 0, 0) 
 UI_SetGridSpace( grdNPCtradeOther, 2, 3 )
-UI_SetGridContent( grdNPCtradeOther, 30, 4 )
+UI_SetGridContent( grdNPCtradeOther, 24, 5 )
 UI_SetGridUnitSize( grdNPCtradeOther, 32, 32 )
-UI_SetMargin( grdNPCtradeOther, 17, 6, 0, 4 )
+UI_SetMargin( grdNPCtradeOther, 6, 6, 0, 4 )
 
 --获得滚动条
 scrollid = UI_GetScroll( grdNPCtradeOther )
