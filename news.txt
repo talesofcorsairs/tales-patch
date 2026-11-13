@@ -1,0 +1,5 @@
+Versão 2.0.30
+
+• Hexathlon: sábado, 9h-12h e 21h-24h.
+• Stabilizer e Catalyst na loja de Argent.
+• Timers: ampulheta embaixo do minimapa.
