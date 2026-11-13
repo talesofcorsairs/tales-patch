@@ -1,5 +1,5 @@
-Versão 2.0.32
+Versão 2.0.33
 
+• Buffs: o efeito no pé (ex.: Fairy Possession) volta ao ligar/desligar Efeitos.
 • Tela de seleção: anel dourado nos pés do personagem escolhido.
 • Barra de EXP cheia (MAX) no nível 100.
-• Apparel Upgrade sobe de 2 em 2%: 102% até 110%.
