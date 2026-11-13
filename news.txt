@@ -1,5 +1,5 @@
-Versão 2.0.30
+Versão 2.0.31
 
-• Hexathlon: sábado, 9h-12h e 21h-24h.
-• Stabilizer e Catalyst na loja de Argent.
-• Timers: ampulheta embaixo do minimapa.
+• Barra de EXP cheia (MAX) no nível 100.
+• Apparel Upgrade sobe de 2 em 2%: 102% até 110%.
+• Launcher novo: Opções e Minha conta.
