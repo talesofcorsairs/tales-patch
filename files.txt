@@ -250,4 +250,6 @@ texture/ui/corsairs/cronometros_mapas.wsd
 texture/ui/corsairs/cronometros_mapas.txt
 texture/ui/corsairs/barraca2.png
 texture/ui/corsairs/barraca2.wsd
+texture/ui/corsairs/mercado.png
+texture/ui/corsairs/mercado.wsd
 music/sound/pc/venda.wav
