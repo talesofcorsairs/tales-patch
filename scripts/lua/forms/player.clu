@@ -580,72 +580,52 @@ UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 -- 定义玩家摆摊 set stall window
 -----------------------------------------------------------------------	
 -- 创建玩家摆摊表单
-frmBooth = UI_CreateForm( "frmBooth", FALSE, 288, 290, 100, 100, TRUE, FALSE )
+-- Tales of Corsairs: barraca nova (skin_barraca.ps1 e UIBoothForm.cpp)
+frmBooth = UI_CreateForm( "frmBooth", FALSE, 420, 440, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmBooth, FALSE )
 UI_AddFormToTemplete( frmBooth, FORM_MAIN )
---UI_FormSetHotKey( frmBooth, ALT_KEY, HOTKEY_T )
 UI_SetIsDrag( frmBooth, TRUE )
-UI_FormSetIsEscClose( frmFound, FALSE )
-
-
--- 加载图片
-imgBak = UI_CreateCompent( frmBooth, IMAGE_TYPE, "imgBak", 288, 290, 0, 0 )
-UI_LoadImage( imgBak, "texture/ui/corsairs/barraca.png", NORMAL, 288, 290, 0, 0 )
-
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnClose", 14, 14, 271, 3 )
+imgBak = UI_CreateCompent( frmBooth, IMAGE_TYPE, "imgBak", 420, 440, 0, 0 )
+UI_LoadImage( imgBak, "texture/ui/corsairs/barraca2.png", NORMAL, 420, 440, 0, 0 )
+btnClose = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnClose", 14, 14, 396, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---加载摆主名称
-lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 94, 31, 21, 5 )
-UI_SetCaption( lblOwnerName, "就就就就就就就就" )
-UI_SetTextColor( lblOwnerName, COLOR_YELLOW )
+lblOwnerName = UI_CreateCompent( frmBooth, LABELEX_TYPE, "lblOwnerName", 340, 14, 38, 14 )
+UI_SetCaption( lblOwnerName, "" )
+UI_SetTextColor( lblOwnerName, 4294366590 )
 UI_SetLabelExFont( lblOwnerName, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---摊位名
-edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 264, 13, 21, 31 )
-UI_SetTextColor( edtBoothName, COLOR_CLOUD )
+edtBoothName = UI_CreateCompent( frmBooth, EDIT_TYPE, "edtBoothName", 330, 13, 68, 47 )
+UI_SetTextColor( edtBoothName, 4294107838 )
 UI_SetLabelExFont( edtBoothName, DEFAULT_FONT, TRUE, COLOR_BLACK )
-UI_SetEditCursorColor( edtBoothName, COLOR_CLOUD )
+UI_SetEditCursorColor( edtBoothName, 4294107838 )
 UI_SetEditMaxNum( edtBoothName, 100 )
-
---创建物品表格
-grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 267, 178, 11, 75 ) 
-UI_SetGridSpace( grdBoothItem, 1, 1 )
-UI_SetGridContent( grdBoothItem, 4, 3 )
-UI_SetGridUnitSize( grdBoothItem, 87, 84 )
+-- cartoes: 2 colunas de 186x56, 3 fileiras visiveis
+grdBoothItem = UI_CreateCompent( frmBooth, GOODS_GRID_TYPE, "grdBoothItem", 392, 184, 16, 78 )
+UI_SetGridSpace( grdBoothItem, 4, 4 )
+UI_SetGridContent( grdBoothItem, 3, 2 )
+UI_SetGridUnitSize( grdBoothItem, 186, 56 )
 UI_SetMargin( grdBoothItem, 0, 0, 0, 0 )
---UI_GoodGridLoadUnitImage( grdBoothItem, "texture/ui/baitan2.tga", 87, 84, 172, 173 )
-
---获得滚动条
-scrollid = UI_GetScroll( grdBoothItem)
+scrollid = UI_GetScroll( grdBoothItem )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
 UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 44, 166, 9 )
 UI_SetSize( id, 9, 44 )
-
---加载向下按钮
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
-
---加载确定，取消按钮
-btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 80, 24, 104, 260 )
-UI_LoadButtonImage( btnSetupBooth, "texture/ui/corsairs/btnBarracaMontar.png", 80, 24, 0, 0, FALSE )
-
-btnPullStakes = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnPullStakes", 80, 24, 104, 260 )
-UI_LoadButtonImage( btnPullStakes, "texture/ui/corsairs/btnBarracaFechar.png", 80, 24, 0, 0, FALSE )
+-- resumo e historico (desenhados pelo Game.exe)
+UI_CreateCompent( frmBooth, UI3D_COMPENT_TYPE, "d3dBarraca", 392, 126, 14, 276 )
+btnBarracaRepetir = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnBarracaRepetir", 120, 26, 14, 410 )
+UI_LoadButtonImage( btnBarracaRepetir, "texture/ui/corsairs/barraca2.png", 120, 26, 720, 0, FALSE )
+UI_SetHint( btnBarracaRepetir, "Put back the items and prices of your last stall" )
+btnSetupBooth = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnSetupBooth", 120, 26, 286, 410 )
+UI_LoadButtonImage( btnSetupBooth, "texture/ui/corsairs/barraca2.png", 120, 26, 440, 0, FALSE )
+btnPullStakes = UI_CreateCompent( frmBooth, BUTTON_TYPE, "btnPullStakes", 120, 26, 286, 410 )
+UI_LoadButtonImage( btnPullStakes, "texture/ui/corsairs/barraca2.png", 120, 26, 580, 0, FALSE )
 
 
 -----------------------------------------------------------------------
