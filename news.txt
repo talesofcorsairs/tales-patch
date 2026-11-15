@@ -1,9 +1,9 @@
-Versão 2.0.36
+Versão 2.0.37
 
+• Chat: aperte Enter para digitar e Enter de novo para enviar; Esc fecha. Corrigido: na 2.0.36 o Enter não abria o chat.
 • Market: novo ícone embaixo da ampulheta mostra todas as barracas abertas e o que vendem, com busca por item. Clique numa linha e o personagem vai até a barraca e ela abre.
 • Barracas aparecem no minimapa. Barraca em destaque (500.000 de ouro): placa dourada com brilho e topo do Market.
 • Barraca offline: depois de montar, "Go Offline" fecha o jogo e a barraca fica aberta até 24 h, até vender tudo ou você entrar de novo.
-• Chat: aperte Enter para digitar e Enter de novo para enviar (Esc fecha). As teclas não vão mais parar no chat sem querer.
 • Robe of the Frozen Heart e Robe of the Chilling Heart: a aparência no personagem não vem mais trocada.
 • Barraca nova: cartões com preço colorido, resumo, histórico de vendas, aviso com som e "Repeat last".
 • Buffs: o efeito no pé (ex.: Fairy Possession) volta ao ligar/desligar Efeitos.
