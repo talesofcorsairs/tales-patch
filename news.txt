@@ -1,12 +1,12 @@
-Versão 2.0.41
+Versão 2.0.42
 
+• IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
+• Baús e caixas (Purple Crystal, Green Dragon, Ultimate, Untwinned, presentes de Natal) não dão mais prêmio vazio.
+• Missões: as missões aleatórias não pedem nem dão mais itens que não existem; a cadeia de Câncer da Alena pode ser concluída.
+• NPCs que cobravam e não entregavam nada (loteria de Luna Heaven e outros) foram retirados.
+• Ícones corrigidos em 4 itens.
 • Inventário: os nomes dos encaixes (Neck, Head, Hands...) ganharam uma plaquinha escura e ficaram fáceis de ler; os encaixes Wing, Pet e Ration têm moldura dourada.
 • Lista de regiões e servidores: a faixa de seleção agora é dourada e lisa, com o nome centralizado.
 • Menu Sistema (Alt+O) com o título SYSTEM.
 • Tela de carregamento: a dica do mapa agora diz Alt+W, a tecla certa.
 • Forja nova: janela maior e organizada. Cada bônus de gema fica na sua linha (com 2 ou mais gemas o texto não sai mais da janela).
-• Forja: ao colocar a gema, a janela mostra em qual casa ela entra, o nível que vai ficar e o efeito; avisa se falta nível na gema ou casa livre.
-• Forja: barra com a chance de sucesso em porcentagem.
-• IMP MALL novo: itens em cartões com ícone, preço em IMPs e selo HOT/NEW, saldo de IMPs em destaque e botão Get IMPs. Clique duplo compra (a confirmação mostra quanto vai sobrar), clique direito mostra os detalhes.
-• Fitting Room: o personagem volta a aparecer e já veste a roupa ou arma escolhida.
-• Mall: pacotes que não entregavam nada foram retirados; se uma compra falhar, os IMPs voltam.
