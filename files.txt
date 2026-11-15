@@ -263,3 +263,5 @@ texture/ui/ods/inventory.tga
 texture/ui/ods/inventory.wsd
 texture/ui/loading/full_a.tga
 texture/ui/loading/full_a.wsd
+texture/icon/toc_ataque_proibido.png
+texture/icon/toc_skill_proibida.png
