@@ -253,3 +253,5 @@ texture/ui/corsairs/barraca2.wsd
 texture/ui/corsairs/mercado.png
 texture/ui/corsairs/mercado.wsd
 music/sound/pc/venda.wav
+texture/ui/corsairs/mall.png
+texture/ui/corsairs/mall.wsd

@@ -1,5 +1,8 @@
-Versão 2.0.38
+Versão 2.0.39
 
+• IMP MALL novo: itens em cartões com ícone, preço em IMPs e selo HOT/NEW, saldo de IMPs em destaque e botão Get IMPs. Clique duplo compra (a confirmação mostra quanto vai sobrar), clique direito mostra os detalhes.
+• Fitting Room: o personagem volta a aparecer e já veste a roupa ou arma escolhida.
+• Mall: pacotes que não entregavam nada foram retirados; se uma compra falhar, os IMPs voltam.
 • Barraca em destaque: o selo FEATURED agora é fácil de ler (fundo escuro e letra clara), no Market e em cima da placa; o nome do vendedor não fica mais por cima.
 • Código de segurança: os números do teclado ficaram nítidos e no visual do jogo.
 • Chat: aperte Enter para digitar e Enter de novo para enviar; Esc fecha. Corrigido: na 2.0.36 o Enter não abria o chat.
@@ -7,5 +10,3 @@ Versão 2.0.38
 • Barracas aparecem no minimapa. Barraca em destaque (500.000 de ouro): placa dourada com brilho e topo do Market.
 • Barraca offline: depois de montar, "Go Offline" fecha o jogo e a barraca fica aberta até 24 h, até vender tudo ou você entrar de novo.
 • Robe of the Frozen Heart e Robe of the Chilling Heart: a aparência no personagem não vem mais trocada.
-• Barraca nova: cartões com preço colorido, resumo, histórico de vendas, aviso com som e "Repeat last".
-• Buffs: o efeito no pé (ex.: Fairy Possession) volta ao ligar/desligar Efeitos.
