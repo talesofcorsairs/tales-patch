@@ -453,85 +453,42 @@ UI_SetLabelExFont( labNo, DEFAULT_FONT, TRUE, COLOR_BLACK )
 -- 定义NPC精练
 -----------------------------------------------------------------------	
 --- 创建NPC对话表单
-frmNPCforge = UI_CreateForm( "frmNPCforge", FALSE, 407, 275, 240, 70, TRUE, FALSE )
+-- Tales of Corsairs: forja/fusao nova (skin_forja.ps1 e UIForgeForm.cpp)
+frmNPCforge = UI_CreateForm( "frmNPCforge", FALSE, 440, 300, 240, 70, TRUE, FALSE )
 UI_ShowForm( frmNPCforge, TRUE )
 UI_AddFormToTemplete( frmNPCforge, FORM_MAIN )
---UI_FormSetHotKey( frmNPCforge, ALT_KEY, HOTKEY_Z )
-UI_SetFormStyle( frmNPCforge, 2 )---左右居中
+UI_SetFormStyle( frmNPCforge, 2 )
 UI_SetIsDrag( frmNPCforge, TRUE )
---UI_SetAlpha( frmNPCforge, 200 )
-
--- 加载背景图片
-imgBakTopLeft = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgBakTopLeft", 256, 256, 0, 0 )
-UI_LoadImage( imgBakTopLeft, "texture/ui/corsairs/npc_janelas.png", NORMAL, 256, 256, 0, 0 )
-imgBakTopRight = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgBakTopRight", 151, 256, 256, 0 )
-UI_LoadImage( imgBakTopRight, "texture/ui/corsairs/npc_janelas.png", NORMAL, 151, 256, 256, 0 )
-imgBakDownLeft = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgBakDownLeft", 256, 18, 0, 256 )
-UI_LoadImage( imgBakDownLeft, "texture/ui/corsairs/npc_janelas.png", NORMAL, 256, 18, 0, 256 )
-imgBakDownRight = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgBakDownRight", 151, 18, 256, 256 )
-UI_LoadImage( imgBakDownRight, "texture/ui/corsairs/npc_janelas.png", NORMAL, 151, 18, 256, 256 )
-
-imgMillingTitle = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgMillingTitle", 100, 18, 153, 5 )
-UI_LoadImage( imgMillingTitle, "texture/ui/corsairs/npc_janelas.png", NORMAL, 100, 18, 660, 392 )
-
---labTitle = UI_CreateCompent( frmNPCforge, LABELEX_TYPE, "labTitle", 400, 150, 182, 4 )
---UI_SetCaption( labTitle, "Item Forging")
---UI_SetTextColor( labTitle, COLOR_BLACK )
---UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnClose", 14, 14, 386, 7 )
+imgForjaFundo = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgForjaFundo", 440, 300, 0, 0 )
+UI_LoadImage( imgForjaFundo, "texture/ui/corsairs/forja.png", NORMAL, 440, 300, 0, 0 )
+imgMillingTitle = UI_CreateCompent( frmNPCforge, IMAGE_TYPE, "imgMillingTitle", 200, 30, 120, 4 )
+UI_LoadImage( imgMillingTitle, "texture/ui/corsairs/forja.png", NORMAL, 200, 30, 0, 304 )
+-- rotulos, informacoes e chance de sucesso (desenhados pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmNPCforge, UI3D_COMPENT_TYPE, "d3dForja", 2, 2, 0, 0 )
+btnClose = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnClose", 14, 14, 418, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---精炼需求和结果程序用栏
-cmdForgeItem1 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem1", 32, 32, 20, 100 )	-- 原料1
-cmdForgeItem2 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem2", 32, 32, 20, 151 )	-- 原料2
-cmdForgeItem0 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem0", 32, 32, 20, 49 )	-- 精炼道具
+cmdForgeItem0 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem0", 32, 32, 50, 54 )
+cmdForgeItem1 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem1", 32, 32, 50, 116 )
+cmdForgeItem2 = UI_CreateCompent( frmNPCforge, COMMAND_ONE_TYPE, "cmdForgeItem2", 32, 32, 50, 178 )
 UI_SetHint( cmdForgeItem0, "Forge item" )
 UI_SetHint( cmdForgeItem1, "Attribute Gem" )
 UI_SetHint( cmdForgeItem2, "Refining Gem" )
-
---创建精练所需金币显示
-labForgeGold = UI_CreateCompent( frmNPCforge, LABELEX_TYPE, "labForgeGold", 140, 12, 55, 247 )
+labForgeGold = UI_CreateCompent( frmNPCforge, LABELEX_TYPE, "labForgeGold", 136, 12, 46, 276 )
 UI_SetCaption( labForgeGold, "" )
-UI_SetTextColor( labForgeGold, COLOR_BLACK )
-UI_SetLabelExFont( labForgeGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建精炼进度
-proNPCforge = UI_CreateCompent( frmNPCforge, PROGRESS_TYPE, "proNPCforge", 354, 8, 25, 210 )
-UI_LoadImage( proNPCforge, "texture/ui/corsairs/npc_janelas.png", PROGRESS_PROGRESS, 354, 8, 660, 380 )
-
---创建物品属性显示
-memForgeItemState = UI_CreateCompent( frmNPCforge, MEMO_TYPE, "memForgeItemState", 294, 124, 82, 54 )
-UI_SetTextColor( memForgeItemState, COLOR_BLACK )
-UI_SetMemoMaxNumPerRow( memForgeItemState, 24 )
-UI_SetMemoPageShowNum( memForgeItemState, 7 )
-UI_SetMemoRowHeight( memForgeItemState, 17 )
-
-lstForgeItemState = UI_CreateCompent( frmNPCforge, LIST_TYPE, "lstForgeItemState", 294, 124, 82, 54 )
-UI_SetListRowHeight( lstForgeItemState, 17 )
-UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
-UI_SetMargin( lstForgeItemState, 8,3,6,0 )
-UI_SetIsShow( lstForgeItemState, TRUE )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-
---加载精炼，取消按钮
-btnForgeYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeYes", 41, 19, 249, 241 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/npc_janelas.png", 41, 19, 660, 414, TRUE )
-
-btnMillingYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnMillingYes", 41, 19, 249, 241 )
-UI_LoadButtonImage( btnMillingYes, "texture/ui/corsairs/npc_janelas.png", 41, 19, 660, 436, TRUE )
-
-btnForgeNo = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeNo", 41, 19, 316, 241 )
-UI_LoadButtonImage( btnForgeNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_SetTextColor( labForgeGold, 4294366590 )
+UI_SetLabelExFont( labForgeGold, DEFAULT_FONT, TRUE, COLOR_BLACK )
+-- barra do tempo da forja: por cima do trilho da chance (150,249)
+proNPCforge = UI_CreateCompent( frmNPCforge, PROGRESS_TYPE, "proNPCforge", 220, 10, 150, 249 )
+UI_LoadImage( proNPCforge, "texture/ui/corsairs/forja.png", PROGRESS_PROGRESS, 220, 10, 0, 336 )
+btnForgeYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeYes", 76, 26, 264, 268 )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/forja.png", 76, 26, 0, 350, FALSE )
+btnMillingYes = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnMillingYes", 76, 26, 264, 268 )
+UI_LoadButtonImage( btnMillingYes, "texture/ui/corsairs/forja.png", 76, 26, 80, 350, FALSE )
+btnForgeNo = UI_CreateCompent( frmNPCforge, BUTTON_TYPE, "btnForgeNo", 76, 26, 348, 268 )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/forja.png", 76, 26, 160, 350, FALSE )
 UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+
 
 -----------------------------------------------------------------------
 -- 定义NPC打磨

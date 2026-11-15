@@ -255,3 +255,5 @@ texture/ui/corsairs/mercado.wsd
 music/sound/pc/venda.wav
 texture/ui/corsairs/mall.png
 texture/ui/corsairs/mall.wsd
+texture/ui/corsairs/forja.png
+texture/ui/corsairs/forja.wsd

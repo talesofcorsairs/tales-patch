@@ -1,5 +1,8 @@
-Versão 2.0.39
+Versão 2.0.40
 
+• Forja nova: janela maior e organizada. Cada bônus de gema fica na sua linha (com 2 ou mais gemas o texto não sai mais da janela).
+• Forja: ao colocar a gema, a janela mostra em qual casa ela entra, o nível que vai ficar e o efeito; avisa se falta nível na gema ou casa livre.
+• Forja: barra com a chance de sucesso em porcentagem.
 • IMP MALL novo: itens em cartões com ícone, preço em IMPs e selo HOT/NEW, saldo de IMPs em destaque e botão Get IMPs. Clique duplo compra (a confirmação mostra quanto vai sobrar), clique direito mostra os detalhes.
 • Fitting Room: o personagem volta a aparecer e já veste a roupa ou arma escolhida.
 • Mall: pacotes que não entregavam nada foram retirados; se uma compra falhar, os IMPs voltam.
@@ -7,6 +10,3 @@ Versão 2.0.39
 • Código de segurança: os números do teclado ficaram nítidos e no visual do jogo.
 • Chat: aperte Enter para digitar e Enter de novo para enviar; Esc fecha. Corrigido: na 2.0.36 o Enter não abria o chat.
 • Market: novo ícone embaixo da ampulheta mostra todas as barracas abertas e o que vendem, com busca por item. Clique numa linha e o personagem vai até a barraca e ela abre.
-• Barracas aparecem no minimapa. Barraca em destaque (500.000 de ouro): placa dourada com brilho e topo do Market.
-• Barraca offline: depois de montar, "Go Offline" fecha o jogo e a barraca fica aberta até 24 h, até vender tudo ou você entrar de novo.
-• Robe of the Frozen Heart e Robe of the Chilling Heart: a aparência no personagem não vem mais trocada.
