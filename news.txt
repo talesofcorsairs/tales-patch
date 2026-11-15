@@ -1,5 +1,6 @@
-Versão 2.0.44
+Versão 2.0.45
 
+• Link de item no chat (Shift + botão direito no item): agora mostra o item de verdade, com refino, gemas, durabilidade e bônus. Os dados vêm conferidos pelo servidor, então ninguém consegue falsificar um link nem usar o link de outro jogador.
 • Estaleiro (SHIPYARD): o navio voltou a aparecer na janela! Ela foi refeita, com o navio sobre o mar, setas para girar, peças e atributos organizados e o custo em destaque.
 • Aviso de compra do IMP MALL: agora aparece numa faixa dourada centralizada no topo da tela, sem ficar torto nem em cima do alvo; mensagens longas quebram em duas linhas.
 • IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
@@ -9,4 +10,3 @@ Versão 2.0.44
 • Ícones corrigidos em 4 itens.
 • Inventário: os nomes dos encaixes (Neck, Head, Hands...) ganharam uma plaquinha escura e ficaram fáceis de ler; os encaixes Wing, Pet e Ration têm moldura dourada.
 • Lista de regiões e servidores: a faixa de seleção agora é dourada e lisa, com o nome centralizado.
-• Menu Sistema (Alt+O) com o título SYSTEM.
