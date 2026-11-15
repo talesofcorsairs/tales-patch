@@ -1,5 +1,6 @@
-Versão 2.0.43
+Versão 2.0.44
 
+• Estaleiro (SHIPYARD): o navio voltou a aparecer na janela! Ela foi refeita, com o navio sobre o mar, setas para girar, peças e atributos organizados e o custo em destaque.
 • Aviso de compra do IMP MALL: agora aparece numa faixa dourada centralizada no topo da tela, sem ficar torto nem em cima do alvo; mensagens longas quebram em duas linhas.
 • IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
 • Baús e caixas (Purple Crystal, Green Dragon, Ultimate, Untwinned, presentes de Natal) não dão mais prêmio vazio.
@@ -9,4 +10,3 @@ Versão 2.0.43
 • Inventário: os nomes dos encaixes (Neck, Head, Hands...) ganharam uma plaquinha escura e ficaram fáceis de ler; os encaixes Wing, Pet e Ration têm moldura dourada.
 • Lista de regiões e servidores: a faixa de seleção agora é dourada e lisa, com o nome centralizado.
 • Menu Sistema (Alt+O) com o título SYSTEM.
-• Tela de carregamento: a dica do mapa agora diz Alt+W, a tecla certa.
