@@ -257,3 +257,7 @@ texture/ui/corsairs/mall.png
 texture/ui/corsairs/mall.wsd
 texture/ui/corsairs/forja.png
 texture/ui/corsairs/forja.wsd
+texture/ui/ods/inventory.tga
+texture/ui/ods/inventory.wsd
+texture/ui/loading/full_a.tga
+texture/ui/loading/full_a.wsd
