@@ -2,267 +2,144 @@
 -- 定义船只建造
 -----------------------------------------------------------------------
 --创建船只建造表单
-frmShipBiuld = UI_CreateForm( "frmShipBiuld", FALSE, 382, 410, 294, 193, FALSE, FALSE )
+-- Tales of Corsairs: estaleiro novo (skin_estaleiro.ps1 e ShipFactory.cpp)
+frmShipBiuld = UI_CreateForm( "frmShipBiuld", FALSE, 440, 428, 294, 120, FALSE, FALSE )
 UI_ShowForm( frmShipBiuld, FALSE )
 UI_AddFormToTemplete( frmShipBiuld, FORM_MAIN )
 UI_SetIsDrag( frmShipBiuld, TRUE )
---UI_FormSetHotKey( frmShipBiuld, ALT_KEY, HOTKEY_T ) 
-
--- 加载背景图片
-imgBakLeftTop = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgBakLeftTop", 256, 256, 0, 0 )
-UI_LoadImage( imgBakLeftTop, "texture/ui/corsairs/navio_construir.png", NORMAL, 256, 256, 0, 0 )
-
-imgBakRightTop = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgBakRightTop", 126, 256, 256, 0 )
-UI_LoadImage( imgBakRightTop, "texture/ui/corsairs/navio_construir.png", NORMAL, 126, 256, 256, 0 )
-
-imgBakLeftButtom = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgBakLeftButtom", 256, 118, 0, 256 )
-UI_LoadImage( imgBakLeftButtom, "texture/ui/corsairs/navio_construir.png", NORMAL, 256, 118, 0, 256 )
-
-imgBakRightButtom = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgBakRightButtom", 126, 118, 256, 256 )
-UI_LoadImage( imgBakRightButtom, "texture/ui/corsairs/navio_construir.png", NORMAL, 126, 118, 256, 256 )
-
-
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnClose", 14, 14, 360, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+imgEstaleiroFundo = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgEstaleiroFundo", 440, 428, 0, 0 )
+UI_LoadImage( imgEstaleiroFundo, "texture/ui/corsairs/estaleiro.png", NORMAL, 440, 428, 0, 0 )
+btnClose = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnClose", 14, 14, 412, 13 )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---创建3Dship
-ui3dship = UI_CreateCompent( frmShipBiuld, UI3D_COMPENT, "ui3dship", 318, 147, 31, 49 )
-
---创建船只等级名称
-labShipLvName = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipLvName", 40, 13, 31, 182 )
-UI_SetCaption( labShipLvName, "Lv:" )
-UI_SetTextColor( labShipLvName, COLOR_BLACK )
-UI_SetLabelExFont( labShipLvName, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建船只等级数据
-labShipLv = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipLv", 65, 8, 88, 182 )
+-- navio 3D no centro da cena do mar
+ui3dship = UI_CreateCompent( frmShipBiuld, UI3D_COMPENT, "ui3dship", 416, 172, 12, 42 )
+-- selo de Lv/EXP
+labShipLvName = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipLvName", 30, 13, 28, 56 )
+UI_SetCaption( labShipLvName, "LV" )
+UI_SetTextColor( labShipLvName, 4294366590 )
+UI_SetLabelExFont( labShipLvName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labShipLv = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipLv", 60, 13, 62, 56 )
 UI_SetCaption( labShipLv, "1" )
-UI_SetTextColor( labShipLv, COLOR_BLACK )
-UI_SetLabelExFont( labShipLv, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
-
---创建船只熟练度名称
-labShipExpName = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipExpName", 40, 13, 31, 196 )
-UI_SetCaption( labShipExpName, "EXP:" )
-UI_SetTextColor( labShipExpName, COLOR_BLACK )
-UI_SetLabelExFont( labShipExpName, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建船只熟练度数据
-labShipExp = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipExp", 65, 8, 88, 196 )
+UI_SetTextColor( labShipLv, 4294967295 )
+UI_SetLabelExFont( labShipLv, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labShipExpName = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipExpName", 30, 13, 28, 73 )
+UI_SetCaption( labShipExpName, "EXP" )
+UI_SetTextColor( labShipExpName, 4294366590 )
+UI_SetLabelExFont( labShipExpName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labShipExp = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipExp", 60, 13, 62, 73 )
 UI_SetCaption( labShipExp, "0" )
-UI_SetTextColor( labShipExp, COLOR_BLACK )
-UI_SetLabelExFont( labShipExp, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
-
---创建旋转按钮
-btnLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnLeft", 15, 39, 20, 105 )
-UI_LoadButtonImage( btnLeft, "texture/ui/SysBotton4.tga", 15, 39, 165, 39, TRUE )
-
-btnRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnRight", 15, 39, 345, 105 )
-UI_LoadButtonImage( btnRight, "texture/ui/SysBotton4.tga", 15, 39, 165, 0, TRUE )
-
-btnTop = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnTop", 39, 15, 172, 38 )
-UI_LoadButtonImage( btnTop, "texture/ui/ShipBuildT.tga", 39, 15, 132, 185, FALSE )
-
-btnDown = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnDown", 39, 15, 172, 192 )
-UI_LoadButtonImage( btnDown, "texture/ui/ShipBuildT.tga", 39, 15, 132, 123, FALSE )
-
---创建船名输入
-edtShipName = UI_CreateCompent( frmShipBiuld, EDIT_TYPE, "edtShipName", 103, 13, 62, 225 )
+UI_SetTextColor( labShipExp, 4294967295 )
+UI_SetLabelExFont( labShipExp, DEFAULT_FONT, TRUE, COLOR_BLACK )
+-- girar o navio
+btnLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnLeft", 18, 40, 18, 108 )
+UI_LoadButtonImage( btnLeft, "texture/ui/corsairs/estaleiro.png", 18, 40, 448, 120, TRUE )
+btnRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnRight", 18, 40, 404, 108 )
+UI_LoadButtonImage( btnRight, "texture/ui/corsairs/estaleiro.png", 18, 40, 530, 120, TRUE )
+btnTop = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnTop", 32, 14, 204, 46 )
+UI_LoadButtonImage( btnTop, "texture/ui/corsairs/estaleiro.png", 32, 14, 612, 120, TRUE )
+btnDown = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnDown", 32, 14, 204, 196 )
+UI_LoadButtonImage( btnDown, "texture/ui/corsairs/estaleiro.png", 32, 14, 612, 140, TRUE )
+-- nome
+edtShipName = UI_CreateCompent( frmShipBiuld, EDIT_TYPE, "edtShipName", 206, 13, 71, 225 )
 UI_SetEditMaxNum( edtShipName, 16 )
-
---创建船身名称显示
-labShipBody = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipBody", 103, 13, 62, 255 )
-UI_SetCaption( labShipBody, "Fool" )
-UI_SetTextColor( labShipBody, COLOR_BLACK )
-UI_SetLabelExFont( labShipBody, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建动力名称显示
-labShipPower = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipPower", 103, 13, 62, 275 )
-UI_SetCaption( labShipPower, "Wheel of Fate" )
-UI_SetTextColor( labShipPower, COLOR_BLACK )
-UI_SetLabelExFont( labShipPower, DEFAULT_FONT, TRUE, COLOR_WHITE )
-btnPowerLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnPowerLeft", 13, 13, 45, 274 )
-UI_LoadButtonImage( btnPowerLeft, "texture/ui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
-btnPowerRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnPowerRight", 13, 13, 163, 274 )
-UI_LoadButtonImage( btnPowerRight, "texture/ui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
-
-
---创建船首名称显示
-labShipHead = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipHead", 103, 13, 62, 295 )
-UI_SetCaption( labShipHead, "Queen" )
-UI_SetTextColor( labShipHead, COLOR_BLACK )
-UI_SetLabelExFont( labShipHead, DEFAULT_FONT, TRUE, COLOR_WHITE )
-btnHeadLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnHeadLeft", 13, 13, 45, 294 )
-UI_LoadButtonImage( btnHeadLeft, "texture/ui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
-btnHeadRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnHeadRight", 13, 13, 163, 294 )
-UI_LoadButtonImage( btnHeadRight, "texture/ui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
-
-
---创建武装名称显示
-labShipSign = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipSign", 103, 13, 62, 315 )
-UI_SetCaption( labShipSign, "Skull" )
-UI_SetTextColor( labShipSign, COLOR_BLACK )
-UI_SetLabelExFont( labShipSign, DEFAULT_FONT, TRUE, COLOR_WHITE )
-btnSignLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnSignLeft", 13, 13, 45, 314 )
-UI_LoadButtonImage( btnSignLeft, "texture/ui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
-btnSignRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnSignRight", 13, 13, 163, 314 )
-UI_LoadButtonImage( btnSignRight, "texture/ui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
-
-
---创建配件名称显示
-labShipCanon = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipCanon", 103, 13, 62, 335 )
-UI_SetCaption( labShipCanon, "Cannon" )
-UI_SetTextColor( labShipCanon, COLOR_BLACK )
-UI_SetLabelExFont( labShipCanon, DEFAULT_FONT, TRUE, COLOR_WHITE )
-btnCanonLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnCanonLeft", 13, 13, 45, 334 )
-UI_LoadButtonImage( btnCanonLeft, "texture/ui/SystemBotton3.tga", 13, 13, 0, 197, TRUE )
-btnCanonRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnCanonRight", 13, 13, 163, 334 )
-UI_LoadButtonImage( btnCanonRight, "texture/ui/SystemBotton3.tga", 13, 13, 0, 211, TRUE )
-
-
-
-
---创建数据显示
---攻击
-labAtackShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labAtackShow", 62, 12, 216, 254 )
-UI_SetCaption( labAtackShow, "11111/11111" )
-UI_SetTextColor( labAtackShow, COLOR_BLACK )
-UI_SetLabelExFont( labAtackShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---航速
-labTimeShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labTimeShow", 27, 12, 330, 254 )
-UI_SetCaption( labTimeShow, "11111" )
-UI_SetTextColor( labTimeShow, COLOR_BLACK )
-UI_SetLabelExFont( labTimeShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---耐久
-labSailorShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSailorShow", 62, 12, 216, 274 )
-UI_SetCaption( labSailorShow, "22222/22222" )
-UI_SetTextColor( labSailorShow, COLOR_BLACK )
-UI_SetLabelExFont( labSailorShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---补给消耗
-labFlyspeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labFlyspeedShow", 27, 12, 330, 294)
-UI_SetCaption( labFlyspeedShow, "22222" )
-UI_SetTextColor( labFlyspeedShow, COLOR_BLACK )
-UI_SetLabelExFont( labFlyspeedShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---防御
-labDefenceShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labDefenceShow", 27, 12, 330, 314 )
-UI_SetCaption( labDefenceShow, "33333" )
-UI_SetTextColor( labDefenceShow, COLOR_BLACK )
-UI_SetLabelExFont( labDefenceShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---补给
-labCanonShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labCanonShow", 62, 12, 216, 294 )
-UI_SetCaption( labCanonShow, "33333/33333" )
-UI_SetTextColor( labCanonShow, COLOR_BLACK )
-UI_SetLabelExFont( labCanonShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---容量
-labContentShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labContentShow", 62, 12, 216, 314 )
-UI_SetCaption( labContentShow, "44444/44444" )
-UI_SetTextColor( labContentShow, COLOR_BLACK )
-UI_SetLabelExFont( labContentShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
---射速
-labSpeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSpeedShow", 27, 12, 330, 274 )
-UI_SetCaption( labSpeedShow, "44444" )
-UI_SetTextColor( labSpeedShow, COLOR_BLACK )
-UI_SetLabelExFont( labSpeedShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
-
--------------------------------------------
---建造船只用
--------------------------------------------
---金额
-imgMomeyTitle = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgMomeyTitle", 25, 13, 182, 333 )
-UI_LoadImage( imgMomeyTitle, "texture/ui/corsairs/navio_construir.png", NORMAL, 25, 13, 400, 450 )
-
-imgMoney = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgMoney", 152, 18, 224, 331 )
-UI_LoadImage( imgMoney, "texture/ui/corsairs/navio_construir.png", NORMAL, 152, 18, 300, 450 )
-
-labMenShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labMenShow", 62, 12, 248, 336 )
-UI_SetCaption( labMenShow, "55555555555" )
-UI_SetTextColor( labMenShow, COLOR_BLACK )
-UI_SetLabelExFont( labMenShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建确定和取消Botton
-btnYes = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnYes", 41, 19, 106, 353 )
-UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
-
-btnNo = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnNo", 41, 19, 226, 353 )
-UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_SetTextColor( edtShipName, 4293976766 )
+-- atributos originais (so ao ver o navio no porto)
+chkShip = UI_CreateCompent( frmShipBiuld, CHECK_TYPE, "chkShip", 12, 12, 298, 225 )
+UI_LoadImage( chkShip, "texture/ui/corsairs/estaleiro.png", UNCHECKED, 12, 12, 448, 220 )
+UI_LoadImage( chkShip, "texture/ui/corsairs/estaleiro.png", CHECKED, 12, 12, 464, 220 )
+imgShipo = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgShipo", 84, 14, 314, 224 )
+UI_LoadImage( imgShipo, "texture/ui/corsairs/estaleiro.png", NORMAL, 84, 14, 600, 194 )
+-- pecas (Body nao troca; as outras tem setas)
+labShipBody = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipBody", 136, 13, 83, 275 )
+UI_SetCaption( labShipBody, "" )
+UI_SetTextColor( labShipBody, 4293976766 )
+UI_SetLabelExFont( labShipBody, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labShipPower = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipPower", 136, 13, 83, 296 )
+UI_SetCaption( labShipPower, "" )
+UI_SetTextColor( labShipPower, 4293976766 )
+UI_SetLabelExFont( labShipPower, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnPowerLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnPowerLeft", 13, 13, 67, 295 )
+UI_LoadButtonImage( btnPowerLeft, "texture/ui/corsairs/estaleiro.png", 13, 13, 448, 170, TRUE )
+btnPowerRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnPowerRight", 13, 13, 220, 295 )
+UI_LoadButtonImage( btnPowerRight, "texture/ui/corsairs/estaleiro.png", 13, 13, 510, 170, TRUE )
+labShipHead = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipHead", 136, 13, 83, 317 )
+UI_SetCaption( labShipHead, "" )
+UI_SetTextColor( labShipHead, 4293976766 )
+UI_SetLabelExFont( labShipHead, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnHeadLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnHeadLeft", 13, 13, 67, 316 )
+UI_LoadButtonImage( btnHeadLeft, "texture/ui/corsairs/estaleiro.png", 13, 13, 448, 170, TRUE )
+btnHeadRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnHeadRight", 13, 13, 220, 316 )
+UI_LoadButtonImage( btnHeadRight, "texture/ui/corsairs/estaleiro.png", 13, 13, 510, 170, TRUE )
+labShipSign = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipSign", 136, 13, 83, 338 )
+UI_SetCaption( labShipSign, "" )
+UI_SetTextColor( labShipSign, 4293976766 )
+UI_SetLabelExFont( labShipSign, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnSignLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnSignLeft", 13, 13, 67, 337 )
+UI_LoadButtonImage( btnSignLeft, "texture/ui/corsairs/estaleiro.png", 13, 13, 448, 170, TRUE )
+btnSignRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnSignRight", 13, 13, 220, 337 )
+UI_LoadButtonImage( btnSignRight, "texture/ui/corsairs/estaleiro.png", 13, 13, 510, 170, TRUE )
+labShipCanon = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labShipCanon", 136, 13, 83, 359 )
+UI_SetCaption( labShipCanon, "" )
+UI_SetTextColor( labShipCanon, 4293976766 )
+UI_SetLabelExFont( labShipCanon, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnCanonLeft = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnCanonLeft", 13, 13, 67, 358 )
+UI_LoadButtonImage( btnCanonLeft, "texture/ui/corsairs/estaleiro.png", 13, 13, 448, 170, TRUE )
+btnCanonRight = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnCanonRight", 13, 13, 220, 358 )
+UI_LoadButtonImage( btnCanonRight, "texture/ui/corsairs/estaleiro.png", 13, 13, 510, 170, TRUE )
+-- atributos
+labAtackShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labAtackShow", 62, 13, 297, 277 )
+UI_SetCaption( labAtackShow, "" )
+UI_SetTextColor( labAtackShow, 4294967295 )
+UI_SetLabelExFont( labAtackShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labTimeShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labTimeShow", 20, 13, 406, 277 )
+UI_SetCaption( labTimeShow, "" )
+UI_SetTextColor( labTimeShow, 4294967295 )
+UI_SetLabelExFont( labTimeShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labSailorShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSailorShow", 62, 13, 297, 301 )
+UI_SetCaption( labSailorShow, "" )
+UI_SetTextColor( labSailorShow, 4294967295 )
+UI_SetLabelExFont( labSailorShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labSpeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labSpeedShow", 20, 13, 406, 301 )
+UI_SetCaption( labSpeedShow, "" )
+UI_SetTextColor( labSpeedShow, 4294967295 )
+UI_SetLabelExFont( labSpeedShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labCanonShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labCanonShow", 62, 13, 297, 325 )
+UI_SetCaption( labCanonShow, "" )
+UI_SetTextColor( labCanonShow, 4294967295 )
+UI_SetLabelExFont( labCanonShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labFlyspeedShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labFlyspeedShow", 20, 13, 406, 325 )
+UI_SetCaption( labFlyspeedShow, "" )
+UI_SetTextColor( labFlyspeedShow, 4294967295 )
+UI_SetLabelExFont( labFlyspeedShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labContentShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labContentShow", 62, 13, 297, 349 )
+UI_SetCaption( labContentShow, "" )
+UI_SetTextColor( labContentShow, 4294967295 )
+UI_SetLabelExFont( labContentShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+labDefenceShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labDefenceShow", 20, 13, 406, 349 )
+UI_SetCaption( labDefenceShow, "" )
+UI_SetTextColor( labDefenceShow, 4294967295 )
+UI_SetLabelExFont( labDefenceShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+-- custo (construir) ou porto (ver navio)
+imgMomeyTitle = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgMomeyTitle", 64, 22, 16, 394 )
+UI_LoadImage( imgMomeyTitle, "texture/ui/corsairs/estaleiro.png", NORMAL, 64, 22, 448, 190 )
+imgSpace = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgSpace", 64, 22, 16, 394 )
+UI_LoadImage( imgSpace, "texture/ui/corsairs/estaleiro.png", NORMAL, 64, 22, 520, 190 )
+labMenShow = UI_CreateCompent( frmShipBiuld, LABELEX_TYPE, "labMenShow", 136, 13, 90, 399 )
+UI_SetCaption( labMenShow, "" )
+UI_SetTextColor( labMenShow, 4294366590 )
+UI_SetLabelExFont( labMenShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+-- botoes
+btnYes = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnYes", 84, 26, 252, 392 )
+UI_LoadButtonImage( btnYes, "texture/ui/corsairs/estaleiro.png", 84, 26, 448, 0, TRUE )
+btnNo = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnNo", 84, 26, 344, 392 )
+UI_LoadButtonImage( btnNo, "texture/ui/corsairs/estaleiro.png", 84, 26, 448, 30, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
+btnROpen = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnROpen", 84, 26, 344, 392 )
+UI_LoadButtonImage( btnROpen, "texture/ui/corsairs/estaleiro.png", 84, 26, 448, 60, TRUE )
+btnRClose = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnRClose", 84, 26, 344, 392 )
+UI_LoadButtonImage( btnRClose, "texture/ui/corsairs/estaleiro.png", 84, 26, 448, 90, TRUE )
 
--------------------------------------------
---船只属性用
--------------------------------------------
-
---创建船只原始属性
-imgShipo = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgShipo", 73, 13, 184, 225 )
-UI_LoadImage( imgShipo, "texture/ui/ShipR2.tga", NORMAL, 73, 13, 62, 212 )
-
-chkShip = UI_CreateCompent( frmShipBiuld, CHECK_TYPE, "chkShip", 10, 10, 260, 227 )
-UI_LoadImage( chkShip, "texture/ui/QQ2.tga", UNCHECKED, 10, 10, 40, 231 )
-UI_LoadImage( chkShip, "texture/ui/QQ2.tga", CHECKED, 10, 10, 52, 231 )
-
-
---停泊地
-imgSpace = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgSpace", 42, 13, 182, 333 )
-UI_LoadImage( imgSpace, "texture/ui/shipR2.tga", NORMAL, 42, 13, 63, 192 )
-
---创建开启船舱按钮
-btnROpen = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnROpen", 92, 23, 270, 220 )
-UI_LoadButtonImage( btnROpen, "texture/ui/botton2.tga", 92, 23, 62, 58, FALSE )
-
--- 加载船舱背景图片
-imgRoomLeft = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgRoomLeft", 256, 168, 0, 0 )
---UI_LoadImage( imgRoomLeft, "texture/ui/shipR2.tga", NORMAL, 256, 168, 0, 0 )
-
-imgRoomRight = UI_CreateCompent( frmShipBiuld, IMAGE_TYPE, "imgRoomRight", 126, 168, 256, 0 )
---UI_LoadImage( imgRoomRight, "texture/ui/shipR.tga", NORMAL, 126, 168, 0, 0 )
-
---创建船舱表格
---grdRoom = UI_CreateCompent( frmShipBiuld, GOODS_GRID_TYPE, "grdRoom", 320, 110, 42, 270 ) 
---UI_SetGridSpace( grdRoom, 3, 3 )
---UI_SetGridContent( grdRoom, 4, 8 )
---UI_SetGridUnitSize( grdRoom, 32, 32 )
---UI_SetMargin( grdRoom, 3, 2, 0, 0 )
-
---UI_GridLoadSelectImage( grdRoom, "texture/ui/StartF.dds", 32, 32, 123, 99 )
-
---获得滚动条
---scrollid = UI_GetScroll( grdRoom )
---UI_SetSize( scrollid, 11, 1 )
---UI_LoadImage( scrollid, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
---id = UI_GetScrollObj( scrollid, SCROLL_UP )
---UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
---UI_SetSize( id, 11, 9 )
-
---加载滚动条
---id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
---UI_LoadImage( id, "texture/ui/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
---UI_SetSize( id, 11, 43 )
-
---加载向下按钮
---id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
---UI_LoadButtonImage( id, "texture/ui/PublicC.tga", 11, 9, 166, 0, TRUE )
---UI_SetSize( id, 11, 9 )
-
---创建关闭船舱按钮
-btnRClose = UI_CreateCompent( frmShipBiuld, BUTTON_TYPE, "btnRClose", 92, 23, 270, 220 )
-UI_LoadButtonImage( btnRClose, "texture/ui/Botton2.tga", 92, 23, 155, 58, FALSE )
-
------------------------------------------------------------------------
--- 定义船仓--不用
------------------------------------------------------------------------
---创建船仓表单
 frmShipRoom = UI_CreateForm( "frmShipRoom", FALSE, 382, 374, 294, 193, FALSE, FALSE )
 UI_ShowForm( frmShipRoom, FALSE )
 UI_AddFormToTemplete( frmShipRoom, FORM_MAIN )
