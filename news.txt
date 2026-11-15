@@ -1,5 +1,6 @@
-Versão 2.0.42
+Versão 2.0.43
 
+• Aviso de compra do IMP MALL: agora aparece numa faixa dourada centralizada no topo da tela, sem ficar torto nem em cima do alvo; mensagens longas quebram em duas linhas.
 • IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
 • Baús e caixas (Purple Crystal, Green Dragon, Ultimate, Untwinned, presentes de Natal) não dão mais prêmio vazio.
 • Missões: as missões aleatórias não pedem nem dão mais itens que não existem; a cadeia de Câncer da Alena pode ser concluída.
@@ -9,4 +10,3 @@ Versão 2.0.42
 • Lista de regiões e servidores: a faixa de seleção agora é dourada e lisa, com o nome centralizado.
 • Menu Sistema (Alt+O) com o título SYSTEM.
 • Tela de carregamento: a dica do mapa agora diz Alt+W, a tecla certa.
-• Forja nova: janela maior e organizada. Cada bônus de gema fica na sua linha (com 2 ou mais gemas o texto não sai mais da janela).
