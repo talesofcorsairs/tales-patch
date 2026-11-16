@@ -295,60 +295,59 @@ UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, FALSE )
 -- 定义银行 Bank storage
 -----------------------------------------------------------------------	
 -- 创建NPC保管表单
-frmNPCstorage = UI_CreateForm( "frmNPCstorage", FALSE, 198, 394, 100, 100, TRUE, FALSE )
---UI_FormSetHotKey( frmNPCstorage, ALT_KEY, HOTKEY_V ) 
+-- Tales of Corsairs: banco novo (skin_banco.ps1 e UIBankForm.cpp)
+frmNPCstorage = UI_CreateForm( "frmNPCstorage", FALSE, 336, 400, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmNPCstorage, TRUE )
 UI_AddFormToTemplete( frmNPCstorage, FORM_MAIN )
 UI_SetIsDrag( frmNPCstorage, TRUE )
-
--- 加载背景图片
-imgBakTop = UI_CreateCompent( frmNPCstorage, IMAGE_TYPE, "imgBakTop", 198, 394, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/corsairs/npc_janelas.png", NORMAL, 198, 394, 210, 450 )
-
---title
-labTitle = UI_CreateCompent( frmNPCstorage, LABELEX_TYPE, "labTitle", 400, 150, 10, 4 )
-UI_SetCaption( labTitle, "")
-UI_SetTextColor( labTitle, COLOR_YELLOW )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnClose", 14, 14, 178, 7 )
+imgBancoFundo = UI_CreateCompent( frmNPCstorage, IMAGE_TYPE, "imgBancoFundo", 336, 400, 0, 0 )
+UI_LoadImage( imgBancoFundo, "texture/ui/corsairs/banco.png", NORMAL, 336, 400, 0, 0 )
+btnClose = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnClose", 14, 14, 314, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---加载仓库主人名称显示
-labOwnerName = UI_CreateCompent( frmNPCstorage, LABELEX_TYPE, "labOwnerName", 170, 12, 14, 39 )
-UI_SetCaption( labOwnerName, "就就就就就就就就专用" )
-UI_SetTextColor( labOwnerName, COLOR_CLOUD )
+labOwnerName = UI_CreateCompent( frmNPCstorage, LABELEX_TYPE, "labOwnerName", 255, 12, 40, 43 )
+UI_SetCaption( labOwnerName, "" )
+UI_SetTextColor( labOwnerName, 4293976766 )
 UI_SetLabelExFont( labOwnerName, DEFAULT_FONT, TRUE, COLOR_BLACK )
 UI_SetLabelExAlign( labOwnerName, TRUE )
-
---创建物品表格
-grdNPCstorage = UI_CreateCompent( frmNPCstorage, GOODS_GRID_TYPE, "grdNPCstorage", 184, 305, 7, 71 ) 
-UI_SetGridSpace( grdNPCstorage, 2, 3 )
-UI_SetGridContent( grdNPCstorage, 8, 4 )
+-- abas de filtro: All, Gear, Usable, Gems, Other
+btnBancoAba0 = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnBancoAba0", 60, 22, 12, 104 )
+UI_LoadButtonImage( btnBancoAba0, "texture/ui/corsairs/banco.png", 60, 22, 0, 404, FALSE )
+UI_SetHint( btnBancoAba0, "All items" )
+btnBancoAba1 = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnBancoAba1", 60, 22, 75, 104 )
+UI_LoadButtonImage( btnBancoAba1, "texture/ui/corsairs/banco.png", 60, 22, 62, 404, FALSE )
+UI_SetHint( btnBancoAba1, "Weapons, armor, jewelry, wings and pets" )
+btnBancoAba2 = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnBancoAba2", 60, 22, 138, 104 )
+UI_LoadButtonImage( btnBancoAba2, "texture/ui/corsairs/banco.png", 60, 22, 124, 404, FALSE )
+UI_SetHint( btnBancoAba2, "Potions, food and scrolls" )
+btnBancoAba3 = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnBancoAba3", 60, 22, 201, 104 )
+UI_LoadButtonImage( btnBancoAba3, "texture/ui/corsairs/banco.png", 60, 22, 186, 404, FALSE )
+UI_SetHint( btnBancoAba3, "Gems and refining gems" )
+btnBancoAba4 = UI_CreateCompent( frmNPCstorage, BUTTON_TYPE, "btnBancoAba4", 60, 22, 264, 104 )
+UI_LoadButtonImage( btnBancoAba4, "texture/ui/corsairs/banco.png", 60, 22, 248, 404, FALSE )
+UI_SetHint( btnBancoAba4, "Everything else" )
+-- 48 casas a vista (8x6); com mais de 48 aparece a rolagem
+grdNPCstorage = UI_CreateCompent( frmNPCstorage, GOODS_GRID_TYPE, "grdNPCstorage", 306, 224, 18, 134 )
+UI_SetGridSpace( grdNPCstorage, 4, 4 )
+UI_SetGridContent( grdNPCstorage, 6, 8 )
 UI_SetGridUnitSize( grdNPCstorage, 32, 32 )
-UI_SetMargin( grdNPCstorage, 21, 4, 0, 0 )
-
---获得滚动条
+UI_SetMargin( grdNPCstorage, 8, 4, 0, 4 )
+UI_GoodGridLoadUnitImage( grdNPCstorage, "texture/ui/corsairs/banco.png", 32, 32, 340, 0 )
 scrollid = UI_GetScroll( grdNPCstorage )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 43, 166, 10 )
-UI_SetSize( id, 9, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 44, 166, 9 )
+UI_SetSize( id, 9, 44 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
+-- contagem, barra, aba ativa, filtro e dicas (desenhados pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmNPCstorage, UI3D_COMPENT_TYPE, "d3dBanco", 2, 2, 0, 0 )
+
 
 -----------------------------------------------------------------------
 -- 定义NPC任务对话

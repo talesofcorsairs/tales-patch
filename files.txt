@@ -265,3 +265,5 @@ texture/ui/loading/full_a.tga
 texture/ui/loading/full_a.wsd
 texture/icon/toc_ataque_proibido.png
 texture/icon/toc_skill_proibida.png
+texture/ui/corsairs/banco.png
+texture/ui/corsairs/banco.wsd
