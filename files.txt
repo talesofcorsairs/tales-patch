@@ -267,3 +267,11 @@ texture/icon/toc_ataque_proibido.png
 texture/icon/toc_skill_proibida.png
 texture/ui/corsairs/banco.png
 texture/ui/corsairs/banco.wsd
+texture/ui/corsairs/combinar_gemas.png
+texture/ui/corsairs/combinar_gemas.wsd
+texture/ui/corsairs/fusao_apparel.png
+texture/ui/corsairs/fusao_apparel.wsd
+texture/ui/corsairs/evoluir_apparel.png
+texture/ui/corsairs/evoluir_apparel.wsd
+texture/ui/corsairs/casar_fadas.png
+texture/ui/corsairs/casar_fadas.wsd

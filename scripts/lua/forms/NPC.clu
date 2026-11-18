@@ -554,74 +554,54 @@ UI_LoadButtonImage( btnShineNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 -- 定义NPC合成
 -----------------------------------------------------------------------	
 --- 创建NPC对话表单
-frmMakeEquip = UI_CreateForm( "frmMakeEquip", FALSE, 226, 440, 240, 70, TRUE, FALSE )
+-- Tales of Corsairs: Combine novo (skin_combinar.ps1 e UIMakeEquipForm.cpp)
+frmMakeEquip = UI_CreateForm( "frmMakeEquip", FALSE, 400, 340, 150, 150, TRUE, FALSE )
 UI_ShowForm( frmMakeEquip, TRUE )
 UI_AddFormToTemplete( frmMakeEquip, FORM_MAIN )
---UI_FormSetHotKey( frmMakeEquip, ALT_KEY, HOTKEY_V )
-UI_SetFormStyle( frmMakeEquip, 2 )---左右居中
+UI_SetFormStyle( frmMakeEquip, 2 )
 UI_SetIsDrag( frmMakeEquip, TRUE )
-
-
--- 加载背景图片
-imgBakTop = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgBakTop", 226, 256, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/corsairs/npc_janelas.png", NORMAL, 226, 256, 420, 0 ) 
-imgBakDown = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgBakDown", 226, 184, 0, 256 )
-UI_LoadImage( imgBakDown, "texture/ui/corsairs/npc_janelas.png", NORMAL, 226, 184, 420, 256 )
-
---title
---labTitle = UI_CreateCompent( frmMakeEquip, LABELEX_TYPE, "labTitle", 400, 150, 87, 6 )
---UI_SetCaption( labTitle, "Item combining")
---UI_SetTextColor( labTitle, COLOR_BLACK )
---UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnClose", 14, 14, 205, 7 )
+-- um fundo por servico (o Game.exe mostra so o do servico aberto)
+imgCombGemas = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgCombGemas", 400, 340, 0, 0 )
+UI_LoadImage( imgCombGemas, "texture/ui/corsairs/combinar_gemas.png", NORMAL, 400, 340, 0, 0 )
+imgCombFusao = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgCombFusao", 400, 340, 0, 0 )
+UI_LoadImage( imgCombFusao, "texture/ui/corsairs/fusao_apparel.png", NORMAL, 400, 340, 0, 0 )
+imgCombEvoluir = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgCombEvoluir", 400, 340, 0, 0 )
+UI_LoadImage( imgCombEvoluir, "texture/ui/corsairs/evoluir_apparel.png", NORMAL, 400, 340, 0, 0 )
+imgCombFadas = UI_CreateCompent( frmMakeEquip, IMAGE_TYPE, "imgCombFadas", 400, 340, 0, 0 )
+UI_LoadImage( imgCombFadas, "texture/ui/corsairs/casar_fadas.png", NORMAL, 400, 340, 0, 0 )
+-- rotulos, previa, informacoes e avisos (desenhados pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmMakeEquip, UI3D_COMPENT_TYPE, "d3dCombinar", 2, 2, 0, 0 )
+btnClose = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnClose", 14, 14, 378, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---合成需求和结果程序用栏
-cmdRouLeau = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdRouLeau", 32, 32, 97, 67 )	-- 卷轴
-cmdItem0 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem0", 32, 32, 25, 122 )	-- 原料1
-cmdItem1 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem1", 32, 32, 172, 122 )	-- 原料2
-cmdItem2 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem2", 32, 32, 49, 207 )	-- 原料3
-cmdItem3 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem3", 32, 32, 146, 207 )	-- 原料4
-cmdLastEquip = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdLastEquip", 32, 32, 97, 142 )	-- 结果
-UI_SetHint( cmdLastEquip, "Combine item" )
-UI_SetHint( cmdItem0, "Ingredient 1" )
-UI_SetHint( cmdItem1, "Ingredient 2" )
-UI_SetHint( cmdItem2, "Ingredient 3" )
-UI_SetHint( cmdItem3, "Ingredient 4" )
-UI_SetHint( cmdRouLeau, "Scroll" )
-
---创建合成所需金币显示
-labForgeGold = UI_CreateCompent( frmMakeEquip, LABELEX_TYPE, "labForgeGold", 112, 12, 50, 386 )
+-- casas: o Game.exe muda de lugar e de dica conforme o servico
+cmdRouLeau = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdRouLeau", 32, 32, 36, 98 )
+cmdItem0 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem0", 32, 32, 136, 98 )
+cmdItem1 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem1", 32, 32, 212, 98 )
+cmdItem2 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem2", 32, 32, 36, 130 )
+cmdItem3 = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdItem3", 32, 32, 0, 0 )
+cmdLastEquip = UI_CreateCompent( frmMakeEquip, COMMAND_ONE_TYPE, "cmdLastEquip", 32, 32, 318, 98 )
+UI_SetHint( cmdLastEquip, "Result preview" )
+labForgeGold = UI_CreateCompent( frmMakeEquip, LABELEX_TYPE, "labForgeGold", 136, 12, 46, 312 )
 UI_SetCaption( labForgeGold, "" )
-UI_SetTextColor( labForgeGold, COLOR_BLACK )
-UI_SetLabelExFont( labForgeGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetTextColor( labForgeGold, 4294366590 )
+UI_SetLabelExFont( labForgeGold, DEFAULT_FONT, TRUE, COLOR_BLACK )
+-- o C++ ainda procura o memForgeItemState (o texto agora e desenhado pelo d3dCombinar)
+memForgeItemState = UI_CreateCompent( frmMakeEquip, MEMO_TYPE, "memForgeItemState", 2, 2, 0, 0 )
+UI_SetIsShow( memForgeItemState, FALSE )
+-- confirmar: um botao por servico, no mesmo lugar (o Game.exe mostra so o do servico aberto)
+btnForgeYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/combinar_gemas.png", 76, 26, 0, 350, FALSE )
+btnFusaoYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnFusaoYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnFusaoYes, "texture/ui/corsairs/fusao_apparel.png", 76, 26, 0, 350, FALSE )
+btnEvoluiYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnEvoluiYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnEvoluiYes, "texture/ui/corsairs/evoluir_apparel.png", 76, 26, 0, 350, FALSE )
+btnFadasYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnFadasYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnFadasYes, "texture/ui/corsairs/casar_fadas.png", 76, 26, 0, 350, FALSE )
+btnForgeNo = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeNo", 76, 26, 310, 307 )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/combinar_gemas.png", 76, 26, 80, 350, FALSE )
+UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
 
---创建物品属性显示
-memForgeItemState = UI_CreateCompent( frmMakeEquip, MEMO_TYPE, "memForgeItemState", 180, 77, 24, 286 )
-UI_SetTextColor( memForgeItemState, 4293976766 )
-UI_SetMemoMaxNumPerRow( memForgeItemState, 16 )
-UI_SetMemoPageShowNum( memForgeItemState, 4 )
-UI_SetMemoRowHeight( memForgeItemState, 18 )
-
-lstForgeItemState = UI_CreateListView( frmConAsk, "lstForgeItemState", 180, 77, 24, 286, 1, 2 )
-UI_SetListRowHeight( lstForgeItemState, 18 )
-UI_SetListFontColor( lstForgeItemState, 4293591039, 4293591039 )
-UI_SetMargin( lstForgeItemState, 8,5,0,0 )
-UI_SetIsShow( lstForgeItemState, TRUE )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-UI_AddListText( lstForgeItemState, "" )
-
---加载合成，取消按钮
-btnForgeYes = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeYes", 41, 19, 52, 411 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
-
-btnForgeNo = UI_CreateCompent( frmMakeEquip, BUTTON_TYPE, "btnForgeNo", 41, 19, 135, 411 )
-UI_LoadButtonImage( btnForgeNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
 
 
 -----------------------------------------------------------------------
