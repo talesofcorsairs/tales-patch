@@ -1,5 +1,6 @@
-Versão 2.0.48
+Versão 2.0.49
 
+• Apparel Fusion: agora dá para fundir os equipamentos Lv95 (Heaven Sword, Guard of Honor, Battle Blade e os outros) numa apparel. Antes o jogo achava que eles eram apparel e recusava a fusão.
 • Combine novo! Combine de gemas, Apparel Fusion e Apparel Upgrade agora têm cada um a sua janela, com as casas certas, prévia do resultado, efeito da gema antes e depois, escada de eficácia (100% a 110%) e avisos claros quando algo não combina. Também dá para colocar e tirar os itens com o botão direito, sem arrastar.
 • Banco novo! Agora mostra as 48 casas de uma vez, quantas estão ocupadas e quantas sobram (com barra de ocupação), tem abas para filtrar (equipamentos, consumíveis, gemas e outros) e guarda ou tira itens com o botão direito, sem precisar arrastar.
 • Arena: os debuffs Attack Forbidden e Skill Forbidden agora têm ícone próprio (espada e magia com o sinal de proibido) no lugar das letras AF/SF.
@@ -9,4 +10,3 @@ Versão 2.0.48
 • IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
 • Baús e caixas (Purple Crystal, Green Dragon, Ultimate, Untwinned, presentes de Natal) não dão mais prêmio vazio.
 • Missões: as missões aleatórias não pedem nem dão mais itens que não existem; a cadeia de Câncer da Alena pode ser concluída.
-• NPCs que cobravam e não entregavam nada (loteria de Luna Heaven e outros) foram retirados.
