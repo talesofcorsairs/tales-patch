@@ -1,5 +1,6 @@
-Versão 2.0.49
+Versão 2.0.50
 
+• Botão direito mais rápido: na loja do NPC ele vende o item do inventário e compra o item da loja (com confirmação e quantidade, como ao arrastar). Na troca entre jogadores ele coloca e tira os itens. Na forja ele põe o equipamento, a gema e a Refining Gem na casa certa; clicando de novo, o item sai.
 • Apparel Fusion: agora dá para fundir os equipamentos Lv95 (Heaven Sword, Guard of Honor, Battle Blade e os outros) numa apparel. Antes o jogo achava que eles eram apparel e recusava a fusão.
 • Combine novo! Combine de gemas, Apparel Fusion e Apparel Upgrade agora têm cada um a sua janela, com as casas certas, prévia do resultado, efeito da gema antes e depois, escada de eficácia (100% a 110%) e avisos claros quando algo não combina. Também dá para colocar e tirar os itens com o botão direito, sem arrastar.
 • Banco novo! Agora mostra as 48 casas de uma vez, quantas estão ocupadas e quantas sobram (com barra de ocupação), tem abas para filtrar (equipamentos, consumíveis, gemas e outros) e guarda ou tira itens com o botão direito, sem precisar arrastar.
@@ -9,4 +10,3 @@ Versão 2.0.49
 • Aviso de compra do IMP MALL: agora aparece numa faixa dourada centralizada no topo da tela, sem ficar torto nem em cima do alvo; mensagens longas quebram em duas linhas.
 • IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
 • Baús e caixas (Purple Crystal, Green Dragon, Ultimate, Untwinned, presentes de Natal) não dão mais prêmio vazio.
-• Missões: as missões aleatórias não pedem nem dão mais itens que não existem; a cadeia de Câncer da Alena pode ser concluída.
