@@ -1,3 +1,7 @@
+Versão 2.0.55
+
+• Criar personagem mais bonito: o boneco aparece inteiro e sem falhas (antes, partes de trás do corpo passavam por cima das da frente), o cabelo ficou mais caprichado e o personagem está maior no quadro.
+
 Versão 2.0.54
 
 • Notícias novas no launcher! Cada versão com seu título, os tópicos em destaque e rolagem com a roda do mouse.
