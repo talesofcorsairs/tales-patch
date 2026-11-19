@@ -825,7 +825,7 @@ btnNo = UI_CreateCompent( frmTeamPK, BUTTON_TYPE, "btnNo", 41, 19, 279, 382 )
 UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
 
 -- Tales of Corsairs: janela nova da versao DX9 (contem imgBackDropTarget), copiada da interface da fonte.
-frmTargetInfo = UI_CreateForm("frmTargetInfo", FALSE, 242, 74, 262, 4, TRUE, FALSE)
+frmTargetInfo = UI_CreateForm("frmTargetInfo", FALSE, 242, 74, 284, 4, TRUE, FALSE)
 
 imgBackDropTarget = UI_CreateCompent(frmTargetInfo, IMAGE_TYPE, "imgBackDropTarget", 38, 38, 7, 7)
 UI_LoadImage(imgBackDropTarget, "texture/ui/corsairs/npcBackdrop/0.tga", NORMAL, 55, 44, 0, 0)

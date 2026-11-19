@@ -283,3 +283,5 @@ texture/ui/corsairs/amigos.png
 texture/ui/corsairs/amigos.wsd
 texture/ui/corsairs/npcBackdrop/monstro.tga
 texture/ui/corsairs/npcBackdrop/monstro.wsd
+texture/ui/corsairs/hud.png
+texture/ui/corsairs/hud.wsd
