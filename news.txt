@@ -1,5 +1,6 @@
-Versão 2.0.52
+Versão 2.0.53
 
+• Apparel Fusion: a prévia do resultado agora mostra a apparel com os atributos certos do equipamento Lv95 (defesa, bônus, nível exigido e eficácia), igual ao item que sai da fusão.
 • Foto do monstro no alvo! Ao passar o mouse ou atacar um monstro, o quadro do alvo mostra o bicho de corpo inteiro, animado, sobre um fundo escuro. Antes aparecia só a paisagem da região. O Banco de Dados do site também ganhou a foto de cada monstro e chefe, e mais ícones de itens e skills.
 • Inventário, Skills e Amigos novos! O inventário mostra quantas casas estão ocupadas e quantas sobram (com barra), tem abas para destacar equipamentos, consumíveis, gemas e outros, e as casas de equipamento e de Wing/Pet/Ration mostram o desenho da peça. A janela de skills tem abas com nome (Battle, Life, Sail) e cada skill mostra o nível com marquinhas, o custo de SP e o selo MAX. A lista de amigos mostra quantos estão on-line em cada grupo, nomes mais fáceis de ler e o botão Block para bloquear jogadores.
 • Botão direito mais rápido: na loja do NPC ele vende o item do inventário e compra o item da loja (com confirmação e quantidade, como ao arrastar). Na troca entre jogadores ele coloca e tira os itens. Na forja ele põe o equipamento, a gema e a Refining Gem na casa certa; clicando de novo, o item sai.
