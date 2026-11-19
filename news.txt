@@ -1,3 +1,7 @@
+Versão 2.0.54
+
+• Notícias novas no launcher! Cada versão com seu título, os tópicos em destaque e rolagem com a roda do mouse.
+
 Versão 2.0.53
 
 • Apparel Fusion: a prévia mostra a apparel com os atributos certos do equipamento Lv95 (defesa, bônus, nível e eficácia), igual ao item que sai da fusão.
