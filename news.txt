@@ -1,3 +1,7 @@
+Versão 2.0.56
+
+• Barra do personagem nova! Retrato num medalhão dourado, nível em destaque e barras de HP, SP e EXP maiores e mais fáceis de ler. A barra do pet ganhou o mesmo visual.
+
 Versão 2.0.55
 
 • Criar personagem mais bonito: o boneco aparece inteiro e sem falhas (antes, partes de trás do corpo passavam por cima das da frente), o cabelo ficou mais caprichado e o personagem está maior no quadro.
