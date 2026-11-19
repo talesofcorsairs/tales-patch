@@ -1,329 +1,189 @@
 -----------------------------------------------------------------------
 -- 定义道具表单 Inventory window
 -----------------------------------------------------------------------
-frmInv = UI_CreateForm( "frmInv", FALSE, 240, 536, 244, 110, TRUE, FALSE )
-UI_FormSetHotKey( frmInv, ALT_KEY, HOTKEY_E ) --'E'
---UI_LoadFormImage( frmInv, "texture/ui/Item.dds", 233, 358, 0, 0, "", 0, 0 )
+-- Tales of Corsairs: inventario novo (skin_janelas_jogador.ps1 e JanelasJogador.cpp)
+frmInv = UI_CreateForm( "frmInv", FALSE, 252, 566, 244, 110, TRUE, FALSE )
+UI_FormSetHotKey( frmInv, ALT_KEY, HOTKEY_E )
 UI_ShowForm( frmInv, FALSE )
 UI_AddFormToTemplete( frmInv, FORM_MAIN )
 UI_SetIsDrag( frmInv, TRUE )
---UI_SetFormStyle( frmInv, 0 )
---UI_SetAlpha( frmInv, 200 )
-
--- 加载背景图片
-imgItemTop = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemTop", 240, 536, 0, 0 )
-UI_LoadImage( imgItemTop, "texture/ui/ods/inventory.tga", NORMAL, 240, 536, 0, 0 )
---imgItemDown = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemDown", 198, 138, 0, 256 )
---UI_LoadImage( imgItemDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnClose", 14, 14, 221, 3 )
+imgItemTop = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemTop", 252, 566, 0, 0 )
+UI_LoadImage( imgItemTop, "texture/ui/corsairs/inventario.png", NORMAL, 252, 566, 0, 0 )
+btnClose = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnClose", 14, 14, 230, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
--- 加载界面title
-labTitle = UI_CreateCompent( frmInv, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
-UI_SetCaption( labTitle, "Inventory")
-UI_SetTextColor( labTitle, COLOR_YELLOW )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
--- 加载道具背景图片 equiped items
---imgItemBackTop = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackTop", 148, 74, 25, 25 )
---UI_LoadImage( imgItemBackTop, "texture/ui/Item2.tga", NORMAL, 148, 74, 0, 182 )
-
---imgItemBackDownL = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackDownL", 74, 74, 25, 99 )
---UI_LoadImage( imgItemBackDownL, "texture/ui/Item2.tga", NORMAL, 74, 74, 177, 154 )
-
---imgItemBackDownR = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackDownR", 74, 74, 99, 99 )
---UI_LoadImage( imgItemBackDownR, "texture/ui/Item2.tga", NORMAL, 74, 74, 177, 76 )
-
---imgItemBackLT = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackLT", 36, 36, 17, 24 )
---UI_LoadImage( imgItemBackLT, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 0)
-
---imgItemBackLD = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackLD", 36, 36, 17, 138 )
---UI_LoadImage( imgItemBackLD, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 36)
-
---imgItemBackRT = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackRT", 36, 36, 145, 24 )
---UI_LoadImage( imgItemBackRT, "texture/ui/Item2.tga", NORMAL, 36, 36, 213, 0)
-
---imgItemBackRD = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBackRD", 36, 36, 145, 138 )
---UI_LoadImage( imgItemBackRD, "texture/ui/Item2.tga", NORMAL, 36, 36, 176, 36)
-
--- 加载表格图片 invent slot space bg 
---imgItemBack = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemBack", 174, 176, 7, 178 )
---UI_LoadImage( imgItemBack, "texture/ui/Item2.tga", NORMAL, 174, 176, 0, 0 )
-
--- 加载道具前4格的图片 - wing fairy and ration grids
-
---创建道具物品表格
-grdItem = UI_CreateCompent( frmInv, GOODS_GRID_TYPE, "grdItem", 216, 284, 19, 203 ) 
-UI_SetGridSpace( grdItem, 2, 3 )
+-- equipamento: 3x3, como sempre foi (pescoco, cabeca, maos / arma, corpo, escudo / anel, pes, anel)
+cmdNecklace = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 46, 48 )
+UI_SetTag( cmdNecklace, enumEQUIP_NECK )
+cmdArmet = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 110, 48 )
+UI_SetTag( cmdArmet, enumEQUIP_HEAD )
+cmdGlove = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 174, 48 )
+UI_SetTag( cmdGlove, enumEQUIP_GLOVE )
+cmdRightHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 46, 98 )
+UI_SetTag( cmdRightHand, enumEQUIP_RHAND )
+cmdBody = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 110, 98 )
+UI_SetTag( cmdBody, enumEQUIP_BODY )
+cmdLeftHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 174, 98 )
+UI_SetTag( cmdLeftHand, enumEQUIP_LHAND )
+cmdCirclet1 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 46, 148 )
+UI_SetTag( cmdCirclet1, enumEQUIP_HAND1 )
+cmdShoes = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 110, 148 )
+UI_SetTag( cmdShoes, enumEQUIP_SHOES )
+cmdCirclet2 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 174, 148 )
+UI_SetTag( cmdCirclet2, enumEQUIP_HAND2 )
+-- abas de filtro: All, Gear, Usable, Gems, Other (so destacam; nao mudam nada nos itens)
+btnInvAba0 = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnInvAba0", 44, 18, 14, 224 )
+UI_LoadButtonImage( btnInvAba0, "texture/ui/corsairs/inventario.png", 44, 18, 260, 80, FALSE )
+UI_SetHint( btnInvAba0, "All items" )
+btnInvAba1 = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnInvAba1", 44, 18, 59, 224 )
+UI_LoadButtonImage( btnInvAba1, "texture/ui/corsairs/inventario.png", 44, 18, 306, 80, FALSE )
+UI_SetHint( btnInvAba1, "Weapons, armor, jewelry, wings and pets" )
+btnInvAba2 = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnInvAba2", 44, 18, 104, 224 )
+UI_LoadButtonImage( btnInvAba2, "texture/ui/corsairs/inventario.png", 44, 18, 352, 80, FALSE )
+UI_SetHint( btnInvAba2, "Potions, food and scrolls" )
+btnInvAba3 = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnInvAba3", 44, 18, 149, 224 )
+UI_LoadButtonImage( btnInvAba3, "texture/ui/corsairs/inventario.png", 44, 18, 398, 80, FALSE )
+UI_SetHint( btnInvAba3, "Gems and refining gems" )
+btnInvAba4 = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnInvAba4", 44, 18, 194, 224 )
+UI_LoadButtonImage( btnInvAba4, "texture/ui/corsairs/inventario.png", 44, 18, 444, 80, FALSE )
+UI_SetHint( btnInvAba4, "Everything else" )
+-- mochila: 6 colunas x 8 linhas; as 3 primeiras casas sao Wing, Pet e Ration
+grdItem = UI_CreateCompent( frmInv, GOODS_GRID_TYPE, "grdItem", 224, 270, 16, 263 )
+UI_SetGridSpace( grdItem, 4, 2 )
 UI_SetGridContent( grdItem, 8, 6 )
 UI_SetGridUnitSize( grdItem, 32, 32 )
 UI_SetMargin( grdItem, 0, 0, 0, 0 )
-UI_GoodGridLoadUnitImage( grdItem, "texture/ui/ods/inventory.tga", 32, 32, 300, 0 )
-imgItem4 = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItem4", 100, 32, 19, 203 )
-UI_LoadImage( imgItem4, "texture/ui/ods/inventory.tga", NORMAL, 100, 32, 300, 40 )
-UI_SetIsEnabled( imgItem4, FALSE )
-
---获得滚动条
-scrollid = UI_GetScroll( grdItem)
+UI_GoodGridLoadUnitImage( grdItem, "texture/ui/corsairs/inventario.png", 32, 32, 260, 0 )
+scrollid = UI_GetScroll( grdItem )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
 UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 44, 166, 9 )
 UI_SetSize( id, 9, 44 )
-
---加载向下按钮
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
--- 加载金钱图片 Dollar sign gold
---imgItemM = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemM", 20, 28, 15, 357 )
---UI_LoadImage( imgItemM, "texture/ui/PublicC.tga", NORMAL, 20, 28, 228, 110 )
-
---创建金币栏 Gold text area bg
---imgItemgold = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgItemgold", 96, 18, 42, 365 )
---UI_LoadImage( imgItemgold, "texture/ui/PublicC.tga", NORMAL, 96, 18, 0, 235 )
-
-labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 91, 8, 58, 506 )
---UI_SetCaption( labItemgoldnumber, "7777777" )
-UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
-UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, 4289901234 )
-
---创建透明控制按钮
-btnLock = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLock", 13, 18, 168, 502 )
---创建密码锁定图片(锁定)
-imgLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgLock", 13, 18, 168, 502 )
-UI_LoadImage( imgLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 0, FALSE )
---创建密码锁定图片(未锁定)
-imgUnLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgUnLock", 13, 18, 168, 502 )
-UI_LoadImage( imgUnLock, "texture/ui/ods/lock.tga",NORMAL, 13, 18, 1, 18, FALSE )
-
---创建丢弃按钮 trash can
-btnbrush = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnbrush", 16, 19, 194, 500 )
---UI_LoadButtonImage( btnbrush, "texture/ui/SystemBotton3.tga", 16, 19, 151, 226, TRUE ) 
-cmdLost = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLost", 31, 31, 192, 494 )	-- 鞋子
+-- rodape: ouro, cadeado e lixeira
+labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 112, 12, 40, 545 )
+UI_SetTextColor( labItemgoldnumber, 4293976766 )
+UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnLock = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnLock", 14, 18, 166, 542 )
+UI_SetHint( btnLock, "Lock / unlock the inventory" )
+imgLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgLock", 14, 18, 166, 542 )
+UI_LoadImage( imgLock, "texture/ui/corsairs/inventario.png", NORMAL, 14, 18, 260, 160 )
+imgUnLock = UI_CreateCompent( frmInv, IMAGE_TYPE, "imgUnLock", 14, 18, 166, 542 )
+UI_LoadImage( imgUnLock, "texture/ui/corsairs/inventario.png", NORMAL, 14, 18, 276, 160 )
+btnbrush = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnbrush", 30, 24, 210, 538 )
+cmdLost = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLost", 30, 24, 210, 538 )
 UI_SetTag( cmdLost, 999 )
-
--- 装备
-cmdArmet = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdArmet", 32, 32, 104, 30 )	-- 头盔
-cmdBody = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdBody", 32, 32, 104, 78 )	-- 身体
-cmdNecklace = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdNecklace", 32, 32, 52, 30 )	-- 项链
-cmdRightHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdRightHand", 32, 32, 52, 78 )	-- 右手
-cmdLeftHand = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdLeftHand", 32, 32, 156, 78 )	-- 左手
-cmdGlove = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdGlove", 32, 32, 156, 30 )	-- 手套
-cmdCirclet1 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet1", 32, 32, 52, 126 )	-- 手饰1
-cmdCirclet2 = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdCirclet2", 32, 32, 156, 126 )	-- 手饰2
-cmdShoes = UI_CreateCompent( frmInv, COMMAND_ONE_TYPE, "cmdShoes", 32, 32, 104, 126 )	-- 鞋子
-	
--- 设置Tag值供程序使用
-UI_SetTag( cmdArmet, enumEQUIP_HEAD )
-UI_SetTag( cmdBody, enumEQUIP_BODY )
-UI_SetTag( cmdNecklace, enumEQUIP_NECK )
-UI_SetTag( cmdRightHand, enumEQUIP_RHAND )
-UI_SetTag( cmdLeftHand, enumEQUIP_LHAND )
-UI_SetTag( cmdGlove, enumEQUIP_GLOVE )
-UI_SetTag( cmdCirclet1, enumEQUIP_HAND1 )
-UI_SetTag( cmdCirclet2, enumEQUIP_HAND2 )
-UI_SetTag( cmdShoes, enumEQUIP_SHOES )
-
-labItemgoldnumber = UI_CreateCompent( frmInv, LABELEX_TYPE, "labItemgoldnumber", 103, 10, 58, 506 )
---UI_SetCaption( labItemgoldnumber, "0" )
-UI_SetTextColor( labItemgoldnumber, COLOR_BLACK )
-UI_SetLabelExFont( labItemgoldnumber, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetHint( cmdLost, "Drop an item here to destroy it" )
+-- capacidade, aba ativa, filtro e silhuetas (desenhados pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmInv, UI3D_COMPENT_TYPE, "d3dInventario", 2, 2, 0, 0 )
 
 -----------------------------------------------------------------------
 -- 定义技能 skills page
 -----------------------------------------------------------------------
-frmSkill = UI_CreateForm( "frmSkill", FALSE, 198, 394, 486, 120, FALSE, FALSE )
-UI_FormSetHotKey( frmSkill, ALT_KEY, HOTKEY_S ) 
+-- Tales of Corsairs: janela de skills nova (skin_janelas_jogador.ps1, JanelasJogador.cpp e UISkillList.cpp)
+frmSkill = UI_CreateForm( "frmSkill", FALSE, 260, 404, 486, 120, FALSE, FALSE )
+UI_FormSetHotKey( frmSkill, ALT_KEY, HOTKEY_S )
 UI_ShowForm( frmSkill, TRUE )
 UI_AddFormToTemplete( frmSkill, FORM_MAIN )
 UI_SetIsDrag( frmSkill, TRUE )
---UI_SetFormStyle( frmSkill, 0 )
---UI_SetAlpha( frmSkill, 200 )
-
--- 加载背景图片
-imgSkillBTop = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBTop", 198, 394, 0, 0 )
-UI_LoadImage( imgSkillBTop, "texture/ui/corsairs/habilidades.png", NORMAL, 198, 394, 0, 0 )
---imgSkillBDown = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBDown", 198, 138, 0, 256 )
---UI_LoadImage( imgSkillBDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
-
---imgSkillTop = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillTop", 177, 256, 7, 54 )
---UI_LoadImage( imgSkillTop, "texture/ui/Skill.dds", NORMAL, 175, 256, 0, 0 )
---imgSkillDown = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillDown", 177, 19, 7, 310 )
---UI_LoadImage( imgSkillDown, "texture/ui/ShipBuild2.tga", NORMAL, 175, 18, 80, 233 )
-
---imgSkillD = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillD", 184, 43, 7, 330 )
---UI_LoadImage( imgSkillD, "texture/ui/TalkM.dds", NORMAL, 184, 43, 0, 213 )
-
---imgSkillDL = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillDL", 36, 36, 15, 334 )
---UI_LoadImage( imgSkillDL, "texture/ui/PublicC.tga", NORMAL, 36, 36, 167, 59 )
-
-
------------------------------------------------------------------------------------------------------------------------------------------------
---创建剩余技能点信息 skill points to distribute
---imgSkillP = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillP", 39, 18, 132, 296 )
---UI_LoadImage( imgSkillP, "texture/ui/SysBotton4.tga", NORMAL, 39, 18, 106, 99 )
-
---labFront = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labFront", 59, 11, 69, 299 )
---UI_SetCaption( labFront, "Skill Pts" )
---UI_SetTextColor( labFront, COLOR_BLACK )
---UI_SetLabelExFont( labFront, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---战斗技能点
-labPoint = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint", 19, 11, 143, 299 )
-UI_SetCaption( labPoint, "100" )
-UI_SetTextColor( labPoint, COLOR_CLOUD )
-UI_SetLabelExFont( labPoint, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---生活技能点
-labPoint1 = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint1", 19, 11, 143, 299 )
-UI_SetCaption( labPoint1, "100" )
-UI_SetTextColor( labPoint1, COLOR_YELLOW )
-UI_SetLabelExFont( labPoint1, DEFAULT_FONT, TRUE, COLOR_BLACK )
------------------------------------------------------------------------------------------------------------------------------------------------
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmSkill, BUTTON_TYPE, "btnClose", 14, 14, 177, 3 )
+imgSkillBTop = UI_CreateCompent( frmSkill, IMAGE_TYPE, "imgSkillBTop", 260, 404, 0, 0 )
+UI_LoadImage( imgSkillBTop, "texture/ui/corsairs/habilidades2.png", NORMAL, 260, 404, 0, 0 )
+btnClose = UI_CreateCompent( frmSkill, BUTTON_TYPE, "btnClose", 14, 14, 238, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
--- 加载界面title
-labTitle = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
-UI_SetCaption( labTitle, "Skill")
-UI_SetTextColor( labTitle, COLOR_YELLOW )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---创建战斗技能列表
-lstSkill = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkill", 183, 275, 5, -20 )
-UI_SetMargin( lstSkill, 1, 4, 3, 5 )
-UI_SetListRowHeight( lstSkill, 38 )
---UI_ListLoadSelectImage( lstSkill, "texture/ui/button.dds", 148, 32, 38, 175 )
-
-UI_LoadSkillListButtonImage( lstSkill, "texture/ui/ods/quest1.tga", 17, 17, 4, 198, 17, 17 )
-
---获得滚动条
-scrollid = UI_GetScroll( lstSkill)
+-- pontos de skill (batalha) e de vida: o Game.exe escreve o numero
+labPoint = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint", 40, 12, 196, 333 )
+UI_SetCaption( labPoint, "0" )
+UI_SetTextColor( labPoint, 4293976766 )
+UI_SetLabelExFont( labPoint, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labPoint, TRUE )
+labPoint1 = UI_CreateCompent( frmSkill, LABELEX_TYPE, "labPoint1", 40, 12, 196, 333 )
+UI_SetCaption( labPoint1, "0" )
+UI_SetTextColor( labPoint1, COLOR_YELLOW )
+UI_SetLabelExFont( labPoint1, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labPoint1, TRUE )
+-- listas: batalha, vida e navio (linhas de 40)
+lstSkill = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkill", 236, 284, 12, 34 )
+UI_SetMargin( lstSkill, 4, 2, 3, 2 )
+UI_SetListRowHeight( lstSkill, 40 )
+UI_LoadSkillListButtonImage( lstSkill, "texture/ui/corsairs/habilidades2.png", 18, 18, 350, 0, 18, 18 )
+scrollid = UI_GetScroll( lstSkill )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
-UI_SetSize( id, 11, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 43, 166, 9 )
+UI_SetSize( id, 9, 43 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---创建生活技能列表
-lstSkillW = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillW", 183, 275, 5, -20 )
-UI_SetMargin( lstSkillW, 1, 4, 3, 5 )
-UI_SetListRowHeight( lstSkillW, 38 )
---UI_ListLoadSelectImage( lstSkillW, "texture/ui/button.dds", 148, 32, 38, 175 )
-UI_LoadSkillListButtonImage( lstSkillW, "texture/ui/ods/quest1.tga", 17, 17, 4, 198, 17, 17 )
-
---获得滚动条
+lstSkillW = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillW", 236, 284, 12, 34 )
+UI_SetMargin( lstSkillW, 4, 2, 3, 2 )
+UI_SetListRowHeight( lstSkillW, 40 )
+UI_LoadSkillListButtonImage( lstSkillW, "texture/ui/corsairs/habilidades2.png", 18, 18, 350, 0, 18, 18 )
 scrollid = UI_GetScroll( lstSkillW )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
-UI_SetSize( id, 11, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 43, 166, 9 )
+UI_SetSize( id, 9, 43 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
-
---创建海上技能列表
-lstSkillS = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillS", 183, 275, 5, -20 )
-UI_SetMargin( lstSkillS, 1, 4, 3, 5 )
-UI_SetListRowHeight( lstSkillS, 38 )
---UI_ListLoadSelectImage( lstSkillS, "texture/ui/button.dds", 148, 32, 38, 175 )
-
-UI_LoadSkillListButtonImage( lstSkillS, "texture/ui/ods/quest1.tga", 17, 17, 4, 198, 17, 17 )
-
---获得滚动条
+lstSkillS = UI_CreateCompent( frmSkill, SKILL_LIST_TYPE, "lstSkillS", 236, 284, 12, 34 )
+UI_SetMargin( lstSkillS, 4, 2, 3, 2 )
+UI_SetListRowHeight( lstSkillS, 40 )
+UI_LoadSkillListButtonImage( lstSkillS, "texture/ui/corsairs/habilidades2.png", 18, 18, 350, 0, 18, 18 )
 scrollid = UI_GetScroll( lstSkillS )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
-UI_SetSize( id, 11, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 43, 166, 9 )
+UI_SetSize( id, 9, 43 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---创建页面
-pgeSkill = UI_CreateCompent( frmSkill, PAGE_TYPE, "pgeSkill", 211, 233, 11, 79 )
+pgeSkill = UI_CreateCompent( frmSkill, PAGE_TYPE, "pgeSkill", 260, 364, 0, 40 )
 UI_SetPageButton( pgeSkill, PAGE_BUTTON_CUSTOM, 48, 16 )
-
---战斗技能 tab buttons skill , life skill , fairy skill
 skillid = UI_CreatePageItem( pgeSkill )
 ttlBattle = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlBattle, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_NORMAL, 49, 35, 103, 113 )
-UI_LoadImage( ttlBattle, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_ACTIVE, 49, 35, 48, 113 )
-UI_SetPos( ttlBattle, 12, -54 )
-UI_SetSize( ttlBattle, 49, 35 )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_NORMAL, 74, 24, 270, 0 )
+UI_LoadImage( ttlBattle, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_ACTIVE, 74, 24, 270, 26 )
+UI_SetPos( ttlBattle, 15, 2 )
+UI_SetSize( ttlBattle, 74, 24 )
 UI_AddCompent( skillid, lstSkill )
-UI_AddCompent( skillid, imgSkillP )
-UI_AddCompent( skillid, labFront )
 UI_AddCompent( skillid, labPoint )
-
---生活技能
 skillid = UI_CreatePageItem( pgeSkill )
 ttlLive = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlLive, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_NORMAL, 49, 35, 100, 154 )
-UI_LoadImage( ttlLive, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_ACTIVE, 49, 35, 45, 154 )
-UI_SetPos( ttlLive, 61, -54 )
-UI_SetSize( ttlLive, 49, 35 )
+UI_LoadImage( ttlLive, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_NORMAL, 74, 24, 270, 52 )
+UI_LoadImage( ttlLive, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_ACTIVE, 74, 24, 270, 78 )
+UI_SetPos( ttlLive, 93, 2 )
+UI_SetSize( ttlLive, 74, 24 )
 UI_AddCompent( skillid, lstSkillW )
-UI_AddCompent( skillid, imgSkillP )
-UI_AddCompent( skillid, labFront )
 UI_AddCompent( skillid, labPoint1 )
-
---海上技能
 skillid = UI_CreatePageItem( pgeSkill )
 ttlSail = UI_GetPageItemObj( skillid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlSail, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_NORMAL, 49, 35, 103, 70 )
-UI_LoadImage( ttlSail, "texture/ui/ods/player2.tga", PAGE_ITEM_TITLE_ACTIVE, 49, 35, 48, 70 )
-UI_SetPos( ttlSail, 110, -54 )
-UI_SetSize( ttlSail, 49, 35 )
+UI_LoadImage( ttlSail, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_NORMAL, 74, 24, 270, 104 )
+UI_LoadImage( ttlSail, "texture/ui/corsairs/habilidades2.png", PAGE_ITEM_TITLE_ACTIVE, 74, 24, 270, 130 )
+UI_SetPos( ttlSail, 171, 2 )
+UI_SetSize( ttlSail, 74, 24 )
 UI_AddCompent( skillid, lstSkillS )
+-- rotulo da caixa dos pontos (desenhado pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmSkill, UI3D_COMPENT_TYPE, "d3dSkill", 2, 2, 0, 0 )
 
 -- Tales of Corsairs: valores da fonte usados pelos controles copiados.
 impgoldplacementX = 200
@@ -549,6 +409,12 @@ UI_AddCompent( skillid, labMonster )
 UI_AddCompent( skillid, labMonsterLV )
 UI_AddCompent( skillid, labMPOS )
 
+-- Tales of Corsairs: controle novo da versao DX9 (labTitle), copiado da interface da fonte.
+labTitle = UI_CreateCompent( frmInv, LABELEX_TYPE, "labTitle", 400, 150, 10, 2 )
+UI_SetCaption( labTitle, "Inventory")
+UI_SetTextColor( labTitle, COLOR_BLACK )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
+UI_SetIsShow( labTitle, FALSE )
 -- Tales of Corsairs: controle novo da versao DX9 (btnChaLeft3d), copiado da interface da fonte.
 btnChaLeft3d = UI_CreateCompent( frmInv, BUTTON_TYPE, "btnChaLeft3d", 32, 38, 55,335 )
 UI_LoadButtonImage( btnChaLeft3d, "texture/ui/corsairs/coButtons.png", 32, 32, 217, 87, TRUE )

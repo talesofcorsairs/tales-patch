@@ -31,104 +31,65 @@ UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
 
 
 --创建QQ面板
-frmQQ = UI_CreateForm( "frmQQ", FALSE, 148, 335, 652, 200, TRUE, FALSE )
+-- Tales of Corsairs: lista de amigos nova (skin_janelas_jogador.ps1 e UIChat.cpp)
+frmQQ = UI_CreateForm( "frmQQ", FALSE, 200, 420, 652, 200, TRUE, FALSE )
 UI_FormSetHotKey( frmQQ, ALT_KEY, HOTKEY_F )
 UI_ShowForm( frmQQ, FALSE )
 UI_AddFormToTemplete( frmQQ, 1 )
 UI_SetIsDrag( frmQQ, TRUE )
 UI_SetFormStyleEx( frmQQ, FORM_BOTTOM, 0, 45)
-
-
--- 加载背景图片
-imgQQTop = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgQQTop", 148, 335, 0, 0 )
-UI_LoadImage( imgQQTop, "texture/ui/corsairs/escuras.png", NORMAL, 148, 335, 520, 520 )
---imgQQDown = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgQQDown", 148, 98, 0, 258 )
---UI_LoadImage( imgQQDown, "texture/ui/ods/friend.tga", NORMAL, 148, 98, 0, 257 )
-
-
-
--- 加载界面title
-labTitle = UI_CreateCompent( frmQQ, LABELEX_TYPE, "labTitle", 400, 150, 10, 4 )
-UI_SetCaption( labTitle, "Friends List")
-UI_SetTextColor( labTitle, COLOR_YELLOW )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---创建角色名称
-labMineName = UI_CreateCompent( frmQQ, LABELEX_TYPE, "labMineName", 96, 11, 45, 22 )
-UI_SetCaption( labMineName, "Child of Demon what is that" )
-UI_SetTextColor( labMineName, COLOR_CLOUD )
---UI_SetLabelExFont( labMineName, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
--- 加载角色头像
---imgHead = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgHead", 32, 32, 1, 20 )
---UI_LoadImage( imgHead, "texture/ui/main800.tga", NORMAL, 32, 32, 37, 201 )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnClose", 14, 14, 127, 3 )
+imgQQTop = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgQQTop", 200, 420, 0, 0 )
+UI_LoadImage( imgQQTop, "texture/ui/corsairs/amigos.png", NORMAL, 200, 420, 0, 0 )
+labMineName = UI_CreateCompent( frmQQ, LABELEX_TYPE, "labMineName", 150, 12, 34, 43 )
+UI_SetCaption( labMineName, "" )
+UI_SetTextColor( labMineName, 4293976766 )
+UI_SetLabelExFont( labMineName, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnClose = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnClose", 14, 14, 178, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
-
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
-
---创建添加按钮
-btnAdd = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnAdd", 25, 13, 40, 39 )
-UI_LoadButtonImage( btnAdd, "texture/ui/ods/friendbutton.tga", 25, 13, 0, 0, TRUE )
-UI_SetHint( btnAdd, "Add" )
-
-
---创建编辑按钮
-btnEdit = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnEdit", 25, 13, 70, 39 )
-UI_LoadButtonImage( btnEdit, "texture/ui/ods/friendbutton.tga", 25, 13, 0, 13, TRUE )
-UI_SetHint( btnEdit, "Info" )
-
---创建树型结构
-trvEditor = UI_CreateCompent( frmQQ, TREE_TYPE, "trvEditor", 142, 265, 5, 62 )
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Chat", 5,2 )
+btnAdd = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnAdd", 56, 20, 12, 64 )
+UI_LoadButtonImage( btnAdd, "texture/ui/corsairs/amigos.png", 56, 20, 210, 50, FALSE )
+UI_SetHint( btnAdd, "Add a friend" )
+btnEdit = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnEdit", 56, 20, 72, 64 )
+UI_LoadButtonImage( btnEdit, "texture/ui/corsairs/amigos.png", 56, 20, 268, 50, FALSE )
+UI_SetHint( btnEdit, "Edit your motto" )
+btnBlock = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnBlock", 56, 20, 132, 64 )
+UI_LoadButtonImage( btnBlock, "texture/ui/corsairs/amigos.png", 56, 20, 326, 50, FALSE )
+UI_SetHint( btnBlock, "Block a player" )
+trvEditor = UI_CreateCompent( frmQQ, TREE_TYPE, "trvEditor", 180, 314, 10, 94 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Chat", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-	
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Friend", 5,2 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Friend", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-	
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Party", 5,2 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Party", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-	
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Guild", 5,2 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Guild", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-
---itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Passer-by", 5,2 )
---gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Mentor", 5,2 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Mentor", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-
-itemid = UI_CreateNoteGraphItem( "texture/ui/ods/QQ2.tga", 87,16,20,0, 0, "Disciple", 5,2 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Disciple", 9, 3 )
 gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
-
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "GM", 9, 3 )
+gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
+itemid = UI_CreateNoteGraphItem( "texture/ui/corsairs/amigos.png", 146, 18, 210, 0, 0, "Blocked", 9, 3 )
+gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
 UI_SetIsDrag( trvEditor, TRUE )
-
-UI_TreeLoadImage( trvEditor, enumTreeAddImage, "texture/ui/ods/QQ2.tga", 20,16,0,0, 20, 16)
-UI_TreeLoadImage( trvEditor, enumTreeSubImage, "texture/ui/ods/QQ2.tga", 20,16,0,18, 20, 16)
-
---获得滚动条
+UI_TreeLoadImage( trvEditor, enumTreeAddImage, "texture/ui/corsairs/amigos.png", 20, 16, 210, 24, 20, 16 )
+UI_TreeLoadImage( trvEditor, enumTreeSubImage, "texture/ui/corsairs/amigos.png", 20, 16, 232, 24, 20, 16 )
 scrollid = UI_GetScroll( trvEditor )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", NORMAL, 8, 43, 166, 10 )
-UI_SetSize( id, 8, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 43, 166, 9 )
+UI_SetSize( id, 9, 43 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
+-- "online / total" de cada grupo (desenhado pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmQQ, UI3D_COMPENT_TYPE, "d3dAmigos", 2, 2, 0, 0 )
 
 -----------------------------------------------------------------------
 -- 定义右键菜单 Friends list pop up menu mouse click
@@ -756,11 +717,6 @@ UI_LoadImage( scrollid, "texture/ui/editor/scroll.dds", COMPENT_BACK, 16, 32, 0,
 UI_SetSize( scrollid, 10, 32 )
 -- UI_SetAlpha( trvChatManage, 100 )
 
--- Tales of Corsairs: controle novo da versao DX9 (btnBlock), copiado da interface da fonte.
-btnBlock = UI_CreateCompent( frmQQ, BUTTON_TYPE, "btnBlock", 14, 14, 70, 332 )
-UI_LoadButtonImage( btnBlock, "texture/ui/corsairs/coButtons.png", 14, 14, 276, 51, TRUE )
-UI_SetHint( btnBlock, "Block" )
-UI_SetIsShow( btnBlock, FALSE )
 -- Tales of Corsairs: controle novo da versao DX9 (BlockedRight), copiado da interface da fonte.
 BlockedRight = UI_CreateCompent( frmQQ, MENU_TYPE, "BlockedRight", 92, 97, 240, 468 )
 UI_MenuLoadImage( BlockedRight, TRUE, FALSE, "texture/ui/right.tga", 5, 5, 10, 10, "texture/ui/right.tga", 5, 5 )
@@ -768,51 +724,41 @@ UI_SetMargin( BlockedRight, 10, 5, 5, 5 )
 UI_MenuLoadSelect( BlockedRight, "texture/ui/SystemBotton3.tga", 79, 13, 25, 227  )
 UI_MenuAddText( BlockedRight, "Delete" )
 UI_SetIsShow( BlockedRight, FALSE )
--- Tales of Corsairs: grupo novo da versao DX9 (GM), copiado da interface da fonte.
-itemid = UI_CreateNoteGraphItem( "texture/ui/QQ2.tga", 87,16,105,222, 0, "GM", 5,2 )
-gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
--- Tales of Corsairs: grupo novo da versao DX9 (Blocked), copiado da interface da fonte.
-itemid = UI_CreateNoteGraphItem( "texture/ui/QQ2.tga", 87,16,105,222, 0, "Blocked", 5,2 )
-gridid = UI_CreateGridNode( trvEditor, itemid, 1, 32, 32, -1 )
 -- Tales of Corsairs: janela nova da versao DX9 (frmBlockPlayer), copiada da interface da fonte.
+-- Tales of Corsairs: "Block Player" no mesmo painel da "Add a Friend"
 frmBlockPlayer = UI_CreateForm( "frmBlockPlayer",  FALSE, 185, 101, 397, 500, FALSE, FALSE )
-UI_LoadFormImage( frmBlockPlayer, "texture/ui/sure.dds", 185, 101, 0, 0, "", 0, 0 )
+UI_LoadFormImage( frmBlockPlayer, "texture/ui/corsairs/escuras.png", 185, 101, 0, 0, "", 0, 0 )
 UI_ShowForm( frmBlockPlayer, FALSE )
 UI_AddFormToTemplete( frmBlockPlayer, FORM_MAIN )
 UI_SetFormStyle( frmBlockPlayer, 0 )
 UI_SetIsDrag( frmBlockPlayer, TRUE )
---UI_SetAlpha( frmBlockPlayer, 200 )
---UI_FormSetHotKey( frmBlockPlayer, ALT_KEY, HOTKEY_K ) 
-
+UI_SetAlpha( frmBlockPlayer, 240 )
 btnClose = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnClose", 14, 14, 164, 3 )
-UI_LoadButtonImage( btnClose, "texture/ui/PublicC.tga", 14, 14, 116, 175, TRUE )
+UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
 labTitle = UI_CreateCompent( frmBlockPlayer, LABELEX_TYPE, "labTitle", 400, 150, 10, 4 )
 UI_SetCaption( labTitle, "Block Player")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
+UI_SetTextColor( labTitle, COLOR_YELLOW )
+UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
 labTradeGold = UI_CreateCompent( frmBlockPlayer, LABELEX_TYPE, "labTradeGold", 23, 11, 50, 30 )
-UI_SetCaption( labTradeGold, "Please input player name" )
-UI_SetTextColor( labTradeGold, COLOR_BLACK )
-UI_SetLabelExFont( labTradeGold, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
-imgTradeGoldBak = UI_CreateCompent( frmBlockPlayer, IMAGE_TYPE, "imgTradeGoldBak", 109, 19, 50, 50 )
-UI_LoadImage( imgTradeGoldBak, "texture/ui/PublicC.tga", NORMAL, 109, 19, 47, 68 )
-
-edtTradeGold = UI_CreateCompent( frmBlockPlayer, EDIT_TYPE, "edtTradeGold", 96, 11, 58, 54 )
-UI_SetTextColor( edtTradeGold, COLOR_BLACK )
+UI_SetCaption( labTradeGold, "Input Player Name" )
+UI_SetTextColor( labTradeGold, COLOR_YELLOW )
+UI_SetLabelExFont( labTradeGold, DEFAULT_FONT, TRUE, COLOR_BLACK )
+edtTradeGold = UI_CreateCompent( frmBlockPlayer, EDIT_TYPE, "edtTradeGold", 96, 14, 56, 52 )
+UI_SetTextColor( edtTradeGold, COLOR_CLOUD )
 UI_SetEditMaxNum( edtTradeGold, 17 )
 UI_SetEditMaxNumVisible( edtTradeGold, 17 )
-
-btnYes = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnYes", 41, 19, 74, 78 )
-UI_LoadButtonImage( btnYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
-
-btnNo = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnNo", 41, 19, 122, 78 )
-UI_LoadButtonImage( btnNo, "texture/ui/PublicC.tga", 41, 19, 0, 20, TRUE )
+UI_SetEditCursorColor( edtTradeGold, COLOR_CLOUD )
+btnYes = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnYes", 38, 16, 87, 79 )
+UI_LoadButtonImage( btnYes, "texture/ui/ods/sysbtn.tga", 38, 16, 144, 16, TRUE )
+btnNo = UI_CreateCompent( frmBlockPlayer, BUTTON_TYPE, "btnNo", 36, 16, 136, 79 )
+UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 0, 112, TRUE )
 UI_SetButtonModalResult( btnNo, BUTTON_CLOSE )
 
 -----------------
 -- chat pop up --
 -----------------
+-- Tales of Corsairs: controle novo da versao DX9 (imgHead), copiado da interface da fonte.
+imgHead = UI_CreateCompent( frmQQ, IMAGE_TYPE, "imgHead", 32, 32, 1, 20 )
+UI_LoadImage( imgHead, "texture/ui/main800.tga", NORMAL, 32, 32, 37, 201 )
+UI_SetIsShow( imgHead, FALSE )

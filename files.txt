@@ -275,3 +275,9 @@ texture/ui/corsairs/evoluir_apparel.png
 texture/ui/corsairs/evoluir_apparel.wsd
 texture/ui/corsairs/casar_fadas.png
 texture/ui/corsairs/casar_fadas.wsd
+texture/ui/corsairs/inventario.png
+texture/ui/corsairs/inventario.wsd
+texture/ui/corsairs/habilidades2.png
+texture/ui/corsairs/habilidades2.wsd
+texture/ui/corsairs/amigos.png
+texture/ui/corsairs/amigos.wsd
