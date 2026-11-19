@@ -281,3 +281,5 @@ texture/ui/corsairs/habilidades2.png
 texture/ui/corsairs/habilidades2.wsd
 texture/ui/corsairs/amigos.png
 texture/ui/corsairs/amigos.wsd
+texture/ui/corsairs/npcBackdrop/monstro.tga
+texture/ui/corsairs/npcBackdrop/monstro.wsd
