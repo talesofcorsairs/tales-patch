@@ -1,5 +1,6 @@
-Versão 2.0.51
+Versão 2.0.52
 
+• Foto do monstro no alvo! Ao passar o mouse ou atacar um monstro, o quadro do alvo mostra o bicho de corpo inteiro, animado, sobre um fundo escuro. Antes aparecia só a paisagem da região. O Banco de Dados do site também ganhou a foto de cada monstro e chefe, e mais ícones de itens e skills.
 • Inventário, Skills e Amigos novos! O inventário mostra quantas casas estão ocupadas e quantas sobram (com barra), tem abas para destacar equipamentos, consumíveis, gemas e outros, e as casas de equipamento e de Wing/Pet/Ration mostram o desenho da peça. A janela de skills tem abas com nome (Battle, Life, Sail) e cada skill mostra o nível com marquinhas, o custo de SP e o selo MAX. A lista de amigos mostra quantos estão on-line em cada grupo, nomes mais fáceis de ler e o botão Block para bloquear jogadores.
 • Botão direito mais rápido: na loja do NPC ele vende o item do inventário e compra o item da loja (com confirmação e quantidade, como ao arrastar). Na troca entre jogadores ele coloca e tira os itens. Na forja ele põe o equipamento, a gema e a Refining Gem na casa certa; clicando de novo, o item sai.
 • Apparel Fusion: agora dá para fundir os equipamentos Lv95 (Heaven Sword, Guard of Honor, Battle Blade e os outros) numa apparel. Antes o jogo achava que eles eram apparel e recusava a fusão.
@@ -9,4 +10,3 @@ Versão 2.0.51
 • Link de item no chat (Shift + botão direito no item): agora mostra o item de verdade, com refino, gemas, durabilidade e bônus. Os dados vêm conferidos pelo servidor, então ninguém consegue falsificar um link nem usar o link de outro jogador.
 • Estaleiro (SHIPYARD): o navio voltou a aparecer na janela! Ela foi refeita, com o navio sobre o mar, setas para girar, peças e atributos organizados e o custo em destaque.
 • Aviso de compra do IMP MALL: agora aparece numa faixa dourada centralizada no topo da tela, sem ficar torto nem em cima do alvo; mensagens longas quebram em duas linhas.
-• IMP MALL: a aba Apparels foi refeita; cada pacote entrega exatamente as peças do nome, separadas por classe e por arma. Asas, rações e livro de reset de skill com os itens certos; pacotes de itens que não existem foram retirados.
