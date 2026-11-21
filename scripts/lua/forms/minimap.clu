@@ -45,12 +45,12 @@ end
 --创建打开大地图按钮
 btnOpen = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpen", 48, 30, 56, 167 )
 UI_LoadButtonImage( btnOpen, "texture/ui/corsairs/minimapa_botoes.png", 48, 30, 48, 0, FALSE )
-UI_SetHint( btnOpen, "World Map" )
+UI_SetHint( btnOpen, "World Map (Alt+W)" )
 
 --创建打开了雷达按钮
 btnSearch = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 48, 30, 6, 167 )
 UI_LoadButtonImage( btnSearch, "texture/ui/corsairs/minimapa_botoes.png", 48, 30, 0, 0, FALSE )
-UI_SetHint( btnSearch, "Radar" )
+UI_SetHint( btnSearch, "Radar (Alt+R)" )
 
 --打开商城button ingame mall
 btnOpenStore = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnOpenStore", 46, 22, 108, 203 )
@@ -64,6 +64,12 @@ UI_SetHint( btnteam, "Find Party" )
 btnSearchCoord = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnSearch", 100, 22, 6, 203 )
 UI_LoadButtonImage( btnSearchCoord, "texture/ui/corsairs/minimapa_botoes.png", 100, 22, 0, 128, FALSE )
 UI_SetHint( btnSearchCoord, "Click to go to a coordinate (Radar)" )
+btnMiniZoomIn = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnMiniZoomIn", 16, 16, 128, 33 )
+UI_LoadButtonImage( btnMiniZoomIn, "texture/ui/corsairs/minimapa_botoes.png", 16, 16, 200, 0, FALSE )
+UI_SetHint( btnMiniZoomIn, "Zoom in" )
+btnMiniZoomOut = UI_CreateCompent( frmMinimap, BUTTON_TYPE, "btnMiniZoomOut", 16, 16, 128, 51 )
+UI_LoadButtonImage( btnMiniZoomOut, "texture/ui/corsairs/minimapa_botoes.png", 16, 16, 220, 0, FALSE )
+UI_SetHint( btnMiniZoomOut, "Zoom out" )
 
 -----------------------------------------------------------------------
 -- 定义雷达 minimap search

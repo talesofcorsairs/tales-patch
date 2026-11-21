@@ -115,7 +115,7 @@ UI_SetEditCursorColor( edtSay, COLOR_CLOUD )
 -- 聊天显示区
 lstOnSay = UI_CreateCompent( frmMain800, LIST_TYPE, "lstOnSay", 288, 98, 0, -98 )
 UI_LoadImage( lstOnSay, "texture/ui/ods/chat.tga", COMPENT_BACK, 1, 1, 0, 45 )
-UI_SetImageAlpha( lstOnSay, 153 )
+UI_SetImageAlpha( lstOnSay, 190 )
 UI_SetMargin( lstOnSay, 5, 3, 0, 0 )
 
 
@@ -146,7 +146,7 @@ UI_SetSize( id, 12, 12 )
 -- 聊天显示区（系统频道）
 lstOnSaySystem = UI_CreateCompent( frmMain800, LIST_TYPE, "lstOnSaySystem", 288, 60, 0, -158 )
 UI_LoadImage( lstOnSaySystem, "texture/ui/ods/chat.tga", COMPENT_BACK, 1, 1, 0, 45 )
-UI_SetImageAlpha( lstOnSaySystem, 153 )
+UI_SetImageAlpha( lstOnSaySystem, 190 )
 UI_SetMargin( lstOnSaySystem, 5, 3, 0, 0 )
 
 
@@ -372,7 +372,7 @@ UI_MenuAddText( selfMouseRight, "Leave Party" )
 frmFast = UI_CreateForm( "frmFast", FALSE, 328, 45, 290, 557, TRUE, FALSE )
 --UI_FormSetHotKey( frmFast, ALT_KEY, HOTKEY_T ) 
 UI_ShowForm( frmFast, TRUE )
-UI_SetFormStyle( frmFast, 7 )---下
+UI_SetFormStyleEx( frmFast, 12, 290, 0 )---下
 UI_AddFormToTemplete( frmFast, FORM_MAIN )
 UI_SetIsDrag( frmFast, TRUE )
 UI_FormSetIsEscClose( frmFast, FALSE )
@@ -434,39 +434,39 @@ UI_LoadImage( imgMainFun1, "texture/ui/corsairs/menu_barra.png", NORMAL, 318, 48
 --加载按钮图片
 btnState = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnState", 34, 34, 9, 7 )
 UI_LoadButtonImage( btnState, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 56, TRUE )
-UI_SetHint( btnState , "Stats" )
+UI_SetHint( btnState , "Stats (Alt+A)" )
 
 
 btnOpenItem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenItem", 34, 34, 47, 7 )
 UI_LoadButtonImage( btnOpenItem, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 92, TRUE )
-UI_SetHint( btnOpenItem , "Inventory" )
+UI_SetHint( btnOpenItem , "Inventory (Alt+E)" )
 
 --点击后显示临时背包
 btnOpenTempBag = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenTempBag", 34, 34, 85, 7 )
 UI_LoadButtonImage( btnOpenTempBag, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 128, TRUE )
-UI_SetHint( btnOpenTempBag , "Temp Bag" )
+UI_SetHint( btnOpenTempBag , "Temp Bag (Alt+D)" )
 
 btnSkill = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSkill", 34, 34, 123, 7 )
 UI_LoadButtonImage( btnSkill, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 164, TRUE )
-UI_SetHint( btnSkill , "Skills" )
+UI_SetHint( btnSkill , "Skills (Alt+S)" )
 
 
 btnMission = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnMission", 34, 34, 161, 7 )
 UI_LoadButtonImage( btnMission, "texture/ui/corsairs/menu_barra.png", 34, 34, 0, 200, TRUE )
-UI_SetHint( btnMission , "Quest" )
+UI_SetHint( btnMission , "Quests (Alt+Q)" )
 
 
 btnOpenGuild = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnOpenGuild", 34, 34, 199, 7 )
 UI_LoadButtonImage( btnOpenGuild, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 56, TRUE )
-UI_SetHint( btnOpenGuild , "Guild" )
+UI_SetHint( btnOpenGuild , "Guild (Alt+C)" )
 
 btnSystem = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnSystem", 34, 34, 275, 7 )
 UI_LoadButtonImage( btnSystem, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 128, TRUE )
-UI_SetHint( btnSystem , "Settings" )
+UI_SetHint( btnSystem , "Settings (Alt+O)" )
 
 btnQQ = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnQQ", 34, 34, 237, 7 )
 UI_LoadButtonImage( btnQQ, "texture/ui/corsairs/menu_barra.png", 34, 34, 140, 92, TRUE )
-UI_SetHint( btnQQ , "Friends" )
+UI_SetHint( btnQQ , "Friends (Alt+F)" )
 
 --定义升级帮助系统
 btnLevelUpHelp = UI_CreateCompent( frmMainFun, BUTTON_TYPE, "btnLevelUpHelp", 40, 40, 236, -44 )
@@ -2479,7 +2479,7 @@ UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
 -- Tales of Corsairs: segunda barra de atalhos da versao DX9, com a moldura da skin.
 frmFast2 = UI_CreateForm( "frmFast2", FALSE, 430, 45, 239, 512, TRUE, FALSE )
 UI_ShowForm( frmFast2, FALSE )
-UI_SetFormStyleEx( frmFast2, FORM_BOTTOM, 0, 45 )
+UI_SetFormStyleEx( frmFast2, 12, 239, 45 )
 UI_AddFormToTemplete( frmFast2, FORM_MAIN )
 UI_SetIsDrag( frmFast2, TRUE )
 UI_FormSetIsEscClose( frmFast2, FALSE )
