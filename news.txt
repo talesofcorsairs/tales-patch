@@ -1,3 +1,11 @@
+Versão 2.0.57
+
+• Chat mais fácil de ler: fundo mais escuro e o aviso de tempestade só aparece quando você está no mar, numa linha só.
+• Barra de atalhos centralizada embaixo da tela.
+• Dicas com atalho: passe o mouse nos botões do menu e do minimapa para ver o nome e a tecla (ex.: Inventory (Alt+E)).
+• Nomes com contorno: os nomes em cima de jogadores, NPCs e navios ficaram bem mais nítidos.
+• Zoom no minimapa: botões + e - no canto do mapa.
+
 Versão 2.0.56
 
 • Barra do personagem nova! Retrato num medalhão dourado, nível em destaque e barras de HP, SP e EXP maiores e mais fáceis de ler. A barra do pet ganhou o mesmo visual.
