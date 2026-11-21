@@ -369,7 +369,7 @@ UI_MenuAddText( selfMouseRight, "Leave Party" )
 -----------------------------------------------------------------------------------
 ---快捷区 skills shortcut
 -----------------------------------------------------------------------------------
-frmFast = UI_CreateForm( "frmFast", FALSE, 328, 45, 290, 557, TRUE, FALSE )
+frmFast = UI_CreateForm( "frmFast", FALSE, 430, 45, 290, 557, TRUE, FALSE )
 --UI_FormSetHotKey( frmFast, ALT_KEY, HOTKEY_T ) 
 UI_ShowForm( frmFast, TRUE )
 UI_SetFormStyleEx( frmFast, 12, 290, 0 )---下
@@ -378,8 +378,8 @@ UI_SetIsDrag( frmFast, TRUE )
 UI_FormSetIsEscClose( frmFast, FALSE )
 
 
-imgMain1 = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgMain1", 328, 45, 0, 0 )
-UI_LoadImage( imgMain1, "texture/ui/ods/frmfast.tga", NORMAL, 328, 45, 0, 0 )
+imgMain1 = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgMain1", 430, 45, 0, 0 )
+UI_LoadImage( imgMain1, "texture/ui/ods/frmfast12.png", NORMAL, 430, 45, 0, 0 )
 
 --imgMain2 = UI_CreateCompent( frmFast, IMAGE_TYPE, "imgMain2", 39, 43, 256, 0 )
 --UI_LoadImage( imgMain2, "texture/ui/new4.tga", NORMAL, 39, 43, 0, 79 )
@@ -395,17 +395,14 @@ fscMainF5  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF5", 32, 32, 
 fscMainF6  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF6", 32, 32, 212, 9 )
 fscMainF7  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF7", 32, 32, 246, 9 )
 fscMainF8  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF8", 32, 32, 280, 9 )
-fscMainF9  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF9", 32, 32, 280, 9 )
-UI_SetIsShow( fscMainF9, FALSE )
-fscMainF10 = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF10", 32, 32, 280, 9 )
-UI_SetIsShow( fscMainF10, FALSE )
-fscMainF11 = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF11", 32, 32, 280, 9 )
-UI_SetIsShow( fscMainF11, FALSE )
+fscMainF9  = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF9", 32, 32, 314, 9 )
+fscMainF10 = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF10", 32, 32, 348, 9 )
+fscMainF11 = UI_CreateCompent( frmFast, FAST_COMMANG_TYPE, "fscMainF11", 32, 32, 382, 9 )
 
 -- 向上按钮
-btnFastUp = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastUp", 6, 9, 318, 21 )
+btnFastUp = UI_CreateCompent( frmFast, BUTTON_TYPE, "btnFastUp", 6, 9, 420, 21 )
 UI_LoadButtonImage( btnFastUp, "texture/ui/ods/frmfast.tga", 6, 9, 0, 45, TRUE )
-UI_SetHint( btnFastUp, "Switch (F12)" )
+UI_SetHint( btnFastUp, "Switch (Tab)" )
 
 
 -- 向下按钮

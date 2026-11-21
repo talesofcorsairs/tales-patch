@@ -287,3 +287,7 @@ texture/ui/corsairs/hud.png
 texture/ui/corsairs/hud.wsd
 scripts/lua/table/scripts.lua
 scripts/lua/table/scripts.bin
+texture/ui/ods/frmfast12.png
+texture/ui/ods/frmfast12.wsd
+texture/ui/ods/frmfast12b.png
+texture/ui/ods/frmfast12b.wsd
