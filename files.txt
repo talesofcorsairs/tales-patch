@@ -291,3 +291,4 @@ texture/ui/ods/frmfast12.png
 texture/ui/ods/frmfast12.wsd
 texture/ui/ods/frmfast12b.png
 texture/ui/ods/frmfast12b.wsd
+scripts/table/ItemRefineInfo.bin
