@@ -1,3 +1,9 @@
+Versão 2.0.58
+
+• Brilho da forja com a cor da gema! Cada gema tem a sua cor: Rage vermelho, Glowing ciano, Wind verde, Shadow violeta e por aí vai. A gema de nível mais alto pinta a lâmina e a segunda pinta as chamas e as faíscas.
+• Armas forjadas com gema de nível 7 ou mais têm o brilho pulsando, mais forte quanto maior o nível.
+• Gemas de nível baixo agora aparecem bem melhor na arma.
+
 Versão 2.0.57
 
 • Chat mais fácil de ler: fundo mais escuro e o aviso de tempestade só aparece quando você está no mar, numa linha só.
