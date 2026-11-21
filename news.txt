@@ -1,3 +1,7 @@
+Versão 2.0.61
+
+• Brilho da forja ainda mais forte nas armas top: acima da soma 13 dos níveis das gemas o brilho continua crescendo até as 3 gemas nível 9, pulsando mais forte e mais rápido e com a cor mais viva.
+
 Versão 2.0.60
 
 • Arcos forjados agora brilham! Todos os arcos ganham o brilho da forja na cor da gema, como as outras armas.
