@@ -1,3 +1,8 @@
+Versão 2.0.69
+
+• Drops lendários: no Mob Info, os itens com 0,01% de chance brilham em dourado com "Legendary".
+• Quando alguém consegue um drop lendário, o servidor inteiro fica sabendo: faixa dourada no topo da tela, aviso no chat e fogos de artifício em quem pegou!
+
 Versão 2.0.68
 
 • Dica nova da fada: passe o mouse no pet e veja barras de Stamina e Growth, quanto tempo a comida dura, quando ele fica pronto para subir de nível e quanto falta para a Fairy Coin, o Elven Signet e o Elven Royal Signet.
