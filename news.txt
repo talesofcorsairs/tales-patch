@@ -1,3 +1,7 @@
+Versão 2.0.67
+
+• Mapa Mundi (Alt+W): os teleportadores (como o Jovial de Argent) aparecem com o ícone verde de teleporte, o mesmo do minimapa. O redemoinho roxo fica só para os portais.
+
 Versão 2.0.66
 
 • Corrigido o erro que fechava o jogo de repente (janela "Online" com exception.txt) quando uma janela abria ou fechava enquanto a tela era desenhada.
