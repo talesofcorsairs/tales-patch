@@ -1,3 +1,7 @@
+Versão 2.0.74
+
+• Alt+V agora abre e fecha a janela do VIP Club. Antes ele abria uma janela antiga sem uso, com letras estranhas na tela.
+
 Versão 2.0.73
 
 • Se o jogo fechar com erro, ele agora grava um relatório mais completo na pasta log (exception.txt e crash_*.dmp). Mande esses arquivos para a equipe e o erro é corrigido mais rápido.
