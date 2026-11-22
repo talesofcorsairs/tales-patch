@@ -1,3 +1,8 @@
+Versão 2.0.68
+
+• Dica nova da fada: passe o mouse no pet e veja barras de Stamina e Growth, quanto tempo a comida dura, quando ele fica pronto para subir de nível e quanto falta para a Fairy Coin, o Elven Signet e o Elven Royal Signet.
+• Avisa quando a fada está com fome (não cresce nem dá moedas) e quando ela não está na 2ª casa da bolsa.
+
 Versão 2.0.67
 
 • Mapa Mundi (Alt+W): os teleportadores (como o Jovial de Argent) aparecem com o ícone verde de teleporte, o mesmo do minimapa. O redemoinho roxo fica só para os portais.
