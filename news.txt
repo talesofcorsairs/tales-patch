@@ -1,3 +1,7 @@
+Versão 2.0.70
+
+• Barracas: depois que você abre a barraca de alguém, a placa dela ganha um selo verde com visto e fica mais apagada. Assim as barracas que você ainda não olhou chamam a atenção. A marca vale por 24 horas, e se o vendedor trocar o nome da barraca ela volta a aparecer como nova.
+
 Versão 2.0.69
 
 • Drops lendários: no Mob Info, os itens com 0,01% de chance brilham em dourado com "Legendary".
