@@ -1,3 +1,10 @@
+Versão 2.0.63
+
+• Loja dos NPCs nova, no mesmo visual do banco e do inventário.
+• Barra de pesquisa na loja: digite o nome e o item aparece na hora, procurando em todas as abas.
+• Abas All, Weapons, Armor e Others, com 56 casas à vista e o nome do NPC no topo.
+• Itens que você não tem ouro para comprar ficam com um véu vermelho.
+
 Versão 2.0.62
 
 • Barra de atalhos: F1 a F12 agora com a mesma letra, maior e mais fácil de ler.
