@@ -1,3 +1,9 @@
+Versão 2.0.62
+
+• Barra de atalhos: F1 a F12 agora com a mesma letra, maior e mais fácil de ler.
+• Tela de escolher personagem: botões Enter, Create, Edit, Delete e Exit maiores e mais visíveis.
+• Login: a janela "Please wait" aparece abaixo da caixa de login, sem cobrir os botões.
+
 Versão 2.0.61
 
 • Brilho da forja ainda mais forte nas armas top: acima da soma 13 dos níveis das gemas o brilho continua crescendo até as 3 gemas nível 9, pulsando mais forte e mais rápido e com a cor mais viva.
