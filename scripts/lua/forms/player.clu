@@ -889,6 +889,9 @@ UI_SetButtonModalResult(btnClose, BUTTON_CLOSE)
 
 
 MobDropCtl = {}
+-- brilho dos drops lendarios (desenhado pelo Game.exe embaixo das linhas; o componente so serve de gancho)
+d3dMobRaro = UI_CreateCompent(frmMonsterInfo, UI3D_COMPENT_TYPE, "d3dMobRaro", 2, 2, 0, 0)
+table.insert(MobDropCtl, d3dMobRaro)
 for i = 0, 14 do
 	local fora = 0
 	if i >= 10 then fora = 5000 end
