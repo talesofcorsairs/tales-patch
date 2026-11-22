@@ -292,3 +292,17 @@ texture/ui/ods/frmfast12.wsd
 texture/ui/ods/frmfast12b.png
 texture/ui/ods/frmfast12b.wsd
 scripts/table/ItemRefineInfo.bin
+scripts/lua/forms/select.clu
+scripts/lua/forms/select.bin
+texture/ui/corsairs/selecao_barra.png
+texture/ui/corsairs/selecao_barra.wsd
+texture/ui/corsairs/btnSelEntrar.tga
+texture/ui/corsairs/btnSelEntrar.wsd
+texture/ui/corsairs/btnSelCriar.tga
+texture/ui/corsairs/btnSelCriar.wsd
+texture/ui/corsairs/btnSelEditar.tga
+texture/ui/corsairs/btnSelEditar.wsd
+texture/ui/corsairs/btnSelApagar.tga
+texture/ui/corsairs/btnSelApagar.wsd
+texture/ui/corsairs/btnSelSair.tga
+texture/ui/corsairs/btnSelSair.wsd

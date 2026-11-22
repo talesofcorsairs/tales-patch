@@ -38,10 +38,10 @@ UI_SetLabelExFont( labLoad, DEFAULT_FONT, TRUE, COLOR_BLACK)
 -- 定义连接服务器表单
 -----------------------------------------------------------------------	
 -- 创建连接服务器表单
-frmConnect = UI_CreateForm( "frmConnect", FALSE, 300, 72, 533, 340, FALSE, FALSE )
+frmConnect = UI_CreateForm( "frmConnect", FALSE, 300, 72, 533, 490, FALSE, FALSE )
 UI_LoadFormImage( frmConnect, "texture/ui/ods/loginbox.tga", 300, 72, 0, 270, "", 0, 0 )
 --UI_FormSetHotKey( frmConnect, ALT_KEY, HOTKEY_L ) 
-UI_SetFormStyle( frmConnect, 1 )
+UI_SetFormStyle( frmConnect, 2 )
 UI_AddFormToTemplete( frmConnect, FORM_SWITCH_SCENE )
 UI_FormSetIsEscClose( frmConnect, FALSE )
 
