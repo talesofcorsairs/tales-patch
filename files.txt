@@ -310,3 +310,5 @@ texture/ui/corsairs/loja.png
 texture/ui/corsairs/loja.wsd
 texture/ui/corsairs/vip.png
 texture/ui/corsairs/vip.wsd
+texture/icon/n7294.png
+texture/icon/n7295.png
