@@ -79,154 +79,81 @@ UI_LoadButtonImage( btnNo, "texture/ui/ods/sysbtn.tga", 36, 16, 300, 96, TRUE )
 -- 定义NPC交易 NPC item trade window weapons armor grocery
 -----------------------------------------------------------------------	
 -- 创建NPC交易表单
-frmNPCtrade = UI_CreateForm( "frmNPCtrade", FALSE, 198, 394, 240, 168, TRUE, FALSE )
---UI_FormSetHotKey( frmNPCtrade, ALT_KEY, HOTKEY_V )
---UI_LoadFormImage( frmNPCtrade, "texture/ui/Npctrade.dds", 233, 357, 0, 0, "", 0, 0 )
+-- Tales of Corsairs: loja nova com pesquisa (skin_loja.ps1 e UINpcTradeForm.cpp)
+frmNPCtrade = UI_CreateForm( "frmNPCtrade", FALSE, 336, 420, 100, 100, TRUE, FALSE )
 UI_ShowForm( frmNPCtrade, TRUE )
 UI_AddFormToTemplete( frmNPCtrade, FORM_MAIN )
 UI_SetIsDrag( frmNPCtrade, TRUE )
---UI_SetFormStyle( frmNPCtrade, 2 )---左右居中
-
-
-
--- 加载背景图片
-imgBakTop = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgBakTop", 198, 394, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/corsairs/npc_janelas.png", NORMAL, 198, 394, 0, 450 )
---imgBakDown = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgBakDown", 198, 138, 0, 256 )
---UI_LoadImage( imgBakDown, "texture/ui/PublicD2.bmp", NORMAL, 198, 138, 0, 0 )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnClose", 14, 14, 177, 7 )
+imgLojaFundo = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgLojaFundo", 336, 420, 0, 0 )
+UI_LoadImage( imgLojaFundo, "texture/ui/corsairs/loja.png", NORMAL, 336, 420, 0, 0 )
+btnClose = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnClose", 14, 14, 314, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
-
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
--- 加载界面title
-labTitle = UI_CreateCompent( frmNPCtrade, LABELEX_TYPE, "labTitle", 400, 150, 10, 3 )
-UI_SetCaption( labTitle, "")
-UI_SetTextColor( labTitle, COLOR_YELLOW )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
--- 加载表格图片
---imgBakTop1 = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgBakTop1", 177, 256, 7, 55 )
---UI_LoadImage( imgBakTop1, "texture/ui/PublicD3.dds", NORMAL, 177, 256, 0, 0 )
---imgBakDown1 = UI_CreateCompent( frmNPCtrade, IMAGE_TYPE, "imgBakDown1", 177, 57, 7, 311 )
---UI_LoadImage( imgBakDown1, "texture/ui/PublicD2.bmp", NORMAL, 177, 57, 0, 138 )
-
---创建武器物品表格
-grdNPCtradeWeapon = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeWeapon", 189, 313, 0, 0 ) 
-UI_SetGridSpace( grdNPCtradeWeapon, 2, 3 )
-UI_SetGridContent( grdNPCtradeWeapon, 24, 5 )
+labLojaNpc = UI_CreateCompent( frmNPCtrade, LABELEX_TYPE, "labLojaNpc", 255, 12, 40, 43 )
+UI_SetCaption( labLojaNpc, "" )
+UI_SetTextColor( labLojaNpc, 4293976766 )
+UI_SetLabelExFont( labLojaNpc, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetLabelExAlign( labLojaNpc, TRUE )
+-- pesquisa: o Game.exe le o texto a cada quadro e refaz a grade
+edtLojaBusca = UI_CreateCompent( frmNPCtrade, EDIT_TYPE, "edtLojaBusca", 252, 13, 44, 70 )
+UI_SetTextColor( edtLojaBusca, 4293976766 )
+UI_SetLabelExFont( edtLojaBusca, DEFAULT_FONT, TRUE, COLOR_BLACK )
+UI_SetEditCursorColor( edtLojaBusca, 4293976766 )
+UI_SetEditMaxNum( edtLojaBusca, 30 )
+btnLojaLimpar = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnLojaLimpar", 16, 16, 302, 68 )
+UI_LoadButtonImage( btnLojaLimpar, "texture/ui/corsairs/loja.png", 16, 16, 380, 0, FALSE )
+UI_SetHint( btnLojaLimpar, "Clear the search" )
+-- abas: All, Weapons, Armor, Others
+btnLojaAba0 = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnLojaAba0", 75, 22, 12, 96 )
+UI_LoadButtonImage( btnLojaAba0, "texture/ui/corsairs/loja.png", 75, 22, 340, 72, FALSE )
+UI_SetHint( btnLojaAba0, "Everything this shop sells" )
+btnLojaAba1 = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnLojaAba1", 75, 22, 90, 96 )
+UI_LoadButtonImage( btnLojaAba1, "texture/ui/corsairs/loja.png", 75, 22, 340, 160, FALSE )
+UI_SetHint( btnLojaAba1, "First page of the shop" )
+btnLojaAba2 = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnLojaAba2", 75, 22, 168, 96 )
+UI_LoadButtonImage( btnLojaAba2, "texture/ui/corsairs/loja.png", 75, 22, 340, 248, FALSE )
+UI_SetHint( btnLojaAba2, "Second page of the shop" )
+btnLojaAba3 = UI_CreateCompent( frmNPCtrade, BUTTON_TYPE, "btnLojaAba3", 75, 22, 246, 96 )
+UI_LoadButtonImage( btnLojaAba3, "texture/ui/corsairs/loja.png", 75, 22, 340, 336, FALSE )
+UI_SetHint( btnLojaAba3, "Third page of the shop" )
+-- as tres paginas do servidor, escondidas (guardam os itens na ordem que a compra manda ao servidor)
+grdNPCtradeWeapon = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeWeapon", 4, 4, 0, 0 )
+UI_SetGridSpace( grdNPCtradeWeapon, 4, 4 )
+UI_SetGridContent( grdNPCtradeWeapon, 64, 4 )
 UI_SetGridUnitSize( grdNPCtradeWeapon, 32, 32 )
-UI_SetMargin( grdNPCtradeWeapon, 6, 6, 0, 4 )
-
---获得滚动条
-scrollid = UI_GetScroll( grdNPCtradeWeapon )
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
-id = UI_GetScrollObj( scrollid, SCROLL_UP )
-UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
-UI_SetSize( id, 11, 9 )
-
---加载滚动条
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 8, 43, 166, 10 )
-UI_SetSize( id, 8, 43 )
-
---加载向下按钮
-id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
-UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
-UI_SetSize( id, 11, 9 )
-
---创建放具物品表格
-grdNPCtradeEquip = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeEquip", 189, 313, 0, 0 ) 
-UI_SetGridSpace( grdNPCtradeEquip, 2, 3 )
-UI_SetGridContent( grdNPCtradeEquip, 24, 5 )
+UI_SetIsShow( grdNPCtradeWeapon, FALSE )
+grdNPCtradeEquip = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeEquip", 4, 4, 0, 0 )
+UI_SetGridSpace( grdNPCtradeEquip, 4, 4 )
+UI_SetGridContent( grdNPCtradeEquip, 64, 4 )
 UI_SetGridUnitSize( grdNPCtradeEquip, 32, 32 )
-UI_SetMargin( grdNPCtradeEquip, 6, 6, 0, 4 )
-
---获得滚动条
-scrollid = UI_GetScroll( grdNPCtradeEquip )
-UI_SetSize( scrollid, 11, 1 )
-UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
-id = UI_GetScrollObj( scrollid, SCROLL_UP )
-UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
-UI_SetSize( id, 11, 9 )
-
---加载滚动条
-id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 8, 43, 166, 10 )
-UI_SetSize( id, 8, 43 )
-
---加载向下按钮
-id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
-UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
-UI_SetSize( id, 11, 9 )
-
---创建杂项物品表格
-grdNPCtradeOther = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeOther", 189, 313, 0, 0) 
-UI_SetGridSpace( grdNPCtradeOther, 2, 3 )
-UI_SetGridContent( grdNPCtradeOther, 24, 5 )
+UI_SetIsShow( grdNPCtradeEquip, FALSE )
+grdNPCtradeOther = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeOther", 4, 4, 0, 0 )
+UI_SetGridSpace( grdNPCtradeOther, 4, 4 )
+UI_SetGridContent( grdNPCtradeOther, 64, 4 )
 UI_SetGridUnitSize( grdNPCtradeOther, 32, 32 )
-UI_SetMargin( grdNPCtradeOther, 6, 6, 0, 4 )
-
---获得滚动条
-scrollid = UI_GetScroll( grdNPCtradeOther )
+UI_SetIsShow( grdNPCtradeOther, FALSE )
+-- a grade que aparece: 56 casas a vista (8x7); com mais aparece a rolagem
+grdNPCtradeVista = UI_CreateCompent( frmNPCtrade, GOODS_GRID_TYPE, "grdNPCtradeVista", 306, 260, 18, 126 )
+UI_SetGridSpace( grdNPCtradeVista, 4, 4 )
+UI_SetGridContent( grdNPCtradeVista, 7, 8 )
+UI_SetGridUnitSize( grdNPCtradeVista, 32, 32 )
+UI_SetMargin( grdNPCtradeVista, 8, 4, 0, 4 )
+UI_GoodGridLoadUnitImage( grdNPCtradeVista, "texture/ui/corsairs/loja.png", 32, 32, 340, 0 )
+scrollid = UI_GetScroll( grdNPCtradeVista )
 UI_SetSize( scrollid, 11, 1 )
 UI_LoadImage( scrollid, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 1, 194, 13 )
-
---加载向上按钮
 id = UI_GetScrollObj( scrollid, SCROLL_UP )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
-
---加载滚动条
 id = UI_GetScrollObj( scrollid, SCROLL_SCROLL )
-UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 11, 43, 166, 10 )
-UI_SetSize( id, 11, 43 )
-
---加载向下按钮
+UI_LoadImage( id, "texture/ui/ods/PublicC.tga", COMPENT_BACK, 9, 44, 166, 9 )
+UI_SetSize( id, 9, 44 )
 id = UI_GetScrollObj( scrollid, SCROLL_DOWN )
 UI_LoadButtonImage( id, "texture/ui/ods/PublicC.tga", 11, 9, 166, 0, TRUE )
 UI_SetSize( id, 11, 9 )
+-- aba ativa, contagem, pesquisa vazia e marcas das casas (desenhados pelo Game.exe; o componente so serve de gancho)
+UI_CreateCompent( frmNPCtrade, UI3D_COMPENT_TYPE, "d3dLoja", 2, 2, 0, 0 )
 
-
---创建页面
-pgeNPCtrade = UI_CreateCompent( frmNPCtrade, PAGE_TYPE, "pgeNPCtrade", 187, 313, 7, 56 )
-UI_SetPageButton( pgeNPCtrade, PAGE_BUTTON_CUSTOM, 39, 19 )
-
---武器
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlWeapon = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlWeapon, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_NORMAL, 58, 22, 660, 486 )
-UI_LoadImage( ttlWeapon, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_ACTIVE, 58, 22, 718, 486 )
-UI_SetPos( ttlWeapon, 5, -26 )
-UI_SetSize( ttlWeapon, 58, 22 )
-UI_AddCompent( itemid, grdNPCtradeWeapon )
-
-
---防具
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlEquip = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlEquip, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_NORMAL, 58, 22, 776, 486 )
-UI_LoadImage( ttlEquip, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_ACTIVE, 58, 22, 834, 486 )
-UI_SetPos( ttlEquip, 63, -26 )
-UI_SetSize( ttlEquip, 58, 22 )
-UI_AddCompent( itemid, grdNPCtradeEquip )
-
-
---杂项
-itemid = UI_CreatePageItem( pgeNPCtrade )
-ttlOther = UI_GetPageItemObj( itemid, PAGE_ITEM_TITLE )
-UI_LoadImage( ttlOther, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_NORMAL, 58, 22, 892, 486 )
-UI_LoadImage( ttlOther, "texture/ui/corsairs/npc_janelas.png", PAGE_ITEM_TITLE_ACTIVE, 58, 22, 950, 486 )
-UI_SetPos( ttlOther, 121, -26 )
-UI_SetSize( ttlOther, 58, 22 )
-UI_AddCompent( itemid, grdNPCtradeOther )
 
 -----------------------------------------------------------------------
 -- 定义NPC交易数量

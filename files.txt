@@ -306,3 +306,5 @@ texture/ui/corsairs/btnSelApagar.tga
 texture/ui/corsairs/btnSelApagar.wsd
 texture/ui/corsairs/btnSelSair.tga
 texture/ui/corsairs/btnSelSair.wsd
+texture/ui/corsairs/loja.png
+texture/ui/corsairs/loja.wsd
