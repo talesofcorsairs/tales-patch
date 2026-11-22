@@ -1,3 +1,9 @@
+Versão 2.0.77
+
+• Moedas de IMP: a nova aba IMP Coins do IMP Mall troca IMPs por IMP Coin (vale 1 IMP) e IMP Coin Bag (vale 10 IMPs). Dá para vender as moedas na barraca ou trocar com outros jogadores, e clique duplo nelas devolve os IMPs.
+• Frutas especiais no IMP Mall (aba Fairy > Fruits): +2 no atributo do pet em qualquer nível até o Lv 62, sempre com sucesso.
+• A aba Eggs do IMP Mall agora vende só o Egg of Mordo.
+
 Versão 2.0.76
 
 • Launcher novo: as notícias ficaram maiores e mais fáceis de ler, e o status do servidor foi para o painel da esquerda, com uma luz verde quando está online.
