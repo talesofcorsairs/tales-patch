@@ -275,7 +275,7 @@ UI_SetEditEnterButton( edtUserInput, btnYes )
 frmforgeMove = UI_CreateForm( "frmforgeMove", FALSE, 310, 275, 240, 70, TRUE, FALSE )
 UI_ShowForm( frmforgeMove, TRUE )
 UI_AddFormToTemplete( frmforgeMove, FORM_MAIN )
-UI_FormSetHotKey( frmforgeMove, ALT_KEY, HOTKEY_V )
+--UI_FormSetHotKey( frmforgeMove, ALT_KEY, HOTKEY_V )
 UI_SetIsDrag( frmforgeMove, TRUE )
 
 -- º”‘ÿ±≥æ∞Õº∆¨
