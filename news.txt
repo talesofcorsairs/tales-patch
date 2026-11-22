@@ -1,3 +1,7 @@
+Versão 2.0.66
+
+• Corrigido o erro que fechava o jogo de repente (janela "Online" com exception.txt) quando uma janela abria ou fechava enquanto a tela era desenhada.
+
 Versão 2.0.65
 
 • VIP Club: ícone de coroa no canto da tela, embaixo do Market. Cada R$1 doado vale 1 ponto VIP, e o nível vale para todos os personagens da conta.
