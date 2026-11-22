@@ -1,3 +1,9 @@
+Versão 2.0.65
+
+• VIP Club: ícone de coroa no canto da tela, embaixo do Market. Cada R$1 doado vale 1 ponto VIP, e o nível vale para todos os personagens da conta.
+• 7 níveis (Bronze, Silver, Gold, Emerald, Sapphire, Ruby e Legend) com bônus de EXP e de drop, baú diário e título VIP brilhando acima do nome.
+• Desde o VIP 1: banco aberto de qualquer lugar e teleporte para Argent, Shaitan e Icicle. No VIP 4 você não perde EXP ao morrer, e no VIP 5 o servidor inteiro vê quando você entra.
+
 Versão 2.0.64
 
 • Mapa Mundi (Alt+W) com os portais e o nome de cada um: "Portal to Abandoned Mine 2", "Portal to Silver Mine 2", "Portal to Lone Tower 1" e todos os outros.
