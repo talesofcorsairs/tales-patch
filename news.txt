@@ -1,3 +1,7 @@
+Versão 2.0.73
+
+• Se o jogo fechar com erro, ele agora grava um relatório mais completo na pasta log (exception.txt e crash_*.dmp). Mande esses arquivos para a equipe e o erro é corrigido mais rápido.
+
 Versão 2.0.72
 
 • Gem of Striking (e as versões Broken, Cracked, Chipped e Great) agora também pode ser forjada em gun e arco, além da luva.
