@@ -1,3 +1,9 @@
+Versão 2.0.64
+
+• Mapa Mundi (Alt+W) com os portais e o nome de cada um: "Portal to Abandoned Mine 2", "Portal to Silver Mine 2", "Portal to Lone Tower 1" e todos os outros.
+• Portais das dungeons com hora marcada (Forsaken City, Demonic World, Dark Swamp, Gate to Hell) aparecem em dourado no mapa.
+• Minimapa: os teleportadores e os portais abertos aparecem com o ícone de portal.
+
 Versão 2.0.63
 
 • Loja dos NPCs nova, no mesmo visual do banco e do inventário.
