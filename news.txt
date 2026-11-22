@@ -1,3 +1,10 @@
+Versão 2.0.76
+
+• Launcher novo: as notícias ficaram maiores e mais fáceis de ler, e o status do servidor foi para o painel da esquerda, com uma luz verde quando está online.
+• Download: a barra de baixo ficou maior e mostra a porcentagem, a velocidade e quanto já baixou. O botão vai enchendo de dourado enquanto atualiza.
+• Próximos mapas: uma luz ao lado de cada mapa mostra se ele está aberto (verde), se abre em menos de 10 minutos (laranja) ou se ainda falta muito (apagado).
+• Botões do launcher e ícones das redes ficaram maiores, com destaque ao passar o mouse.
+
 Versão 2.0.75
 
 • Portais: o nome em cima dos portais (Forsaken City, Demonic World, Dark Swamp e outros) ganhou uma placa nova, azul-escura com moldura dourada e um redemoinho girando.
