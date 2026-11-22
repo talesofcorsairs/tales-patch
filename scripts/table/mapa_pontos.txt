@@ -1,4 +1,4 @@
-// gerado por ferramentas\mapa_pontos.py: terreno, B chefe / R recurso, x, y, nivel (recurso: tipo logico), nome
+// gerado por ferramentas\mapa_pontos.py: terreno, B chefe / R recurso / P portal, x, y, nivel (recurso: tipo logico; portal: 1 fixo, 2 com hora), nome
 abandonedcity	B	153	136	38	Sorrow Captain
 abandonedcity	B	154	161	40	Wailing Captain
 abandonedcity	B	177	139	38	Sorrow Archer Captain
@@ -494,3 +494,155 @@ puzzleworld	R	522	21	6	Metal Norite
 puzzleworld	R	469	465	6	Metal Norite
 puzzleworld2	B	266	246	65	Snowman Warlord
 shalan2	B	120	109	80	Phantom Knight
+abandonedcity	P	72	40	1	Portal to Magical Ocean
+abandonedcity2	P	24	22	1	Portal to Forsaken City 1
+abandonedcity2	P	236	20	1	Portal to Forsaken City 1
+abandonedcity2	P	460	471	1	Portal to Forsaken City 1
+abandonedcity2	P	25	471	1	Portal to Forsaken City 1
+abandonedcity3	P	257	226	1	Portal to Forsaken City 2
+abandonedcity3	P	24	23	1	Portal to Shaitan
+darkblue	P	3228	2440	1	Portal to Underwater Tunnel
+darkblue	P	3157	2538	1	Portal to Underwater City
+darkblue	P	3424	2989	1	Portal to Seabed Tunnel
+darkblue	P	2871	2783	1	Portal to Underwater Tunnel
+darkblue	P	3431	3297	1	Portal to Black Dragon Lair 1
+darkswamp	P	154	138	1	Portal to Dark Swamp 2
+darkswamp	P	52	453	1	Portal to Dark Swamp 1
+darkswamp	P	501	914	1	Portal to Dark Swamp 3
+darkswamp	P	501	1449	1	Portal to Dark Swamp 2
+darkswamp	P	52	990	1	Portal to Shaitan
+darkswamp	P	92	51	1	Portal to Shaitan
+eastgoaf	P	116	25	1	Portal to Abandoned Mine 1
+eastgoaf	P	239	28	1	Portal to Silver Mine 1
+eastgoaf	P	201	142	1	Portal to Silver Mine 3
+eastgoaf	P	379	124	1	Portal to Silver Mine 2
+eastgoaf	P	484	31	1	Portal to Abandoned Mine 2
+eastgoaf	P	24	137	1	Portal to Silver Mine 3
+eastgoaf	P	199	245	1	Portal to Spring Island
+eastgoaf	P	49	429	1	Portal to Spring Island
+eastgoaf	P	160	425	1	Portal to Seabed Tunnel
+eastgoaf	P	407	286	1	Portal to Underwater Tunnel
+eastgoaf	P	493	412	1	Portal to Summer Island
+eastgoaf	P	464	573	1	Portal to Autumn Island
+eastgoaf	P	796	542	1	Portal to Summer Island
+eastgoaf	P	762	724	1	Portal to Summer Island
+garner	P	1786	2647	1	Portal to Silver Mine 2
+garner	P	1741	2668	1	Portal to Abandoned Mine 2
+garner	P	269	1783	1	Portal to Lone Tower 1
+hell	P	34	98	1	Portal to Purgatory 6
+hell	P	102	98	1	Portal to Purgatory 7
+hell	P	96	37	1	Portal to Purgatory 8
+hell	P	152	31	1	Portal to Purgatory 5
+hell	P	219	94	1	Portal to Purgatory 7
+hell	P	158	99	1	Portal to Purgatory 8
+hell	P	223	155	1	Portal to Purgatory 5
+hell	P	155	156	1	Portal to Purgatory 6
+hell	P	155	217	1	Portal to Purgatory 8
+hell	P	35	154	1	Portal to Purgatory 5
+hell	P	97	158	1	Portal to Purgatory 6
+hell	P	37	217	1	Portal to Purgatory 7
+hell3	P	151	183	1	Portal to Hades (Left)
+hell3	P	154	150	1	Portal to Hades (Left)
+hell3	P	189	149	1	Portal to Hades (On)
+hell3	P	223	152	1	Portal to Hades (Upper right)
+hell3	P	223	183	1	Portal to Hades (Right)
+hell3	P	223	219	1	Portal to Hades (Lower right)
+hell3	P	187	222	1	Portal to Hades (Next)
+hell3	P	154	220	1	Portal to Hades (Left)
+hell3	P	105	181	1	Portal to Hades (Back to the left)
+hell3	P	102	100	1	Portal to Hades (Back to the left)
+hell3	P	190	100	1	Portal to Hades (Back)
+hell3	P	275	100	1	Portal to Hades (Back to the top right)
+hell3	P	271	183	1	Portal to Hades (Right back)
+hell3	P	275	269	1	Portal to Hades (Back to the lower right)
+hell3	P	188	269	1	Portal to Hades (Back next)
+hell3	P	103	271	1	Portal to Hades (Back to the left)
+jialebi	P	761	896	1	Portal to Skeleton
+jialebi	P	423	874	1	Portal to The Navy
+jialebi	P	413	635	1	Portal to Pirate Hideout (Skull Sea Maze)
+jialebi	P	79	316	1	Portal to Pirate Hideout (Skull Sea Maze)
+jialebi	P	635	548	1	Portal to Pirate Hideout (Skull Sea Maze)
+jialebi	P	459	88	1	Portal to Pirate Hideout (Skull Sea Maze)
+jialebi	P	1447	1006	1	Portal to Dock Library underground Ordnance
+jialebi	P	1582	1109	1	Portal to Underground dock
+jialebi	P	928	818	1	Portal to Dock
+jialebi	P	927	929	1	Portal to Dock
+jialebi	P	921	980	1	Portal to Dock
+jialebi	P	610	642	1	Portal to Booty Bay
+jialebi	P	1053	225	1	Portal to Booty Bay
+jialebi	P	606	1083	1	Portal to Witch
+jialebi	P	734	1032	1	Portal to Witch
+jialebi	P	697	920	1	Portal to Witch
+lonetower	P	352	379	1	Portal to Sacred Forest
+lonetower	P	268	257	1	Portal to Lone Tower 2
+lonetower	P	36	19	1	Portal to Lone Tower 1
+lonetower	P	140	129	1	Portal to Lone Tower 3
+lonetower	P	120	410	1	Portal to Lone Tower 2
+lonetower	P	56	306	1	Portal to Lone Tower 4
+lonetower	P	320	179	1	Portal to Lone Tower 3
+lonetower	P	239	73	1	Portal to Lone Tower 5
+lonetower	P	480	122	1	Portal to Lone Tower 4
+lonetower	P	548	39	1	Portal to Lone Tower 6
+lonetower	P	488	298	1	Portal to Lone Tower 5
+magicsea	P	2202	2781	1	Portal to Caribbean
+magicsea	P	877	3756	1	Portal to Caribbean
+magicsea	P	1010	374	1	Portal to Caribbean
+mjing1	P	359	180	1	Portal to 2nd Aurora Area
+mjing2	P	359	180	1	Portal to 1st Aurora Area
+mjing3	P	86	184	1	Portal to 2nd Dark Area
+mjing3	P	123	107	1	Portal to 2nd Dark Area
+mjing3	P	252	107	1	Portal to 2nd Dark Area
+mjing3	P	315	194	1	Portal to 2nd Dark Area
+mjing3	P	204	235	1	Portal to 2nd Dark Area
+mjing3	P	140	330	1	Portal to 2nd Dark Area
+mjing3	P	316	299	1	Portal to 2nd Dark Area
+mjing3	P	132	395	1	Portal to 2nd Dark Area
+mjing3	P	222	403	1	Portal to 2nd Dark Area
+mjing3	P	341	435	1	Portal to 2nd Dark Area
+mjing3	P	187	483	1	Portal to 2nd Dark Area
+mjing3	P	251	418	1	Portal to 2nd Dark Area
+mjing4	P	86	184	1	Portal to 1st Dark Area
+mjing4	P	123	107	1	Portal to 1st Dark Area
+mjing4	P	252	107	1	Portal to 1st Dark Area
+mjing4	P	315	194	1	Portal to 1st Dark Area
+mjing4	P	204	235	1	Portal to 1st Dark Area
+mjing4	P	140	330	1	Portal to 1st Dark Area
+mjing4	P	316	299	1	Portal to 1st Dark Area
+mjing4	P	132	395	1	Portal to 1st Dark Area
+mjing4	P	222	403	1	Portal to 1st Dark Area
+mjing4	P	341	435	1	Portal to 1st Dark Area
+mjing4	P	187	483	1	Portal to 1st Dark Area
+mjing4	P	251	418	1	Portal to 1st Dark Area
+puzzleworld2	P	60	295	1	Portal to Demonic World 2
+puzzleworld2	P	478	294	1	Portal to Demonic World 2
+puzzleworld2	P	250	51	1	Portal to Demonic World 2
+puzzleworld2	P	288	500	1	Portal to Demonic World 2
+puzzleworld2	P	68	66	1	Portal to Demonic World 2
+puzzleworld2	P	470	65	1	Portal to Demonic World 2
+puzzleworld2	P	470	483	1	Portal to Demonic World 2
+puzzleworld2	P	67	483	1	Portal to Demonic World 2
+puzzleworld2	P	23	20	1	Portal to Demonic World
+puzzleworld2	P	23	525	1	Portal to Demonic World
+puzzleworld2	P	521	525	1	Portal to Demonic World
+puzzleworld2	P	520	22	1	Portal to Demonic World
+puzzleworld2	P	326	210	1	Portal to Ascaron
+secretgarden	P	174	168	1	Portal to Garden of Edel (Upper side)
+secretgarden	P	144	141	1	Portal to Garden of Edel (Upper side)
+secretgarden	P	305	175	1	Portal to Garden of Edel (Upper side)
+secretgarden	P	330	150	1	Portal to Garden of Edel (Upper side)
+secretgarden	P	188	239	1	Portal to Garden of Edel (Middle)
+secretgarden	P	85	215	1	Portal to Garden of Edel (Middle)
+secretgarden	P	280	235	1	Portal to Garden of Edel (Middle)
+secretgarden	P	383	242	1	Portal to Garden of Edel (Middle)
+secretgarden	P	173	297	1	Portal to Garden of Edel (Lower side)
+secretgarden	P	140	327	1	Portal to Garden of Edel (Lower side)
+secretgarden	P	300	305	1	Portal to Garden of Edel (Lower side)
+secretgarden	P	325	330	1	Portal to Garden of Edel (Lower side)
+winterland	P	272	1060	1	Portal to Autumn Island
+yschurch	P	192	164	1	Portal to Church (inside)
+yschurch	P	469	81	1	Portal to Church (outside)
+garner	P	2170	2778	2	Portal to Forsaken City
+magicsea	P	942	3565	2	Portal to Dark Swamp
+garner	P	2175	2782	2	Portal to Demonic World
+darkblue	P	1299	557	2	Gate to Hell (Abaddon)
+darkblue	P	1370	532	2	Portal to Chaos Argent
