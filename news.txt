@@ -1,3 +1,9 @@
+Versão 2.0.78
+
+• Skills Expert do pet no IMP Mall (aba Fairy > Skills): Expert Protection, Berserk, Magic, Recover e Meditation, o nível mais forte, a 20 IMPs. As Standard passaram a custar 12 IMPs.
+• Um livro de skill mais fraco não rebaixa mais a skill do pet: se o pet já tem o mesmo nível ou maior, o livro não é gasto.
+• IMP Mall: a sub-aba Miscellaneous virou Utilities, e as asas agora aparecem na aba Wings. Great Fairy Ration e Great Auto Ration saíram (iguais às rações comuns).
+
 Versão 2.0.77
 
 • Moedas de IMP: a nova aba IMP Coins do IMP Mall troca IMPs por IMP Coin (vale 1 IMP) e IMP Coin Bag (vale 10 IMPs). Dá para vender as moedas na barraca ou trocar com outros jogadores, e clique duplo nelas devolve os IMPs.
