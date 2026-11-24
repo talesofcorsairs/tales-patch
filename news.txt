@@ -1,3 +1,7 @@
+Versão 2.0.79
+
+• Caixas de apparel no Award Center do site, a 450 créditos: Lance, Carsise, Phyllis e Ami Apparel Chest. Clique duplo para ganhar um set de apparel aleatório daquele personagem (de 39 a 42 sets possíveis em cada caixa). É preciso ter espaço na mochila para todas as peças do set.
+
 Versão 2.0.78
 
 • Skills Expert do pet no IMP Mall (aba Fairy > Skills): Expert Protection, Berserk, Magic, Recover e Meditation, o nível mais forte, a 20 IMPs. As Standard passaram a custar 12 IMPs.
