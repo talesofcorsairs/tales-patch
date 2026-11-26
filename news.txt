@@ -1,3 +1,9 @@
+Versão 2.0.80
+
+• VIP Club: o baú diário virou um prêmio de nível. Cada nível VIP paga o prêmio uma vez por conta, e quem subiu vários níveis pega um por clique, do menor para o maior (Alt+V, botão "Claim VIP N reward").
+• Prêmios bem maiores: de 100 mil a 3,5 milhões de ouro, Auto Ration, Hi-Amplifiers a partir do VIP 4, Refining Gem no VIP 2, 5 e 7, IMP Coin Bags no VIP 5, 6 e 7, caixa de apparel do seu personagem no VIP 6 e 7, Stabilizer e Catalyst no VIP 6 e 7 e Lv5 Refining Gem Box no VIP 7.
+• Os prêmios vão para a Temp Bag: o do VIP 7 precisa de 12 casas livres.
+
 Versão 2.0.79
 
 • Caixas de apparel no Award Center do site, a 450 créditos: Lance, Carsise, Phyllis e Ami Apparel Chest. Clique duplo para ganhar um set de apparel aleatório daquele personagem (de 39 a 42 sets possíveis em cada caixa). É preciso ter espaço na mochila para todas as peças do set.
