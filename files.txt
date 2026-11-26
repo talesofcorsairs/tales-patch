@@ -312,3 +312,13 @@ texture/ui/corsairs/vip.png
 texture/ui/corsairs/vip.wsd
 texture/icon/n7294.png
 texture/icon/n7295.png
+texture/ui/corsairs/casamento_fadas.png
+texture/ui/corsairs/casamento_fadas.wsd
+texture/ui/corsairs/consertar_ferramenta.png
+texture/ui/corsairs/consertar_ferramenta.wsd
+texture/ui/corsairs/extrair_gema.png
+texture/ui/corsairs/extrair_gema.wsd
+texture/ui/corsairs/purificar.png
+texture/ui/corsairs/purificar.wsd
+texture/ui/corsairs/recarregar_coral.png
+texture/ui/corsairs/recarregar_coral.wsd

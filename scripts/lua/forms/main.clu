@@ -1081,182 +1081,108 @@ UI_SetMargin( grdTempBag, 21, 4, 0, 0 )
 -----------------------------------------------------------------------
 -- 定义精灵结婚面板  2006.8.29 by Leo pet marriage
 -----------------------------------------------------------------------
-frmSpiritMarry = UI_CreateForm( "frmSpiritMarry", FALSE, 226, 426, 0, 0, TRUE, FALSE )
+-- Tales of Corsairs: Fairies Marriage (skin_combinar.ps1 e UISpiritForm.cpp)
+frmSpiritMarry = UI_CreateForm( "frmSpiritMarry", FALSE, 400, 400, 150, 150, TRUE, FALSE )
 UI_ShowForm( frmSpiritMarry, FALSE )
 UI_AddFormToTemplete( frmSpiritMarry, FORM_MAIN )
 UI_FormSetIsEscClose( frmSpiritMarry, TRUE )
-UI_SetIsDrag( frmSpiritMarry,TRUE)
-UI_SetFormStyle( frmSpiritMarry,1)
-
---UI_FormSetHotKey( frmSpiritMarry, ALT_KEY, HOTKEY_Z )
-
---加载背景图片
-imgBakTop = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgBakTop", 226, 256, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/corsairs/diversos1.png", NORMAL, 226, 256, 430, 560 )
-
-imgBakButtom = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgBakButtom", 226, 170, 0, 256 )
-UI_LoadImage( imgBakButtom, "texture/ui/corsairs/diversos1.png", NORMAL, 226, 170, 430, 816 )
-
---定义title
-labTitle = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labTitle", 49, 14, 7, 3 )
-UI_SetCaption( labTitle, "")
-UI_SetTextColor( labTitle, COLOR_BLACK )
-UI_SetLabelExFont( labTitle, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建command栏
-cmdSpiritOne = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritOne", 32, 32, 52, 196 )	-- 结婚精灵一
-cmdSpiritTwo = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritTwo", 32, 32, 138, 196 )	-- 结婚精灵二
-cmdSpiritItem = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritItem", 32, 32, 96, 264 )	-- 产出精灵
-
---设置tag供程序调用
+UI_SetIsDrag( frmSpiritMarry, TRUE )
+UI_SetFormStyle( frmSpiritMarry, 2 )
+imgCasarFundo = UI_CreateCompent( frmSpiritMarry, IMAGE_TYPE, "imgCasarFundo", 400, 400, 0, 0 )
+UI_LoadImage( imgCasarFundo, "texture/ui/corsairs/casamento_fadas.png", NORMAL, 400, 400, 0, 0 )
+UI_CreateCompent( frmSpiritMarry, UI3D_COMPENT_TYPE, "d3dCasarFadas", 2, 2, 0, 0 )
+cmdSpiritItem = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritItem", 32, 32, 36, 98 )
+cmdSpiritOne = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritOne", 32, 32, 136, 98 )
+cmdSpiritTwo = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdSpiritTwo", 32, 32, 212, 98 )
+cmdCasarRes = UI_CreateCompent( frmSpiritMarry, COMMAND_ONE_TYPE, "cmdCasarRes", 32, 32, 318, 98 )
 UI_SetTag( cmdSpiritOne, enumSPIRIT_ONE )
 UI_SetTag( cmdSpiritTwo, enumSPIRIT_TWO )
 UI_SetTag( cmdSpiritItem, enumSPIRIT_OUT )
-
---设置labal
-labNotice = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labNotice", 112, 14, 18, 384 )
-UI_SetCaption( labNotice, "Demonic Fruit has bonus effect!")
-UI_SetTextColor( labNotice, 4294941312 )
-UI_SetLabelExFont( labNotice, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---设置金钱显示label
-labMoneyShow = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labMoneyShow", 112, 14, 68, 334 )
-UI_SetCaption( labMoneyShow, "$$$")
-UI_SetTextColor( labMoneyShow, COLOR_BLACK )
-UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnClose", 14, 14, 206, 7 )
+UI_SetHint( cmdSpiritItem, "Demonic Fruit" )
+UI_SetHint( cmdSpiritOne, "Fairy (Lv 20+, full stamina)" )
+UI_SetHint( cmdSpiritTwo, "Another fairy (Lv 20+, full stamina)" )
+UI_SetHint( cmdCasarRes, "The fairy that will be born" )
+labMoneyShow = UI_CreateCompent( frmSpiritMarry, LABELEX_TYPE, "labMoneyShow", 136, 12, 46, 372 )
+UI_SetCaption( labMoneyShow, "" )
+UI_SetTextColor( labMoneyShow, 4294366590 )
+UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnClose = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnClose", 14, 14, 378, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---加载确定取消按钮
-btnForgeYes = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeYes", 50, 44, 22, 275 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/marryyesno.tga", 60, 53, 0, 0, FALSE )
-
-btnForgeNo = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeNo", 50, 44, 150, 275)
-UI_LoadButtonImage( btnForgeNo, "texture/ui/marryyesno.tga", 60, 53, 60, 0, FALSE )
+btnForgeYes = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeYes", 76, 26, 226, 367 )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/casamento_fadas.png", 76, 26, 404, 0, FALSE )
+btnForgeNo = UI_CreateCompent( frmSpiritMarry, BUTTON_TYPE, "btnForgeNo", 76, 26, 310, 367 )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/casamento_fadas.png", 76, 26, 404, 110, FALSE )
 UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
+
 -----------------------------------------------------------------------
 -- 定义装备提纯面板  2006.8.29 by Leo
 -----------------------------------------------------------------------
-frmEquipPurify = UI_CreateForm( "frmEquipPurify", FALSE, 226, 255, 0, 0, TRUE, FALSE )
+-- Tales of Corsairs: extrair gema e afins (skin_combinar.ps1 e UIPurifyForm.cpp)
+frmEquipPurify = UI_CreateForm( "frmEquipPurify", FALSE, 400, 340, 150, 150, TRUE, FALSE )
 UI_ShowForm( frmEquipPurify, FALSE )
 UI_AddFormToTemplete( frmEquipPurify, FORM_MAIN )
 UI_FormSetIsEscClose( frmEquipPurify, TRUE )
-UI_SetIsDrag( frmEquipPurify,TRUE)
-UI_SetFormStyle( frmEquipPurify,1)
-
---UI_FormSetHotKey( frmEquipPurify, ALT_KEY, HOTKEY_X )
-
---加载背景图片
-imgBakTop = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgBakTop", 226, 255, 0, 0 )
-UI_LoadImage( imgBakTop, "texture/ui/corsairs/npc_janelas.png", NORMAL, 226, 255, 660, 0 )
-
---title
-labTitle1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle1", 214, 14, 6, 8 )
-UI_SetCaption( labTitle1, "Purification")
-UI_SetTextColor( labTitle1, 4294366590 )
-UI_SetLabelExAlign( labTitle1, TRUE )
-UI_SetLabelExFont( labTitle1, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-labTitle2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle2", 214, 14, 6, 8 )
-UI_SetCaption( labTitle2, "Coral recharge")
-UI_SetTextColor( labTitle2, 4294366590 )
-UI_SetLabelExAlign( labTitle2, TRUE )
-UI_SetLabelExFont( labTitle2, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-labTitle3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle3", 214, 14, 6, 8 )
-UI_SetCaption( labTitle3, "Gem purification")
-UI_SetTextColor( labTitle3, 4294366590 )
-UI_SetLabelExAlign( labTitle3, TRUE )
-UI_SetLabelExFont( labTitle3, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-labTitle4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle4", 214, 14, 6, 8 )
-UI_SetCaption( labTitle4, "Repair Lifeskill tools")
-UI_SetTextColor( labTitle4, 4294366590 )
-UI_SetLabelExAlign( labTitle4, TRUE )
-UI_SetLabelExFont( labTitle4, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---创建command栏
-cmdEquipOne = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipOne", 32, 32, 46, 65 )	-- 另一把武器
-
---设置装备提纯lab左
-labHintleft1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft1", 100, 14, 12, 110 )
-UI_SetCaption( labHintleft1, "Main")
-UI_SetTextColor( labHintleft1, 4293976766 )
-UI_SetLabelExAlign( labHintleft1, TRUE )
-UI_SetLabelExFont( labHintleft1, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---设置贝壳充电lab左
-labHintleft2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft2", 100, 14, 12, 110 )
-UI_SetCaption( labHintleft2, "Conch")
-UI_SetTextColor( labHintleft2, 4293976766 )
-UI_SetLabelExAlign( labHintleft2, TRUE )
-UI_SetLabelExFont( labHintleft2, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---道具分解lab左
-labHintleft3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft3", 100, 14, 12, 110 )
-UI_SetCaption( labHintleft3, "Equipment")
-UI_SetTextColor( labHintleft3, 4293976766 )
-UI_SetLabelExAlign( labHintleft3, TRUE )
-UI_SetLabelExFont( labHintleft3, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---修理破锅lab左
-labHintleft4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft4", 100, 14, 12, 110 )
-UI_SetCaption( labHintleft4, "Lifeskill tool")
-UI_SetTextColor( labHintleft4, 4293976766 )
-UI_SetLabelExAlign( labHintleft4, TRUE )
-UI_SetLabelExFont( labHintleft4, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
-cmdEquipTwo = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipTwo", 32, 32, 146, 65 )	-- 要提纯的武器
-
---设置装备提纯lab右
-labHintright1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright1", 100, 14, 112, 110 )
-UI_SetCaption( labHintright1, "Catalyst")
-UI_SetTextColor( labHintright1, 4293976766 )
-UI_SetLabelExAlign( labHintright1, TRUE )
-UI_SetLabelExFont( labHintright1, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---设置贝壳充电lab右
-labHintright2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright2", 100, 14, 112, 110 )
-UI_SetCaption( labHintright2, "Battery")
-UI_SetTextColor( labHintright2, 4293976766 )
-UI_SetLabelExAlign( labHintright2, TRUE )
-UI_SetLabelExFont( labHintright2, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---道具分解lab右
-labHintright3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright3", 100, 14, 112, 110 )
-UI_SetCaption( labHintright3, "Pliers")
-UI_SetTextColor( labHintright3, 4293976766 )
-UI_SetLabelExAlign( labHintright3, TRUE )
-UI_SetLabelExFont( labHintright3, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---修理破锅lab右
-labHintright4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright4", 100, 14, 112, 110 )
-UI_SetCaption( labHintright4, "Repair Tool")
-UI_SetTextColor( labHintright4, 4293976766 )
-UI_SetLabelExAlign( labHintright4, TRUE )
-UI_SetLabelExFont( labHintright4, DEFAULT_FONT, TRUE, COLOR_BLACK )
-
---设置金钱显示label
-labMoneyShow = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labMoneyShow", 112, 14, 64, 148 )
-UI_SetCaption( labMoneyShow, "")
-UI_SetTextColor( labMoneyShow, COLOR_BLACK )
-UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_WHITE )
-
---创建关闭按钮
-btnClose = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnClose", 14, 14, 206, 7 )
+UI_SetIsDrag( frmEquipPurify, TRUE )
+UI_SetFormStyle( frmEquipPurify, 2 )
+imgPurifPurificar = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgPurifPurificar", 400, 340, 0, 0 )
+UI_LoadImage( imgPurifPurificar, "texture/ui/corsairs/purificar.png", NORMAL, 400, 340, 0, 0 )
+imgPurifCoral = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgPurifCoral", 400, 340, 0, 0 )
+UI_LoadImage( imgPurifCoral, "texture/ui/corsairs/recarregar_coral.png", NORMAL, 400, 340, 0, 0 )
+imgPurifExtrair = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgPurifExtrair", 400, 340, 0, 0 )
+UI_LoadImage( imgPurifExtrair, "texture/ui/corsairs/extrair_gema.png", NORMAL, 400, 340, 0, 0 )
+imgPurifConserto = UI_CreateCompent( frmEquipPurify, IMAGE_TYPE, "imgPurifConserto", 400, 340, 0, 0 )
+UI_LoadImage( imgPurifConserto, "texture/ui/corsairs/consertar_ferramenta.png", NORMAL, 400, 340, 0, 0 )
+UI_CreateCompent( frmEquipPurify, UI3D_COMPENT_TYPE, "d3dPurificar", 2, 2, 0, 0 )
+-- textos antigos: o C++ ainda procura, mas o texto agora e desenhado pelo d3dPurificar
+labTitle1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle1", 2, 2, 0, 0 )
+UI_SetCaption( labTitle1, "" )
+labTitle2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle2", 2, 2, 0, 0 )
+UI_SetCaption( labTitle2, "" )
+labTitle3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle3", 2, 2, 0, 0 )
+UI_SetCaption( labTitle3, "" )
+labTitle4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labTitle4", 2, 2, 0, 0 )
+UI_SetCaption( labTitle4, "" )
+labHintleft1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft1", 2, 2, 0, 0 )
+UI_SetCaption( labHintleft1, "" )
+labHintleft2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft2", 2, 2, 0, 0 )
+UI_SetCaption( labHintleft2, "" )
+labHintleft3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft3", 2, 2, 0, 0 )
+UI_SetCaption( labHintleft3, "" )
+labHintleft4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintleft4", 2, 2, 0, 0 )
+UI_SetCaption( labHintleft4, "" )
+labHintright1 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright1", 2, 2, 0, 0 )
+UI_SetCaption( labHintright1, "" )
+labHintright2 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright2", 2, 2, 0, 0 )
+UI_SetCaption( labHintright2, "" )
+labHintright3 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright3", 2, 2, 0, 0 )
+UI_SetCaption( labHintright3, "" )
+labHintright4 = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labHintright4", 2, 2, 0, 0 )
+UI_SetCaption( labHintright4, "" )
+cmdEquipOne = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipOne", 32, 32, 174, 98 )
+cmdEquipTwo = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdEquipTwo", 32, 32, 36, 98 )
+cmdPurifRes = UI_CreateCompent( frmEquipPurify, COMMAND_ONE_TYPE, "cmdPurifRes", 32, 32, 318, 98 )
+UI_SetHint( cmdPurifRes, "Result preview" )
+labMoneyShow = UI_CreateCompent( frmEquipPurify, LABELEX_TYPE, "labMoneyShow", 136, 12, 46, 312 )
+UI_SetCaption( labMoneyShow, "" )
+UI_SetTextColor( labMoneyShow, 4294366590 )
+UI_SetLabelExFont( labMoneyShow, DEFAULT_FONT, TRUE, COLOR_BLACK )
+btnClose = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnClose", 14, 14, 378, 13 )
 UI_LoadButtonImage( btnClose, "texture/ui/ods/PublicC.tga", 14, 14, 116, 175, TRUE )
 UI_SetButtonModalResult( btnClose, BUTTON_CLOSE )
-
---加载确定取消按钮
-btnForgeNo = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeNo", 41, 19, 135, 220 )
-UI_LoadButtonImage( btnForgeNo, "texture/ui/PublicC.tga", 41, 19, 0, 20 ,TRUE )
+-- confirmar: um botao por servico, no mesmo lugar (o Game.exe mostra so o do servico aberto)
+btnPurifYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnPurifYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnPurifYes, "texture/ui/corsairs/purificar.png", 76, 26, 0, 350, FALSE )
+btnCoralYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnCoralYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnCoralYes, "texture/ui/corsairs/recarregar_coral.png", 76, 26, 0, 350, FALSE )
+btnForgeYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnForgeYes, "texture/ui/corsairs/extrair_gema.png", 76, 26, 0, 350, FALSE )
+btnConsertoYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnConsertoYes", 76, 26, 226, 307 )
+UI_LoadButtonImage( btnConsertoYes, "texture/ui/corsairs/consertar_ferramenta.png", 76, 26, 0, 350, FALSE )
+btnForgeNo = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeNo", 76, 26, 310, 307 )
+UI_LoadButtonImage( btnForgeNo, "texture/ui/corsairs/extrair_gema.png", 76, 26, 80, 350, FALSE )
 UI_SetButtonModalResult( btnForgeNo, BUTTON_CLOSE )
 
-btnForgeYes = UI_CreateCompent( frmEquipPurify, BUTTON_TYPE, "btnForgeYes", 41, 19, 52, 220 )
-UI_LoadButtonImage( btnForgeYes, "texture/ui/PublicC.tga", 41, 19, 0, 0, TRUE )
 
 -----------------------------------------------------------------------
 -- 定义精灵老虎机面板  2006.8.29 by Leo
