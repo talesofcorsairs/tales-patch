@@ -1,3 +1,12 @@
+Versão 2.0.81
+
+• Ferreiro Goldie (Argent): agora faz Combine e Extract Gem. O Combine Master saiu da cidade.
+• Extract Gem com janela nova: mostra as gemas da peça, qual sai, como a casa fica e o custo. Botão direito do inventário coloca os itens.
+• Fairies Marriage com janela nova e detalhada: fada que nasce, chance de Junior, atributos do filhote, skills, materiais da fruta e custo. O NPC Pets de Argent também casa fadas.
+• Angela Junior: case um Angela para ter a chance (Angela + Angela = 100%). Ele dá atributos x1.2, +3 de Physical Resist e drop melhor que o Mordo Junior.
+• Angela-Egg no IMP Mall, a 35 IMPs.
+• Forge Materials Seller: Fusion Scroll 50.000 e Fusion Catalyst 100.000. Refining Gem, Great Fusion Catalyst e gemas Broken/Cracked/Chipped agora vêm só de drop.
+
 Versão 2.0.80
 
 • VIP Club: o baú diário virou um prêmio de nível. Cada nível VIP paga o prêmio uma vez por conta, e quem subiu vários níveis pega um por clique, do menor para o maior (Alt+V, botão "Claim VIP N reward").
