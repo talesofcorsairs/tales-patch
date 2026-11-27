@@ -322,3 +322,4 @@ texture/ui/corsairs/purificar.png
 texture/ui/corsairs/purificar.wsd
 texture/ui/corsairs/recarregar_coral.png
 texture/ui/corsairs/recarregar_coral.wsd
+scripts/table/sceneffectinfo.bin
