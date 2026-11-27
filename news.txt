@@ -1,3 +1,9 @@
+Versão 2.0.83
+
+• Wing Chest nova: abre uma asa aleatória entre 10. Angel Fallen e Dragon Fallen só saem dela (5% cada) e avisam o servidor todo.
+• IMP Mall: aba Miscellaneous > Lucky Chests com a Wing Chest e as caixas de apparel (50 IMPs cada).
+• Award Center: caixas de apparel a 800 créditos e Wing Chest a 1000.
+
 Versão 2.0.82
 
 • Asas novas: Angel Fallen Wings e Dragon Fallen Wings, com efeito animado nas costas (coloque na 1ª casa do inventário).
