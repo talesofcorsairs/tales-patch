@@ -1,3 +1,8 @@
+Versão 2.0.82
+
+• Asas novas: Angel Fallen Wings e Dragon Fallen Wings, com efeito animado nas costas (coloque na 1ª casa do inventário).
+• Correção do motor: efeitos com animação própria agora batem certo, sem a asa piscar ou entortar.
+
 Versão 2.0.81
 
 • Ferreiro Goldie (Argent): agora faz Combine e Extract Gem. O Combine Master saiu da cidade.
