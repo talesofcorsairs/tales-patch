@@ -1,3 +1,7 @@
+Versão 2.0.84
+
+• Launcher: barra de baixo renovada, alinhada com a moldura de madeira. Ícones das redes maiores e status centralizado.
+
 Versão 2.0.83
 
 • Wing Chest nova: abre uma asa aleatória entre 10. Angel Fallen e Dragon Fallen só saem dela (5% cada) e avisam o servidor todo.
