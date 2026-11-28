@@ -1,3 +1,7 @@
+Versão 2.0.85
+
+• Hell: os Abyss Lords agora soltam o baú de armadura Death Soul (Lv75) da sua classe, com a mesma chance da arma (5%). Cada baú dá o set completo.
+
 Versão 2.0.84
 
 • Launcher: barra de baixo renovada, alinhada com a moldura de madeira. Ícones das redes maiores e status centralizado.
