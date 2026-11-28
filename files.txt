@@ -323,3 +323,5 @@ texture/ui/corsairs/purificar.wsd
 texture/ui/corsairs/recarregar_coral.png
 texture/ui/corsairs/recarregar_coral.wsd
 scripts/table/sceneffectinfo.bin
+texture/ui/corsairs/jornada.png
+texture/ui/corsairs/jornada.wsd

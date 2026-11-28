@@ -1,3 +1,9 @@
+Versão 2.0.86
+
+• Captain's Journal (Alt+J ou o ícone da rosa dos ventos embaixo do VIP): recompensa diária de login em 28 dias, missões diárias e semanais, conquistas e ranking.
+• Conquistas: 39 para liberar, com pontos, ouro e 19 títulos que aparecem acima do seu nome.
+• Ranking no jogo e no site: nível, conquistas, caçadores, caçadores de chefes, riqueza e PvP.
+
 Versão 2.0.85
 
 • Hell: os Abyss Lords agora soltam o baú de armadura Death Soul (Lv75) da sua classe, com a mesma chance da arma (5%). Cada baú dá o set completo.
